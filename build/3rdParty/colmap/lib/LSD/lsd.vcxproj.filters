@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\lsd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\lsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{71CE4A3D-AE71-3DEE-8F91-29ED86293900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2B598E77-A3EC-372A-A8F8-5C6C2C5FA3FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

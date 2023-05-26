@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\build\CMakeFiles\b43e1c12da5040f09d8b46dbb2d6c254\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{773FA6A7-6A33-34D4-976B-D9AB9CB151F7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

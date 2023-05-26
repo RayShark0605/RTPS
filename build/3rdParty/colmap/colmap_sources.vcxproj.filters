@@ -1,0 +1,1585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\lsd.c">
+      <Filter>lib\LSD</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Factor.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MarchingCubes.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PlyFile.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PoissonRecon.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SurfaceTrimmer.cpp">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CLTexImage.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CuTexImage.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\FrameBufferObject.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GLTexImage.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GlobalUtil.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCG.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCL.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramGLSL.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCL.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCU.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidGL.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ShaderMan.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftGPU.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatch.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatchCU.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftPyramid.cpp">
+      <Filter>lib\SiftGPU</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\aib.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\array.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\covdet.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\dsift.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\fisher.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\generic.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\getopt_long.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\gmm.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hikmeans.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hog.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\homkermap.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\host.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv_sse2.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kdtree.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kmeans.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\lbp.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\liop.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_avx.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_sse2.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mser.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\pgm.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\quickshift.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\random.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\rodrigues.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\scalespace.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\sift.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\slic.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\stringop.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svm.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svmdataset.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\vlad.c">
+      <Filter>lib\VLFeat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\cost_functions_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_reader.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp_test.cc">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\automatic_reconstruction.cc">
+      <Filter>src\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\bundle_adjustment.cc">
+      <Filter>src\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\hierarchical_mapper.cc">
+      <Filter>src\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\incremental_mapper.cc">
+      <Filter>src\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_coeffs.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\pose.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\translation_transform_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\triangulation.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils_test.cc">
+      <Filter>src\estimators</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\colmap.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\database.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\feature.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\gui.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\image.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\model.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\mvs.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\sfm.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc">
+      <Filter>src\exe</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\extraction.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\matching.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift_test.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types_test.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils_test.cc">
+      <Filter>src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph_test.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map_test.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\fusion.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\image.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\mat_test.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\meshing.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\model.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map_test.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\workspace.cc">
+      <Filter>src\mvs</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\loransac_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\ransac_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sprt.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement_test.cc">
+      <Filter>src\optim</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry.cc">
+      <Filter>src\retrieval</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry_test.cc">
+      <Filter>src\retrieval</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file_entry_test.cc">
+      <Filter>src\retrieval</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\visual_index_test.cc">
+      <Filter>src\retrieval</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\vote_and_verify.cc">
+      <Filter>src\retrieval</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_mapper.cc">
+      <Filter>src\sfm</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_triangulator.cc">
+      <Filter>src\sfm</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\tools\example.cc">
+      <Filter>src\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\automatic_reconstruction_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\bundle_adjustment_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\colormaps.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\database_management_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\dense_reconstruction_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_extraction_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_matching_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\image_viewer_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\license_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\line_painter.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\log_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\main_window.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\match_matrix_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\model_viewer_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\movie_grabber_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\options_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_painter.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_viewer_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\project_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\qt_utils.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_manager_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_options_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_stats_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\thread_control_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\triangle_painter.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\undistortion_widget.cc">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cache_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\camera_specs.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\endian_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\logging.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\matrix_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\option_manager.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\ply.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer_test.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\lsd.h">
+      <Filter>lib\LSD</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Allocator.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Array.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Array.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BSplineData.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BSplineData.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BinaryNode.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Factor.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\FunctionData.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\FunctionData.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Hash.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MAT.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MAT.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MarchingCubes.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MemoryUsage.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.Evaluation.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.IsoSurface.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.SortedTreeNodes.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.System.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.WeightedSamples.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MyTime.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Octree.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Octree.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PPolynomial.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PPolynomial.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Ply.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PointStream.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PointStream.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PoissonRecon.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Polynomial.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Polynomial.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SparseMatrix.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SparseMatrix.inl">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SurfaceTrimmer.h">
+      <Filter>lib\PoissonRecon</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CLTexImage.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CuTexImage.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\FrameBufferObject.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GLTexImage.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GlobalUtil.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\LiteWindow.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCG.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCL.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCU.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramGLSL.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramGPU.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCL.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCU.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidGL.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ShaderMan.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftGPU.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatch.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatchCU.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftPyramid.h">
+      <Filter>lib\SiftGPU</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\aib.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\array.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\covdet.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\dsift.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\fisher.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\float.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\generic.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\getopt_long.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\gmm.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\heap-def.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hikmeans.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hog.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\homkermap.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\host.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv_sse2.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kdtree.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kmeans.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\lbp.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\liop.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_avx.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_sse2.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mser.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\pgm.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\qsort-def.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\quickshift.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\random.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\rodrigues.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\scalespace.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\shuffle-def.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\sift.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\slic.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\stringop.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svm.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svmdataset.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\vlad.h">
+      <Filter>lib\VLFeat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\cost_functions.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_reader.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\automatic_reconstruction.h">
+      <Filter>src\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\bundle_adjustment.h">
+      <Filter>src\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\hierarchical_mapper.h">
+      <Filter>src\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\incremental_mapper.h">
+      <Filter>src\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix_coeffs.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix_poly.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\euclidean_transform.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_coeffs.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\pose.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\similarity_transform.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\translation_transform.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\triangulation.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils.h">
+      <Filter>src\estimators</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\database.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\feature.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\gui.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\image.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\model.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\mvs.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\sfm.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.h">
+      <Filter>src\exe</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\extraction.h">
+      <Filter>src\feature</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\matching.h">
+      <Filter>src\feature</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.h">
+      <Filter>src\feature</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types.h">
+      <Filter>src\feature</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils.h">
+      <Filter>src\feature</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_flip.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_rotate.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_texture.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_transpose.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\fusion.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_prng.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_ref_image.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\image.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\mat.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\meshing.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\model.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match_cuda.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\workspace.h">
+      <Filter>src\mvs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\loransac.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\ransac.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sampler.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sprt.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement.h">
+      <Filter>src\optim</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file_entry.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_index.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\utils.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\visual_index.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\vote_and_verify.h">
+      <Filter>src\retrieval</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_mapper.h">
+      <Filter>src\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_triangulator.h">
+      <Filter>src\sfm</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\automatic_reconstruction_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\bundle_adjustment_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\colormaps.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\database_management_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\dense_reconstruction_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_extraction_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_matching_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\image_viewer_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\license_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\line_painter.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\log_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\main_window.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\match_matrix_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\model_viewer_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\movie_grabber_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\options_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_painter.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_viewer_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\project_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\qt_utils.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_manager_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_options_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_stats_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\thread_control_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\triangle_painter.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\undistortion_widget.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\alignment.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cache.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\camera_specs.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\endian.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\logging.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\matrix.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\option_manager.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\ply.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\sqlite3_utils.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\testing.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\types.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\..\..\3rdParty\colmap\lib\SiftGPU\ProgramCU.cu">
+      <Filter>lib\SiftGPU</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\gpu_mat_prng.cu">
+      <Filter>src\mvs</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\gpu_mat_ref_image.cu">
+      <Filter>src\mvs</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\gpu_mat_test.cu">
+      <Filter>src\mvs</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\patch_match_cuda.cu">
+      <Filter>src\mvs</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_elkan.tc">
+      <Filter>lib\VLFeat</Filter>
+    </None>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_init.tc">
+      <Filter>lib\VLFeat</Filter>
+    </None>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_lloyd.tc">
+      <Filter>lib\VLFeat</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lib">
+      <UniqueIdentifier>{C86D1388-072A-3235-9F39-EBE2E4727AD9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\LSD">
+      <UniqueIdentifier>{8A8FB555-9ED5-31AF-AB55-0432507E3BA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\PoissonRecon">
+      <UniqueIdentifier>{CDF3D581-8184-3D43-A59F-C21D19365486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\SiftGPU">
+      <UniqueIdentifier>{419CE5D3-7FF4-30F3-8B9B-E9A86A697981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\VLFeat">
+      <UniqueIdentifier>{4BAA15B1-10CA-3F8A-AFAE-47D67B2054D0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{ACED9E5C-66FC-320B-B98C-80D2B2DDECB5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{20E29C82-5B6B-342B-90D7-99442FB87584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\controllers">
+      <UniqueIdentifier>{B5CE1D44-B610-355B-A9C4-6A4B55BEE35D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\estimators">
+      <UniqueIdentifier>{0D587AB5-59B9-303B-8C0C-58FE9A6D1D29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\exe">
+      <UniqueIdentifier>{76664B79-E0AE-3894-B1F5-72F87B9552A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\feature">
+      <UniqueIdentifier>{AA46886D-73FF-37CC-A6BA-52A8A4BF03B5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mvs">
+      <UniqueIdentifier>{80F6AA12-BA98-33C8-8C95-115E51A765B5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\optim">
+      <UniqueIdentifier>{51E3689E-FECD-34F9-AACE-13DDBFF16C51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\retrieval">
+      <UniqueIdentifier>{6E219A29-4A7F-3AF8-AD2C-7F06847CF1DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sfm">
+      <UniqueIdentifier>{5236D300-48A9-39E1-A42F-10BBCE987571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tools">
+      <UniqueIdentifier>{F67DDCB7-0F8F-3DD7-BA39-C2A5C5F07096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{01B610D0-4572-317E-B6D9-4091B22D2295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\util">
+      <UniqueIdentifier>{CCCD2838-2580-3C41-AAEB-7323BD2BD684}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

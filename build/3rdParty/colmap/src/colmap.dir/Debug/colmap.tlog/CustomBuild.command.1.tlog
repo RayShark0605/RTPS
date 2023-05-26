@@ -1,0 +1,26 @@
+^D:\RTPS\RTPSV0.5\BUILD\CMAKEFILES\CAD58AD2E6F76B6D7FFD84749C14747B\QRC_RESOURCES.CPP.RULE
+setlocal
+cd D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc D:/RTPS/RTPSv0.5/build/3rdParty/colmap/src/CMakeFiles/colmap_autogen.dir/AutoRcc_resources_UYX5XTB5RZ_Info.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc D:/RTPS/RTPSv0.5/build/3rdParty/colmap/src/CMakeFiles/colmap_autogen.dir/AutoRcc_resources_UYX5XTB5RZ_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\RTPS\RTPSV0.5\3RDPARTY\COLMAP\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

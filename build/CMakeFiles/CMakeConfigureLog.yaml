@@ -1,0 +1,1146 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:18 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:65 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      生成启动时间为 2023/5/2 22:15:29。
+      Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdC.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+        或批处理文件。
+        命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:00.91
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:18 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:65 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      生成启动时间为 2023/5/2 22:15:30。
+      Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdCXX.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+        或批处理文件。
+        命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:00.76
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-r2qs8p"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-r2qs8p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-r2qs8p
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f05f0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:15:31。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\cmTC_f05f0.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_f05f0.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\Debug\\”。
+          正在创建目录“cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f05f0.dir\\Debug\\\\" /Fd"cmTC_f05f0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CMakeCCompilerABI.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f05f0.dir\\Debug\\\\" /Fd"cmTC_f05f0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\Debug\\cmTC_f05f0.exe" /INCREMENTAL /ILK:"cmTC_f05f0.dir\\Debug\\cmTC_f05f0.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-r2qs8p/Debug/cmTC_f05f0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-r2qs8p/Debug/cmTC_f05f0.lib" /MACHINE:X64  /machine:x64 cmTC_f05f0.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_f05f0.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\Debug\\cmTC_f05f0.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\Debug\\cmTC_f05f0.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\cmTC_f05f0.write.1u.tlog" "cmTC_f05f0.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\Debug\\cmTC_f05f0.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\cmTC_f05f0.write.1u.tlog" "cmTC_f05f0.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\Debug\\cmTC_f05f0.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\cmTC_f05f0.write.1u.tlog" "cmTC_f05f0.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_f05f0.dir\\Debug\\cmTC_f05f0.tlog\\cmTC_f05f0.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r2qs8p\\cmTC_f05f0.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.76
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nasiru"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nasiru"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nasiru
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_751b1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:15:31。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\cmTC_751b1.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_751b1.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\Debug\\”。
+          正在创建目录“cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_751b1.dir\\Debug\\\\" /Fd"cmTC_751b1.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CMakeCXXCompilerABI.cpp
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_751b1.dir\\Debug\\\\" /Fd"cmTC_751b1.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\Debug\\cmTC_751b1.exe" /INCREMENTAL /ILK:"cmTC_751b1.dir\\Debug\\cmTC_751b1.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nasiru/Debug/cmTC_751b1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nasiru/Debug/cmTC_751b1.lib" /MACHINE:X64  /machine:x64 cmTC_751b1.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_751b1.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\Debug\\cmTC_751b1.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\Debug\\cmTC_751b1.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\cmTC_751b1.write.1u.tlog" "cmTC_751b1.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\Debug\\cmTC_751b1.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\cmTC_751b1.write.1u.tlog" "cmTC_751b1.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\Debug\\cmTC_751b1.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\cmTC_751b1.write.1u.tlog" "cmTC_751b1.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_751b1.dir\\Debug\\cmTC_751b1.tlog\\cmTC_751b1.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nasiru\\cmTC_751b1.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:483 (_OPENMP_GET_FLAGS)"
+      - "3rdParty/colmap/CMakeLists.txt:89 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-125ygv"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-125ygv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/colmap/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_openmp"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-125ygv
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_63e91.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:15:32。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\cmTC_63e91.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_63e91.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\Debug\\”。
+          正在创建目录“cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_63e91.dir\\Debug\\\\" /Fd"cmTC_63e91.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\OpenMPTryFlag.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPTryFlag.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_63e91.dir\\Debug\\\\" /Fd"cmTC_63e91.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\OpenMPTryFlag.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\Debug\\cmTC_63e91.exe" /INCREMENTAL /ILK:"cmTC_63e91.dir\\Debug\\cmTC_63e91.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-125ygv/Debug/cmTC_63e91.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-125ygv/Debug/cmTC_63e91.lib" /MACHINE:X64  /machine:x64 cmTC_63e91.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_63e91.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\Debug\\cmTC_63e91.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\Debug\\cmTC_63e91.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\cmTC_63e91.write.1u.tlog" "cmTC_63e91.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\Debug\\cmTC_63e91.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\cmTC_63e91.write.1u.tlog" "cmTC_63e91.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\Debug\\cmTC_63e91.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\cmTC_63e91.write.1u.tlog" "cmTC_63e91.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_63e91.dir\\Debug\\cmTC_63e91.tlog\\cmTC_63e91.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-125ygv\\cmTC_63e91.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.80
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:483 (_OPENMP_GET_FLAGS)"
+      - "3rdParty/colmap/CMakeLists.txt:89 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-qim8d6"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-qim8d6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/colmap/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_openmp"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-qim8d6
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_3ebff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:15:33。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\cmTC_3ebff.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_3ebff.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\Debug\\”。
+          正在创建目录“cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_3ebff.dir\\Debug\\\\" /Fd"cmTC_3ebff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\OpenMPTryFlag.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPTryFlag.cpp
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_3ebff.dir\\Debug\\\\" /Fd"cmTC_3ebff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\OpenMPTryFlag.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\Debug\\cmTC_3ebff.exe" /INCREMENTAL /ILK:"cmTC_3ebff.dir\\Debug\\cmTC_3ebff.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-qim8d6/Debug/cmTC_3ebff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-qim8d6/Debug/cmTC_3ebff.lib" /MACHINE:X64  /machine:x64 cmTC_3ebff.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_3ebff.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\Debug\\cmTC_3ebff.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\Debug\\cmTC_3ebff.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\cmTC_3ebff.write.1u.tlog" "cmTC_3ebff.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\Debug\\cmTC_3ebff.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\cmTC_3ebff.write.1u.tlog" "cmTC_3ebff.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\Debug\\cmTC_3ebff.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\cmTC_3ebff.write.1u.tlog" "cmTC_3ebff.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_3ebff.dir\\Debug\\cmTC_3ebff.tlog\\cmTC_3ebff.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qim8d6\\cmTC_3ebff.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.77
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:419 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_SPEC_DATE)"
+      - "3rdParty/colmap/CMakeLists.txt:89 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-mhhb9u"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-mhhb9u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/colmap/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-mhhb9u
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_86608.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:15:34。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\cmTC_86608.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_86608.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\Debug\\”。
+          正在创建目录“cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_86608.dir\\Debug\\\\" /Fd"cmTC_86608.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\OpenMPCheckVersion.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPCheckVersion.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_86608.dir\\Debug\\\\" /Fd"cmTC_86608.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\OpenMPCheckVersion.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\Debug\\cmTC_86608.exe" /INCREMENTAL /ILK:"cmTC_86608.dir\\Debug\\cmTC_86608.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-mhhb9u/Debug/cmTC_86608.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-mhhb9u/Debug/cmTC_86608.lib" /MACHINE:X64  /machine:x64 cmTC_86608.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_86608.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\Debug\\cmTC_86608.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\Debug\\cmTC_86608.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\cmTC_86608.write.1u.tlog" "cmTC_86608.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\Debug\\cmTC_86608.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\cmTC_86608.write.1u.tlog" "cmTC_86608.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\Debug\\cmTC_86608.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\cmTC_86608.write.1u.tlog" "cmTC_86608.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_86608.dir\\Debug\\cmTC_86608.tlog\\cmTC_86608.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mhhb9u\\cmTC_86608.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:419 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_SPEC_DATE)"
+      - "3rdParty/colmap/CMakeLists.txt:89 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nyt4s2"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nyt4s2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/colmap/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nyt4s2
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_51554.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:15:35。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\cmTC_51554.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_51554.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\Debug\\”。
+          正在创建目录“cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_51554.dir\\Debug\\\\" /Fd"cmTC_51554.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\OpenMPCheckVersion.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPCheckVersion.cpp
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_51554.dir\\Debug\\\\" /Fd"cmTC_51554.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\OpenMPCheckVersion.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\Debug\\cmTC_51554.exe" /INCREMENTAL /ILK:"cmTC_51554.dir\\Debug\\cmTC_51554.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nyt4s2/Debug/cmTC_51554.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-nyt4s2/Debug/cmTC_51554.lib" /MACHINE:X64  /machine:x64 cmTC_51554.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_51554.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\Debug\\cmTC_51554.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\Debug\\cmTC_51554.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\cmTC_51554.write.1u.tlog" "cmTC_51554.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\Debug\\cmTC_51554.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\cmTC_51554.write.1u.tlog" "cmTC_51554.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\Debug\\cmTC_51554.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\cmTC_51554.write.1u.tlog" "cmTC_51554.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_51554.dir\\Debug\\cmTC_51554.tlog\\cmTC_51554.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nyt4s2\\cmTC_51554.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.79
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/ceres/CeresConfig.cmake:179 (find_dependency)"
+      - "3rdParty/colmap/CMakeLists.txt:93 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-z78dok"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-z78dok"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MP"
+      CMAKE_MODULE_PATH: "C:/vcpkg/installed/x64-windows/share/ceres"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-z78dok
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e214a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:16:33。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\cmTC_e214a.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_e214a.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\Debug\\”。
+          正在创建目录“cmTC_e214a.dir\\Debug\\cmTC_e214a.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_e214a.dir\\Debug\\cmTC_e214a.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e214a.dir\\Debug\\\\" /Fd"cmTC_e214a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\src.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          src.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e214a.dir\\Debug\\\\" /Fd"cmTC_e214a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\src.c"
+        D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\cmTC_e214a.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\cmTC_e214a.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\cmTC_e214a.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z78dok\\cmTC_e214a.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.32
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/ceres/CeresConfig.cmake:179 (find_dependency)"
+      - "3rdParty/colmap/CMakeLists.txt:93 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-pnmaiy"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-pnmaiy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MP"
+      CMAKE_MODULE_PATH: "C:/vcpkg/installed/x64-windows/share/ceres"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-pnmaiy
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_cf500.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:16:34。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\cmTC_cf500.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_cf500.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\Debug\\”。
+          正在创建目录“cmTC_cf500.dir\\Debug\\cmTC_cf500.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_cf500.dir\\Debug\\cmTC_cf500.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf500.dir\\Debug\\\\" /Fd"cmTC_cf500.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cf500.dir\\Debug\\\\" /Fd"cmTC_cf500.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\Debug\\cmTC_cf500.exe" /INCREMENTAL /ILK:"cmTC_cf500.dir\\Debug\\cmTC_cf500.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-pnmaiy/Debug/cmTC_cf500.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-pnmaiy/Debug/cmTC_cf500.lib" /MACHINE:X64  /machine:x64 cmTC_cf500.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\cmTC_cf500.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\cmTC_cf500.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\cmTC_cf500.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pnmaiy\\cmTC_cf500.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.28
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/ceres/CeresConfig.cmake:179 (find_dependency)"
+      - "3rdParty/colmap/CMakeLists.txt:93 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-5x24ta"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-5x24ta"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MP"
+      CMAKE_MODULE_PATH: "C:/vcpkg/installed/x64-windows/share/ceres"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-5x24ta
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e87c0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:16:34。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\cmTC_e87c0.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_e87c0.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\Debug\\”。
+          正在创建目录“cmTC_e87c0.dir\\Debug\\cmTC_e87c0.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_e87c0.dir\\Debug\\cmTC_e87c0.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e87c0.dir\\Debug\\\\" /Fd"cmTC_e87c0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.c
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e87c0.dir\\Debug\\\\" /Fd"cmTC_e87c0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\Debug\\cmTC_e87c0.exe" /INCREMENTAL /ILK:"cmTC_e87c0.dir\\Debug\\cmTC_e87c0.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-5x24ta/Debug/cmTC_e87c0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-5x24ta/Debug/cmTC_e87c0.lib" /MACHINE:X64  /machine:x64 cmTC_e87c0.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\cmTC_e87c0.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\cmTC_e87c0.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\cmTC_e87c0.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5x24ta\\cmTC_e87c0.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.28
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:367 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:411 (check_blas_libraries)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/suitesparse/suitesparse-config.cmake:7 (find_dependency)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/ceres/CeresConfig.cmake:183 (find_dependency)"
+      - "3rdParty/colmap/CMakeLists.txt:93 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-wjuw8t"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-wjuw8t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MP"
+      CMAKE_MODULE_PATH: "C:/vcpkg/installed/x64-windows/share/ceres"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "BLAS_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-wjuw8t
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ab87a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:16:53。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\cmTC_ab87a.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_ab87a.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\”。
+          正在创建目录“cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sgemm_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab87a.dir\\Debug\\\\" /Fd"cmTC_ab87a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sgemm_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ab87a.dir\\Debug\\\\" /Fd"cmTC_ab87a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\cmTC_ab87a.exe" /INCREMENTAL /ILK:"cmTC_ab87a.dir\\Debug\\cmTC_ab87a.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-wjuw8t/Debug/cmTC_ab87a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-wjuw8t/Debug/cmTC_ab87a.lib" /MACHINE:X64  /machine:x64 cmTC_ab87a.dir\\Debug\\CheckFunctionExists.obj
+          cmTC_ab87a.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\cmTC_ab87a.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\cmTC_ab87a.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\cmTC_ab87a.write.1u.tlog" "cmTC_ab87a.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\cmTC_ab87a.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\cmTC_ab87a.write.1u.tlog" "cmTC_ab87a.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\cmTC_ab87a.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\cmTC_ab87a.write.1u.tlog" "cmTC_ab87a.dir\\Debug\\vcpkg.applocal.log"
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\Debug\\openblas.dll
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_ab87a.dir\\Debug\\cmTC_ab87a.tlog\\cmTC_ab87a.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wjuw8t\\cmTC_ab87a.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.90
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:220 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:395 (check_lapack_libraries)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/suitesparse/suitesparse-config.cmake:8 (find_dependency)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/vcpkg/installed/x64-windows/share/ceres/CeresConfig.cmake:183 (find_dependency)"
+      - "3rdParty/colmap/CMakeLists.txt:93 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-0zvh6x"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-0zvh6x"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MP"
+      CMAKE_MODULE_PATH: "C:/vcpkg/installed/x64-windows/share/ceres"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "LAPACK_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-0zvh6x
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_89013.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:16:54。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\cmTC_89013.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_89013.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\”。
+          正在创建目录“cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cheev_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_89013.dir\\Debug\\\\" /Fd"cmTC_89013.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.c
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cheev_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_89013.dir\\Debug\\\\" /Fd"cmTC_89013.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\cmTC_89013.exe" /INCREMENTAL /ILK:"cmTC_89013.dir\\Debug\\cmTC_89013.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-0zvh6x/Debug/cmTC_89013.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-0zvh6x/Debug/cmTC_89013.lib" /MACHINE:X64  /machine:x64 cmTC_89013.dir\\Debug\\CheckFunctionExists.obj
+          cmTC_89013.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\cmTC_89013.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\cmTC_89013.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\cmTC_89013.write.1u.tlog" "cmTC_89013.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\cmTC_89013.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\cmTC_89013.write.1u.tlog" "cmTC_89013.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\cmTC_89013.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\cmTC_89013.write.1u.tlog" "cmTC_89013.dir\\Debug\\vcpkg.applocal.log"
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\liblapack.dll
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\libgcc_s_seh-1.dll
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\libwinpthread-1.dll
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\libgfortran-5.dll
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\libquadmath-0.dll
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\Debug\\openblas.dll
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_89013.dir\\Debug\\cmTC_89013.tlog\\cmTC_89013.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0zvh6x\\cmTC_89013.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.88
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:18 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:54 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCUDACompiler.cmake:307 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "3rdParty/colmap/CMakeLists.txt:157 (enable_language)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      生成启动时间为 2023/5/2 22:21:29。
+      Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdCUDA.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+      AddCudaCompileDeps:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=7 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include" /IC:\\vcpkg\\installed\\x64-windows\\include /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include" /I. /FIcuda_runtime.h /c D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu 
+      项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj”(1)正在节点 1 上生成“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj”(1:2) (CudaBuildCore 个目标)。
+      CudaBuildCore:
+        Compiling CUDA source file CMakeCUDACompilerId.cu...
+        正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\x64\\Debug”。
+        cmd.exe /C "C:\\Users\\Zhan\\AppData\\Local\\Temp\\tmpff7e5352a742483c9f3213f22998511e.cmd"
+        "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include" -I"C:\\vcpkg\\installed\\x64-windows\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc143.pdb /FS /Zi /RTC1 /MDd " -o D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"
+        
+        D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include" -I"C:\\vcpkg\\installed\\x64-windows\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc143.pdb /FS /Zi /RTC1 /MDd " -o D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" 
+        #$ _NVVM_BRANCH_=nvvm
+        #$ _SPACE_= 
+        #$ _CUDART_=cudart
+        #$ _HERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin
+        #$ _THERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin
+        #$ _TARGET_SIZE_=
+        #$ _TARGET_DIR_=
+        #$ _TARGET_SIZE_=64
+        #$ _WIN_PLATFORM_=x64
+        #$ TOP=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/..
+        #$ NVVMIR_LIBRARY_DIR=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/../nvvm/libdevice
+        #$ PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/../lib;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x64;;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8.1 Tools\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x86;;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8.1 Tools;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\tools;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\Program Files (x86)\\VMware\\bin\\;E:\\Python3.10.11\\Scripts\\;E:\\Python3.10.11\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\libnvvp;C:\\Program Files (x86)\\Intel\\oneAPI\\mpi\\latest\\bin\\;C:\\Program Files (x86)\\Intel\\oneAPI\\mpi\\latest\\bin\\release\\;C:\\Program Files (x86)\\Intel\\oneAPI\\mpi\\latest\\libfabric\\bin\\;C:\\Program Files (x86)\\Intel\\oneAPI\\mpi\\latest\\libfabric\\bin\\utils\\;C:\\Program Files (x86)\\Intel\\oneAPI\\tbb\\latest\\redist\\intel64\\vc_mt\\;C:\\Program Files (x86)\\Intel\\oneAPI\\tbb\\latest\\redist\\ia32\\vc_mt\\;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\latest\\windows\\redist\\ia32_win\\compiler;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2022.2.0\\;E:\\Matlab R2021b\\runtime\\win64;E:\\Matlab R2021b\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\vcpkg;C:\\Program Files\\CMake\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64;C:\\Users\\Zhan\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhan\\.dotnet\\tools;E:\\PyCharm\\bin;C:\\Program Files (x86)\\IDM Computer Solutions\\UltraEdit\\;
+        #$ INCLUDES="-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/../include"  
+        #$ LIBRARIES=  "/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/../lib/x64"
+        #$ CUDAFE_FLAGS=--sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"
+        #$ PTXAS_FLAGS=
+        CMakeCUDACompilerId.cu
+        #$ cl.exe @"C:\\Users\\Zhan\\AppData\\Local\\Temp/tmpxft_00002b3c_00000000-9.res" > "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-8_CMakeCUDACompilerId.cpp1.ii" 
+        CMakeCUDACompilerId.cu
+        #$ erase C:\\Users\\Zhan\\AppData\\Local\\Temp/tmpxft_00002b3c_00000000-9.res
+        #$ cicc --microsoft_version=1935 --msvc_target_version=1935 --compiler_bindir "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_00002b3c_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --gen_module_id_file --module_id_file_name "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-8_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.ptx"
+        #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-10_CMakeCUDACompilerId.sm_52.cubin" 
+        #$ fatbinary -64 --ident="D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-10_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-4_CMakeCUDACompilerId.fatbin.c" 
+        #$ erase C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-4_CMakeCUDACompilerId.fatbin
+        #$ cl.exe @"C:\\Users\\Zhan\\AppData\\Local\\Temp/tmpxft_00002b3c_00000000-11.res" > "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+        CMakeCUDACompilerId.cu
+        #$ erase C:\\Users\\Zhan\\AppData\\Local\\Temp/tmpxft_00002b3c_00000000-11.res
+        #$ cudafe++ --microsoft_version=1935 --msvc_target_version=1935 --compiler_bindir "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/Zhan/AppData/Local/Temp/tmpxft_00002b3c_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+        #$ cl.exe @"C:\\Users\\Zhan\\AppData\\Local\\Temp/tmpxft_00002b3c_00000000-12.res" -Fo"D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" 
+        tmpxft_00002b3c_00000000-7_CMakeCUDACompilerId.cudafe1.cpp
+        #$ erase C:\\Users\\Zhan\\AppData\\Local\\Temp/tmpxft_00002b3c_00000000-12.res
+      已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj”(CudaBuildCore 个目标)的操作。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\lib\\x64" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" cudart_static.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj
+          正在创建库 .\\CompilerIdCUDA.lib 和对象 .\\CompilerIdCUDA.exp
+      LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+        CompilerIdCUDA.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+        或批处理文件。
+        命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.write.1u.tlog" "Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe
+        :VCEnd
+        CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+      
+      “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj”(默认目标) (1) ->
+      (Link 目标) -> 
+        LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\3.26.3\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+      
+          1 个警告
+          0 个错误
+      
+      已用时间 00:00:02.19
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exe"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exp"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.lib"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.vcxproj"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        D:/RTPS/RTPSv0.5/build/CMakeFiles/3.26.3/CompilerIdCUDA/CompilerIdCUDA.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCUDACompiler.cmake:579 (message)"
+      - "3rdParty/colmap/CMakeLists.txt:157 (enable_language)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'INCLUDES=' string: ["-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin/../include"  ]
+      
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "3rdParty/colmap/CMakeLists.txt:157 (enable_language)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9"
+      binary: "D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9"
+    cmakeVariables:
+      CMAKE_CUDA_FLAGS: "-D_WINDOWS -Xcompiler=\"/W3 /GR /EHsc\""
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/colmap/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d51e6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/2 22:21:31。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_d51e6.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\”。
+          正在创建目录“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        AddCudaCompileDeps:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=7 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include" /I. /FIcuda_runtime.h /c "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu" 
+        项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(1)正在节点 1 上生成“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(1:2) (CudaBuildCore 个目标)。
+        CudaBuildCore:
+          Compiling CUDA source file C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu...
+          cmd.exe /C "C:\\Users\\Zhan\\AppData\\Local\\Temp\\tmp028f10ae4d084908ac275396fa70ac32.cmd"
+          "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_d51e6.dir\\Debug\\vc143.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_d51e6.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu"
+          
+          D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_d51e6.dir\\Debug\\vc143.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_d51e6.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu" 
+        cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+          CMakeCUDACompilerABI.cu
+        cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+          CMakeCUDACompilerABI.cu
+          CMakeCUDACompilerABI.cu
+        cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(CudaBuildCore 个目标)的操作。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" /INCREMENTAL /ILK:"cmTC_d51e6.dir\\Debug\\cmTC_d51e6.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\lib\\x64" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" cudadevrt.lib cudart_static.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.lib" /MACHINE:X64  -v cmTC_d51e6.dir\\Debug\\CMakeCUDACompilerABI.obj
+        LINK : warning LNK4044: 无法识别的选项“/v”；已忽略 [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+            正在创建库 D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.lib 和对象 D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.exp
+        LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+          cmTC_d51e6.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.write.1u.tlog" "cmTC_d51e6.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.write.1u.tlog" "cmTC_d51e6.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.write.1u.tlog" "cmTC_d51e6.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+        
+        “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标) (1) ->
+        “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(CudaBuildCore 目标) (1:2) ->
+        (CudaBuildCore 目标) -> 
+          cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+          cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+          cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+        
+        
+        “D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : warning LNK4044: 无法识别的选项“/v”；已忽略 [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+          LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]
+        
+            5 个警告
+            0 个错误
+        
+        已用时间 00:00:01.90
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "3rdParty/colmap/CMakeLists.txt:157 (enable_language)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=start
+        warn: unable to parse implicit include dirs!
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "3rdParty/colmap/CMakeLists.txt:157 (enable_language)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(link\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9]
+        ignore line: []
+        ignore line: [Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d51e6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework]
+        ignore line: [生成启动时间为 2023/5/2 22:21:31。]
+        ignore line: [Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp]
+        ignore line: []
+        ignore line: [节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标)。]
+        ignore line: [PrepareForBuild:]
+        ignore line: [  正在创建目录“cmTC_d51e6.dir\\Debug\\”。]
+        ignore line: [  正在创建目录“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\”。]
+        ignore line: [  正在创建目录“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\”。]
+        ignore line: [InitializeBuildStatus:]
+        ignore line: [  正在创建“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。]
+        ignore line: [AddCudaCompileDeps:]
+        ignore line: [  C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=7 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include" /I. /FIcuda_runtime.h /c "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu" ]
+        ignore line: [项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(1)正在节点 1 上生成“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(1:2) (CudaBuildCore 个目标)。]
+        ignore line: [CudaBuildCore:]
+        ignore line: [  Compiling CUDA source file C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu...]
+        ignore line: [  cmd.exe /C "C:\\Users\\Zhan\\AppData\\Local\\Temp\\tmp028f10ae4d084908ac275396fa70ac32.cmd"]
+        ignore line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_d51e6.dir\\Debug\\vc143.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_d51e6.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu"]
+        ignore line: [  ]
+        ignore line: [  D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_d51e6.dir\\Debug\\vc143.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_d51e6.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCUDACompilerABI.cu" ]
+        ignore line: [cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(CudaBuildCore 个目标)的操作。]
+        ignore line: [VcpkgTripletSelection:]
+        ignore line: [  Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"]
+        ignore line: [  Using normalized configuration "Release"]
+        ignore line: [Link:]
+        ignore line: [  C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" /INCREMENTAL /ILK:"cmTC_d51e6.dir\\Debug\\cmTC_d51e6.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.7\\lib\\x64" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" cudadevrt.lib cudart_static.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.lib" /MACHINE:X64  -v cmTC_d51e6.dir\\Debug\\CMakeCUDACompilerABI.obj]
+        ignore line: [LINK : warning LNK4044: 无法识别的选项“/v”；已忽略 [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [    正在创建库 D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.lib 和对象 D:/RTPS/RTPSv0.5/build/CMakeFiles/CMakeScratch/TryCompile-tpfxw9/Debug/cmTC_d51e6.exp]
+        ignore line: [LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [  cmTC_d51e6.vcxproj -> D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe]
+        ignore line: [AppLocalFromInstalled:]
+        ignore line: [  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.write.1u.tlog" "cmTC_d51e6.dir\\Debug\\vcpkg.applocal.log"]
+        ignore line: [  'pwsh.exe' 不是内部或外部命令，也不是可运行的程序]
+        ignore line: [  或批处理文件。]
+        ignore line: [  命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.write.1u.tlog" "cmTC_d51e6.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。]
+        ignore line: [  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\Debug\\cmTC_d51e6.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.write.1u.tlog" "cmTC_d51e6.dir\\Debug\\vcpkg.applocal.log"]
+        ignore line: [FinalizeBuildStatus:]
+        ignore line: [  正在删除文件“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\unsuccessfulbuild”。]
+        ignore line: [  正在对“cmTC_d51e6.dir\\Debug\\cmTC_d51e6.tlog\\cmTC_d51e6.lastbuildstate”执行 Touch 任务。]
+        ignore line: [已完成生成项目“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标)的操作。]
+        ignore line: []
+        ignore line: [已成功生成。]
+        ignore line: []
+        ignore line: [“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标) (1) ->]
+        ignore line: [“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(CudaBuildCore 目标) (1:2) ->]
+        ignore line: [(CudaBuildCore 目标) -> ]
+        ignore line: [  cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [  cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [  cl : 命令行 warning D9002: 忽略未知选项“-v” [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: []
+        ignore line: []
+        ignore line: [“D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj”(默认目标) (1) ->]
+        ignore line: [(Link 目标) -> ]
+        ignore line: [  LINK : warning LNK4044: 无法识别的选项“/v”；已忽略 [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: [  LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [D:\\RTPS\\RTPSv0.5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpfxw9\\cmTC_d51e6.vcxproj]]
+        ignore line: []
+        ignore line: [    5 个警告]
+        ignore line: [    0 个错误]
+        ignore line: []
+        ignore line: [已用时间 00:00:01.90]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

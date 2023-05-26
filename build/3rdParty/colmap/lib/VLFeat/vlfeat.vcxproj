@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GL|x64">
+      <Configuration>GL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E3195C43-0E7F-38FB-AB91-14B9C953007C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>vlfeat</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GL|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>PGOptimize</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vlfeat.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vlfeat</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\GL\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vlfeat.dir\Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='GL|x64'">vlfeat.dir\GL\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vlfeat</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='GL|x64'">vlfeat</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='GL|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;VL_DISABLE_AVX;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;VL_DISABLE_AVX;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;VL_DISABLE_AVX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <SupportJustMyCode>true</SupportJustMyCode>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;VL_DISABLE_AVX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+      <Optimization>O2</Optimization>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+    <CudaCompile>
+      <Optimization>O2</Optimization>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GL|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;VL_DISABLE_AVX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;VL_DISABLE_AVX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+      <Optimization>O2</Optimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+    <CudaCompile>
+      <Optimization>O2</Optimization>
+      <FastMath>true</FastMath>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/lib/VLFeat/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/lib/VLFeat/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/lib/VLFeat/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='GL|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/lib/VLFeat/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/lib/VLFeat/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GL|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/lib/VLFeat/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\aib.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\aib.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\array.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\array.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\covdet.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\covdet.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\dsift.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\dsift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\fisher.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\fisher.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\float.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\generic.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\generic.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\getopt_long.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\getopt_long.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\gmm.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\gmm.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\heap-def.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hikmeans.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hikmeans.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hog.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hog.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\homkermap.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\homkermap.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\host.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\host.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans.h" />
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_elkan.tc">
+    </None>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_init.tc">
+    </None>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_lloyd.tc">
+    </None>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kdtree.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kdtree.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kmeans.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kmeans.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\lbp.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\lbp.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\liop.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\liop.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mser.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mser.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\pgm.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\pgm.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\qsort-def.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\quickshift.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\quickshift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\random.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\random.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\rodrigues.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\rodrigues.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\scalespace.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\scalespace.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\shuffle-def.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\sift.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\sift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\slic.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\slic.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\stringop.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\stringop.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svm.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svm.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svmdataset.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svmdataset.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\vlad.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\vlad.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv_sse2.c">
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);__SSE2__</PreprocessorDefinitions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</ScanSourceforModuleDependencies>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);__SSE2__</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='GL|x64'">%(PreprocessorDefinitions);__SSE2__</PreprocessorDefinitions>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv_sse2.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_sse2.c">
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);__SSE2__</PreprocessorDefinitions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</ScanSourceforModuleDependencies>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);__SSE2__</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='GL|x64'">%(PreprocessorDefinitions);__SSE2__</PreprocessorDefinitions>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_sse2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\ZERO_CHECK.vcxproj">
+      <Project>{34E2AA31-3682-39D5-8A1D-13B9B76EBDEF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.targets" />
+  </ImportGroup>
+</Project>

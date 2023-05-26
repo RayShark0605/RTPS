@@ -1,0 +1,35 @@
+﻿  Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/lib/VLFeat/CMakeLists.txt
+  aib.c
+  array.c
+  covdet.c
+  dsift.c
+  fisher.c
+  generic.c
+  getopt_long.c
+  gmm.c
+  hikmeans.c
+  hog.c
+  homkermap.c
+  host.c
+  ikmeans.c
+  imopv.c
+  kdtree.c
+  kmeans.c
+  lbp.c
+  liop.c
+  mathop.c
+  mser.c
+  pgm.c
+  quickshift.c
+  random.c
+  rodrigues.c
+  scalespace.c
+  sift.c
+  slic.c
+  stringop.c
+  svm.c
+  svmdataset.c
+  vlad.c
+  imopv_sse2.c
+  mathop_sse2.c
+  vlfeat.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\Debug\vlfeat.lib

@@ -1,0 +1,10 @@
+﻿  sift.cc
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(128,32): warning C4267: “=”: 从“size_t”转换到“colmap::point2D_t”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(138,32): warning C4267: “=”: 从“size_t”转换到“colmap::point2D_t”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(336,32): warning C4267: “=”: 从“size_t”转换到“colmap::point2D_t”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(346,32): warning C4267: “=”: 从“size_t”转换到“colmap::point2D_t”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(545,3): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(546,41): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(547,62): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc(842,76): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+  colmap.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\GL\colmap.lib

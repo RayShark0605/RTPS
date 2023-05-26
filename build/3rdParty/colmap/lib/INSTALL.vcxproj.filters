@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\build\CMakeFiles\411641e0d3424ef0ebb316b3eb430c78\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{773FA6A7-6A33-34D4-976B-D9AB9CB151F7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Factor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MarchingCubes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PlyFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PoissonRecon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SurfaceTrimmer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Array.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BSplineData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BSplineData.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BinaryNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Factor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\FunctionData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\FunctionData.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MAT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MAT.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MarchingCubes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MemoryUsage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.Evaluation.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.IsoSurface.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.SortedTreeNodes.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.System.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.WeightedSamples.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MyTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Octree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Octree.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PPolynomial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PPolynomial.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Ply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PointStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PointStream.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PoissonRecon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Polynomial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Polynomial.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SparseMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SparseMatrix.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SurfaceTrimmer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{71CE4A3D-AE71-3DEE-8F91-29ED86293900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2B598E77-A3EC-372A-A8F8-5C6C2C5FA3FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

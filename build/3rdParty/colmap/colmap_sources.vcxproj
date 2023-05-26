@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{53767546-84C7-313B-AE2E-069F0047E549}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>colmap_sources</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">colmap_sources.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">colmap_sources</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">colmap_sources.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">colmap_sources</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;_FORCE_INLINES;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;CMAKE_INTDIR="Debug"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-gpu-targets -std=c++14 --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;_FORCE_INLINES;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;CMAKE_INTDIR="Release"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-gpu-targets -std=c++14 --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\colmap_sources_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCUDAInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibConfig.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisConfig.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config-version.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfigVersion.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeHelper.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeUninstall.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindEigen3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFLANN.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFreeImage.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlew.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindLZ4.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindMetis.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindSQLite3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\GenerateVersionDefinitions.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h.in;D:\RTPS\RTPSv0.5\build\CMakeFiles\3.26.3\CMakeCUDACompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCUDAInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibConfig.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisConfig.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config-version.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfigVersion.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeHelper.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeUninstall.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindEigen3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFLANN.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFreeImage.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlew.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindLZ4.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindMetis.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindSQLite3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\GenerateVersionDefinitions.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h.in;D:\RTPS\RTPSv0.5\build\CMakeFiles\3.26.3\CMakeCUDACompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\lsd.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\LSD\lsd.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Allocator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Array.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Array.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BSplineData.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BSplineData.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\BinaryNode.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\CmdLineParser.inl" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Factor.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Factor.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\FunctionData.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\FunctionData.inl" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.cpp">
+      <ObjectFileName>$(IntDir)/lib/PoissonRecon/Geometry.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Geometry.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Hash.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MAT.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MAT.inl" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MarchingCubes.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MarchingCubes.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MemoryUsage.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.Evaluation.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.IsoSurface.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.SortedTreeNodes.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.System.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.WeightedSamples.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MultiGridOctreeData.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\MyTime.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Octree.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Octree.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PPolynomial.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PPolynomial.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Ply.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PlyFile.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PointStream.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PointStream.inl" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PoissonRecon.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\PoissonRecon.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Polynomial.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\Polynomial.inl" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SparseMatrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SparseMatrix.inl" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SurfaceTrimmer.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\PoissonRecon\SurfaceTrimmer.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CLTexImage.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CLTexImage.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CuTexImage.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\CuTexImage.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\FrameBufferObject.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\FrameBufferObject.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GLTexImage.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GLTexImage.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GlobalUtil.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\GlobalUtil.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\LiteWindow.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCG.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCG.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCL.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCL.h" />
+    <CudaCompile Include="..\..\..\3rdParty\colmap\lib\SiftGPU\ProgramCU.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramCU.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramGLSL.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramGLSL.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ProgramGPU.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCL.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCL.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCU.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidCU.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidGL.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\PyramidGL.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ShaderMan.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\ShaderMan.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftGPU.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftGPU.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatch.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatch.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatchCU.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftMatchCU.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftPyramid.cpp" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\SiftGPU\SiftPyramid.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\aib.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\aib.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\array.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\array.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\covdet.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\covdet.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\dsift.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\dsift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\fisher.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\fisher.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\float.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\generic.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\generic.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\getopt_long.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\getopt_long.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\gmm.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\gmm.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\heap-def.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hikmeans.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hikmeans.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hog.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\hog.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\homkermap.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\homkermap.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\host.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\host.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans.h" />
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_elkan.tc">
+    </None>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_init.tc">
+    </None>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\ikmeans_lloyd.tc">
+    </None>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv_sse2.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\imopv_sse2.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kdtree.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kdtree.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kmeans.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\kmeans.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\lbp.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\lbp.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\liop.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\liop.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_avx.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_avx.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_sse2.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mathop_sse2.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mser.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\mser.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\pgm.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\pgm.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\qsort-def.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\quickshift.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\quickshift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\random.c">
+      <ObjectFileName>$(IntDir)/lib/VLFeat/random.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\random.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\rodrigues.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\rodrigues.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\scalespace.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\scalespace.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\shuffle-def.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\sift.c">
+      <ObjectFileName>$(IntDir)/lib/VLFeat/sift.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\sift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\slic.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\slic.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\stringop.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\stringop.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svm.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svm.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svmdataset.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\svmdataset.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\vlad.c" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\lib\VLFeat\vlad.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\cost_functions.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\cost_functions_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database.cc">
+      <ObjectFileName>$(IntDir)/src/base/database.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix.cc">
+      <ObjectFileName>$(IntDir)/src/base/essential_matrix.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix_test.cc">
+      <ObjectFileName>$(IntDir)/src/base/essential_matrix_test.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix.cc">
+      <ObjectFileName>$(IntDir)/src/base/homography_matrix.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix_test.cc">
+      <ObjectFileName>$(IntDir)/src/base/homography_matrix_test.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image.cc">
+      <ObjectFileName>$(IntDir)/src/base/image.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_reader.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_reader.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose.cc">
+      <ObjectFileName>$(IntDir)/src/base/pose.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation.cc">
+      <ObjectFileName>$(IntDir)/src/base/triangulation.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\automatic_reconstruction.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\automatic_reconstruction.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\bundle_adjustment.cc">
+      <ObjectFileName>$(IntDir)/src/controllers/bundle_adjustment.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\bundle_adjustment.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\hierarchical_mapper.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\hierarchical_mapper.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\incremental_mapper.cc">
+      <ObjectFileName>$(IntDir)/src/controllers/incremental_mapper.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\incremental_mapper.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/essential_matrix.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix_coeffs.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix_poly.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix_test.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/essential_matrix_test.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\euclidean_transform.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_coeffs.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_coeffs.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/homography_matrix.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix_test.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/homography_matrix_test.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\pose.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/pose.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\pose.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\similarity_transform.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\translation_transform.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\translation_transform_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\triangulation.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/triangulation.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\triangulation.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/utils.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils_test.cc">
+      <ObjectFileName>$(IntDir)/src/estimators/utils_test.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\colmap.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\database.cc">
+      <ObjectFileName>$(IntDir)/src/exe/database.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\database.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\feature.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\feature.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\gui.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\gui.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\image.cc">
+      <ObjectFileName>$(IntDir)/src/exe/image.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\image.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\model.cc">
+      <ObjectFileName>$(IntDir)/src/exe/model.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\model.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\mvs.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\mvs.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\sfm.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\sfm.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\extraction.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\extraction.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\matching.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\matching.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc">
+      <ObjectFileName>$(IntDir)/src/feature/sift.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils.cc">
+      <ObjectFileName>$(IntDir)/src/feature/utils.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils_test.cc">
+      <ObjectFileName>$(IntDir)/src/feature/utils_test.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_flip.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_rotate.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_texture.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\cuda_transpose.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\fusion.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\fusion.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat.h" />
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\gpu_mat_prng.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_prng.h" />
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\gpu_mat_ref_image.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_ref_image.h" />
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\gpu_mat_test.cu" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\image.cc">
+      <ObjectFileName>$(IntDir)/src/mvs/image.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\image.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\mat.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\mat_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\meshing.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\meshing.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\model.cc">
+      <ObjectFileName>$(IntDir)/src/mvs/model.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\model.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.h" />
+    <CudaCompile Include="..\..\..\3rdParty\colmap\src\mvs\patch_match_cuda.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match_cuda.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\workspace.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\workspace.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment.cc">
+      <ObjectFileName>$(IntDir)/src/optim/bundle_adjustment.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\loransac.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\loransac_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\ransac.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\ransac_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sampler.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sprt.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sprt.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry.cc">
+      <ObjectFileName>$(IntDir)/src/retrieval/geometry.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file_entry.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file_entry_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_index.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\visual_index.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\visual_index_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\vote_and_verify.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\vote_and_verify.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_mapper.cc">
+      <ObjectFileName>$(IntDir)/src/sfm/incremental_mapper.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_mapper.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_triangulator.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_triangulator.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\tools\example.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\automatic_reconstruction_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\automatic_reconstruction_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\bundle_adjustment_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\bundle_adjustment_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\colormaps.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\colormaps.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\database_management_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\database_management_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\dense_reconstruction_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\dense_reconstruction_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_extraction_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_extraction_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_matching_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_matching_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\image_viewer_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\image_viewer_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\license_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\license_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\line_painter.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\line_painter.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\log_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\log_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\main_window.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\main_window.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\match_matrix_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\match_matrix_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\model_viewer_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\model_viewer_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\movie_grabber_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\movie_grabber_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\options_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\options_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_painter.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_painter.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_viewer_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_viewer_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\project_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\project_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\qt_utils.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\qt_utils.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_manager_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_manager_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_options_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_options_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_stats_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_stats_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\thread_control_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\thread_control_widget.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\triangle_painter.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\triangle_painter.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\undistortion_widget.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\undistortion_widget.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\alignment.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cache.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cache_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\camera_specs.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\camera_specs.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\endian.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\endian_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\logging.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\logging.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\matrix.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\matrix_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\option_manager.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\option_manager.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\ply.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\ply.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random.cc">
+      <ObjectFileName>$(IntDir)/src/util/random.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\sqlite3_utils.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\testing.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading_test.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer_test.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\types.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\ZERO_CHECK.vcxproj">
+      <Project>{34E2AA31-3682-39D5-8A1D-13B9B76EBDEF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.targets" />
+  </ImportGroup>
+</Project>

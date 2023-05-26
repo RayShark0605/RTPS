@@ -1,0 +1,10 @@
+^D:\RTPS\RTPSV0.5\BUILD\CMAKEFILES\F43AB0F2A8FE0B3B705393911CB37026\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/RTPS/RTPSv0.5/build/RTPS.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

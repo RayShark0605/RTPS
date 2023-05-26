@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_prng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_ref_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match_cuda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\..\..\..\3rdParty\colmap\src\mvs\gpu_mat_prng.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\3rdParty\colmap\src\mvs\gpu_mat_ref_image.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\3rdParty\colmap\src\mvs\patch_match_cuda.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{71CE4A3D-AE71-3DEE-8F91-29ED86293900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2B598E77-A3EC-372A-A8F8-5C6C2C5FA3FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

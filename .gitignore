@@ -1,0 +1,13 @@
+*.lib
+*.obj
+*.pdb
+*.ipch
+*.db
+*.VC.db
+*.ilk
+*.iobj
+*.pgd
+*.pgc
+*.exe
+*.dll
+*.ipdb

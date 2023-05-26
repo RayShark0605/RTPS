@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_reader.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\automatic_reconstruction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\bundle_adjustment.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\hierarchical_mapper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\incremental_mapper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_coeffs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\pose.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\triangulation.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\feature.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\sfm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\extraction.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\matching.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\fusion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\image.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\meshing.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\model.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\workspace.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sprt.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\vote_and_verify.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_mapper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_triangulator.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\camera_specs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\logging.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\option_manager.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\ply.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\automatic_reconstruction_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\bundle_adjustment_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\colormaps.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\database_management_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\dense_reconstruction_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_extraction_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_matching_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\image_viewer_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\license_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\line_painter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\log_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\main_window.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\match_matrix_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\model_viewer_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\movie_grabber_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\options_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_painter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_viewer_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\project_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\qt_utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_manager_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_options_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_stats_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\thread_control_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\triangle_painter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\undistortion_widget.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_autogen\UYX5XTB5RZ\qrc_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_models.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\camera_rig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\correspondence_graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\database_cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\essential_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\gps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\graph_cut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\homography_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\image_reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\point3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\polynomial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\pose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\projection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\reconstruction_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\scene_clustering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\similarity_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\track.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\triangulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\undistortion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\visibility_pyramid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\base\warp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\automatic_reconstruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\bundle_adjustment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\hierarchical_mapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\controllers\incremental_mapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\absolute_pose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\affine_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\coordinate_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\essential_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\euclidean_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\fundamental_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_absolute_pose_coeffs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\generalized_relative_pose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\homography_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\pose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\similarity_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\translation_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\triangulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\two_view_geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\estimators\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\feature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\sfm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\extraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\matching.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\sift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\feature\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\consistency_graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\depth_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\fusion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\meshing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\normal_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\workspace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\bundle_adjustment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\combination_sampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\least_absolute_deviations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\progressive_sampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\random_sampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\sprt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\optim\support_measurement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_file_entry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\inverted_index.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\visual_index.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval\vote_and_verify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_mapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\sfm\incremental_triangulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\alignment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\camera_specs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\opengl_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\option_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\ply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\sqlite3_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\threading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\testing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\automatic_reconstruction_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\bundle_adjustment_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\colormaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\database_management_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\dense_reconstruction_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_extraction_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\feature_matching_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\image_viewer_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\license_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\line_painter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\log_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\main_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\match_matrix_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\model_viewer_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\movie_grabber_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\options_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_painter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\point_viewer_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\project_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\qt_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_manager_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_options_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\reconstruction_stats_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\render_options_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\thread_control_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\triangle_painter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\undistortion_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\build\CMakeFiles\cad58ad2e6f76b6d7ffd84749c14747b\qrc_resources.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\resources.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{773FA6A7-6A33-34D4-976B-D9AB9CB151F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{71CE4A3D-AE71-3DEE-8F91-29ED86293900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2B598E77-A3EC-372A-A8F8-5C6C2C5FA3FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

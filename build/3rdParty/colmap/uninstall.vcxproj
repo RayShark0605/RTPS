@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GL|x64">
+      <Configuration>GL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8EA822DB-748D-30F5-B426-5F3010B71C6F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>uninstall</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GL|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='GL|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GL|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\build\CMakeFiles\b43e1c12da5040f09d8b46dbb2d6c254\uninstall.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeUninstall.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\uninstall</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='GL|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeUninstall.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GL|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeUninstall.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\uninstall</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\uninstall</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCUDAInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibConfig.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisConfig.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config-version.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfigVersion.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeHelper.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeUninstall.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindEigen3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFLANN.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFreeImage.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlew.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindLZ4.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindMetis.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindSQLite3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\GenerateVersionDefinitions.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h.in;D:\RTPS\RTPSv0.5\build\CMakeFiles\3.26.3\CMakeCUDACompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='GL|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GL|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCUDAInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibConfig.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisConfig.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config-version.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfigVersion.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeHelper.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeUninstall.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindEigen3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFLANN.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFreeImage.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlew.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindLZ4.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindMetis.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindSQLite3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\GenerateVersionDefinitions.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h.in;D:\RTPS\RTPSv0.5\build\CMakeFiles\3.26.3\CMakeCUDACompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCUDAInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfig.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\ceres\CeresTargets.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5Config.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5\Qt5ModuleLocation.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJp2Plugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QPdfPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5OpenGL\Qt5OpenGLConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\vcpkg\installed\x64-windows\share\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibConfig.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\gklib\GKlibTargets.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-config.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\glog\glog-targets.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisConfig.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-debug.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets-release.cmake;C:\vcpkg\installed\x64-windows\share\metis\metisTargets.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config-version.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-config.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\suitesparse\suitesparse-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeConfigVersion.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeHelper.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\CMakeUninstall.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindEigen3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFLANN.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindFreeImage.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlew.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindLZ4.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindMetis.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\FindSQLite3.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\cmake\GenerateVersionDefinitions.cmake;D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\version.h.in;D:\RTPS\RTPSv0.5\build\CMakeFiles\3.26.3\CMakeCUDACompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\CMakeFiles\uninstall">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\ZERO_CHECK.vcxproj">
+      <Project>{34E2AA31-3682-39D5-8A1D-13B9B76EBDEF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.targets" />
+  </ImportGroup>
+</Project>

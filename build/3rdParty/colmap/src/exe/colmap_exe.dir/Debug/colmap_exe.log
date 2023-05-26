@@ -1,0 +1,65 @@
+﻿  Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/src/exe/CMakeLists.txt
+  colmap.cc
+  database.cc
+  feature.cc
+  gui.cc
+  image.cc
+  model.cc
+  mvs.cc
+  sfm.cc
+  vocab_tree.cc
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\model.cc(942,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(526,1): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(512,63): message : 在编译 类 模板 成员函数“void colmap::retrieval::VisualIndex<uint8_t,128,64>::Build(const colmap::retrieval::VisualIndex<uint8_t,128,64>::BuildOptions &,const Eigen::Matrix<kDescType,-1,128,1,-1,128> &)”时
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc(145,21): message : 查看对正在编译的函数 模板 实例化“void colmap::retrieval::VisualIndex<uint8_t,128,64>::Build(const colmap::retrieval::VisualIndex<uint8_t,128,64>::BuildOptions &,const Eigen::Matrix<kDescType,-1,128,1,-1,128> &)”的引用
+          with
+          [
+              kDescType=uint8_t
+          ]
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc(123,42): message : 查看对正在编译的 类 模板 实例化“colmap::retrieval::VisualIndex<uint8_t,128,64>”的引用
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(568,17): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(540,30): message : 在编译 类 模板 成员函数“void colmap::retrieval::VisualIndex<uint8_t,128,64>::Read(const std::string &)”时 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc(179,20): message : 查看对正在编译的函数 模板 实例化“void colmap::retrieval::VisualIndex<uint8_t,128,64>::Read(const std::string &)”的引用
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(608,18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(591,30): message : 在编译 类 模板 成员函数“void colmap::retrieval::VisualIndex<uint8_t,128,64>::Write(const std::string &)”时 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc(150,21): message : 查看对正在编译的函数 模板 实例化“void colmap::retrieval::VisualIndex<uint8_t,128,64>::Write(const std::string &)”的引用
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/inverted_index.h(407,1): warning C4267: “初始化”: 从“size_t”转换到“int32_t”，可能丢失数据 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/inverted_index.h(386,31): message : 在编译 类 模板 成员函数“void colmap::retrieval::InvertedIndex<kDescType,128,64>::Write(std::ofstream *) const”时
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(619,26): message : 查看对正在编译的函数 模板 实例化“void colmap::retrieval::InvertedIndex<kDescType,128,64>::Write(std::ofstream *) const”的引用
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(191,5): message : 在编译 类 模板 成员函数“colmap::retrieval::VisualIndex<uint8_t,128,64>::VisualIndex(void)”时 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc(136,28): message : 查看对正在编译的函数 模板 实例化“colmap::retrieval::VisualIndex<uint8_t,128,64>::VisualIndex(void)”的引用
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/inverted_index.h(407,1): warning C4267: “初始化”: 从“size_t”转换到“const int32_t”，可能丢失数据 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/inverted_index.h(423,1): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/inverted_index.h(418,78): message : 在编译 类 模板 成员函数“void colmap::retrieval::InvertedIndex<kDescType,128,64>::ComputeWeightsAndNormalizationConstants(void)”时
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/inverted_index.h(171,42): message : 查看对正在编译的函数 模板 实例化“void colmap::retrieval::InvertedIndex<kDescType,128,64>::ComputeWeightsAndNormalizationConstants(void)”的引用
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(670,77): message : 在编译 类 模板 成员函数“void colmap::retrieval::VisualIndex<uint8_t,128,64>::QueryAndFindWordIds(const colmap::retrieval::VisualIndex<uint8_t,128,64>::QueryOptions &,const Eigen::Matrix<kDescType,-1,128,1,-1,128> &,std::vector<colmap::retrieval::ImageScore,std::allocator<colmap::retrieval::ImageScore>> *,Eigen::MatrixXi *) const”时
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\retrieval/visual_index.h(265,22): message : 查看对正在编译的函数 模板 实例化“void colmap::retrieval::VisualIndex<uint8_t,128,64>::QueryAndFindWordIds(const colmap::retrieval::VisualIndex<uint8_t,128,64>::QueryOptions &,const Eigen::Matrix<kDescType,-1,128,1,-1,128> &,std::vector<colmap::retrieval::ImageScore,std::allocator<colmap::retrieval::ImageScore>> *,Eigen::MatrixXi *) const”的引用
+          with
+          [
+              kDescType=uint8_t
+          ] (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\exe\vocab_tree.cc)
+  colmap_exe.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\exe\Debug\colmap.exe

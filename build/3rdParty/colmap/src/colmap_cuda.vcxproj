@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GL|x64">
+      <Configuration>GL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6392FB30-5A85-348B-988C-F21B13CB0C33}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>colmap_cuda</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GL|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>PGOptimize</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">colmap_cuda.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">colmap_cuda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\GL\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">colmap_cuda.dir\Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='GL|x64'">colmap_cuda.dir\GL\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">colmap_cuda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='GL|x64'">colmap_cuda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='GL|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtOpenGL" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.7/include" /external:I "C:/vcpkg/installed/x64-windows/include/GKlib" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;_FORCE_INLINES;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Debug"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-gpu-targets --default-stream per-thread -Xptxas=-suppress-stack-size-warning -std=c++14 --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CodeGeneration>
+      </CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <FastMath>true</FastMath>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Debug;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtOpenGL" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.7/include" /external:I "C:/vcpkg/installed/x64-windows/include/GKlib" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <SupportJustMyCode>true</SupportJustMyCode>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;_FORCE_INLINES;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Release"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-gpu-targets --default-stream per-thread -Xptxas=-suppress-stack-size-warning -std=c++14 --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CodeGeneration>
+      </CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <FastMath>true</FastMath>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+      <Optimization>O2</Optimization>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GL|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtOpenGL" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.7/include" /external:I "C:/vcpkg/installed/x64-windows/include/GKlib" /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;_FORCE_INLINES;NDEBUG;GLOG_NO_ABBREVIATED_SEVERITIES;GL_GLEXT_PROTOTYPES;OPENMP_ENABLED;CUDA_ENABLED;GUI_ENABLED;OPENGL_ENABLED;_MWAITXINTRIN_H_INCLUDED;WIN32_LEAN_AND_MEAN;GLOG_CUSTOM_PREFIX_SUPPORT;QT_CORE_LIB;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Release"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-gpu-targets --default-stream per-thread -Xptxas=-suppress-stack-size-warning -std=c++14 --generate-code=arch=compute_86,code=[compute_86,sm_86] -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CodeGeneration>
+      </CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <FastMath>true</FastMath>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+      <Warning>W3</Warning>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\colmap_cuda_autogen\include_Release;D:\RTPS\RTPSv0.5\3rdParty\colmap\lib;D:\RTPS\RTPSv0.5\3rdParty\colmap\src;C:\vcpkg\installed\x64-windows\include\glog;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtOpenGL;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\installed\x64-windows\include\GKlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+      <Optimization>O2</Optimization>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\resources.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='GL|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GL|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5 -BD:/RTPS/RTPSv0.5/build --check-stamp-file D:/RTPS/RTPSv0.5/build/3rdParty/colmap/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\resources.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\3rdParty\colmap\src\ui\resources.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GL|x64'">D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='GL|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_prng.h" />
+    <CudaCompile Include="..\..\..\..\3rdParty\colmap\src\mvs\gpu_mat_prng.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\gpu_mat_ref_image.h" />
+    <CudaCompile Include="..\..\..\..\3rdParty\colmap\src\mvs\gpu_mat_ref_image.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match_cuda.h" />
+    <CudaCompile Include="..\..\..\..\3rdParty\colmap\src\mvs\patch_match_cuda.cu" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cuda.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.h" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\cudacc.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\ZERO_CHECK.vcxproj">
+      <Project>{34E2AA31-3682-39D5-8A1D-13B9B76EBDEF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\LSD\lsd.vcxproj">
+      <Project>{41597BE5-3429-3D2D-8B8B-D1B7CCD83D42}</Project>
+      <Name>lsd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\PoissonRecon\poisson_recon.vcxproj">
+      <Project>{19634EC3-09FB-3174-A8E6-AD1C6ED1C3C0}</Project>
+      <Name>poisson_recon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\SiftGPU\sift_gpu.vcxproj">
+      <Project>{B22079F3-1874-3E10-A867-AE96E1867C09}</Project>
+      <Name>sift_gpu</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\VLFeat\vlfeat.vcxproj">
+      <Project>{E3195C43-0E7F-38FB-AB91-14B9C953007C}</Project>
+      <Name>vlfeat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.7.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,9 @@
+﻿  Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/colmap/lib/PoissonRecon/CMakeLists.txt
+  CmdLineParser.cpp
+  Factor.cpp
+  Geometry.cpp
+  MarchingCubes.cpp
+  PlyFile.cpp
+  PoissonRecon.cpp
+  SurfaceTrimmer.cpp
+  poisson_recon.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\PoissonRecon\Debug\poisson_recon.lib
