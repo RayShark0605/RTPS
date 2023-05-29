@@ -16,6 +16,7 @@ import NetVlad
 import h5py
 from treelib import Tree
 
+
 file_path = "DebugData.txt"
 
 def ParseVocTree(VocTreePath):
