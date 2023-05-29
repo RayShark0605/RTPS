@@ -114,7 +114,7 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 		TwoViewGeometry Geometries;
 		Geometries.inlier_matches.resize(0);
 
-		if (UseGPU && sift_match_gpu.__matcher)
+		if (UseGPU && IsGPUAvailable() && sift_match_gpu.__matcher)
 		{
 			if (MatchedImageIDs.size() >= 500)
 			{
@@ -175,7 +175,6 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 		}
 #endif
 		
-		
 		CPU_TaskCount--;
 
 		if (Matches.size() > options->sift_matching->max_num_matches)
@@ -193,6 +192,20 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 				Geometries.inlier_matches.shrink_to_fit();
 			}
 			CDatabase::AddTwoViewGeometries(ImageID, MatchedImageID, Geometries, db);
+
+			Base::MatchMatrix_Mutex.lock();
+			if (ImageID > MatchedImageID)
+			{
+				Base::MatchMatrix[ImageID][MatchedImageID] = Geometries.inlier_matches.size();
+			}
+			else
+			{
+				Base::MatchMatrix[MatchedImageID][ImageID] = Geometries.inlier_matches.size();
+			}
+			Base::MatchedImages[ImageID].insert(MatchedImageID);
+			Base::MatchedImages[MatchedImageID].insert(ImageID);
+			Base::MaxMatches = max(Base::MaxMatches, Geometries.inlier_matches.size());
+			Base::MatchMatrix_Mutex.unlock();
 		}
 		//ReleaseDatabaseConnect(db);
 	}
@@ -257,7 +270,7 @@ bool CExhaustiveMatcher::Match(string ImagePath)
 			bool IsReady = true;
 			for (size_t WaitImageID : WaitImagePairs)
 			{
-				if (!CDatabase::GetImageKeypointsNum(WaitImageID, db))
+				if (!CDatabase::GetImageDescriptorsNum(WaitImageID, db))
 				{
 					IsReady = false;
 					break;
@@ -284,15 +297,234 @@ bool CExhaustiveMatcher::Match(string ImagePath)
 CRetrievalMatcher::CRetrievalMatcher(OptionManager* options)
 {
 	this->options = options;
+	MatchFunc = nullptr;
+	OutputFunc = nullptr;
+	RetrievalDatabaseNum = 0;
+	Database.resize(0);
+
+	std::thread InitializeThread(&CRetrievalMatcher::Initialize, this);
+	InitializeThread.detach();
+}
+CRetrievalMatcher::~CRetrievalMatcher()
+{
+	Uninstall();
+}
+void CRetrievalMatcher::Uninstall()
+{
+	if (MatchFunc || OutputFunc)
+	{
+		if (!PyGILState_Check())
+		{
+			state = PyGILState_Ensure();
+		}
+		Py_DECREF(MatchFunc);
+		Py_DECREF(OutputFunc);
+		PyGILState_Release(state);
+	}
 }
 bool CRetrievalMatcher::Match(string ImagePath)
 {
+	if (!MatchFunc || !OutputFunc)
+	{
+		cout << "PyTorch environment is not loaded" << endl;
+		return false;
+	}
+	string ImageName = GetFileName(ImagePath);
+	QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
+	if (!CDatabase::IsExistImage(ImageName, db))
+	{
+		cout << StringPrintf("[Feature matcher] Error! Image %s does not exist in the database!", ImageName);
+		ReleaseDatabaseConnect(db);
+		return false;
+	}
+	cout << StringPrintf("Start feature matching on image %s", ImageName) << endl;
+
+	QElapsedTimer Timer;
+	Timer.start();
+
+	state = PyGILState_Ensure();
+	PyObject* Arg = PyTuple_New(2);
+	PyTuple_SetItem(Arg, 0, Py_BuildValue("s", ImagePath.c_str()));
+	PyTuple_SetItem(Arg, 1, Py_BuildValue("i", *options->RetrievalTopN));
+
+	Base::GPU_Mutex.lock();
+	PyObject* RetrievalResult_Ptr = PyEval_CallObject(MatchFunc, Arg);
+	Base::GPU_Mutex.unlock();
+	Py_DECREF(Arg);
+
+	if (!RetrievalResult_Ptr)
+	{
+		cout << "Error in retrieval function execution!" << endl;
+		PyErr_Print();
+		return false;
+	}
+	Database.push_back(ImagePath);
+	size_t RetrievalResultNum = PyList_Size(RetrievalResult_Ptr);
+	vector<size_t> RetrievalResult(RetrievalResultNum);
+	for (size_t i = 0; i < RetrievalResultNum; i++)
+	{
+		PyObject* MatchedImagePath_Obj = PyList_GetItem(RetrievalResult_Ptr, i);
+		int CurrentIndex = -1;
+		PyArg_Parse(MatchedImagePath_Obj, "i", &CurrentIndex);
+		if (CurrentIndex < 0)
+		{
+			cout << "Return result error!" << endl;
+			return false;
+		}
+		RetrievalResult[i] = CurrentIndex;
+		Py_DECREF(MatchedImagePath_Obj);
+	}
+	PyGILState_Release(state);
+	size_t TimeConsuming_MS = Timer.elapsed();
+	cout << StringPrintf("[%d ms] Image %s retrieval is complete!", TimeConsuming_MS, ImageName) << endl;
+
+#ifdef OUTPUTLOG_MODE
+	string Log = StringPrintf("Retrieval results for image %s: ", ImageName);
+	for (size_t i = 0; i < RetrievalResult.size(); i++)
+	{
+		Log += GetFileName(Database[RetrievalResult[i]]);
+		if (i != RetrievalResult.size() - 1)
+		{
+			Log += ", ";
+		}
+	}
+	qDebug() << StdString2QString(Log);
+#endif
+
+	vector<size_t> MatchImagePairs, WaitImagePairs;
+	MatchImagePairs.reserve(RetrievalResult.size());
+	WaitImagePairs.reserve(RetrievalResult.size());
+
+	image_t ImageID = CDatabase::GetImageID(ImageName, db);
+	for (size_t i = 0; i < RetrievalResult.size(); i++)
+	{
+		size_t MatchedImageID = CDatabase::GetImageID(GetFileName(Database[RetrievalResult[i]]), db);
+		if (MatchedImageID == ImageID)continue;
+		if (CDatabase::GetMatchesNum(ImageID, MatchedImageID, db) > 0)
+		{
+			continue;
+		}
+		if (CDatabase::GetImageDescriptorsNum(MatchedImageID, db))
+		{
+			MatchImagePairs.push_back(MatchedImageID);
+		}
+		else
+		{
+			WaitImagePairs.push_back(MatchedImageID);
+		}
+	}
+	size_t TimeConsuming1 = 0, TimeConsuming2 = 0;
+	SiftMatch(ImageID, MatchImagePairs, TimeConsuming1);
+	if (!WaitImagePairs.empty())
+	{
+		while (true) //等待"需要等待提取特征完成, 才能开始匹配的影像对"中的影像都已被提取特征
+		{
+			bool IsReady = true;
+			for (size_t WaitImageID : WaitImagePairs)
+			{
+				if (!CDatabase::GetImageKeypointsNum(WaitImageID, db))
+				{
+					IsReady = false;
+					break;
+				}
+			}
+			if (IsReady)
+			{
+				break;
+			}
+			this_thread::sleep_for(chrono::milliseconds(200));
+		}
+		SiftMatch(ImageID, WaitImagePairs, TimeConsuming2);
+	}
+	float TotalTime = (TimeConsuming1 + TimeConsuming2) / 1000.0;
+	cout << StringPrintf("[%.2f s] Image %s matching completed, there are %d images matching it!", TotalTime, ImageName, CDatabase::ExistTwoViewGeometriesImagesNum(ImageID, db)) << endl;
+	ReleaseDatabaseConnect(db);
 	return true;
 }
 bool CRetrievalMatcher::Initialize()
 {
+	ThreadStart();
+	cout << "Initializing PyTorch environment..." << endl;
+	if (!ExistsFile(*options->PthPath) || !ExistsFile(*options->HDF5Path) || !ExistsFile(*options->CheckPointPath) || !ExistsFile(*options->PCA_ModelPath) || !ExistsFile(*options->TreeModelPath))
+	{
+		cout << "The file does not exist or the file path is incorrect!" << endl;
+		ThreadEnd();
+		return false;
+	}
+	Py_Initialize();
+	if (!Py_IsInitialized())
+	{
+		cout << "Python environment initialization failed!" << endl;
+		ThreadEnd();
+		return false;
+	}
+	if (!PyEval_ThreadsInitialized()) 
+	{
+		PyEval_InitThreads();
+	}
+	//PyEval_SaveThread();
+	if (!PyGILState_Check())
+	{
+		state = PyGILState_Ensure();
+	}
+	_import_array();
+	PyRun_SimpleString("import sys");
+	PyRun_SimpleString("sys.path.append('./')");
+
+	Base::GPU_Mutex.lock();
+	PyObject* Module = PyImport_ImportModule("Retrieval");
+	if (!Module)
+	{
+		Base::GPU_Mutex.unlock();
+		cout << "Retrieval module import failed!" << endl;
+		PyErr_Print();
+		ThreadEnd();
+		return false;
+	}
+	PyObject* RetrievalMatchClass = PyObject_GetAttrString(Module, "RetrievalMatchClass");
+	if (!RetrievalMatchClass)
+	{
+		Base::GPU_Mutex.unlock();
+		cout << "Failed to get RetrievalMatchClass class!" << endl;
+		PyErr_Print();
+		ThreadEnd();
+		return false;
+	}
+	PyObject* Arg = PyTuple_New(5);
+	PyTuple_SetItem(Arg, 0, Py_BuildValue("s", (*options->PthPath).c_str()));
+	PyTuple_SetItem(Arg, 1, Py_BuildValue("s", (*options->HDF5Path).c_str()));
+	PyTuple_SetItem(Arg, 2, Py_BuildValue("s", (*options->CheckPointPath).c_str()));
+	PyTuple_SetItem(Arg, 3, Py_BuildValue("s", (*options->PCA_ModelPath).c_str()));
+	PyTuple_SetItem(Arg, 4, Py_BuildValue("s", (*options->TreeModelPath).c_str()));
+
+	PyObject* RetrievalMatch = PyEval_CallObject(RetrievalMatchClass, Arg);
+	Py_DECREF(Arg); Py_DECREF(RetrievalMatchClass);
+	if (!RetrievalMatch)
+	{
+		Base::GPU_Mutex.unlock();
+		cout << "Instantiation failed!" << endl;
+		PyErr_Print();
+		ThreadEnd();
+		return false;
+	}
+	MatchFunc = PyObject_GetAttrString(RetrievalMatch, "Match");
+	OutputFunc = PyObject_GetAttrString(RetrievalMatch, "OutputInfo");
+	Py_DECREF(RetrievalMatch);
+	if (!MatchFunc || !OutputFunc)
+	{
+		Base::GPU_Mutex.unlock();
+		cout << "Get function failed!" << endl;
+		PyErr_Print();
+		ThreadEnd();
+		return false;
+	}
+	Base::GPU_Mutex.unlock();
+	PyGILState_Release(state);
+	cout << "The environment has been loaded!" << endl;
+	ThreadEnd();
 	return true;
 }
+
 
 
 

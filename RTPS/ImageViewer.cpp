@@ -77,9 +77,9 @@ void CImageViewer::Daemon()
 	{
 		this_thread::sleep_for(chrono::milliseconds(500));
 	}
-	size_t ImageID = CDatabase::GetImageID(ImgName, db);
 	if (!StopFlag)
 	{
+		size_t ImageID = CDatabase::GetImageID(ImgName, db);
 		FeatureKeypoints Keypoints;
 		CDatabase::GetKeypoints(ImageID, Keypoints, db);
 

@@ -1,1 +1,13 @@
-﻿  sift_gpu.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\SiftGPU\GL\sift_gpu.lib
+﻿  FrameBufferObject.cpp
+  GlobalUtil.cpp
+  GLTexImage.cpp
+  ProgramGLSL.cpp
+  PyramidGL.cpp
+  ShaderMan.cpp
+  SiftGPU.cpp
+  SiftMatch.cpp
+  SiftPyramid.cpp
+  CuTexImage.cpp
+  PyramidCU.cpp
+  SiftMatchCU.cpp
+  sift_gpu.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\lib\SiftGPU\GL\sift_gpu.lib

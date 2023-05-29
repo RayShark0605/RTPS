@@ -65,8 +65,6 @@ void CMainWindow::SenderQuit_SLOT()
 	StopReceive();
 }
 
-
-
 void CMainWindow::ShowFeatureExtractionSettingWidget()
 {
 	FeatureExtractionSettingWidget->show();
@@ -197,6 +195,10 @@ void CMainWindow::ShowModelImportWidget()
 {
 	ModelImportWidget->show();
 }
+void CMainWindow::ShowModelExportWidget()
+{
+	ModelExportWidget->show();
+}
 
 void CMainWindow::StartReceive()
 {
@@ -229,13 +231,19 @@ void CMainWindow::StartReceive()
 }
 void CMainWindow::ProcessImage(string ImagePath)
 {
+	ScaleImage(ImagePath, options->sift_extraction->max_image_size);
+	ImageListWidget->AddImage(ImagePath);
+	while (GetThreadCount() >= 8)
+	{
+		size_t SleepTime = QRandomGenerator::global()->bounded(100, 1001);
+		this_thread::sleep_for(chrono::milliseconds(SleepTime));
+	}
+
 	ThreadStart();
 	QElapsedTimer timer;
 	timer.start();
-
 	cout << StringPrintf("Start processing image %s", GetFileName(ImagePath)) << endl;
-	ScaleImage(ImagePath, options->sift_extraction->max_image_size);
-	ImageListWidget->AddImage(ImagePath);
+	
 	if (!FeatureExtractor)
 	{
 		cout << "Error! Feature extractor is nullptr!" << endl;
@@ -258,7 +266,8 @@ void CMainWindow::ProcessImage(string ImagePath)
 				ThreadEnd();
 				return;
 			}
-			Reconstructor->AddImage(ImagePath);
+			LastWaitImagePath = ImagePath;
+			WaitforReconstructImageNum++;
 		}
 	}
 	cout << StringPrintf("[%d s] All processes for Image %s have been completed!", timer.elapsed() / 1000, GetFileName(ImagePath)) << endl;
@@ -277,7 +286,14 @@ void CMainWindow::StopReceive()
 	NewProjectAction->setEnabled(true);
 	OpenProjectAction->setEnabled(true);
 }
-
+void CMainWindow::ShowRenderOptionsWidget()
+{
+	RenderOptionsWidget->show();
+}
+void CMainWindow::ShowShowMatchMatrixWidget()
+{
+	ShowMatchMatrixWidget->show();
+}
 
 void CMainWindow::UpdateWindowTitle(QString Extras)
 {
@@ -324,10 +340,18 @@ void CMainWindow::SetupWidgets()
 	connect(FeatureMatchingSettingWidget, &CFeatureMatchingSettingWidget::NewOptions_SIGNAL, this, &CMainWindow::CreateMatcher);
 	ReconstructionSettingWidget = new CReconstructionSettingWidget(this, options);
 	ReceiverSettingWidget = new CReceiverSettingWidget(this);
+	
 	ProjectSettingWidget = new CProjectSettingWidget(this, options);
 	connect(ProjectSettingWidget, &CProjectSettingWidget::LoadDirImages_SIGNAL, this, &CMainWindow::LoadDirImages_SLOT);
+	
 	ModelImportWidget = new CModelImportWidget(this);
 	connect(ModelImportWidget, SIGNAL(ModelImport_SIGNAL(int, std::vector<std::string>, std::string, bool)), this, SLOT(ImportModel(int, std::vector<std::string>, std::string, bool)));
+	
+	ModelExportWidget = new CModelExportWidget(this, ModelManager, options);
+
+	ShowMatchMatrixWidget = new CShowMatchMatrixWidget(this, options);
+
+	RenderOptionsWidget = new CRenderOptionsWidget(this, options, ModelViewer);
 }
 void CMainWindow::SetupActions()
 {
@@ -361,8 +385,7 @@ void CMainWindow::SetupActions()
 	connect(ImportModelAction, &QAction::triggered, this, &CMainWindow::ShowModelImportWidget);
 
 	ExportModelAction = new QAction(QIcon(":/media/export.png"), tr("Export Models"), this);
-	//connect(ExportModelAction, &QAction::triggered, this, &CMainWindow::ShowModelExportWidget);
-	ExportModelAction->setEnabled(false);
+	connect(ExportModelAction, &QAction::triggered, this, &CMainWindow::ShowModelExportWidget);
 
 	StartReceiveAction = new QAction(QIcon(":/media/reconstruction-start.png"), tr("Start Receive"), this);
 	connect(StartReceiveAction, &QAction::triggered, this, &CMainWindow::StartReceive);
@@ -372,10 +395,10 @@ void CMainWindow::SetupActions()
 	StopReceiveAction->setEnabled(false);
 
 	ShowRenderOptionsAction = new QAction(QIcon(":/media/reconstruction-reset.png"), tr("Show Render options"), this);
-	//connect(ShowRenderOptionsAction, &QAction::triggered, this, &CMainWindow::ShowRenderOptionsWidget);
+	connect(ShowRenderOptionsAction, &QAction::triggered, this, &CMainWindow::ShowRenderOptionsWidget);
 
 	ShowMatchMatrixAction = new QAction(QIcon(":/media/match-matrix.png"), tr("Show Match Matrix"), this);
-	//connect(ShowMatchMatrixAction, &QAction::triggered, this, &CMainWindow::ShowMatchMatrixWidget);
+	connect(ShowMatchMatrixAction, &QAction::triggered, this, &CMainWindow::ShowShowMatchMatrixWidget);
 
 	RenderModelAction = new QAction(this);
 	connect(RenderModelAction, &QAction::triggered, this, &CMainWindow::RenderModel_SLOT);
@@ -463,6 +486,9 @@ void CMainWindow::CreateStatusbar()
 	ModelViewer->statusbar_status_label->setFont(Font);
 	ModelViewer->statusbar_status_label->setAlignment(Qt::AlignCenter);
 	statusBar()->addWidget(ModelViewer->statusbar_status_label, 1);
+
+	connect(&UpdateStatusBar_Timer, &QTimer::timeout, this, &CMainWindow::UpdateStatusBar);
+	UpdateStatusBar_Timer.start(500);
 }
 void CMainWindow::CreateExtractor()
 {
@@ -476,6 +502,10 @@ void CMainWindow::CreateMatcher()
 {
 	if (FeatureMatcher)
 	{
+		if(dynamic_cast<CRetrievalMatcher*>(FeatureMatcher))
+		{
+			dynamic_cast<CRetrievalMatcher*>(FeatureMatcher)->Uninstall();
+		}
 		delete FeatureMatcher;
 	}
 	CFeatureMatchMethod MatchMethod = *options->FeatureMatchMethod;
@@ -488,9 +518,36 @@ void CMainWindow::CreateMatcher()
 		FeatureMatcher = new CRetrievalMatcher(options);
 	}
 }
+void CMainWindow::UpdateStatusBar()
+{
+	double TotalGB, UsedGB, FreeGB;
+	GetMemoryUsage(TotalGB, UsedGB, FreeGB);
+	QString MemoryUsage = QString("Memory: %1GB / %2GB. ").arg(UsedGB, 0, 'f', 1).arg(TotalGB, 0, 'f', 1);
+	GetGPUMemUsage(TotalGB, UsedGB, FreeGB);
+	QString GPUMemUsage = QString("GPU Memory: %1GB / %2GB. ").arg(UsedGB, 0, 'f', 1).arg(TotalGB, 0, 'f', 1);
+	QString Info = MemoryUsage + GPUMemUsage + tr("Number of threads: ") + QString::number(GetThreadCount()) + "  ";
+	StatusLabel->setText(Info);
+}
 
+void CMainWindow::DetectReconstruct()
+{
+	ThreadStart();
+	while (IsContinueReconstruct)
+	{
+		this_thread::sleep_for(chrono::milliseconds(1000));
+		if (WaitforReconstructImageNum.load() == 0 || !Reconstructor)continue;
+		if (WaitforReconstructImageNum.load() >= 3 || CReconstructor::LastReconstructTimeConsuming <= 5)
+		{
+			WaitforReconstructImageNum.store(0);
+			Reconstructor->Reconstruct(LastWaitImagePath);
+			AutoSaveModels();
+		}
+	}
+	ThreadEnd();
+}
 void CMainWindow::RenderModel_SLOT()
 {
+	ModelSelectWidget->Update();
 	std::thread RenderThread(&CMainWindow::GetRenderModel, this);
 	RenderThread.detach();
 
@@ -517,6 +574,7 @@ void CMainWindow::RenderModel_SLOT()
 }
 void CMainWindow::GetRenderModel()
 {
+	DebugTimer timer(__FUNCTION__);
 	if (IsRenderNow)return;
 	IsRenderNow = true;
 	if (!ModelManager || !Reconstructor)
@@ -524,7 +582,6 @@ void CMainWindow::GetRenderModel()
 		IsRenderNow = false;
 		return;
 	}
-
 	if (ModelManager->Size() == 0)
 	{
 		emit ClearRenderModel_SIGNAL();
@@ -539,12 +596,17 @@ void CMainWindow::GetRenderModel()
 	}
 	Reconstruction* Model = new Reconstruction();
 	ModelManager->Get(SelectedModelID).ConvertToReconstruction(*Model);
+	if (ModelToRender)
+	{
+		delete ModelToRender;
+	}
 	ModelToRender = Model;
 	emit RenderNow_SIGNAL();
 	IsRenderNow = false;
 }
 void CMainWindow::RenderModel()
 {
+	DebugTimer timer(__FUNCTION__);
 	if (!ModelToRender)return;
 	ModelViewer->reconstruction = ModelToRender;
 	ModelViewer->ReloadReconstruction();
@@ -553,6 +615,7 @@ void CMainWindow::ClearRenderModel()
 {
 	ModelViewer->ClearReconstruction();
 }
+
 void CMainWindow::CreateReconstructor()
 {
 	if (!ModelManager)return;
@@ -579,9 +642,48 @@ void CMainWindow::CreateReconstructor()
 	{
 		RenderModelAction->trigger();
 	});
-	
-}
 
+	IsContinueReconstruct = true;
+	WaitforReconstructImageNum = 0;
+
+	std::thread ReconstructThread(&CMainWindow::DetectReconstruct, this);
+	ReconstructThread.detach();
+}
+void CMainWindow::AutoSaveModels()
+{
+	cout << "Model is being saved automatically..." << endl;
+	QString DirectoryDir = StdString2QString(GetFileDir(*options->database_path)) + "/AutoSaveModels";
+	QDir dir(DirectoryDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(DirectoryDir);
+	}
+	DirectoryDir = dir.fromNativeSeparators(DirectoryDir);
+	dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
+	QStringList FolderList = dir.entryList();
+	for (int i = 0; i < FolderList.size() - 10 + 1; i++)
+	{
+		DeleteDir(DirectoryDir + "/" + FolderList[i]);
+	}
+	QString NewPath = DirectoryDir + "/" + QDateTime::currentDateTime().toString("MM-dd HH-mm-ss");
+	dir = QDir(NewPath);
+	if (!dir.exists())
+	{
+		dir.mkdir(NewPath);
+	}
+	for (int i = 0; i < ModelManager->Size(); i++)
+	{
+		QString SubModelDir = NewPath + "/" + QString::number(i + 1);
+		dir = QDir(SubModelDir);
+		if (!dir.exists())
+		{
+			dir.mkdir(SubModelDir);
+		}
+		string ProjectPath = JoinPaths(QString2StdString(SubModelDir), "project.ini");
+		ModelManager->Get(i).WriteBinary(QString2StdString(SubModelDir));
+		options->Write(ProjectPath);
+	}
+}
 
 
 

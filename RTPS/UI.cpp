@@ -1258,6 +1258,259 @@ void CModelImportWidget::closeEvent(QCloseEvent* event)
 	close();
 }
 
+CModelExportWidget::CModelExportWidget(QWidget* parent, CModelManager* ModelManager, OptionManager* options) :QWidget(parent)
+{
+	this->parent = parent;
+	this->ModelManager = ModelManager;
+	this->options = options;
+
+	setWindowFlags(Qt::Window);
+	setWindowModality(Qt::ApplicationModal);
+	this->setWindowIcon(QIcon(":/media/export.png"));
+	setWindowTitle(tr("Export Model"));
+
+	QVBoxLayout* Layout = new QVBoxLayout(this);
+	QGroupBox* ExportType_Groupbox = new QGroupBox(tr("Select one or more export formats"), this);
+	QGridLayout* GroupboxLayout = new QGridLayout();
+	Folder_Checkbox = new QCheckBox(tr("Directory (*.bin, *.ini)"), this);
+	Text_Checkbox = new QCheckBox(tr("Text (*.txt, *.ini)"), this);
+	VRML_Checkbox = new QCheckBox(tr("VRML (*.wrl)"), this);
+	NVM_Checkbox = new QCheckBox(tr("NVM (*.nvm)"), this);
+	Bundler_Checkbox = new QCheckBox(tr("Bundler (*.out)"), this);
+	Ply_Checkbox = new QCheckBox(tr("PLY (*.ply)"), this);
+	GroupboxLayout->addWidget(Folder_Checkbox, 0, 0);
+	GroupboxLayout->addWidget(Text_Checkbox, 0, 1);
+	GroupboxLayout->addWidget(VRML_Checkbox, 0, 2);
+	GroupboxLayout->addWidget(NVM_Checkbox, 1, 0);
+	GroupboxLayout->addWidget(Bundler_Checkbox, 1, 1);
+	GroupboxLayout->addWidget(Ply_Checkbox, 1, 2);
+	ExportType_Groupbox->setLayout(GroupboxLayout);
+	Layout->addWidget(ExportType_Groupbox);
+
+	ModelTable = new QTableWidget(0, 4, this);
+	Layout->addWidget(ModelTable);
+
+	QGridLayout* SelectFolderLayout = new QGridLayout(this);
+	SelectFolderLayout->addWidget(new QLabel(tr("Save path:"), this), 0, 0);
+	SavePath_LineEdit = new QLineEdit(this);
+	SavePath_LineEdit->setReadOnly(true);
+	SelectFolderLayout->addWidget(SavePath_LineEdit, 0, 1);
+	SelectSavePath_Button = new QPushButton(tr("Select"), this);
+	connect(SelectSavePath_Button, &QPushButton::released, this, &CModelExportWidget::SelectSavePath);
+	SelectFolderLayout->addWidget(SelectSavePath_Button, 0, 2);
+	Layout->addLayout(SelectFolderLayout);
+
+	Export_Button = new QPushButton(tr("Export"), this);
+	connect(Export_Button, &QPushButton::released, this, &CModelExportWidget::Export);
+	Layout->addWidget(Export_Button);
+	this->setFixedWidth(Size(500, true));
+}
+void CModelExportWidget::showEvent(QShowEvent* event)
+{
+	ModelTable->clear();
+	ModelTable->setRowCount(0);
+	ModelTable->setColumnCount(0);
+	QStringList TableHeader({ tr("Model ID"),tr("Registered images num"),tr("Model points num"), tr("Cameras num") });
+	ModelTable->setSortingEnabled(false);
+	ModelTable->setHorizontalHeaderLabels(TableHeader);
+	ModelTable->setShowGrid(true);
+	ModelTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+	ModelTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	ModelTable->horizontalHeader()->setStretchLastSection(true);
+	ModelTable->verticalHeader()->setVisible(false);
+	ModelTable->verticalHeader()->setDefaultSectionSize(15);
+	ModelTable->clearContents();
+	size_t ModelNum = ModelManager->Size();
+	for (size_t i = 0; i < ModelNum; i++)
+	{
+		QTableWidgetItem* item1 = new QTableWidgetItem;
+		item1->setData(Qt::DisplayRole, i + 1);
+		item1->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+		ModelTable->setItem(i, 0, item1);
+
+		QTableWidgetItem* item2 = new QTableWidgetItem;
+		item2->setData(Qt::DisplayRole, ModelManager->Get(i).GetModelRegImagesNum());
+		item2->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+		ModelTable->setItem(i, 1, item2);
+
+		QTableWidgetItem* item3 = new QTableWidgetItem;
+		item3->setData(Qt::DisplayRole, ModelManager->Get(i).GetModelPoints3DNum());
+		item3->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+		ModelTable->setItem(i, 2, item3);
+
+		QTableWidgetItem* item4 = new QTableWidgetItem;
+		item4->setData(Qt::DisplayRole, ModelManager->Get(i).GetModelCamerasNum());
+		item4->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+		ModelTable->setItem(i, 3, item4);
+	}
+	ModelTable->setSortingEnabled(true);
+	ModelTable->sortItems(0);
+	ModelTable->selectAll();
+}
+vector<size_t> CModelExportWidget::GetAllSelectedRow()
+{
+	QItemSelectionModel* selections = ModelTable->selectionModel();
+	QModelIndexList selected = selections->selectedIndexes();
+	vector<size_t> re(selected.count());
+	for (size_t i = 0; i < selected.count(); i++)
+	{
+		re[i] = selected.at(i).row();
+	}
+	sort(re.begin(), re.end());
+	re.erase(unique(re.begin(), re.end()), re.end());
+	return re;
+}
+void CModelExportWidget::ExportFolder(int ModelID)
+{
+	QString DirectoryDir = StdString2QString(SavePath) + "/directory";
+	QDir dir(DirectoryDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(DirectoryDir);
+	}
+	QString SubModelDir = DirectoryDir + "/" + QString::number(ModelID);
+	dir = QDir(SubModelDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(SubModelDir);
+	}
+	string ProjectPath = JoinPaths(QString2StdString(SubModelDir), "project.ini");
+	ModelManager->Get(ModelID - 1).WriteBinary(QString2StdString(SubModelDir));
+	options->Write(ProjectPath);
+}
+void CModelExportWidget::ExportText(int ModelID)
+{
+	QString TextDir = StdString2QString(SavePath) + "/text";
+	QDir dir(TextDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(TextDir);
+	}
+	QString SubModelDir = TextDir + "/" + QString::number(ModelID);
+	dir = QDir(SubModelDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(SubModelDir);
+	}
+	string ProjectPath = JoinPaths(QString2StdString(SubModelDir), "project.ini");
+	ModelManager->Get(ModelID - 1).WriteText(QString2StdString(SubModelDir));
+	options->Write(ProjectPath);
+}
+void CModelExportWidget::ExportVRML(int ModelID)
+{
+	QString VRMLDir = StdString2QString(SavePath) + "/VRML";
+	QDir dir(VRMLDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(VRMLDir);
+	}
+	QString SubModelDir = VRMLDir + "/" + QString::number(ModelID);
+	dir = QDir(SubModelDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(SubModelDir);
+	}
+	ModelManager->Get(ModelID - 1).WriteVRML(QString2StdString(SubModelDir + "/images.wrl"), QString2StdString(SubModelDir + "/points3D.wrl"), 1, Eigen::Vector3d(1, 0, 0));
+}
+void CModelExportWidget::ExportNVM(int ModelID)
+{
+	QString NVMDir = StdString2QString(SavePath) + "/NVM";
+	QDir dir(NVMDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(NVMDir);
+	}
+	string FilePath = QString2StdString(NVMDir + "/" + QString::number(ModelID) + ".nvm");
+	ModelManager->Get(ModelID - 1).WriteNVM(FilePath);
+}
+void CModelExportWidget::ExportBundler(int ModelID)
+{
+	QString BundlerDir = StdString2QString(SavePath) + "/Bundler";
+	QDir dir(BundlerDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(BundlerDir);
+	}
+	QString SubModelDir = BundlerDir + "/" + QString::number(ModelID);
+	dir = QDir(SubModelDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(SubModelDir);
+	}
+	ModelManager->Get(ModelID - 1).WriteBundler(QString2StdString(SubModelDir + "/" + QString::number(ModelID) + ".out"), QString2StdString(SubModelDir + "/list.txt"));
+}
+void CModelExportWidget::ExportPLY(int ModelID)
+{
+	QString PLYDir = StdString2QString(SavePath) + "/PLY";
+	QDir dir(PLYDir);
+	if (!dir.exists())
+	{
+		dir.mkdir(PLYDir);
+	}
+	string FilePath = QString2StdString(PLYDir + "/" + QString::number(ModelID) + ".ply");
+	ModelManager->Get(ModelID - 1).WritePLY(FilePath);
+}
+void CModelExportWidget::SelectSavePath()
+{
+	string ExportPath = QString2StdString(QFileDialog::getExistingDirectory(this, tr("Select the model save path..."), "", QFileDialog::ShowDirsOnly));
+	if (ExportPath == "")
+	{
+		SavePath_LineEdit->setText("");
+		SavePath = "";
+		return;
+	}
+	SavePath_LineEdit->setText(StdString2QString(ExportPath));
+	SavePath = ExportPath;
+}
+void CModelExportWidget::Export()
+{
+	if (SavePath == "" || SavePath_LineEdit->text().isEmpty())
+	{
+		QMessageBox::critical(this, tr("Error"), tr("Invalid Path!"));
+		return;
+	}
+	if (!Folder_Checkbox->isChecked() && !Text_Checkbox->isChecked() && !VRML_Checkbox->isChecked() && !NVM_Checkbox->isChecked() && !Bundler_Checkbox->isChecked() && !Ply_Checkbox->isChecked())
+	{
+		QMessageBox::critical(this, tr("Error"), tr("Choose at least one export format!"));
+		return;
+	}
+	vector<size_t> SelectedRows = GetAllSelectedRow();
+	if (SelectedRows.empty())
+	{
+		QMessageBox::critical(this, tr("Error"), tr("Choose at least one model!"));
+		return;
+	}
+	for (size_t i = 0; i < SelectedRows.size(); i++)
+	{
+		size_t ModelID = ModelTable->item(SelectedRows[i], 0)->text().toInt();
+		if (Folder_Checkbox->isChecked())
+		{
+			ExportFolder(ModelID);
+		}
+		if (Text_Checkbox->isChecked())
+		{
+			ExportText(ModelID);
+		}
+		if (VRML_Checkbox->isChecked())
+		{
+			ExportVRML(ModelID);
+		}
+		if (NVM_Checkbox->isChecked())
+		{
+			ExportNVM(ModelID);
+		}
+		if (Bundler_Checkbox->isChecked())
+		{
+			ExportBundler(ModelID);
+		}
+		if (Ply_Checkbox->isChecked())
+		{
+			ExportPLY(ModelID);
+		}
+	}
+	QMessageBox::information(this, tr("Export"), tr("Model export completed!"));
+}
+
 
 size_t CModelSelectWidget::NewstModelIndex = INT_MAX;
 CModelSelectWidget::CModelSelectWidget(QWidget* parent, CModelManager* ModelManager) :QComboBox(parent)
@@ -1266,10 +1519,19 @@ CModelSelectWidget::CModelSelectWidget(QWidget* parent, CModelManager* ModelMana
 	QFont font;
 	font.setPointSize(Size(10, true));
 	setFont(font);
+
+	connect(&UpdateTimer, &QTimer::timeout, this, &CModelSelectWidget::Update);
+	//UpdateTimer.start(1000);
 }
 void CModelSelectWidget::Update()
 {
-	if (view()->isVisible() || !ModelManager)return;
+	DebugTimer timer(__FUNCTION__);
+	ModelSelectWidget_Mutex.lock();
+	if (view()->isVisible() || !ModelManager)
+	{
+		ModelSelectWidget_Mutex.unlock();
+		return;
+	}
 	blockSignals(true);
 	size_t PreIndex = max(0, currentIndex());
 	clear();
@@ -1299,14 +1561,22 @@ void CModelSelectWidget::Update()
 		setCurrentIndex(PreIndex);
 	}
 	blockSignals(false);
+	ModelSelectWidget_Mutex.unlock();
 }
 size_t CModelSelectWidget::GetSelectedModelIndex()
 {
+	DebugTimer timer(__FUNCTION__);
 	if (!ModelManager)
 	{
 		throw "Model manager is nullptr!";
 	}
-	if (ModelManager->Size() == 0 || currentIndex() == 0)return NewstModelIndex;
+	ModelSelectWidget_Mutex.lock();
+	if (ModelManager->Size() == 0 || currentIndex() == 0)
+	{
+		ModelSelectWidget_Mutex.unlock();
+		return NewstModelIndex;
+	}
+	ModelSelectWidget_Mutex.unlock();
 	return currentIndex() - 1;
 }
 void CModelSelectWidget::SelectModel(size_t index)
@@ -1315,6 +1585,7 @@ void CModelSelectWidget::SelectModel(size_t index)
 	{
 		throw "Model manager is nullptr!";
 	}
+	ModelSelectWidget_Mutex.lock();
 	blockSignals(true);
 	if (ModelManager->Size() == 0)
 	{
@@ -1325,4 +1596,717 @@ void CModelSelectWidget::SelectModel(size_t index)
 		setCurrentIndex(index + 1);
 	}
 	blockSignals(false);
+	ModelSelectWidget_Mutex.unlock();
+}
+
+
+CRenderOptionsWidget::CRenderOptionsWidget(QWidget* parent, OptionManager* options, ModelViewerWidget* ModelViewer) :QWidget(parent)
+{
+	this->parent = parent;
+	this->options = options;
+	this->ModelViewer = ModelViewer;
+
+	BackgroundColor = Eigen::Vector4f(1.0f, 1.0f, 1.0f, 1.0f);
+	ImagePlaneColor = ImageColormapUniform::kDefaultPlaneColor;
+	ImageFrameColor = ImageColormapUniform::kDefaultFrameColor;
+	PointColormapMinQ = 0.02;
+	PointColormapMaxQ = 0.98;
+	PointColormapScale = 1;
+
+
+	setAttribute(Qt::WA_QuitOnClose, false);
+	setWindowFlags(Qt::Window);
+	setWindowTitle(tr("Render options"));
+	//setWindowFlags(Qt::WindowStaysOnTopHint);
+	QVBoxLayout* Layout = new QVBoxLayout();
+
+	QHBoxLayout* SizeLayout = new QHBoxLayout();
+	PointSizeSpinBox = new QDoubleSpinBox(this);
+	ImageSizeSpinBox = new QDoubleSpinBox(this);
+	PointSizeSpinBox->setValue(this->ModelViewer->PointSize());
+	ImageSizeSpinBox->setValue(this->ModelViewer->ImageSize());
+	connect(PointSizeSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [=](double i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				ModelViewer->SetPointSize(i);
+				ModelViewer->update();
+			}
+		});
+	connect(ImageSizeSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [=](double i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				ModelViewer->SetImageSize(i);
+				ModelViewer->update();
+			}
+		});
+	PointSizeSpinBox->setSingleStep(0.01);
+	ImageSizeSpinBox->setSingleStep(0.01);
+	PointSizeSpinBox->setFixedWidth(80);
+	ImageSizeSpinBox->setFixedWidth(80);
+	PointSizeSpinBox->setRange(0.5, 100);
+	QHBoxLayout* PointSizeLayout = new QHBoxLayout();
+	PointSizeLayout->addWidget(new QLabel(tr("Point size:"), this), 99, Qt::AlignRight);
+	PointSizeLayout->addWidget(PointSizeSpinBox);
+	QHBoxLayout* ImageSizeLayout = new QHBoxLayout();
+	ImageSizeLayout->addWidget(new QLabel(tr("Image size:"), this), 99, Qt::AlignRight);
+	ImageSizeLayout->addWidget(ImageSizeSpinBox);
+	SizeLayout->addLayout(PointSizeLayout, 0);
+	SizeLayout->addLayout(ImageSizeLayout);
+	Layout->addLayout(SizeLayout);
+	Layout->addSpacerItem(new QSpacerItem(15, 10, QSizePolicy::Expanding));
+
+	QHBoxLayout* ImageConnectAndProjectionLayout = new QHBoxLayout();
+	QHBoxLayout* ImageConnectLayout = new QHBoxLayout();
+	ImageConnectLayout->addSpacerItem(new QSpacerItem(99, 1, QSizePolicy::Expanding));
+	ImageConnectCheckBox = new QCheckBox(tr("Show image connections"), this);
+	ImageConnectCheckBox->setChecked(this->options->render->image_connections);
+	connect(ImageConnectCheckBox, &QCheckBox::stateChanged, this, &CRenderOptionsWidget::SetImageConnection);
+	ImageConnectLayout->addWidget(ImageConnectCheckBox);
+	ProjectionComboBox = new QComboBox(this);
+	ProjectionComboBox->addItem(tr("Perspective"));
+	ProjectionComboBox->addItem(tr("Orthographic"));
+	ProjectionComboBox->setFixedWidth(120);
+	ProjectionComboBox->setCurrentIndex(options->render->projection_type == RenderOptions::ProjectionType::PERSPECTIVE ? 0 : 1);
+	connect(ProjectionComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=](int index)
+		{
+			if (options && ModelViewer)
+			{
+				if (index == 0)
+				{
+					options->render->projection_type = RenderOptions::ProjectionType::PERSPECTIVE;
+					ModelViewer->ReloadReconstruction();
+				}
+				else if (index == 1)
+				{
+					options->render->projection_type = RenderOptions::ProjectionType::ORTHOGRAPHIC;
+					ModelViewer->ReloadReconstruction();
+				}
+			}
+		});
+	QHBoxLayout* ProjectionLayout = new QHBoxLayout();
+	ProjectionLayout->addWidget(new QLabel(tr("Projection:"), this), 99, Qt::AlignRight);
+	ProjectionLayout->addWidget(ProjectionComboBox);
+	//ProjectionLayout->addSpacerItem(new QSpacerItem(15, 20, QSizePolicy::Expanding));
+	ImageConnectAndProjectionLayout->addLayout(ImageConnectLayout);
+	ImageConnectAndProjectionLayout->addLayout(ProjectionLayout);
+	Layout->addLayout(ImageConnectAndProjectionLayout);
+	Layout->addSpacerItem(new QSpacerItem(15, 10, QSizePolicy::Expanding));
+
+	SelectBackgroundButton = new QPushButton(tr("Select Color"), this);
+	SelectBackgroundButton->setFixedWidth(120);
+	connect(SelectBackgroundButton, &QPushButton::released, this, &CRenderOptionsWidget::SetBackgroundColor);
+	QHBoxLayout* SelectBackgroundLayout = new QHBoxLayout();
+	SelectBackgroundLayout->addWidget(new QLabel(tr("Background color:"), this), 99, Qt::AlignRight);
+	SelectBackgroundLayout->addWidget(SelectBackgroundButton);
+	//SelectBackgroundLayout->addSpacerItem(new QSpacerItem(15, 20, QSizePolicy::Expanding));
+	Layout->addLayout(SelectBackgroundLayout);
+	Layout->addSpacerItem(new QSpacerItem(15, 10, QSizePolicy::Expanding));
+
+	MaxPointErrorSpinBox = new QDoubleSpinBox(this);
+	MaxPointErrorSpinBox->setValue(this->options->render->max_error);
+	MaxPointErrorSpinBox->setFixedWidth(120);
+	MaxPointErrorSpinBox->setSingleStep(0.01);
+	connect(MaxPointErrorSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [=](double i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				options->render->max_error = i;
+				ModelViewer->ReloadReconstruction();
+			}
+		});
+	QHBoxLayout* MaxPointErrorLayout = new QHBoxLayout();
+	MaxPointErrorLayout->addWidget(new QLabel(tr("Point max. error [px]:"), this), 99, Qt::AlignRight);
+	MaxPointErrorLayout->addWidget(MaxPointErrorSpinBox);
+	//MaxPointErrorLayout->addSpacerItem(new QSpacerItem(15, 20, QSizePolicy::Expanding));
+	Layout->addLayout(MaxPointErrorLayout);
+
+	MinTrackLenSpinBox = new QSpinBox(this);
+	MinTrackLenSpinBox->setValue(this->options->render->min_track_len);
+	MinTrackLenSpinBox->setFixedWidth(120);
+	MinTrackLenSpinBox->setSingleStep(1);
+	connect(MinTrackLenSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), [=](int i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				options->render->min_track_len = i;
+				ModelViewer->ReloadReconstruction();
+			}
+		});
+	QHBoxLayout* MinTrackLenLayout = new QHBoxLayout();
+	MinTrackLenLayout->addWidget(new QLabel(tr("Point min. track length:"), this), 99, Qt::AlignRight);
+	MinTrackLenLayout->addWidget(MinTrackLenSpinBox);
+	//MinTrackLenLayout->addSpacerItem(new QSpacerItem(15, 20, QSizePolicy::Expanding));
+	Layout->addLayout(MinTrackLenLayout);
+	Layout->addSpacerItem(new QSpacerItem(15, 10, QSizePolicy::Expanding));
+
+	PointColormapComboBox = new QComboBox(this);
+	PointColormapComboBox->addItem(tr("Photometric"));
+	PointColormapComboBox->addItem(tr("Error"));
+	PointColormapComboBox->addItem(tr("Track length"));
+	PointColormapComboBox->addItem(tr("Ground resolution"));
+
+	QHBoxLayout* PointColormapLayout = new QHBoxLayout();
+	PointColormapLayout->addWidget(new QLabel(tr("Point colormap type:"), this), 99, Qt::AlignRight);
+	PointColormapLayout->addWidget(PointColormapComboBox);
+	Layout->addLayout(PointColormapLayout);
+
+	PointColormapGroupBox = new QGroupBox(tr("Point colormap settings"), this);
+
+	PointColormapMinQSpinBox = new QDoubleSpinBox(this);
+	PointColormapMinQSpinBox->setValue(PointColormapMinQ);
+	PointColormapMinQSpinBox->setFixedWidth(120);
+	PointColormapMinQSpinBox->setSingleStep(0.001);
+	PointColormapMinQSpinBox->setRange(0, 1);
+	PointColormapMinQSpinBox->setDecimals(3);
+	connect(PointColormapMinQSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [=](double i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				PointColormapBase* ColorMap;
+				if (PointColormapComboBox->currentIndex() == 1)
+				{
+					ColorMap = new PointColormapError();
+				}
+				else if (PointColormapComboBox->currentIndex() == 2)
+				{
+					ColorMap = new PointColormapTrackLen();
+				}
+				else if (PointColormapComboBox->currentIndex() == 3)
+				{
+					ColorMap = new PointColormapGroundResolution();
+				}
+				PointColormapMinQ = i;
+				ColorMap->scale = static_cast<float>(PointColormapScale);
+				ColorMap->min_q = static_cast<float>(PointColormapMinQ);
+				ColorMap->max_q = static_cast<float>(PointColormapMaxQ);
+				ModelViewer->SetPointColormap(ColorMap);
+				ModelViewer->ReloadReconstruction();
+			}
+		});
+
+	PointColormapMaxQSpinBox = new QDoubleSpinBox(this);
+	PointColormapMaxQSpinBox->setValue(PointColormapMaxQ);
+	PointColormapMaxQSpinBox->setFixedWidth(120);
+	PointColormapMaxQSpinBox->setSingleStep(0.001);
+	PointColormapMaxQSpinBox->setDecimals(3);
+	connect(PointColormapMaxQSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [=](double i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				PointColormapBase* ColorMap;
+				if (PointColormapComboBox->currentIndex() == 1)
+				{
+					ColorMap = new PointColormapError();
+				}
+				else if (PointColormapComboBox->currentIndex() == 2)
+				{
+					ColorMap = new PointColormapTrackLen();
+				}
+				else if (PointColormapComboBox->currentIndex() == 3)
+				{
+					ColorMap = new PointColormapGroundResolution();
+				}
+				PointColormapMaxQ = i;
+				ColorMap->scale = static_cast<float>(PointColormapScale);
+				ColorMap->min_q = static_cast<float>(PointColormapMinQ);
+				ColorMap->max_q = static_cast<float>(PointColormapMaxQ);
+				ModelViewer->SetPointColormap(ColorMap);
+				ModelViewer->ReloadReconstruction();
+			}
+		});
+	PointColormapScaleSpinBox = new QDoubleSpinBox(this);
+	PointColormapScaleSpinBox->setValue(PointColormapScale);
+	PointColormapScaleSpinBox->setFixedWidth(120);
+	PointColormapScaleSpinBox->setSingleStep(0.001);
+	PointColormapScaleSpinBox->setDecimals(3);
+	connect(PointColormapScaleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [=](double i)
+		{
+			if (options && ModelViewer && this->underMouse())
+			{
+				PointColormapBase* ColorMap;
+				if (PointColormapComboBox->currentIndex() == 1)
+				{
+					ColorMap = new PointColormapError();
+				}
+				else if (PointColormapComboBox->currentIndex() == 2)
+				{
+					ColorMap = new PointColormapTrackLen();
+				}
+				else if (PointColormapComboBox->currentIndex() == 3)
+				{
+					ColorMap = new PointColormapGroundResolution();
+				}
+				PointColormapScale = i;
+				ColorMap->scale = static_cast<float>(PointColormapScale);
+				ColorMap->min_q = static_cast<float>(PointColormapMinQ);
+				ColorMap->max_q = static_cast<float>(PointColormapMaxQ);
+				ModelViewer->SetPointColormap(ColorMap);
+				ModelViewer->ReloadReconstruction();
+			}
+		});
+	QHBoxLayout* PointColormapMinQLayout = new QHBoxLayout();
+	PointColormapMinQLayout->addWidget(new QLabel(tr("Point colormap minq:"), this), 99, Qt::AlignRight);
+	PointColormapMinQLayout->addWidget(PointColormapMinQSpinBox);
+	QHBoxLayout* PointColormapMaxQLayout = new QHBoxLayout();
+	PointColormapMaxQLayout->addWidget(new QLabel(tr("Point colormap maxq:"), this), 99, Qt::AlignRight);
+	PointColormapMaxQLayout->addWidget(PointColormapMaxQSpinBox);
+	QHBoxLayout* PointColormapScaleQLayout = new QHBoxLayout();
+	PointColormapScaleQLayout->addWidget(new QLabel(tr("Point colormap scale:"), this), 99, Qt::AlignRight);
+	PointColormapScaleQLayout->addWidget(PointColormapScaleSpinBox);
+	QVBoxLayout* GroupBoxLayout = new QVBoxLayout();
+	GroupBoxLayout->addLayout(PointColormapMinQLayout);
+	GroupBoxLayout->addLayout(PointColormapMaxQLayout);
+	GroupBoxLayout->addLayout(PointColormapScaleQLayout);
+	PointColormapGroupBox->setLayout(GroupBoxLayout);
+	PointColormapGroupBox->setFixedHeight(110);
+	PointColormapGroupBox->setEnabled(false);
+	connect(PointColormapComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=](int index)
+		{
+			if (options && ModelViewer)
+			{
+				PointColormapBase* ColorMap;
+				if (index == 0)
+				{
+					ColorMap = new PointColormapPhotometric();
+				}
+				else if (index == 1)
+				{
+					ColorMap = new PointColormapError();
+				}
+				else if (index == 2)
+				{
+					ColorMap = new PointColormapTrackLen();
+				}
+				else if (index == 3)
+				{
+					ColorMap = new PointColormapGroundResolution();
+				}
+				ColorMap->scale = static_cast<float>(PointColormapScale);
+				ColorMap->min_q = static_cast<float>(PointColormapMinQ);
+				ColorMap->max_q = static_cast<float>(PointColormapMaxQ);
+				ModelViewer->SetPointColormap(ColorMap);
+				ModelViewer->ReloadReconstruction();
+				if (index == 0)
+				{
+					PointColormapGroupBox->setEnabled(false);
+				}
+				else
+				{
+					PointColormapGroupBox->setEnabled(true);
+				}
+			}
+		});
+	Layout->addWidget(PointColormapGroupBox);
+	Layout->addSpacerItem(new QSpacerItem(15, 10, QSizePolicy::Expanding));
+
+	ImageColormapComboBox = new QComboBox(this);
+	ImageColormapComboBox->addItem(tr("Uniform color"));
+	ImageColormapComboBox->addItem(tr("Images with words in name"));
+	QHBoxLayout* ImageColormapLayout = new QHBoxLayout();
+	ImageColormapLayout->addWidget(new QLabel(tr("Image colormap type:"), this), 99, Qt::AlignRight);
+	ImageColormapLayout->addWidget(ImageColormapComboBox);
+	Layout->addLayout(ImageColormapLayout);
+
+	ImageColormapGroupBox = new QGroupBox(tr("Image colormap settings"), this);
+	ImageColormapGroupBox->setFixedHeight(60);
+	QVBoxLayout* ImageColormapGroupBoxLayout = new QVBoxLayout();
+	UniformColorFrame = new QFrame(this);
+	QHBoxLayout* UniformColorFrameLayout = new QHBoxLayout();
+	QHBoxLayout* ImagePlaneLayout = new QHBoxLayout();
+	SelectImagePlaneButton = new QPushButton(tr("Select color"), this);
+	connect(SelectImagePlaneButton, &QPushButton::released, this, &CRenderOptionsWidget::SelectImagePlaneColor);
+	ImagePlaneLayout->addWidget(new QLabel(tr("Image plane:"), this), 0, Qt::AlignLeft);
+	ImagePlaneLayout->addWidget(SelectImagePlaneButton);
+	QHBoxLayout* ImageFrameLayout = new QHBoxLayout();
+	SelectImageFrameButton = new QPushButton(tr("Select color"), this);
+	connect(SelectImageFrameButton, &QPushButton::released, this, &CRenderOptionsWidget::SelectImageFrameColor);
+	ImageFrameLayout->addWidget(new QLabel(tr("Image frame:"), this));
+	ImageFrameLayout->addWidget(SelectImageFrameButton);
+	UniformColorFrameLayout->addSpacerItem(new QSpacerItem(99, 1, QSizePolicy::Expanding));
+	UniformColorFrameLayout->addLayout(ImagePlaneLayout);
+	UniformColorFrameLayout->addLayout(ImageFrameLayout);
+	UniformColorFrame->setLayout(UniformColorFrameLayout);
+	ImageColormapGroupBoxLayout->addWidget(UniformColorFrame);
+
+	WithNameFrame = new QFrame(this);
+	QHBoxLayout* WithNameFrameLayout = new QHBoxLayout();
+	WithNameFrameLayout->addWidget(new QLabel(tr("Words:"), this), 99, Qt::AlignRight);
+	AddWordsButton = new QPushButton(tr("Add"), this);
+	connect(AddWordsButton, &QPushButton::released, this, &CRenderOptionsWidget::AddWord);
+	ClearWordsButton = new QPushButton(tr("Clear"), this);
+	connect(ClearWordsButton, &QPushButton::released, this, &CRenderOptionsWidget::ClearWord);
+	WithNameFrameLayout->addWidget(AddWordsButton);
+	WithNameFrameLayout->addWidget(ClearWordsButton);
+	WithNameFrame->setLayout(WithNameFrameLayout);
+	WithNameFrame->setVisible(false);
+	Layout->addSpacerItem(new QSpacerItem(15, 10, QSizePolicy::Expanding));
+	ImageColormapGroupBoxLayout->addWidget(WithNameFrame);
+	ImageColormapGroupBox->setLayout(ImageColormapGroupBoxLayout);
+	ImageColormapGroupBox->setFixedHeight(70);
+	Layout->addWidget(ImageColormapGroupBox);
+	connect(ImageColormapComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=](int index)
+		{
+			if (options && ModelViewer)
+			{
+				if (index == 0)
+				{
+					ImagePlaneColor = ImageColormapUniform::kDefaultPlaneColor;
+					ImageFrameColor = ImageColormapUniform::kDefaultFrameColor;
+					ImageColorMap = new ImageColormapUniform();
+					reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_plane_color = ImagePlaneColor;
+					reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_frame_color = ImageFrameColor;
+					ModelViewer->SetImageColormap(ImageColorMap);
+					ModelViewer->ReloadReconstruction();
+					UniformColorFrame->setVisible(true);
+					WithNameFrame->setVisible(false);
+				}
+				else
+				{
+					ImagePlaneColor = ImageColormapUniform::kDefaultPlaneColor;
+					ImageFrameColor = ImageColormapUniform::kDefaultFrameColor;
+					ImageColorMap = new ImageColormapUniform();
+					reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_plane_color = ImagePlaneColor;
+					reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_frame_color = ImageFrameColor;
+					ModelViewer->SetImageColormap(ImageColorMap);
+					ModelViewer->ReloadReconstruction();
+					UniformColorFrame->setVisible(false);
+					WithNameFrame->setVisible(true);
+				}
+				ImageColormapGroupBox->setLayout(ImageColormapGroupBoxLayout);
+			}
+		});
+
+	QVBoxLayout* RateLayout = new QVBoxLayout();
+	QHBoxLayout* AdaptiveRateLayout = new QHBoxLayout();
+	AdaptiveRateCheckBox = new QCheckBox(tr("Adaptive refresh rate"), this);
+	AdaptiveRateCheckBox->setChecked(true);
+	connect(AdaptiveRateCheckBox, &QCheckBox::stateChanged, this, &CRenderOptionsWidget::SetAdaptiveRate);
+	AdaptiveRateLayout->addSpacerItem(new QSpacerItem(99, 1, QSizePolicy::Expanding));
+	AdaptiveRateLayout->addWidget(AdaptiveRateCheckBox);
+	RateLayout->addLayout(AdaptiveRateLayout);
+	QHBoxLayout* RefreshRateLayout = new QHBoxLayout();
+	RefreshRateSpinbox = new QSpinBox(this);
+	RefreshRateSpinbox->setValue(options->render->refresh_rate);
+	RefreshRateSpinbox->setEnabled(false);
+	RefreshRateSpinbox->setFixedWidth(120);
+	RefreshRateSpinbox->setSingleStep(1);
+	connect(MinTrackLenSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), [=](int i)
+		{
+			options->render->refresh_rate = i;
+			ModelViewer->ReloadReconstruction();
+		});
+	RefreshRateLayout->addSpacerItem(new QSpacerItem(99, 1, QSizePolicy::Expanding));
+	RefreshRateLayout->addWidget(new QLabel(tr("Refresh rate [frames]:"), this));
+	RefreshRateLayout->addWidget(RefreshRateSpinbox);
+	RateLayout->addLayout(RefreshRateLayout);
+	Layout->addLayout(RateLayout);
+
+	this->setWindowIcon(QIcon(":/media/reconstruction-reset.png"));
+	this->setFixedSize(Size(400, true), Size(530, false));
+	this->setLayout(Layout);
+	connect(&UpdateTimer, &QTimer::timeout, this, &CRenderOptionsWidget::RefreshValues);
+}
+void CRenderOptionsWidget::showEvent(QShowEvent* event)
+{
+	UpdateTimer.start(100);
+	this->show();
+}
+void CRenderOptionsWidget::closeEvent(QCloseEvent* event)
+{
+	UpdateTimer.stop();
+	this->hide();
+}
+void CRenderOptionsWidget::RefreshValues()
+{
+	if (abs(ModelViewer->PointSize() - PointSizeSpinBox->value()) > 1e-5)
+	{
+		PointSizeSpinBox->setValue(ModelViewer->PointSize());
+	}
+	if (abs(ModelViewer->ImageSize() - ImageSizeSpinBox->value()) > 1e-5)
+	{
+		ImageSizeSpinBox->setValue(ModelViewer->ImageSize());
+	}
+	if (ImageConnectCheckBox->isChecked() != options->render->image_connections)
+	{
+		ImageConnectCheckBox->setChecked(options->render->image_connections);
+	}
+	if (abs(options->render->max_error - MaxPointErrorSpinBox->value()) > 1e-5)
+	{
+		MaxPointErrorSpinBox->setValue(options->render->max_error);
+	}
+	if (abs(options->render->min_track_len - MinTrackLenSpinBox->value()) > 1e-5)
+	{
+		MinTrackLenSpinBox->setValue(options->render->min_track_len);
+	}
+	if (AdaptiveRateCheckBox->isChecked() != options->render->adapt_refresh_rate)
+	{
+		AdaptiveRateCheckBox->setChecked(options->render->adapt_refresh_rate);
+	}
+	if (RefreshRateSpinbox->value() != options->render->refresh_rate)
+	{
+		RefreshRateSpinbox->setValue(options->render->refresh_rate);
+	}
+}
+void CRenderOptionsWidget::SetImageConnection()
+{
+	if (options && ModelViewer)
+	{
+		options->render->image_connections = ImageConnectCheckBox->isChecked();
+		ModelViewer->ReloadReconstruction();
+	}
+}
+void CRenderOptionsWidget::SetBackgroundColor()
+{
+	if (options && ModelViewer)
+	{
+		QColor InitialColor(static_cast<int>(255 * BackgroundColor(0)), static_cast<int>(255 * BackgroundColor(1)), static_cast<int>(255 * BackgroundColor(2)), static_cast<int>(255 * BackgroundColor(3)));
+		QColor SelectedColor = QColorDialog::getColor(InitialColor, this, tr("Select a background color..."));
+		BackgroundColor(0) = SelectedColor.red() / 255.0;
+		BackgroundColor(1) = SelectedColor.green() / 255.0;
+		BackgroundColor(2) = SelectedColor.blue() / 255.0;
+		BackgroundColor(3) = SelectedColor.alpha() / 255.0;
+		ModelViewer->SetBackgroundColor(BackgroundColor(0), BackgroundColor(1), BackgroundColor(2));
+	}
+}
+void CRenderOptionsWidget::SelectImagePlaneColor()
+{
+	if (options && ModelViewer)
+	{
+		QColor InitialColor(static_cast<int>(255 * ImagePlaneColor(0)), static_cast<int>(255 * ImagePlaneColor(1)), static_cast<int>(255 * ImagePlaneColor(2)), static_cast<int>(255 * ImagePlaneColor(3)));
+		QColor SelectedColor = QColorDialog::getColor(InitialColor, this, tr("Select a image plane color..."));
+		ImagePlaneColor(0) = SelectedColor.red() / 255.0;
+		ImagePlaneColor(1) = SelectedColor.green() / 255.0;
+		ImagePlaneColor(2) = SelectedColor.blue() / 255.0;
+		ImagePlaneColor(3) = SelectedColor.alpha() / 255.0;
+		ImageColormapBase* ImageColorMap = new ImageColormapUniform();
+		reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_plane_color = ImagePlaneColor;
+		reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_frame_color = ImageFrameColor;
+		ModelViewer->SetImageColormap(ImageColorMap);
+		ModelViewer->ReloadReconstruction();
+	}
+}
+void CRenderOptionsWidget::SelectImageFrameColor()
+{
+	if (options && ModelViewer)
+	{
+		QColor InitialColor(static_cast<int>(255 * ImageFrameColor(0)), static_cast<int>(255 * ImageFrameColor(1)), static_cast<int>(255 * ImageFrameColor(2)), static_cast<int>(255 * ImageFrameColor(3)));
+		QColor SelectedColor = QColorDialog::getColor(InitialColor, this, tr("Select a image frame color..."));
+		ImageFrameColor(0) = SelectedColor.red() / 255.0;
+		ImageFrameColor(1) = SelectedColor.green() / 255.0;
+		ImageFrameColor(2) = SelectedColor.blue() / 255.0;
+		ImageFrameColor(3) = SelectedColor.alpha() / 255.0;
+		ImageColormapBase* ImageColorMap = new ImageColormapUniform();
+		reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_plane_color = ImagePlaneColor;
+		reinterpret_cast<ImageColormapUniform*>(ImageColorMap)->uniform_frame_color = ImageFrameColor;
+		ModelViewer->SetImageColormap(ImageColorMap);
+		ModelViewer->ReloadReconstruction();
+	}
+}
+void CRenderOptionsWidget::AddWord()
+{
+	if (options && ModelViewer)
+	{
+		QInputDialog insert;
+		insert.setFixedSize(380, 200);
+		insert.setInputMode(QInputDialog::TextInput);
+		insert.setWindowTitle(tr("Assign a color to specific cameras that contain the word"));
+		insert.setLabelText(tr("Word:"));
+		insert.setWindowFlags(Qt::WindowStaysOnTopHint | Qt::MSWindowsFixedSizeDialogHint);
+		insert.setWindowIcon(QIcon(":/media/reconstruction-reset.png"));
+		insert.show();
+		if (insert.exec() != QInputDialog::Accepted)
+		{
+			return;
+		}
+		QString Word = insert.textValue();
+		if (Word == "")
+		{
+			return;
+		}
+		Eigen::Vector4f Plane_Color(ImageColormapBase::kDefaultPlaneColor);
+		QColor InitialColor(static_cast<int>(255 * Plane_Color(0)), static_cast<int>(255 * Plane_Color(1)), static_cast<int>(255 * Plane_Color(2)), static_cast<int>(255 * Plane_Color(3)));
+		QColor SelectedColor = QColorDialog::getColor(InitialColor, this, tr("Select a image plane color..."));
+		Plane_Color(0) = SelectedColor.red() / 255.0;
+		Plane_Color(1) = SelectedColor.green() / 255.0;
+		Plane_Color(2) = SelectedColor.blue() / 255.0;
+		Plane_Color(3) = SelectedColor.alpha() / 255.0;
+
+		Eigen::Vector4f FrameColor(ImageColormapBase::kDefaultFrameColor);
+		InitialColor = QColor(static_cast<int>(255 * FrameColor(0)), static_cast<int>(255 * FrameColor(1)), static_cast<int>(255 * FrameColor(2)), static_cast<int>(255 * FrameColor(3)));
+		SelectedColor = QColorDialog::getColor(InitialColor, this, tr("Select a image frame color..."));
+		FrameColor(0) = SelectedColor.red() / 255.0;
+		FrameColor(1) = SelectedColor.green() / 255.0;
+		FrameColor(2) = SelectedColor.blue() / 255.0;
+		FrameColor(3) = SelectedColor.alpha() / 255.0;
+
+		ImageColormapFilter.AddColorForWord(QString2StdString(Word), Plane_Color, FrameColor);
+		ImageColorMap = new ImageColormapNameFilter(ImageColormapFilter);
+		ModelViewer->SetImageColormap(ImageColorMap);
+		ModelViewer->ReloadReconstruction();
+	}
+}
+void CRenderOptionsWidget::ClearWord()
+{
+	if (options && ModelViewer)
+	{
+		ImageColormapFilter = ImageColormapNameFilter();
+		ImageColorMap = new ImageColormapNameFilter(ImageColormapFilter);
+		ModelViewer->SetImageColormap(ImageColorMap);
+		ModelViewer->ReloadReconstruction();
+	}
+}
+void CRenderOptionsWidget::SetAdaptiveRate()
+{
+	if (options && ModelViewer)
+	{
+		if (AdaptiveRateCheckBox->isChecked())
+		{
+			options->render->adapt_refresh_rate = true;
+			ModelViewer->ReloadReconstruction();
+			RefreshRateSpinbox->setEnabled(false);
+		}
+		else
+		{
+			options->render->adapt_refresh_rate = false;
+			options->render->refresh_rate = RefreshRateSpinbox->value();
+			ModelViewer->ReloadReconstruction();
+			RefreshRateSpinbox->setEnabled(true);
+		}
+	}
+}
+void QAbstractSpinBox::wheelEvent(QWheelEvent* e) {}
+
+
+CMatchMatrixWidget::CMatchMatrixWidget(QWidget* parent, OptionManager* options) :QWidget(parent)
+{
+	this->parent = parent;
+	this->options = options;
+	ImagesNum = 0;
+	connect(&UpdateTimer, SIGNAL(timeout()), this, SLOT(update()));
+}
+void CMatchMatrixWidget::showEvent(QShowEvent* event)
+{
+	UpdateTimer.start(500);
+	show();
+	paintEvent(nullptr);
+}
+void CMatchMatrixWidget::closeEvent(QCloseEvent* event)
+{
+	UpdateTimer.stop();
+	hide();
+}
+void CMatchMatrixWidget::paintEvent(QPaintEvent* event)
+{
+	if (!ExistsFile(*options->database_path))
+		return;
+	try
+	{
+		QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
+		size_t NewImagesNum = CDatabase::GetImagesNum(db);
+		ReleaseDatabaseConnect(db);
+		//if (NewImagesNum == ImagesNum)return;
+		ImagesNum = NewImagesNum;
+	}
+	catch (const std::exception& ex)
+	{
+		return;
+	}
+	
+	QPainter painter(this);
+	size_t width = size().width();
+	size_t height = size().height();
+	size_t gridSize = min(width, height) / ImagesNum;
+
+	for (size_t i = 0; i < ImagesNum; i++)
+	{
+		for (size_t j = 0; j < ImagesNum; j++)
+		{
+			size_t Value = GetValue(i, j);
+			QColor Color = GetColor(Value);
+			painter.setBrush(Color);
+			painter.drawRect(i * gridSize, j * gridSize, gridSize, gridSize);
+		}
+	}
+}
+size_t CMatchMatrixWidget::GetValue(size_t i, size_t j)
+{
+	if (i == j)return 0;
+	if (i < j)return GetValue(j, i);
+
+	Base::MatchMatrix_Mutex.lock();
+	auto it = Base::MatchMatrix.find(i);
+	if (it == Base::MatchMatrix.end())
+	{
+		Base::MatchMatrix_Mutex.unlock();
+		return 0;
+	}
+	auto it2 = it->second.find(j);
+	if (it2 == it->second.end())
+	{
+		Base::MatchMatrix_Mutex.unlock();
+		return 0;
+	}
+	size_t re = it2->second;
+	Base::MatchMatrix_Mutex.unlock();
+	return re;
+}
+QColor CMatchMatrixWidget::GetColor(size_t value)
+{
+	if (value == 0)return Qt::white;
+	QColor Color;
+	Base::MatchMatrix_Mutex.lock();
+	double value2 = log1p(value) / log1p(Base::MaxMatches);
+	Base::MatchMatrix_Mutex.unlock();
+	Color.setRed(255 * JetColormap::Red(value2));
+	Color.setGreen(255 * JetColormap::Green(value2));
+	Color.setBlue(255 * JetColormap::Blue(value2));
+	return Color;
+}
+
+CShowMatchMatrixWidget::CShowMatchMatrixWidget(QWidget* parent, OptionManager* options) :QWidget(parent)
+{
+	setWindowTitle(tr("Match Matrix"));
+	setWindowFlags(Qt::Window);
+	this->parent = parent;
+	this->options = options;
+	MatchMatrix = new CMatchMatrixWidget(parent, options);
+	SaveButton = new QPushButton(tr("Save"), this);
+	connect(SaveButton, &QPushButton::released, this, &CShowMatchMatrixWidget::Save);
+
+	QGridLayout* layout = new QGridLayout(this);
+	layout->addWidget(MatchMatrix, 0, 0, 1, 2);
+	layout->addWidget(SaveButton, 1, 1, 1, 1);
+	layout->setRowStretch(0, 1);
+	layout->setColumnStretch(0, 1);
+	setLayout(layout);
+	setMinimumSize(Size(500, true), Size(500, false));
+}
+void CShowMatchMatrixWidget::showEvent(QShowEvent* event)
+{
+	MatchMatrix->show();
+	this->show();
+}
+void CShowMatchMatrixWidget::closeEvent(QCloseEvent* event)
+{
+	MatchMatrix->close();
+	hide();
+}
+void CShowMatchMatrixWidget::resizeEvent(QResizeEvent* event)
+{
+	MatchMatrix->repaint();
+	QWidget::resizeEvent(event);
+}
+void CShowMatchMatrixWidget::Save()
+{
+	size_t Size = min(MatchMatrix->size().width(), MatchMatrix->size().height());
+	QImage image(QSize(Size, Size), QImage::Format_ARGB32);
+	QPainter painter(&image);
+	MatchMatrix->render(&painter);
+	QString filename = QFileDialog::getSaveFileName(this, "Export Matching Relationship Matrix", "", "BMP Files (*.bmp);;JPEG Files (*.jpg *.jpeg);;All Files (*)");
+	if (!filename.isEmpty()) 
+	{
+		image.save(filename);
+	}
 }

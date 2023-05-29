@@ -250,21 +250,8 @@ bool CBundleAdjuster::Solve(CModel* reconstruction)
         solver_options.preconditioner_type = ceres::SCHUR_JACOBI;
     }
 
-    if (problem_->NumResiduals() < options_.min_num_residuals_for_multi_threading)
-    {
-        solver_options.num_threads = 1;
-#if CERES_VERSION_MAJOR < 2
-        solver_options.num_linear_solver_threads = 1;
-#endif  // CERES_VERSION_MAJOR
-    }
-    else 
-    {
-        solver_options.num_threads = GetEffectiveNumThreads(solver_options.num_threads);
-#if CERES_VERSION_MAJOR < 2
-        solver_options.num_linear_solver_threads =
-            GetEffectiveNumThreads(solver_options.num_linear_solver_threads);
-#endif  // CERES_VERSION_MAJOR
-    }
+    solver_options.num_threads = omp_get_max_threads();
+    qDebug() << "ceres-solver threads num: " << solver_options.num_threads;
 
     std::string solver_error;
     CHECK(solver_options.IsValid(&solver_error)) << solver_error;

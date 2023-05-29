@@ -27,6 +27,8 @@ class CRetrievalMatcher :public CFeatureMatcher
 {
 public:
 	CRetrievalMatcher(colmap::OptionManager* options);
+	~CRetrievalMatcher();
+	void Uninstall();
 	bool Match(std::string ImagePath);
 private:
 	std::vector<std::string> Database;
@@ -37,6 +39,7 @@ private:
 	PyGILState_STATE state;
 
 	bool Initialize();
+	
 };
 
 

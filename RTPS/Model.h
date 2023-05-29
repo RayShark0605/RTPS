@@ -114,22 +114,22 @@ public:
 
 	void CreateImageDirs(std::string Path);
 
-	void Read(std::string& Path);
-	void ReadText(std::string& Path);
-	void ReadBinary(std::string& Path);
-	void ReadPLY(std::string& Path);
+	void Read(std::string Path);
+	void ReadText(std::string Path);
+	void ReadBinary(std::string Path);
+	void ReadPLY(std::string Path);
 	void ReadPLY(std::vector<colmap::PlyPoint>& PLY);
 
-	void Write(std::string& Path);
-	void WriteText(std::string& Path);
-	void WriteBinary(std::string& Path);
-	void WritePLY(std::string& Path);
+	void Write(std::string Path);
+	void WriteText(std::string Path);
+	void WriteBinary(std::string Path);
+	void WritePLY(std::string Path);
 	void WritePLY(std::vector<colmap::PlyPoint>& PLY);
-	bool WriteNVM(std::string& Path, bool IsSkipDistortion = false);
-	bool WriteCam(std::string& Path, bool IsSkipDistortion = false);
-	bool WriteRecon3D(std::string& Path, bool IsSkipDistortion = false);
-	bool WriteBundler(std::string& Path, std::string& ListPath, bool IsSkipDistortion = false);
-	void WriteVRML(std::string& ImagePath, std::string& Points3DPath, double ImageScale, Eigen::Vector3d& ImageRGB);
+	bool WriteNVM(std::string Path, bool IsSkipDistortion = false);
+	bool WriteCam(std::string Path, bool IsSkipDistortion = false);
+	bool WriteRecon3D(std::string Path, bool IsSkipDistortion = false);
+	bool WriteBundler(std::string Path, std::string ListPath, bool IsSkipDistortion = false);
+	void WriteVRML(std::string ImagePath, std::string Points3DPath, double ImageScale, Eigen::Vector3d ImageRGB);
 
 	size_t AddedPoints3DsNum;
 private:

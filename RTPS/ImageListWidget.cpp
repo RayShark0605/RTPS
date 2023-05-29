@@ -22,6 +22,10 @@ CImageListWidget::CImageListWidget(QDockWidget* parent): QListWidget(parent)
 
 void CImageListWidget::AddImage(string ImagePath)
 {
+	QScrollBar* scrollbar = verticalScrollBar();
+	int CurrentValue = scrollbar ? scrollbar->value() : 0;
+	int MaxValue = scrollbar ? scrollbar->maximum() : 0;
+
 	QString QImgPath = StdString2QString(ImagePath);
 
 	//为了加快读取速度并且降低内存占用, 影像预览并不读取原图, 而是使用ImageReader以图标(Icon)的形式直接读取设定大小的影像图标
@@ -35,16 +39,28 @@ void CImageListWidget::AddImage(string ImagePath)
 		cout << "[Warning] Image [ " + ImagePath + " ] is damaged!" << endl;
 		return;
 	}
-	QListWidgetItem* item = new QListWidgetItem();
-	item->setIcon(QIcon(QPixmap::fromImageReader(&ImageReader)));
-	item->setText(StdString2QString(GetFileName(ImagePath)));
-	TargetSize.setHeight(TargetSize.height() + 10);
-	item->setSizeHint(TargetSize);
-	item->setData(Qt::UserRole, StdString2QString(GetFileName(ImagePath)));
-	addItem(item);
-	Items.push_back(item);
-	ImagePaths.push_back(ImagePath);
-	parent->setWindowTitle(tr("Image list ") + "(" + QString::number(Items.size()) + ")");
+	try
+	{
+		QListWidgetItem* NewItem = new QListWidgetItem();
+		NewItem->setIcon(QIcon(QPixmap::fromImageReader(&ImageReader)));
+		NewItem->setText(StdString2QString(GetFileName(ImagePath)));
+		TargetSize.setHeight(TargetSize.height() + 10);
+		NewItem->setSizeHint(TargetSize);
+		NewItem->setData(Qt::UserRole, StdString2QString(GetFileName(ImagePath)));
+		addItem(NewItem);
+		Items.push_back(NewItem);
+		ImagePaths.push_back(ImagePath);
+		parent->setWindowTitle(tr("Image list ") + "(" + QString::number(Items.size()) + ")");
+		/*if (count() > 2 && verticalScrollBar() && CurrentValue == MaxValue)
+		{
+			setCurrentItem(item(count() - 2));
+		}*/
+	}
+	catch (...)
+	{
+		return;
+	}
+	
 }
 void CImageListWidget::ClearImage()
 {

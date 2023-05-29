@@ -9,6 +9,8 @@
 #include "Model.h"
 #include "Database.h"
 
+#include <ui/model_viewer_widget.h>
+
 
 Q_DECLARE_METATYPE(std::string);
 Q_DECLARE_METATYPE(std::vector<std::string>);
@@ -18,6 +20,8 @@ class CMainWindow : public QMainWindow
 	Q_OBJECT
 public:
 	CMainWindow(QWidget* parent = nullptr);
+
+
 
 public slots:
 	void ImportModel(int, std::vector<std::string>, std::string, bool);
@@ -90,8 +94,9 @@ private:
 	CModelImportWidget* ModelImportWidget;
 	void ShowModelImportWidget();
 	
-	
 	QAction* ExportModelAction;                  //导出模型
+	CModelExportWidget* ModelExportWidget;
+	void ShowModelExportWidget();
 
 	QAction* StartReceiveAction;                //开始传输
 	CReceiver* Receiver = nullptr;
@@ -102,7 +107,13 @@ private:
 	void StopReceive();
 
 	QAction* ShowRenderOptionsAction;            //弹出"渲染设置"对话框
+	CRenderOptionsWidget* RenderOptionsWidget;
+	void ShowRenderOptionsWidget();
+
 	QAction* ShowMatchMatrixAction;              //弹出"匹配关系矩阵"对话框
+	CShowMatchMatrixWidget* ShowMatchMatrixWidget;
+	void ShowShowMatchMatrixWidget();
+	
 	QAction* RenderModelAction;                  //渲染模型
 
 	void UpdateWindowTitle(QString Extras = "");
@@ -114,29 +125,26 @@ private:
 	void CreateExtractor();
 	void CreateMatcher();
 
+	QTimer UpdateStatusBar_Timer;
+	void UpdateStatusBar();
+
+
 	//重建相关函数
 	bool IsRenderNow = false;
+	std::string LastWaitImagePath;
 	colmap::Reconstruction* ModelToRender = nullptr;
-
+	bool IsContinueReconstruct = true;
+	std::atomic<size_t> WaitforReconstructImageNum = 0;
+	std::thread ReconstructionThread;
+	void DetectReconstruct();
 	void RenderModel_SLOT();
 	void GetRenderModel();
 	void CreateReconstructor();
+	void AutoSaveModels();
 
 signals:
 	void RenderNow_SIGNAL();
 	void ClearRenderModel_SIGNAL();
-
-
-	
-
-
-
-
-
-
-
-
-
 
 };
 

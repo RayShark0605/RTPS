@@ -207,6 +207,7 @@ size_t CTriangulator::CompleteTracks(const Options& options, const unordered_set
 }
 size_t CTriangulator::CompleteAllTracks(const Options& options) 
 {
+    DebugTimer timer(__FUNCTION__);
     CHECK(options.Check());
 
     size_t num_completed = 0;
@@ -237,6 +238,7 @@ size_t CTriangulator::MergeTracks(const Options& options, const unordered_set<po
 }
 size_t CTriangulator::MergeAllTracks(const Options& options)
 {
+    DebugTimer timer(__FUNCTION__);
     CHECK(options.Check());
 
     size_t num_merged = 0;
@@ -559,25 +561,28 @@ size_t CTriangulator::Continue(const Options& options, const CorrData& ref_corr_
 
     return 0;
 }
-size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id) {
+size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id) 
+{
+    DebugTimer timer(__FUNCTION__);
     if (!reconstruction_->IsModelExistPoint3D(point3D_id)) 
     {
         return 0;
     }
 
-    const double max_squared_reproj_error =
-        options.merge_max_reproj_error * options.merge_max_reproj_error;
+    const double max_squared_reproj_error = options.merge_max_reproj_error * options.merge_max_reproj_error;
+
 
     const auto& point3D = reconstruction_->GetModelPoint3D(point3D_id);
 
-    for (const auto& track_el : point3D.Track().Elements()) {
-        const std::vector<CorrespondenceGraph::Correspondence>& corrs =
-            correspondence_graph_->FindCorrespondences(track_el.image_id,
-                track_el.point2D_idx);
+    for (const auto& track_el : point3D.Track().Elements()) 
+    {
+        const std::vector<CorrespondenceGraph::Correspondence>& corrs = correspondence_graph_->FindCorrespondences(track_el.image_id, track_el.point2D_idx);
 
-        for (const auto corr : corrs) {
+        for (const auto corr : corrs) 
+        {
             const auto& image = reconstruction_->GetModelImage(corr.image_id);
-            if (!image.IsRegistered()) {
+            if (!image.IsRegistered()) 
+            {
                 continue;
             }
 
@@ -604,28 +609,28 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id) {
 
             // Count number of inlier track elements of the merged track.
             bool merge_success = true;
-            for (const Track* track : { &point3D.Track(), &corr_point3D.Track() }) {
-                for (const auto test_track_el : track->Elements()) {
-                    const Image& test_image =
-                        reconstruction_->GetModelImage(test_track_el.image_id);
-                    const Camera& test_camera =
-                        reconstruction_->GetModelCamera(test_image.CameraId());
-                    const Point2D& test_point2D =
-                        test_image.Point2D(test_track_el.point2D_idx);
-                    if (CalculateSquaredReprojectionError(
-                        test_point2D.XY(), merged_xyz, test_image.Qvec(),
-                        test_image.Tvec(), test_camera) > max_squared_reproj_error) {
+            for (const Track* track : { &point3D.Track(), &corr_point3D.Track() }) 
+            {
+                for (const auto test_track_el : track->Elements()) 
+                {
+                    const Image& test_image = reconstruction_->GetModelImage(test_track_el.image_id);
+                    const Camera& test_camera = reconstruction_->GetModelCamera(test_image.CameraId());
+                    const Point2D& test_point2D = test_image.Point2D(test_track_el.point2D_idx);
+                    if (CalculateSquaredReprojectionError(test_point2D.XY(), merged_xyz, test_image.Qvec(), test_image.Tvec(), test_camera) > max_squared_reproj_error)
+                    {
                         merge_success = false;
                         break;
                     }
                 }
-                if (!merge_success) {
+                if (!merge_success) 
+                {
                     break;
                 }
             }
 
             // Only accept merge if all track elements are inliers.
-            if (merge_success) {
+            if (merge_success) 
+            {
                 const size_t num_merged =
                     point3D.Track().Length() + corr_point3D.Track().Length();
 
@@ -651,6 +656,7 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id) {
     return 0;
 }
 size_t CTriangulator::Complete(const Options& options,const point3D_t point3D_id) {
+    DebugTimer timer(__FUNCTION__);
     size_t num_completed = 0;
 
     if (!reconstruction_->IsModelExistPoint3D(point3D_id)) {

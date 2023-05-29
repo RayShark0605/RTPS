@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D755CDD-76B4-35F7-BF90-EDD311CAA1F9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ceres</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ceres.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ceres-debug</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ceres.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ceres</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ceres.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ceres</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ceres.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ceres</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\suitesparse;C:\vcpkg\installed\x64-windows\include\eigen3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_2_2.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_2_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_2_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_2_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_3_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_3_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_3_6.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_3_9.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_3_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_4_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_4_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_4_6.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_4_8.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_4_9.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_4_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_2_d_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_3_3_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_4_4_2.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_4_4_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_4_4_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_4_4_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view_d_d_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_2_2.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_2_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_2_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_2_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_3_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_3_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_3_6.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_3_9.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_3_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_4_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_4_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_4_6.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_4_8.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_4_9.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_4_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_2_d_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_3_3_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_4_4_2.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_4_4_3.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_4_4_4.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_4_4_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator_d_d_d.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\parallel_for_openmp.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\accelerate_sparse.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\array_utils.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_evaluate_preparer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_jacobi_preconditioner.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_jacobian_writer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_random_access_dense_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_random_access_diagonal_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_random_access_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_random_access_sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\block_structure.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\callbacks.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\canonical_views_clustering.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\cgnr_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\compressed_col_sparse_matrix_utils.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\compressed_row_jacobian_writer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\compressed_row_sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\conditioned_cost_function.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\conjugate_gradients_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\context.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\context_impl.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\coordinate_descent_minimizer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\corrector.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\cost_function.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\covariance.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\covariance_impl.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\cxsparse.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dense_cholesky.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dense_normal_cholesky_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dense_qr.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dense_qr_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dense_sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\detect_structure.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dogleg_strategy.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dynamic_compressed_row_jacobian_writer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dynamic_compressed_row_sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\dynamic_sparse_normal_cholesky_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\eigensparse.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\evaluation_callback.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\evaluator.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\file.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\first_order_function.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\float_cxsparse.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\float_suitesparse.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\function_sample.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\gradient_checking_cost_function.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\gradient_problem_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\implicit_schur_complement.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\inner_product_computer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\is_close.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\iteration_callback.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\iterative_refiner.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\iterative_schur_complement_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\levenberg_marquardt_strategy.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\line_search.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\line_search_direction.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\line_search_minimizer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\line_search_preprocessor.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\linear_least_squares_problems.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\linear_operator.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\linear_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\low_rank_inverse_hessian.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\minimizer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\parallel_utils.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\parameter_block_ordering.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\partitioned_matrix_view.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\polynomial.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\preconditioner.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\preprocessor.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\problem_impl.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\program.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\reorder_program.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\residual_block.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\residual_block_utils.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_complement_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_eliminator.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_jacobi_preconditioner.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\schur_templates.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\scratch_evaluate_preparer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\single_linkage_clustering.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\solver_utils.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\sparse_cholesky.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\sparse_normal_cholesky_solver.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\stringprintf.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\subset_preconditioner.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\suitesparse.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\thread_token_provider.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\triplet_sparse_matrix.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\trust_region_minimizer.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\trust_region_preprocessor.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\trust_region_step_evaluator.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\trust_region_strategy.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\visibility.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\visibility_based_preconditioner.obj" />
+    <Object Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.dir\$(Configuration)\wall_time.obj" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\c_api.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\gradient_checker.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\gradient_problem.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\local_parameterization.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\loss_function.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\manifold.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\normal_prior.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\problem.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\solver.cc" />
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\types.cc" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\accelerate_sparse.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\array_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_evaluate_preparer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_jacobi_preconditioner.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_jacobian_writer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_random_access_dense_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_random_access_diagonal_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_random_access_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_random_access_sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\block_structure.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\bundle_adjustment_test_util.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\callbacks.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\canonical_views_clustering.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\casts.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\cgnr_linear_operator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\cgnr_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\compressed_col_sparse_matrix_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\compressed_row_jacobian_writer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\compressed_row_sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\concurrent_queue.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\conjugate_gradients_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\context_impl.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\coordinate_descent_minimizer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\corrector.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\covariance_impl.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\cuda_buffer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\cxsparse.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dense_cholesky.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dense_jacobian_writer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dense_normal_cholesky_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dense_qr.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dense_qr_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dense_sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\detect_structure.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dogleg_strategy.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dynamic_compressed_row_finalizer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dynamic_compressed_row_jacobian_writer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dynamic_compressed_row_sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dynamic_sparse_normal_cholesky_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\eigensparse.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\evaluator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\evaluator_test_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\execution_summary.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\file.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\float_cxsparse.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\float_suitesparse.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\function_sample.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\gradient_checking_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\gradient_problem_evaluator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\graph.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\graph_algorithms.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\implicit_schur_complement.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\inner_product_computer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\invert_psd_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\is_close.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\iterative_refiner.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\iterative_schur_complement_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\levenberg_marquardt_strategy.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\line_search.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\line_search_direction.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\line_search_minimizer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\line_search_preprocessor.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\linear_least_squares_problems.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\linear_operator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\linear_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\low_rank_inverse_hessian.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\manifold_adapter.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\map_util.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\minimizer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\numeric_diff_test_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\pair_hash.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\parallel_for.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\parallel_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\parameter_block.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\parameter_block_ordering.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\partitioned_matrix_view.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\partitioned_matrix_view_impl.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\polynomial.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\preconditioner.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\preprocessor.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\problem_impl.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\program.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\program_evaluator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\random.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\reorder_program.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\residual_block.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\residual_block_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\schur_complement_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\schur_eliminator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\schur_eliminator_impl.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\schur_jacobi_preconditioner.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\schur_templates.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\scoped_thread_token.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\scratch_evaluate_preparer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\single_linkage_clustering.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\small_blas.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\small_blas_generic.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\solver_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\sparse_cholesky.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\sparse_normal_cholesky_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\stl_util.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\stringprintf.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\subset_preconditioner.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\suitesparse.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\test_util.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\thread_pool.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\thread_token_provider.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\tiny_solver_test_util.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\triplet_sparse_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\trust_region_minimizer.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\trust_region_preprocessor.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\trust_region_step_evaluator.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\trust_region_strategy.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\visibility.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\visibility_based_preconditioner.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\wall_time.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\autodiff_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\autodiff_first_order_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\autodiff_local_parameterization.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\autodiff_manifold.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\c_api.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\ceres.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\conditioned_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\context.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\cost_function_to_functor.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\covariance.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\crs_matrix.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\cubic_interpolation.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\dynamic_autodiff_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\dynamic_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\dynamic_cost_function_to_functor.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\dynamic_numeric_diff_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\evaluation_callback.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\first_order_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\gradient_checker.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\gradient_problem.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\gradient_problem_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\iteration_callback.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\jet.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\jet_fwd.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\line_manifold.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\local_parameterization.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\loss_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\manifold.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\manifold_test_utils.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\normal_prior.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\numeric_diff_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\numeric_diff_first_order_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\numeric_diff_options.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\ordered_groups.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\problem.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\product_manifold.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\rotation.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\sized_cost_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\sphere_manifold.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\tiny_solver.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\tiny_solver_autodiff_function.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\tiny_solver_cost_function_adapter.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\types.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include\ceres\version.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include\ceres\internal\config.h" />
+    <ClInclude Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include\ceres\internal\export.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\ZERO_CHECK.vcxproj">
+      <Project>{52B40DC3-E576-399E-85A9-56EF591D631D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.vcxproj">
+      <Project>{79808860-575D-3E45-9E29-E15B731AC9BE}</Project>
+      <Name>ceres_internal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

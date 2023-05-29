@@ -48,8 +48,10 @@
 #include "ui/render_options.h"
 #include "ui/triangle_painter.h"
 #include "util/option_manager.h"
+//#include "../../../RTPS/Model.h"
 
-namespace colmap {
+namespace colmap 
+{
 
 class ModelViewerWidget : public QOpenGLWidget,
                           protected QOpenGLFunctions_3_2_Core {
@@ -123,6 +125,7 @@ class ModelViewerWidget : public QOpenGLWidget,
 
   // Copy of current scene data that is displayed
   Reconstruction* reconstruction = nullptr;
+  //CModel* Model = nullptr;
   EIGEN_STL_UMAP(camera_t, Camera) cameras;
   EIGEN_STL_UMAP(image_t, Image) images;
   EIGEN_STL_UMAP(point3D_t, Point3D) points3D;

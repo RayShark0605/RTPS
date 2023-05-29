@@ -13,10 +13,13 @@ public:
 		NEXT_IMAGE_REG_CALLBACK,
 		LAST_IMAGE_REG_CALLBACK,
 	}; //重建过程的三个状态, 会触发相应的回调函数
+
+	static size_t LastReconstructTimeConsuming; //单位: 秒
+
 	CReconstructor(colmap::OptionManager* options, CModelManager* ModelManager);
 	~CReconstructor();
-	void AddImage(std::string ImagePath);
-	void StopReconstruct();
+	void Reconstruct(std::string ImagePath);
+
 	void UpdateRegImgIDs(); //更新所有模型已经注册的影像(一般是"导入模型"后会调用)
 	void TryMergeModels(); //尝试合并模型
 	bool MergeModel(size_t Model1ID, size_t Model2ID);
@@ -27,13 +30,9 @@ private:
 	CModelManager* ModelManager;
 	std::unordered_set<colmap::image_t> RegImages; //ModelManager中所有模型的"成功注册的影像"的并集
 	
-	std::thread ReconstructThread;
-	std::queue<std::string> queue;
-	std::mutex queue_mutex;
-	size_t LastReconstructTimeConsuming; //单位: 秒
 	bool IsContinue;
-	void Run();
 
+	void Run();
 	void Reconstruct(std::string ImagePath, QSqlDatabase& db); //重建
 	int Reconstruct(std::string ImagePath, CMapperOptions* MapperOptions, colmap::DatabaseCache& DbCache, QSqlDatabase& db);
 	size_t ChooseModel(std::string ImagePath, QSqlDatabase& db);

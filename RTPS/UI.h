@@ -342,7 +342,7 @@ private:
 	void SelectFolder_SLOT();
 	void SelectPLY_SLOT();
 	void Load_SLOT();
-	void closeEvent(QCloseEvent* event);
+	void closeEvent(QCloseEvent* event) override;
 
 signals:
 	void ModelImport_SIGNAL(int, std::vector<std::string>, std::string, bool); //提醒主界面"导入模型", 三个参数分别为: 模型类别(0表示"目录",1表示"PLY"), 模型文件夹路径("PLY"时为空字符串), PLY路径("目录"时为空字符串), 是否覆盖当前模型
@@ -350,6 +350,41 @@ signals:
 
 class CModelExportWidget :public QWidget
 {
+	Q_OBJECT
+public:
+	CModelExportWidget(QWidget* parent, CModelManager* ModelManager, colmap::OptionManager* options);
+private:
+	QWidget* parent;
+	CModelManager* ModelManager;
+	colmap::OptionManager* options;
+	std::string SavePath;
+
+	QCheckBox* Folder_Checkbox;
+	QCheckBox* Text_Checkbox;
+	QCheckBox* VRML_Checkbox;
+	QCheckBox* NVM_Checkbox;
+	QCheckBox* Bundler_Checkbox;
+	QCheckBox* Ply_Checkbox;
+
+	QLineEdit* SavePath_LineEdit;
+	QPushButton* SelectSavePath_Button;
+	QPushButton* Export_Button;
+
+	QTableWidget* ModelTable;
+
+	void showEvent(QShowEvent* event) override;
+	std::vector<size_t> GetAllSelectedRow();
+	void ExportFolder(int ModelID);
+	void ExportText(int ModelID);
+	void ExportVRML(int ModelID);
+	void ExportNVM(int ModelID);
+	void ExportBundler(int ModelID);
+	void ExportPLY(int ModelID);
+
+
+public slots:
+	void SelectSavePath();
+	void Export();
 
 };
 
@@ -364,4 +399,106 @@ public:
 
 private:
 	CModelManager* ModelManager;
+	QTimer UpdateTimer;
+	std::mutex ModelSelectWidget_Mutex;
 };
+
+class CRenderOptionsWidget :public QWidget
+{
+	Q_OBJECT
+public:
+	CRenderOptionsWidget(QWidget* parent, colmap::OptionManager* options, colmap::ModelViewerWidget* ModelViewer);
+private:
+	QWidget* parent;
+	colmap::OptionManager* options;
+	colmap::ModelViewerWidget* ModelViewer;
+	QTimer UpdateTimer;
+
+	Eigen::Vector4f BackgroundColor;
+	Eigen::Vector4f ImagePlaneColor;
+	Eigen::Vector4f ImageFrameColor;
+	double PointColormapMinQ;
+	double PointColormapMaxQ;
+	double PointColormapScale;
+	colmap::ImageColormapNameFilter ImageColormapFilter;
+	colmap::ImageColormapBase* ImageColorMap;
+
+	QDoubleSpinBox* PointSizeSpinBox;
+	QDoubleSpinBox* ImageSizeSpinBox;
+	QDoubleSpinBox* MaxPointErrorSpinBox;
+	QDoubleSpinBox* PointColormapMinQSpinBox;
+	QDoubleSpinBox* PointColormapMaxQSpinBox;
+	QDoubleSpinBox* PointColormapScaleSpinBox;
+	QSpinBox* RefreshRateSpinbox;
+	QSpinBox* MinTrackLenSpinBox;
+
+	QComboBox* ProjectionComboBox;
+	QComboBox* PointColormapComboBox;
+	QComboBox* ImageColormapComboBox;
+	QGroupBox* PointColormapGroupBox;
+	QGroupBox* ImageColormapGroupBox;
+
+	QPushButton* SelectBackgroundButton;
+	QPushButton* SelectImagePlaneButton;
+	QPushButton* SelectImageFrameButton;
+	QPushButton* AddWordsButton;
+	QPushButton* ClearWordsButton;
+
+	QCheckBox* AdaptiveRateCheckBox;
+	QCheckBox* ImageConnectCheckBox;
+
+	QFrame* UniformColorFrame;
+	QFrame* WithNameFrame;
+
+	void showEvent(QShowEvent* event) override;
+	void closeEvent(QCloseEvent* event) override;
+
+	void RefreshValues();
+	void SetImageConnection();
+	void SetBackgroundColor();
+	void SelectImagePlaneColor();
+	void SelectImageFrameColor();
+	void AddWord();
+	void ClearWord();
+	void SetAdaptiveRate();
+};
+
+
+class CMatchMatrixWidget :public QWidget
+{
+	Q_OBJECT
+public:
+	CMatchMatrixWidget(QWidget* parent, colmap::OptionManager* options);
+private:
+	QWidget* parent;
+	colmap::OptionManager* options;
+	QTimer UpdateTimer;
+	size_t ImagesNum;
+	void showEvent(QShowEvent* event) override;
+	void paintEvent(QPaintEvent* event)override;
+	void closeEvent(QCloseEvent* event) override;
+	size_t GetValue(size_t i, size_t j);
+	QColor GetColor(size_t value);
+};
+class CShowMatchMatrixWidget :public QWidget
+{
+	Q_OBJECT
+public:
+	CShowMatchMatrixWidget(QWidget* parent, colmap::OptionManager* options);
+	
+private:
+	QWidget* parent;
+	colmap::OptionManager* options;
+	CMatchMatrixWidget* MatchMatrix;
+	QPushButton* SaveButton;
+
+	void showEvent(QShowEvent* event) override;
+	void closeEvent(QCloseEvent* event) override;
+	void resizeEvent(QResizeEvent* event) override;
+	void Save();
+};
+
+
+
+
+

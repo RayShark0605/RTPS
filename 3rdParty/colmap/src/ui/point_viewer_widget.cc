@@ -176,11 +176,18 @@ void PointViewerWidget::Show(const point3D_t point3D_id) {
   // Paint features for each track element.
 
   for (const auto& track_el : track_idx_image_name_pairs) {
+      if (!model_viewer_widget_->images.count(track_el.first.image_id))
+      {
+          continue;
+      }
     const Image& image = model_viewer_widget_->images[track_el.first.image_id];
     const Camera& camera = model_viewer_widget_->cameras[image.CameraId()];
+    if (track_el.first.point2D_idx >= image.NumPoints2D())
+    {
+        continue;
+    }
     const Point2D& point2D = image.Point2D(track_el.first.point2D_idx);
-    const Eigen::Vector2d proj_point2D =
-        ProjectPointToImage(point3D.XYZ(), image.ProjectionMatrix(), camera);
+    const Eigen::Vector2d proj_point2D = ProjectPointToImage(point3D.XYZ(), image.ProjectionMatrix(), camera);
     const double reproj_error = (point2D.XY() - proj_point2D).norm();
 
     Bitmap bitmap;

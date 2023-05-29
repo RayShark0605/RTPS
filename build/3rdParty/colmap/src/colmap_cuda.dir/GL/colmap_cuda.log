@@ -1,1 +1,13 @@
-﻿  colmap_cuda.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\GL\colmap_cuda.lib
+﻿  patch_match.cc
+  cuda.cc
+  cudacc.cc
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc(279,15): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc(278,43): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc(325,53): warning C4267: “参数”: 从“size_t”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\memory(3393,1): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据 (编译源文件 D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\mvs\patch_match.cc(202,66): message : 查看对正在编译的函数 模板 实例化“std::unique_ptr<colmap::ThreadPool,std::default_delete<colmap::ThreadPool>> std::make_unique<colmap::ThreadPool,unsigned __int64,0>(unsigned __int64 &&)”的引用
+  colmap_cuda.vcxproj -> D:\RTPS\RTPSv0.5\build\3rdParty\colmap\src\GL\colmap_cuda.lib

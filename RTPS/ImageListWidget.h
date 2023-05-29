@@ -13,8 +13,6 @@ public:
 public slots:
 	void itemDoubleClicked_SLOT(QListWidgetItem* item);
 
-
-
 private:
 	QDockWidget* parent;
 	std::vector<QListWidgetItem*> Items;

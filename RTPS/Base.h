@@ -52,7 +52,8 @@
 #include <sfm/incremental_mapper.h>
 #include <ui/options_widget.h>
 #include <ui/thread_control_widget.h>
-#include <ui/model_viewer_widget.h>
+//#include <ui/model_viewer_widget.h>
+
 #include <ui/log_widget.h>
 #include <ui/render_options_widget.h>
 #include <ui/reconstruction_manager_widget.h>
@@ -62,6 +63,7 @@
 #include <util/misc.h>
 
 #include <cuda_runtime_api.h>
+#include <nvml.h>
 #include <psapi.h>
 
 
@@ -195,6 +197,14 @@ public:
 	static size_t ThreadCount;
 	static std::mutex GPU_Mutex;
 	static std::mutex Reconstruction_Mutex;
+	static nvmlDevice_t device;
+
+	static size_t MaxMatches;
+	static std::unordered_map<size_t, std::unordered_map<size_t, size_t>> MatchMatrix;
+	static std::unordered_map<size_t, std::unordered_set<size_t>> MatchedImages;
+	static std::mutex MatchMatrix_Mutex;
+
+
 
 	/*
 	static std::mutex Images_Mutex;
@@ -1033,18 +1043,43 @@ inline void ScaleImage(std::string ImagePath, int MaxSize)
 	}
 }
 
+inline void GetGPUMemUsage(double& TotalGB, double& UsedGB, double& FreeGB)
+{
+	nvmlMemory_t memory;
+	nvmlReturn_t result = nvmlDeviceGetMemoryInfo(Base::device, &memory);
+	if (result != NVML_SUCCESS)
+	{
+		std::cout << "Unable to get the GPU memory usage!" << endl;
+		TotalGB = UsedGB = FreeGB = 0;
+		return;
+	}
+	TotalGB = memory.total / (1024.0 * 1024.0 * 1024.0);
+	UsedGB = memory.used / (1024.0 * 1024.0 * 1024.0);
+	FreeGB = memory.free / (1024.0 * 1024.0 * 1024.0);
+}
 inline bool IsGPUAvailable()
 {
 	int CUDA_DeviceCount = 0;
 	cudaGetDeviceCount(&CUDA_DeviceCount);
 	if (CUDA_DeviceCount == 0)return false;
-	size_t gpu_total_size, gpu_free_size;
-	cudaMemGetInfo(&gpu_free_size, &gpu_total_size);
-	double total_memory_MB = double(gpu_total_size) / (1024.0 * 1024.0);
-	double free_memory_MB = double(gpu_free_size) / (1024.0 * 1024.0);
-	double used_memory_MB = total_memory_MB - free_memory_MB;
-	if (free_memory_MB / 1024.0 < 2.0 || used_memory_MB / 1024.0 > 2.0)return false;
+	double TotalGB, UsedGB, FreeGB;
+	GetGPUMemUsage(TotalGB, UsedGB, FreeGB);
+	if (TotalGB < 4 || FreeGB < 2)
+	{
+		return false;
+	}
 	return true;
+}
+inline void GetMemoryUsage(double& TotalGB, double& UsedGB, double& FreeGB)
+{
+	PROCESS_MEMORY_COUNTERS pmc;
+	GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+	UsedGB = pmc.WorkingSetSize / (1024.0 * 1024.0 * 1024.0);
+	MEMORYSTATUSEX memInfo;
+	memInfo.dwLength = sizeof(MEMORYSTATUSEX);
+	GlobalMemoryStatusEx(&memInfo);
+	TotalGB = memInfo.ullTotalPhys / (1024.0 * 1024.0 * 1024.0);
+	FreeGB = TotalGB - UsedGB;
 }
 
 inline void ThrowError(std::string ErrorInfo)

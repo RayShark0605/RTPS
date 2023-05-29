@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21A56ABD-9234-3AFF-9816-3186FB35988D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeSystem.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddCompileFlagsIfSupported.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddGerritCommitHook.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresCompileOptionsToComponents.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresThreadingModels.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CheckIfUnderscorePrefixedBesselFunctionsExist.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CreateCeresConfig.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\DetectBrokenStackCheckMacOSXcodePairing.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\EnableSanitizer.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindMETIS.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindSuiteSparse.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindTBB.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\PrettyPrintCMakeList.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\ReadCeresVersionFromSource.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\UpdateCacheVariable.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\config.h.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeSystem.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddCompileFlagsIfSupported.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddGerritCommitHook.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresCompileOptionsToComponents.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresThreadingModels.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CheckIfUnderscorePrefixedBesselFunctionsExist.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CreateCeresConfig.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\DetectBrokenStackCheckMacOSXcodePairing.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\EnableSanitizer.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindMETIS.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindSuiteSparse.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindTBB.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\PrettyPrintCMakeList.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\ReadCeresVersionFromSource.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\UpdateCacheVariable.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\config.h.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeSystem.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddCompileFlagsIfSupported.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddGerritCommitHook.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresCompileOptionsToComponents.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresThreadingModels.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CheckIfUnderscorePrefixedBesselFunctionsExist.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CreateCeresConfig.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\DetectBrokenStackCheckMacOSXcodePairing.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\EnableSanitizer.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindMETIS.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindSuiteSparse.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindTBB.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\PrettyPrintCMakeList.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\ReadCeresVersionFromSource.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\UpdateCacheVariable.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\config.h.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Config.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3ConfigVersion.cmake;C:\vcpkg\installed\x64-windows\share\eigen3\Eigen3Targets.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config-version.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-config.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-debug.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets-release.cmake;C:\vcpkg\installed\x64-windows\share\gflags\gflags-nonamespace-targets.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config-version.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-config.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-debug.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets-release.cmake;C:\vcpkg\packages\glog_x64-windows\share\glog\glog-targets.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\3.26.3\CMakeSystem.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddCompileFlagsIfSupported.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\AddGerritCommitHook.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresCompileOptionsToComponents.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresConfig.cmake.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CeresThreadingModels.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CheckIfUnderscorePrefixedBesselFunctionsExist.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\CreateCeresConfig.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\DetectBrokenStackCheckMacOSXcodePairing.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\EnableSanitizer.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindGlog.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindMETIS.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindSuiteSparse.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\FindTBB.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\PrettyPrintCMakeList.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\ReadCeresVersionFromSource.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\UpdateCacheVariable.cmake;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\config.h.in;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\cmake\uninstall.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\ZERO_CHECK.vcxproj">
+      <Project>{52B40DC3-E576-399E-85A9-56EF591D631D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\array_selector_test.vcxproj">
+      <Project>{48930763-E85C-371F-8D2E-956AC0A5DDEA}</Project>
+      <Name>array_selector_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\array_utils_test.vcxproj">
+      <Project>{263D83F6-95C4-3CE3-9E95-0A21B246CFCF}</Project>
+      <Name>array_utils_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\autodiff_cost_function_test.vcxproj">
+      <Project>{216E960A-F1A5-30F5-9B71-9F822A0F85AB}</Project>
+      <Name>autodiff_cost_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\autodiff_first_order_function_test.vcxproj">
+      <Project>{5BBE0A39-76F9-37CD-81B5-7069CA48B242}</Project>
+      <Name>autodiff_first_order_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\autodiff_local_parameterization_test.vcxproj">
+      <Project>{FA68F7BD-701C-357C-B611-2B580A9EEC76}</Project>
+      <Name>autodiff_local_parameterization_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\autodiff_manifold_test.vcxproj">
+      <Project>{370DBF78-B892-3864-9614-2A91B9DBFF17}</Project>
+      <Name>autodiff_manifold_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\autodiff_test.vcxproj">
+      <Project>{719C6C78-9059-3830-8654-393F67F4DA4C}</Project>
+      <Name>autodiff_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_cuda_auto_test.vcxproj">
+      <Project>{749F2E70-6AD2-3794-A9B9-8EA59AC127CA}</Project>
+      <Name>ba_denseschur_cuda_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_cuda_auto_threads_test.vcxproj">
+      <Project>{4EC17DC1-5ABA-3EF3-9F06-A325CBA33ED2}</Project>
+      <Name>ba_denseschur_cuda_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_cuda_user_test.vcxproj">
+      <Project>{C0CF4E87-66A3-348B-96C8-A1C92B33CDE7}</Project>
+      <Name>ba_denseschur_cuda_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_cuda_user_threads_test.vcxproj">
+      <Project>{526EF01B-6C8F-35B7-A76B-FFBA8A56BFBF}</Project>
+      <Name>ba_denseschur_cuda_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_eigen_auto_test.vcxproj">
+      <Project>{85EFA8BC-D0C2-3BFB-BD24-F82FEA6F842C}</Project>
+      <Name>ba_denseschur_eigen_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_eigen_auto_threads_test.vcxproj">
+      <Project>{D6C87FA5-1AB3-3B63-9320-7E80F8BF8938}</Project>
+      <Name>ba_denseschur_eigen_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_eigen_user_test.vcxproj">
+      <Project>{953F307F-550D-3442-8FF1-84B08D198343}</Project>
+      <Name>ba_denseschur_eigen_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_eigen_user_threads_test.vcxproj">
+      <Project>{878E6579-423C-31EB-B445-E713542FC207}</Project>
+      <Name>ba_denseschur_eigen_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_lapack_auto_test.vcxproj">
+      <Project>{50C94671-A46C-3B0C-B57B-C8A934F3B190}</Project>
+      <Name>ba_denseschur_lapack_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_lapack_auto_threads_test.vcxproj">
+      <Project>{9D8E0BC7-75BE-314F-BBC5-E473D41C3A74}</Project>
+      <Name>ba_denseschur_lapack_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_lapack_user_test.vcxproj">
+      <Project>{585BF3E1-7468-3D81-8400-24A728C56C9D}</Project>
+      <Name>ba_denseschur_lapack_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_denseschur_lapack_user_threads_test.vcxproj">
+      <Project>{45149E15-9131-3F8C-ADDC-B5AD9DAA1D8F}</Project>
+      <Name>ba_denseschur_lapack_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clustjacobi_auto_test.vcxproj">
+      <Project>{977206B2-F177-38FF-8E16-598CA0759F1B}</Project>
+      <Name>ba_iterschur_acceleratesparse_clustjacobi_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clustjacobi_auto_threads_test.vcxproj">
+      <Project>{60392D88-172B-373A-ADE1-6CC0E87BF27B}</Project>
+      <Name>ba_iterschur_acceleratesparse_clustjacobi_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clustjacobi_user_test.vcxproj">
+      <Project>{AB126EDF-14EA-3EC5-A3A8-D54A8B16085D}</Project>
+      <Name>ba_iterschur_acceleratesparse_clustjacobi_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clustjacobi_user_threads_test.vcxproj">
+      <Project>{AFC2A3EB-7111-323F-8B71-7A02FD520A81}</Project>
+      <Name>ba_iterschur_acceleratesparse_clustjacobi_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clusttri_auto_test.vcxproj">
+      <Project>{547A13F8-B9EE-3AF5-A962-CAE2CAE4749F}</Project>
+      <Name>ba_iterschur_acceleratesparse_clusttri_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clusttri_auto_threads_test.vcxproj">
+      <Project>{E0387CF1-3DFB-3F2B-BEB3-C1FF14ACA082}</Project>
+      <Name>ba_iterschur_acceleratesparse_clusttri_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clusttri_user_test.vcxproj">
+      <Project>{235E9219-8CF0-385D-995B-E84DEA08517D}</Project>
+      <Name>ba_iterschur_acceleratesparse_clusttri_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_acceleratesparse_clusttri_user_threads_test.vcxproj">
+      <Project>{46B54C4E-62C6-376B-ABA4-5ACC2B09CCFD}</Project>
+      <Name>ba_iterschur_acceleratesparse_clusttri_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clustjacobi_auto_test.vcxproj">
+      <Project>{664BD50B-28FB-3789-BB40-C2664606BBD9}</Project>
+      <Name>ba_iterschur_cxsparse_clustjacobi_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clustjacobi_auto_threads_test.vcxproj">
+      <Project>{0461A249-C058-30FF-B7EC-09D987D8D94D}</Project>
+      <Name>ba_iterschur_cxsparse_clustjacobi_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clustjacobi_user_test.vcxproj">
+      <Project>{9CF7042E-B8F7-3524-A01C-19D8E42E1F13}</Project>
+      <Name>ba_iterschur_cxsparse_clustjacobi_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clustjacobi_user_threads_test.vcxproj">
+      <Project>{BAE6E56C-2BEA-351F-A1D7-46A43E26EF29}</Project>
+      <Name>ba_iterschur_cxsparse_clustjacobi_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clusttri_auto_test.vcxproj">
+      <Project>{A8065E1F-4AB4-3458-8305-735F77EC531E}</Project>
+      <Name>ba_iterschur_cxsparse_clusttri_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clusttri_auto_threads_test.vcxproj">
+      <Project>{7CD0A415-C51D-36BC-B40F-A994CAF186D9}</Project>
+      <Name>ba_iterschur_cxsparse_clusttri_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clusttri_user_test.vcxproj">
+      <Project>{D9936003-216D-347A-977B-C24CD623556D}</Project>
+      <Name>ba_iterschur_cxsparse_clusttri_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_cxsparse_clusttri_user_threads_test.vcxproj">
+      <Project>{FDDC83D1-3028-3BAA-85D5-8857063B868D}</Project>
+      <Name>ba_iterschur_cxsparse_clusttri_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clustjacobi_auto_test.vcxproj">
+      <Project>{138DF0BF-B3AB-3CA9-818C-ED8115993C6A}</Project>
+      <Name>ba_iterschur_eigensparse_clustjacobi_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clustjacobi_auto_threads_test.vcxproj">
+      <Project>{5EB562C4-349A-30E7-B8C9-BB92D39E0319}</Project>
+      <Name>ba_iterschur_eigensparse_clustjacobi_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clustjacobi_user_test.vcxproj">
+      <Project>{93EF242B-AB9B-3364-B3B8-DFB4481DF177}</Project>
+      <Name>ba_iterschur_eigensparse_clustjacobi_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clustjacobi_user_threads_test.vcxproj">
+      <Project>{5A49DE56-FCCA-33EF-BB88-27244937BB4F}</Project>
+      <Name>ba_iterschur_eigensparse_clustjacobi_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clusttri_auto_test.vcxproj">
+      <Project>{B258BE26-8446-3A78-A44C-DE822E77E6B9}</Project>
+      <Name>ba_iterschur_eigensparse_clusttri_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clusttri_auto_threads_test.vcxproj">
+      <Project>{B36E5466-B9B7-38DD-9461-493B4BCCC527}</Project>
+      <Name>ba_iterschur_eigensparse_clusttri_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clusttri_user_test.vcxproj">
+      <Project>{D72582EE-92DB-3144-8576-3B8282E2A8A9}</Project>
+      <Name>ba_iterschur_eigensparse_clusttri_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_eigensparse_clusttri_user_threads_test.vcxproj">
+      <Project>{B976C11C-2F36-3C14-992E-43B861898170}</Project>
+      <Name>ba_iterschur_eigensparse_clusttri_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_jacobi_auto_test.vcxproj">
+      <Project>{AD5ACC97-CDE0-3EEA-BD9B-5D34603AFF0B}</Project>
+      <Name>ba_iterschur_jacobi_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_jacobi_auto_threads_test.vcxproj">
+      <Project>{EECEE837-D9BF-3FA9-8F3A-67289AE089BB}</Project>
+      <Name>ba_iterschur_jacobi_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_jacobi_user_test.vcxproj">
+      <Project>{E280407B-99AC-3440-87AA-4221B61904D5}</Project>
+      <Name>ba_iterschur_jacobi_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_jacobi_user_threads_test.vcxproj">
+      <Project>{6DF2BDBD-64A8-3CA0-98F3-1FDE13F5335D}</Project>
+      <Name>ba_iterschur_jacobi_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_schurjacobi_auto_test.vcxproj">
+      <Project>{6A60C04D-4509-3569-98F3-057DE279018B}</Project>
+      <Name>ba_iterschur_schurjacobi_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_schurjacobi_auto_threads_test.vcxproj">
+      <Project>{25451FA3-3D59-310B-A751-4B1719BE9721}</Project>
+      <Name>ba_iterschur_schurjacobi_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_schurjacobi_user_test.vcxproj">
+      <Project>{3CA14817-66C1-31E1-99FE-67BB24B6B130}</Project>
+      <Name>ba_iterschur_schurjacobi_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_schurjacobi_user_threads_test.vcxproj">
+      <Project>{1AB7F576-765B-3098-A7AF-8FE1180DA14F}</Project>
+      <Name>ba_iterschur_schurjacobi_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clustjacobi_auto_test.vcxproj">
+      <Project>{8E8CA6EA-4D26-30A1-A043-7CAE832FF4CC}</Project>
+      <Name>ba_iterschur_suitesparse_clustjacobi_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clustjacobi_auto_threads_test.vcxproj">
+      <Project>{03DBF9DE-9629-30FF-A434-C72F516EE119}</Project>
+      <Name>ba_iterschur_suitesparse_clustjacobi_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clustjacobi_user_test.vcxproj">
+      <Project>{E3A24CD1-D224-389C-89C6-105EFC4B62EF}</Project>
+      <Name>ba_iterschur_suitesparse_clustjacobi_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clustjacobi_user_threads_test.vcxproj">
+      <Project>{80A63D49-E770-38B6-96D7-3FCD8D0B2DE4}</Project>
+      <Name>ba_iterschur_suitesparse_clustjacobi_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clusttri_auto_test.vcxproj">
+      <Project>{B1C14F9B-4A02-3829-92E1-B14442F7E23C}</Project>
+      <Name>ba_iterschur_suitesparse_clusttri_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clusttri_auto_threads_test.vcxproj">
+      <Project>{3B338EB5-C7F9-3BEC-A961-F68D9CF805E0}</Project>
+      <Name>ba_iterschur_suitesparse_clusttri_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clusttri_user_test.vcxproj">
+      <Project>{C8917B63-4980-3BA2-81B1-025423CA8315}</Project>
+      <Name>ba_iterschur_suitesparse_clusttri_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_iterschur_suitesparse_clusttri_user_threads_test.vcxproj">
+      <Project>{E3C753E7-407D-375C-AAC6-CBB0721F3661}</Project>
+      <Name>ba_iterschur_suitesparse_clusttri_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_acceleratesparse_auto_test.vcxproj">
+      <Project>{09C6FE52-2AFC-39EB-BC5D-993A2C3D40A3}</Project>
+      <Name>ba_sparsecholesky_acceleratesparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_acceleratesparse_auto_threads_test.vcxproj">
+      <Project>{9A7E7EBE-1D00-3BE9-B061-939F04399A39}</Project>
+      <Name>ba_sparsecholesky_acceleratesparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_acceleratesparse_user_test.vcxproj">
+      <Project>{C3DD8F3D-0347-3FB2-87BB-BB058B8BACC6}</Project>
+      <Name>ba_sparsecholesky_acceleratesparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_acceleratesparse_user_threads_test.vcxproj">
+      <Project>{0E8A2119-1403-39DF-9EB8-965B7573F1EE}</Project>
+      <Name>ba_sparsecholesky_acceleratesparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_cxsparse_auto_test.vcxproj">
+      <Project>{00C606B5-F8A4-3225-B8A4-0EE8089DDEF5}</Project>
+      <Name>ba_sparsecholesky_cxsparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_cxsparse_auto_threads_test.vcxproj">
+      <Project>{AB8A02D7-69E2-329E-8E00-834A41D9DC06}</Project>
+      <Name>ba_sparsecholesky_cxsparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_cxsparse_user_test.vcxproj">
+      <Project>{51080492-D622-3880-9A98-BC54A079DE19}</Project>
+      <Name>ba_sparsecholesky_cxsparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_cxsparse_user_threads_test.vcxproj">
+      <Project>{EDB19E11-64D1-3BC3-9544-401CB2FD1EAC}</Project>
+      <Name>ba_sparsecholesky_cxsparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_eigensparse_auto_test.vcxproj">
+      <Project>{09C3A625-CD8C-364D-9114-B7C17E61A515}</Project>
+      <Name>ba_sparsecholesky_eigensparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_eigensparse_auto_threads_test.vcxproj">
+      <Project>{6DBC283F-8070-3924-AF3E-C3777526E384}</Project>
+      <Name>ba_sparsecholesky_eigensparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_eigensparse_user_test.vcxproj">
+      <Project>{50E6C149-6D73-3207-BB8D-2D23B277C473}</Project>
+      <Name>ba_sparsecholesky_eigensparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_eigensparse_user_threads_test.vcxproj">
+      <Project>{550EBA66-7BAA-3DF1-8553-2F704883521F}</Project>
+      <Name>ba_sparsecholesky_eigensparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_suitesparse_auto_test.vcxproj">
+      <Project>{864ACC94-75E3-3E8F-AD0F-F323951744AE}</Project>
+      <Name>ba_sparsecholesky_suitesparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_suitesparse_auto_threads_test.vcxproj">
+      <Project>{7C2F396E-45FF-36DD-82A9-4148CF17C4D8}</Project>
+      <Name>ba_sparsecholesky_suitesparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_suitesparse_user_test.vcxproj">
+      <Project>{54BD1C13-A1F0-361C-A355-DC3574ED2E93}</Project>
+      <Name>ba_sparsecholesky_suitesparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparsecholesky_suitesparse_user_threads_test.vcxproj">
+      <Project>{3B2C0010-D870-383C-A29D-C6BDB3F65DB4}</Project>
+      <Name>ba_sparsecholesky_suitesparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_acceleratesparse_auto_test.vcxproj">
+      <Project>{B0F06D15-99FD-3A5D-8317-30ADBCB80F8B}</Project>
+      <Name>ba_sparseschur_acceleratesparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_acceleratesparse_auto_threads_test.vcxproj">
+      <Project>{793CA985-91A5-34A2-B4EE-BC4CD45C4959}</Project>
+      <Name>ba_sparseschur_acceleratesparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_acceleratesparse_user_test.vcxproj">
+      <Project>{8AC6A23B-D01E-3979-9D8B-A34ECABD56F1}</Project>
+      <Name>ba_sparseschur_acceleratesparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_acceleratesparse_user_threads_test.vcxproj">
+      <Project>{7E258AB4-3C85-3F28-A3ED-BD805108ADDC}</Project>
+      <Name>ba_sparseschur_acceleratesparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_cxsparse_auto_test.vcxproj">
+      <Project>{37BADB2F-4AA2-3C08-B765-A1A133CF35D6}</Project>
+      <Name>ba_sparseschur_cxsparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_cxsparse_auto_threads_test.vcxproj">
+      <Project>{17BCF9D7-64CE-3AD2-A3D7-F1EA27CB9566}</Project>
+      <Name>ba_sparseschur_cxsparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_cxsparse_user_test.vcxproj">
+      <Project>{DBEB9AD0-227A-34C6-A03C-3A1087CD17A8}</Project>
+      <Name>ba_sparseschur_cxsparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_cxsparse_user_threads_test.vcxproj">
+      <Project>{4D366B53-7D39-3373-9AE5-C120E244BC4B}</Project>
+      <Name>ba_sparseschur_cxsparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_eigensparse_auto_test.vcxproj">
+      <Project>{D9A82609-8B07-3718-97C6-FABF81FC6D9C}</Project>
+      <Name>ba_sparseschur_eigensparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_eigensparse_auto_threads_test.vcxproj">
+      <Project>{D1D8805E-3D8A-383A-A0AB-3A1897AC9606}</Project>
+      <Name>ba_sparseschur_eigensparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_eigensparse_user_test.vcxproj">
+      <Project>{A8E3ED45-A9FF-346E-81B0-F370C42F5913}</Project>
+      <Name>ba_sparseschur_eigensparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_eigensparse_user_threads_test.vcxproj">
+      <Project>{15047F3D-11FA-3635-9FF1-B8A07DCC63A8}</Project>
+      <Name>ba_sparseschur_eigensparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_suitesparse_auto_test.vcxproj">
+      <Project>{A1E9D3F5-9E50-3053-9212-DE5DCED7364F}</Project>
+      <Name>ba_sparseschur_suitesparse_auto_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_suitesparse_auto_threads_test.vcxproj">
+      <Project>{EF437667-D1C5-325E-BC10-66AF4FB7A081}</Project>
+      <Name>ba_sparseschur_suitesparse_auto_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_suitesparse_user_test.vcxproj">
+      <Project>{4E9ACDDE-D116-3885-84F8-02ED6B240167}</Project>
+      <Name>ba_sparseschur_suitesparse_user_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\generated_bundle_adjustment_tests\ba_sparseschur_suitesparse_user_threads_test.vcxproj">
+      <Project>{109C9E99-A659-3C7E-AACC-88C1FF59C84A}</Project>
+      <Name>ba_sparseschur_suitesparse_user_threads_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\bicubic_interpolation.vcxproj">
+      <Project>{FCC1E640-D99E-38D6-A91C-108EE874C21B}</Project>
+      <Name>bicubic_interpolation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\bicubic_interpolation_analytic.vcxproj">
+      <Project>{35BCF6BF-EA12-3B1E-AB11-FD1682212DD7}</Project>
+      <Name>bicubic_interpolation_analytic</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\block_jacobi_preconditioner_test.vcxproj">
+      <Project>{48620F4C-0E6E-3F96-82DE-88204DEE3B75}</Project>
+      <Name>block_jacobi_preconditioner_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\block_random_access_dense_matrix_test.vcxproj">
+      <Project>{C19960DC-9EBF-397A-93E7-9788E965EE59}</Project>
+      <Name>block_random_access_dense_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\block_random_access_diagonal_matrix_test.vcxproj">
+      <Project>{B77395AC-954E-31F7-BA05-62647AB56FD6}</Project>
+      <Name>block_random_access_diagonal_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\block_random_access_sparse_matrix_test.vcxproj">
+      <Project>{E8466601-5C1A-3822-B9ED-16F808030540}</Project>
+      <Name>block_random_access_sparse_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\block_sparse_matrix_test.vcxproj">
+      <Project>{D4EBA61F-95EC-3A64-81CA-8F0F81E417B3}</Project>
+      <Name>block_sparse_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\bundle_adjuster.vcxproj">
+      <Project>{F973FAA3-0BAA-3567-9A65-AE3357A392A6}</Project>
+      <Name>bundle_adjuster</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\c_api_test.vcxproj">
+      <Project>{0A94C755-8314-3BA9-BC31-C602C3F2FD19}</Project>
+      <Name>c_api_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\canonical_views_clustering_test.vcxproj">
+      <Project>{910E5A77-F3EC-394E-94F8-A40F4D7DD59D}</Project>
+      <Name>canonical_views_clustering_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres.vcxproj">
+      <Project>{4D755CDD-76B4-35F7-BF90-EDD311CAA1F9}</Project>
+      <Name>ceres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres_internal.vcxproj">
+      <Project>{79808860-575D-3E45-9E29-E15B731AC9BE}</Project>
+      <Name>ceres_internal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\circle_fit.vcxproj">
+      <Project>{4251F04D-D003-3977-BF4F-92839815E5BA}</Project>
+      <Name>circle_fit</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\compressed_col_sparse_matrix_utils_test.vcxproj">
+      <Project>{B7E10746-C10A-36EF-B01E-BDAC3F750B87}</Project>
+      <Name>compressed_col_sparse_matrix_utils_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\compressed_row_sparse_matrix_test.vcxproj">
+      <Project>{AA6922E8-46F0-38F0-B722-BE3F2E4100CE}</Project>
+      <Name>compressed_row_sparse_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\concurrent_queue_test.vcxproj">
+      <Project>{9ABC6402-20B9-37D0-A018-A40000FEB03F}</Project>
+      <Name>concurrent_queue_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\conditioned_cost_function_test.vcxproj">
+      <Project>{36C22052-92B9-39F9-B844-05D94F05E1B2}</Project>
+      <Name>conditioned_cost_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\conjugate_gradients_solver_test.vcxproj">
+      <Project>{BFEAC096-A378-32CB-B7AB-D7645D5E336B}</Project>
+      <Name>conjugate_gradients_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\corrector_test.vcxproj">
+      <Project>{B5DF62D7-8639-33E0-8FAD-A721A2E70CA6}</Project>
+      <Name>corrector_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\cost_function_to_functor_test.vcxproj">
+      <Project>{C79DCD5F-2528-3ADB-B657-421E3DD502B4}</Project>
+      <Name>cost_function_to_functor_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\covariance_test.vcxproj">
+      <Project>{FC4EDB3B-3E34-39BB-84C1-AED3FC790932}</Project>
+      <Name>covariance_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\cubic_interpolation_test.vcxproj">
+      <Project>{30057C96-C939-303C-82A2-F8630EDCE6DD}</Project>
+      <Name>cubic_interpolation_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\cuda_dense_cholesky_test.vcxproj">
+      <Project>{26352725-5A24-3C9D-ADC3-85B9DC8EC428}</Project>
+      <Name>cuda_dense_cholesky_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\cuda_dense_qr_test.vcxproj">
+      <Project>{6A6BEEA9-03E1-38A2-AF6A-A31461C5887D}</Project>
+      <Name>cuda_dense_qr_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\curve_fitting.vcxproj">
+      <Project>{C8DA98CF-567E-3DB4-86BA-DEAB7754FDB6}</Project>
+      <Name>curve_fitting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\curve_fitting_c.vcxproj">
+      <Project>{639257A8-DEA1-3794-AB99-0ECD47DC3C8A}</Project>
+      <Name>curve_fitting_c</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\denoising.vcxproj">
+      <Project>{71E914C5-D762-3D8D-9C45-A2C132F39F58}</Project>
+      <Name>denoising</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dense_cholesky_test.vcxproj">
+      <Project>{CABCA9F2-2B8A-3DE8-BF51-26803C02FBE2}</Project>
+      <Name>dense_cholesky_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dense_linear_solver_test.vcxproj">
+      <Project>{0B6F817B-FB94-3D36-90C5-134196C14394}</Project>
+      <Name>dense_linear_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dense_qr_test.vcxproj">
+      <Project>{21E1CC6F-9CDC-3B74-90EA-70825A381752}</Project>
+      <Name>dense_qr_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dense_sparse_matrix_test.vcxproj">
+      <Project>{2E3BD99D-5DBC-337A-B1E4-66985843BAF4}</Project>
+      <Name>dense_sparse_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\detect_structure_test.vcxproj">
+      <Project>{D5A92943-3C15-3753-ACC7-B18EAA4C4390}</Project>
+      <Name>detect_structure_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dogleg_strategy_test.vcxproj">
+      <Project>{43260AF4-1394-3DC4-8089-CABDCB033F43}</Project>
+      <Name>dogleg_strategy_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dynamic_autodiff_cost_function_test.vcxproj">
+      <Project>{7DF2A9B2-2E23-3CDF-A412-A27AA576E25A}</Project>
+      <Name>dynamic_autodiff_cost_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dynamic_compressed_row_sparse_matrix_test.vcxproj">
+      <Project>{B0EFB0CA-6D68-3DC3-93E9-B4E0B02E5624}</Project>
+      <Name>dynamic_compressed_row_sparse_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dynamic_numeric_diff_cost_function_test.vcxproj">
+      <Project>{8B67A973-A24F-3846-AAEE-1CA470993B9F}</Project>
+      <Name>dynamic_numeric_diff_cost_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dynamic_sparse_normal_cholesky_solver_test.vcxproj">
+      <Project>{40EF709A-8E76-3B4D-8E81-5051D3E0AA51}</Project>
+      <Name>dynamic_sparse_normal_cholesky_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\dynamic_sparsity_test.vcxproj">
+      <Project>{77AA08D0-50CA-352C-B17C-7C816BCEF795}</Project>
+      <Name>dynamic_sparsity_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\ellipse_approximation.vcxproj">
+      <Project>{F9169736-A9BD-35ED-A81E-D716F21C5CE8}</Project>
+      <Name>ellipse_approximation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\evaluation_callback_test.vcxproj">
+      <Project>{DA465199-6F5C-3502-B5E7-1CDB0EC74646}</Project>
+      <Name>evaluation_callback_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\evaluator_test.vcxproj">
+      <Project>{C16ED279-E266-3C26-A140-B666ED9FE13D}</Project>
+      <Name>evaluator_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\fixed_array_test.vcxproj">
+      <Project>{2C0BCE7B-A9BB-33B6-9FC3-0785CD625635}</Project>
+      <Name>fixed_array_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\gradient_checker_test.vcxproj">
+      <Project>{124CEAAC-F64B-372E-9C95-DA60FA2AA03E}</Project>
+      <Name>gradient_checker_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\gradient_checking_cost_function_test.vcxproj">
+      <Project>{4F377185-07AB-3DD3-8C9F-6D1BD6FD05C7}</Project>
+      <Name>gradient_checking_cost_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\gradient_problem_solver_test.vcxproj">
+      <Project>{7157023D-CF80-38BE-B5A0-972C438927D1}</Project>
+      <Name>gradient_problem_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\gradient_problem_test.vcxproj">
+      <Project>{BC743220-B589-3A87-A9E9-6714DE0A8DEA}</Project>
+      <Name>gradient_problem_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\graph_algorithms_test.vcxproj">
+      <Project>{212D6073-D041-3A64-A478-C70DEF70BA41}</Project>
+      <Name>graph_algorithms_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\graph_test.vcxproj">
+      <Project>{84601CCD-6B03-3914-A228-321829F5AAC4}</Project>
+      <Name>graph_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\gtest.vcxproj">
+      <Project>{1CB28072-1258-3236-AB58-68A40DA9AF19}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\helloworld.vcxproj">
+      <Project>{5B520D15-8E95-3CBE-9EB2-8494800A2EC6}</Project>
+      <Name>helloworld</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\helloworld_analytic_diff.vcxproj">
+      <Project>{FFBE307E-65E9-3310-B46E-680E680B4D6D}</Project>
+      <Name>helloworld_analytic_diff</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\helloworld_numeric_diff.vcxproj">
+      <Project>{C9394CB9-DF1A-3983-BDCB-34A4938EE27B}</Project>
+      <Name>helloworld_numeric_diff</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\householder_vector_test.vcxproj">
+      <Project>{B61E9372-A8BA-319F-83FE-B00250FBEB53}</Project>
+      <Name>householder_vector_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\implicit_schur_complement_test.vcxproj">
+      <Project>{591C5281-FEE2-383E-B284-1B376A59DC5D}</Project>
+      <Name>implicit_schur_complement_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\inner_product_computer_test.vcxproj">
+      <Project>{D1CA0DA6-CBF8-31C2-A538-62C95BBE7468}</Project>
+      <Name>inner_product_computer_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\integer_sequence_algorithm_test.vcxproj">
+      <Project>{CF3AF7C7-5859-3CEC-85EE-0A389B5938E7}</Project>
+      <Name>integer_sequence_algorithm_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\invert_psd_matrix_test.vcxproj">
+      <Project>{2CF81155-4687-39DB-BE8E-A0943054A34A}</Project>
+      <Name>invert_psd_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\is_close_test.vcxproj">
+      <Project>{A5626EFC-8F97-37AD-A2A2-2ACDEBF718ED}</Project>
+      <Name>is_close_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\iterative_refiner_test.vcxproj">
+      <Project>{E33B9BAE-13B5-35B1-8FF5-383F826A623D}</Project>
+      <Name>iterative_refiner_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\iterative_schur_complement_solver_test.vcxproj">
+      <Project>{47C79D0C-5109-362F-A8CC-F01DB8387342}</Project>
+      <Name>iterative_schur_complement_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\jet_test.vcxproj">
+      <Project>{DD12DB19-AE5A-3AD5-8E72-A2577A298603}</Project>
+      <Name>jet_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\jet_traits_test.vcxproj">
+      <Project>{387F2752-752B-3E58-8870-BA32C98BBFDE}</Project>
+      <Name>jet_traits_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\levenberg_marquardt_strategy_test.vcxproj">
+      <Project>{4D5635AE-E0AE-37AF-96E4-562054959A83}</Project>
+      <Name>levenberg_marquardt_strategy_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\libmv_bundle_adjuster.vcxproj">
+      <Project>{7588F7CA-0BDE-3E0F-8EF5-3B1F345D002C}</Project>
+      <Name>libmv_bundle_adjuster</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\libmv_homography.vcxproj">
+      <Project>{471EE992-8A6A-3F89-8373-363A2E9E8540}</Project>
+      <Name>libmv_homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\line_search_minimizer_test.vcxproj">
+      <Project>{BD827A72-7893-3CAF-896C-15853FE45FBD}</Project>
+      <Name>line_search_minimizer_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\line_search_preprocessor_test.vcxproj">
+      <Project>{3FBF72C7-21ED-3D6F-9F0F-F681F056BD90}</Project>
+      <Name>line_search_preprocessor_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\local_parameterization_test.vcxproj">
+      <Project>{CD9801EB-2C31-3BA2-94AE-D4B213555178}</Project>
+      <Name>local_parameterization_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\loss_function_test.vcxproj">
+      <Project>{77350E20-C135-3D2F-8EF1-9D9EC7AECA7A}</Project>
+      <Name>loss_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\manifold_test.vcxproj">
+      <Project>{071771B2-AAFD-3440-B9F1-E9A189EEE6B7}</Project>
+      <Name>manifold_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\minimizer_test.vcxproj">
+      <Project>{66827E94-AD85-3939-A83E-3700499F47FF}</Project>
+      <Name>minimizer_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\more_garbow_hillstrom.vcxproj">
+      <Project>{A7227A97-1436-3BFB-8F70-22DE374517F1}</Project>
+      <Name>more_garbow_hillstrom</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\nist.vcxproj">
+      <Project>{4723FDE6-AA80-3723-8DE6-824ADA5AB40A}</Project>
+      <Name>nist</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\normal_prior_test.vcxproj">
+      <Project>{821653D7-B139-3DD3-9D39-7DF6BD6A1B73}</Project>
+      <Name>normal_prior_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\numeric_diff_cost_function_test.vcxproj">
+      <Project>{1A1F743E-7D58-31E0-A7C7-767F5DEE6D7D}</Project>
+      <Name>numeric_diff_cost_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\numeric_diff_first_order_function_test.vcxproj">
+      <Project>{BC3933F2-DC78-31F4-AACE-ABAC5C80A77F}</Project>
+      <Name>numeric_diff_first_order_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ordered_groups_test.vcxproj">
+      <Project>{5D03833F-F97B-3074-AA49-43DFD460463B}</Project>
+      <Name>ordered_groups_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\parallel_for_test.vcxproj">
+      <Project>{07AE9BA0-4451-3724-B648-4D3C90FD90F2}</Project>
+      <Name>parallel_for_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\parallel_utils_test.vcxproj">
+      <Project>{1DB3E873-431D-3233-97E2-ABBBAC249A2D}</Project>
+      <Name>parallel_utils_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\parameter_block_ordering_test.vcxproj">
+      <Project>{E36F8185-4BE7-3D2F-9DBA-C07A3D082F53}</Project>
+      <Name>parameter_block_ordering_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\parameter_block_test.vcxproj">
+      <Project>{606ADB64-3D1D-35F2-A4A9-E3F1155F3B02}</Project>
+      <Name>parameter_block_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\parameter_dims_test.vcxproj">
+      <Project>{263B3ACA-4C40-351C-8BCD-074D6CBD49C1}</Project>
+      <Name>parameter_dims_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\partitioned_matrix_view_test.vcxproj">
+      <Project>{9B3C8375-B6CB-3060-986E-B038A5D50AD3}</Project>
+      <Name>partitioned_matrix_view_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\polynomial_test.vcxproj">
+      <Project>{6EA17A0C-104D-38C4-B704-1AF72C4C03C0}</Project>
+      <Name>polynomial_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\slam\pose_graph_2d\pose_graph_2d.vcxproj">
+      <Project>{873380A2-0989-36C2-BC4D-C6492E10B9B5}</Project>
+      <Name>pose_graph_2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\slam\pose_graph_3d\pose_graph_3d.vcxproj">
+      <Project>{DA52691A-CF67-3192-9DEF-5226F59BAFF6}</Project>
+      <Name>pose_graph_3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\powell.vcxproj">
+      <Project>{A35BBC39-96C2-3300-A3D7-D8F8BC8C7F2F}</Project>
+      <Name>powell</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\problem_test.vcxproj">
+      <Project>{ED72B151-06DA-3474-B2B8-45DB57207D7E}</Project>
+      <Name>problem_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\program_test.vcxproj">
+      <Project>{8B77BCE0-6EF8-3A3B-8904-522A36EC92DC}</Project>
+      <Name>program_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\reorder_program_test.vcxproj">
+      <Project>{681F2F43-18A0-3203-ACDD-F9873590CE2B}</Project>
+      <Name>reorder_program_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\residual_block_test.vcxproj">
+      <Project>{3A04C7B2-98F9-3E65-AB9B-12F276F7EEFC}</Project>
+      <Name>residual_block_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\residual_block_utils_test.vcxproj">
+      <Project>{85D7A2CC-1791-3725-9B2C-DE390A1C5FAE}</Project>
+      <Name>residual_block_utils_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\robot_pose_mle.vcxproj">
+      <Project>{410C9DF6-D130-3838-A92B-5810D5D46548}</Project>
+      <Name>robot_pose_mle</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\robust_curve_fitting.vcxproj">
+      <Project>{93AB461E-5B7C-3A50-A9DE-801521F04952}</Project>
+      <Name>robust_curve_fitting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\rosenbrock.vcxproj">
+      <Project>{AE7AF0A4-68E1-3AE5-B28C-51EF3F7DB7F2}</Project>
+      <Name>rosenbrock</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\rosenbrock_analytic_diff.vcxproj">
+      <Project>{88D80F82-C59F-3849-B531-97EF7E884312}</Project>
+      <Name>rosenbrock_analytic_diff</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\rosenbrock_numeric_diff.vcxproj">
+      <Project>{DA3A3888-FA7B-300F-B6F9-A14516D88D73}</Project>
+      <Name>rosenbrock_numeric_diff</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\rotation_test.vcxproj">
+      <Project>{10F6E25D-7AB4-340E-B3A5-0428D75836A2}</Project>
+      <Name>rotation_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\sampled_function\sampled_function.vcxproj">
+      <Project>{6B08750C-C5B4-3AF1-86D7-BB8D1BBF8730}</Project>
+      <Name>sampled_function</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\schur_complement_solver_test.vcxproj">
+      <Project>{C20662E7-F6F4-33A4-9AB4-DB8DBA18F1AB}</Project>
+      <Name>schur_complement_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\schur_eliminator_test.vcxproj">
+      <Project>{2156EF28-4B1F-350C-9965-1672BE8F67CD}</Project>
+      <Name>schur_eliminator_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\examples\simple_bundle_adjuster.vcxproj">
+      <Project>{36DD4581-9261-387C-93A9-883444E80E1D}</Project>
+      <Name>simple_bundle_adjuster</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\single_linkage_clustering_test.vcxproj">
+      <Project>{19C640DD-D089-3FB9-BE45-D6CA30AB2104}</Project>
+      <Name>single_linkage_clustering_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\small_blas_test.vcxproj">
+      <Project>{B5D7A910-60E3-397D-8B78-95AA1DB078C3}</Project>
+      <Name>small_blas_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\solver_test.vcxproj">
+      <Project>{C1482467-4451-346A-9B85-C6DCD4E14461}</Project>
+      <Name>solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\sparse_cholesky_test.vcxproj">
+      <Project>{C376747F-8BC5-3E10-BA89-63F3FC511776}</Project>
+      <Name>sparse_cholesky_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\sparse_normal_cholesky_solver_test.vcxproj">
+      <Project>{636B406E-8630-3049-971A-E89C89EF35F8}</Project>
+      <Name>sparse_normal_cholesky_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\subset_preconditioner_test.vcxproj">
+      <Project>{FFD442F8-895A-3B87-ACFC-AD1AD4B9ECDF}</Project>
+      <Name>subset_preconditioner_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\system_test.vcxproj">
+      <Project>{E2970A4C-DCDA-3E45-BD81-458D8B2760E0}</Project>
+      <Name>system_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\test_util.vcxproj">
+      <Project>{6BF3361B-420C-3581-8173-47E05DD7618F}</Project>
+      <Name>test_util</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\thread_pool_test.vcxproj">
+      <Project>{8CD1BDEC-AFFF-3693-93D3-3D75349D0734}</Project>
+      <Name>thread_pool_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\tiny_solver_autodiff_function_test.vcxproj">
+      <Project>{CA1AACC7-E8DC-3728-A42C-09B71F5EC44B}</Project>
+      <Name>tiny_solver_autodiff_function_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\tiny_solver_cost_function_adapter_test.vcxproj">
+      <Project>{40341D1C-DDD3-3430-9E4B-5C5291EE245F}</Project>
+      <Name>tiny_solver_cost_function_adapter_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\tiny_solver_test.vcxproj">
+      <Project>{E029F3DF-78A9-3470-B8F8-77DAD43DD84E}</Project>
+      <Name>tiny_solver_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\triplet_sparse_matrix_test.vcxproj">
+      <Project>{226437E1-5352-3ED5-8C4D-5E03B2582F33}</Project>
+      <Name>triplet_sparse_matrix_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\trust_region_minimizer_test.vcxproj">
+      <Project>{827E37D3-F767-3D6A-A1EE-54D43D66577E}</Project>
+      <Name>trust_region_minimizer_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\trust_region_preprocessor_test.vcxproj">
+      <Project>{27E90CA5-AE22-3724-AB98-B7D42A405019}</Project>
+      <Name>trust_region_preprocessor_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\visibility_based_preconditioner_test.vcxproj">
+      <Project>{39CAFAF1-A870-3610-8E64-C8F1D7D564FA}</Project>
+      <Name>visibility_based_preconditioner_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\visibility_test.vcxproj">
+      <Project>{3B5EFF4A-DA49-35A3-BC77-16F1558F9C03}</Project>
+      <Name>visibility_test</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

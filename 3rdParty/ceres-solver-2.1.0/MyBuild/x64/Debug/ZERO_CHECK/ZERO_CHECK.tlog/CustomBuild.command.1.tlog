@@ -1,0 +1,10 @@
+^D:\RTPS\RTPSV0.5\3RDPARTY\CERES-SOLVER-2.1.0\MYBUILD\CMAKEFILES\5D83EBE2ED6568C5EEC0E880CCEAADAF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/Ceres.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -2,6 +2,7 @@
 *.obj
 *.pdb
 *.ipch
+*.idb
 *.db
 *.VC.db
 *.ilk
@@ -11,3 +12,4 @@
 *.exe
 *.dll
 *.ipdb
+.lastbuildstate

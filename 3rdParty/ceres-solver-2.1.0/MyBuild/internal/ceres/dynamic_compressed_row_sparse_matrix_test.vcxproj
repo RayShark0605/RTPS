@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B0EFB0CA-6D68-3DC3-93E9-B4E0B02E5624}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>dynamic_compressed_row_sparse_matrix_test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dynamic_compressed_row_sparse_matrix_test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dynamic_compressed_row_sparse_matrix_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dynamic_compressed_row_sparse_matrix_test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dynamic_compressed_row_sparse_matrix_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">dynamic_compressed_row_sparse_matrix_test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">dynamic_compressed_row_sparse_matrix_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">dynamic_compressed_row_sparse_matrix_test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">dynamic_compressed_row_sparse_matrix_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Debug\gtest-debug.lib;..\..\lib\Debug\test_util-debug.lib;..\..\lib\Debug\ceres-debug.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;..\..\lib\Debug\gtest-debug.lib;..\..\lib\Debug\ceres-debug.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;C:\vcpkg\packages\glog_x64-windows\debug\lib\glog.lib;gflags::gflags.lib;C:\vcpkg\installed\x64-windows\lib\libcholmod.lib;C:\vcpkg\installed\x64-windows\debug\lib\metis.lib;C:\vcpkg\installed\x64-windows\lib\libamd.lib;C:\vcpkg\installed\x64-windows\lib\libcamd.lib;C:\vcpkg\installed\x64-windows\lib\libccolamd.lib;C:\vcpkg\installed\x64-windows\lib\libcolamd.lib;C:\vcpkg\installed\x64-windows\lib\suitesparseconfig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusolver.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusparse.lib;C:\vcpkg\installed\x64-windows\debug\lib\gflags_debug.lib;shlwapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4049</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/lib/Debug/dynamic_compressed_row_sparse_matrix_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/bin/Debug/dynamic_compressed_row_sparse_matrix_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Release\gtest.lib;..\..\lib\Release\test_util.lib;..\..\lib\Release\ceres.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;..\..\lib\Release\gtest.lib;..\..\lib\Release\ceres.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;C:\vcpkg\packages\glog_x64-windows\lib\glog.lib;gflags::gflags.lib;C:\vcpkg\installed\x64-windows\lib\libcholmod.lib;C:\vcpkg\installed\x64-windows\lib\metis.lib;C:\vcpkg\installed\x64-windows\lib\libamd.lib;C:\vcpkg\installed\x64-windows\lib\libcamd.lib;C:\vcpkg\installed\x64-windows\lib\libccolamd.lib;C:\vcpkg\installed\x64-windows\lib\libcolamd.lib;C:\vcpkg\installed\x64-windows\lib\suitesparseconfig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusolver.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusparse.lib;C:\vcpkg\installed\x64-windows\lib\gflags.lib;shlwapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4049</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/lib/Release/dynamic_compressed_row_sparse_matrix_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/bin/Release/dynamic_compressed_row_sparse_matrix_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\MinSizeRel\gtest.lib;..\..\lib\MinSizeRel\test_util.lib;..\..\lib\MinSizeRel\ceres.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;..\..\lib\MinSizeRel\gtest.lib;..\..\lib\MinSizeRel\ceres.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;C:\vcpkg\packages\glog_x64-windows\debug\lib\glog.lib;gflags::gflags.lib;C:\vcpkg\installed\x64-windows\lib\libcholmod.lib;C:\vcpkg\installed\x64-windows\lib\metis.lib;C:\vcpkg\installed\x64-windows\lib\libamd.lib;C:\vcpkg\installed\x64-windows\lib\libcamd.lib;C:\vcpkg\installed\x64-windows\lib\libccolamd.lib;C:\vcpkg\installed\x64-windows\lib\libcolamd.lib;C:\vcpkg\installed\x64-windows\lib\suitesparseconfig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusolver.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusparse.lib;C:\vcpkg\installed\x64-windows\debug\lib\gflags_debug.lib;shlwapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4049</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/lib/MinSizeRel/dynamic_compressed_row_sparse_matrix_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/bin/MinSizeRel/dynamic_compressed_row_sparse_matrix_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/packages/glog_x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include" /external:I "C:/vcpkg/installed/x64-windows/include/eigen3" /external:I "C:/vcpkg/installed/x64-windows/include/suitesparse" /bigobj /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4267;4099;4996;4800;4244;4251</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION="5.8.0";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;_VARIADIC_MAX=10;NOMINMAX;CERES_SUITESPARSE_VERSION=\"5.8.0\";GLOG_NO_ABBREVIATED_SEVERITIES;GLOG_CUSTOM_PREFIX_SUPPORT;GFLAGS_IS_A_DLL=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\include;D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\include;C:\vcpkg\packages\glog_x64-windows\include;C:\vcpkg\installed\x64-windows\include;C:\vcpkg\installed\x64-windows\include\eigen3;C:\vcpkg\installed\x64-windows\include\suitesparse;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\RelWithDebInfo\gtest.lib;..\..\lib\RelWithDebInfo\test_util.lib;..\..\lib\RelWithDebInfo\ceres.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;..\..\lib\RelWithDebInfo\gtest.lib;..\..\lib\RelWithDebInfo\ceres.lib;C:\vcpkg\installed\x64-windows\lib\libspqr.lib;C:\vcpkg\packages\glog_x64-windows\debug\lib\glog.lib;gflags::gflags.lib;C:\vcpkg\installed\x64-windows\lib\libcholmod.lib;C:\vcpkg\installed\x64-windows\lib\metis.lib;C:\vcpkg\installed\x64-windows\lib\libamd.lib;C:\vcpkg\installed\x64-windows\lib\libcamd.lib;C:\vcpkg\installed\x64-windows\lib\libccolamd.lib;C:\vcpkg\installed\x64-windows\lib\libcolamd.lib;C:\vcpkg\installed\x64-windows\lib\suitesparseconfig.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cudart_static.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cublas.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusolver.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64\cusparse.lib;C:\vcpkg\installed\x64-windows\debug\lib\gflags_debug.lib;shlwapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4049</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/lib/RelWithDebInfo/dynamic_compressed_row_sparse_matrix_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/bin/RelWithDebInfo/dynamic_compressed_row_sparse_matrix_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/internal/ceres/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0 -BD:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild --check-stamp-file D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/internal/ceres/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\exportheader.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\internal\ceres\dynamic_compressed_row_sparse_matrix_test.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\ZERO_CHECK.vcxproj">
+      <Project>{52B40DC3-E576-399E-85A9-56EF591D631D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\ceres.vcxproj">
+      <Project>{4D755CDD-76B4-35F7-BF90-EDD311CAA1F9}</Project>
+      <Name>ceres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\gtest.vcxproj">
+      <Project>{1CB28072-1258-3236-AB58-68A40DA9AF19}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\internal\ceres\test_util.vcxproj">
+      <Project>{6BF3361B-420C-3581-8173-47E05DD7618F}</Project>
+      <Name>test_util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

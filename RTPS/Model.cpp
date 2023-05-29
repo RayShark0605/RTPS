@@ -64,6 +64,7 @@ size_t CModel::GetModelImagePairsNum()
 }
 void CModel::ConvertToReconstruction(Reconstruction& Model)
 {
+	DebugTimer timer(__FUNCTION__);
 	lock(Cameras_Mutex, Images_Mutex, Points3D_Mutex, ImagePairs_Mutex, RegImageIDs_Mutex, AddedPoints3DsNum_Mutex);
 	Model = Reconstruction();
 	Model.cameras_.reserve(Cameras.size());
@@ -1105,6 +1106,9 @@ bool CModel::Merge(CModel& MergedModel, double MaxReprojectError)
 	Eigen::Matrix3x4d Alignment;
 	if (!CalcModelsAlignment(MergedModel, MinInlierObservations, MaxReprojectError, &Alignment))
 	{
+#ifdef OUTPUTLOG_MODE
+		qDebug() << "CalcModelsAlignment return false!";
+#endif
 		return false;
 	}
 	SimilarityTransform3 tform(Alignment);
@@ -1330,7 +1334,7 @@ void CModel::CreateImageDirs(string Path)
 	}
 }
 
-void CModel::Read(string& Path)
+void CModel::Read(string Path)
 {
 	if (ExistsFile(JoinPath(Path, "cameras.bin")) && ExistsFile(JoinPath(Path, "images.bin")) && ExistsFile(JoinPath(Path, "points3D.bin")))
 	{
@@ -1345,7 +1349,7 @@ void CModel::Read(string& Path)
 		LOG(FATAL) << "cameras, images, points3D files do not exist at " << Path;
 	}
 }
-void CModel::ReadText(string& Path)
+void CModel::ReadText(string Path)
 {
 	string CamerasPath = JoinPath(Path, "cameras.txt");
 	string ImagesPath = JoinPath(Path, "images.txt");
@@ -1355,7 +1359,7 @@ void CModel::ReadText(string& Path)
 	ReadImagesText(ImagesPath);
 	ReadPoints3DText(Points3DsPath);
 }
-void CModel::ReadBinary(string& Path)
+void CModel::ReadBinary(string Path)
 {
 	string CamerasPath = JoinPath(Path, "cameras.bin");
 	string ImagesPath = JoinPath(Path, "images.bin");
@@ -1364,7 +1368,7 @@ void CModel::ReadBinary(string& Path)
 	ReadImagesBinary(ImagesPath);
 	ReadPoints3DBinary(Points3DsPath);
 }
-void CModel::ReadPLY(string& Path)
+void CModel::ReadPLY(string Path)
 {
 	vector<PlyPoint> PlyPoints = ReadPly(Path);
 	ReadPLY(PlyPoints);
@@ -1384,11 +1388,11 @@ void CModel::ReadPLY(vector<PlyPoint>& PLY)
 	}
 }
 
-void CModel::Write(string& Path)
+void CModel::Write(string Path)
 {
 	WriteBinary(Path);
 }
-void CModel::WriteText(string& Path)
+void CModel::WriteText(string Path)
 {
 	string CamerasPath = JoinPath(Path, "cameras.txt");
 	string ImagesPath = JoinPath(Path, "images.txt");
@@ -1398,7 +1402,7 @@ void CModel::WriteText(string& Path)
 	WriteImagesText(ImagesPath);
 	WritePoints3DText(Points3DsPath);
 }
-void CModel::WriteBinary(string& Path)
+void CModel::WriteBinary(string Path)
 {
 	string CamerasPath = JoinPath(Path, "cameras.bin");
 	string ImagesPath = JoinPath(Path, "images.bin");
@@ -1408,7 +1412,7 @@ void CModel::WriteBinary(string& Path)
 	WriteImagesBinary(ImagesPath);
 	WritePoints3DBinary(Points3DsPath);
 }
-void CModel::WritePLY(string& Path)
+void CModel::WritePLY(string Path)
 {
 	vector<PlyPoint> PLY;
 	WritePLY(PLY);
@@ -1432,7 +1436,7 @@ void CModel::WritePLY(vector<PlyPoint>& PLY)
 	}
 	Points3D_Mutex.unlock();
 }
-bool CModel::WriteNVM(string& Path, bool IsSkipDistortion)
+bool CModel::WriteNVM(string Path, bool IsSkipDistortion)
 {
 	ofstream file(Path, ios::trunc);
 	CHECK(file.is_open()) << Path;
@@ -1519,7 +1523,7 @@ bool CModel::WriteNVM(string& Path, bool IsSkipDistortion)
 
 	return true;
 }
-bool CModel::WriteCam(string& Path, bool IsSkipDistortion)
+bool CModel::WriteCam(string Path, bool IsSkipDistortion)
 {
 	CreateImageDirs(Path);
 	lock(RegImageIDs_Mutex, Images_Mutex, Cameras_Mutex);
@@ -1600,7 +1604,7 @@ bool CModel::WriteCam(string& Path, bool IsSkipDistortion)
 	Cameras_Mutex.unlock();
 	return true;
 }
-bool CModel::WriteRecon3D(string& Path, bool IsSkipDistortion)
+bool CModel::WriteRecon3D(string Path, bool IsSkipDistortion)
 {
 	string BasePath = EnsureTrailingSlash(StringReplace(Path, "\\", "/"));
 	CreateDirIfNotExists(BasePath);
@@ -1712,7 +1716,7 @@ bool CModel::WriteRecon3D(string& Path, bool IsSkipDistortion)
 	Points3D_Mutex.unlock();
 	return true;
 }
-bool CModel::WriteBundler(string& Path, string& ListPath, bool IsSkipDistortion)
+bool CModel::WriteBundler(string Path, string ListPath, bool IsSkipDistortion)
 {
 	ofstream file(Path, ios::trunc);
 	CHECK(file.is_open()) << Path;
@@ -1815,7 +1819,7 @@ bool CModel::WriteBundler(string& Path, string& ListPath, bool IsSkipDistortion)
 	Points3D_Mutex.unlock();
 	return true;
 }
-void CModel::WriteVRML(string& ImagePath, string& Points3DPath, double ImageScale, Eigen::Vector3d& ImageRGB)
+void CModel::WriteVRML(string ImagePath, string Points3DPath, double ImageScale, Eigen::Vector3d ImageRGB)
 {
 	ofstream images_file(ImagePath, ios::trunc);
 	CHECK(images_file.is_open()) << ImagePath;
@@ -2194,6 +2198,10 @@ bool CModel::CalcModelsAlignment(CModel& SrcModel, double MinInlierObservationsN
 	SrcModel.FindCommonRegImages(CommonImageIDs, *this);
 	if (CommonImageIDs.size() < 3)
 	{
+#ifdef OUTPUTLOG_MODE
+		qDebug() << "CommonImageIDs.size()<3";
+#endif
+
 		return false;
 	}
 
@@ -2210,11 +2218,19 @@ bool CModel::CalcModelsAlignment(CModel& SrcModel, double MinInlierObservationsN
 		RefImages[i] = refimage;
 	}
 	auto report = ransac.Estimate(SrcImages, RefImages);
+	for (size_t i = 0; i < CommonImageIDs.size(); i++)
+	{
+		delete SrcImages[i];
+		delete RefImages[i];
+	}
 	if (report.success)
 	{
 		*Alignment = report.model;
 		return true;
 	}
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "report.success==false";
+#endif
 	return false;
 }
 
@@ -2857,6 +2873,7 @@ CModelManager::CModelManager()
 }
 size_t CModelManager::Size()
 {
+	DebugTimer timer(__FUNCTION__);
 	Models_Mutex.lock();
 	size_t re = Models.size();
 	Models_Mutex.unlock();
@@ -2864,6 +2881,7 @@ size_t CModelManager::Size()
 }
 CModel CModelManager::Get(size_t index)
 {
+	DebugTimer timer(__FUNCTION__);
 	Models_Mutex.lock();
 	if (index >= Models.size())
 	{
@@ -2879,6 +2897,7 @@ CModel CModelManager::Get(size_t index)
 }
 size_t CModelManager::Add()
 {
+	DebugTimer timer(__FUNCTION__);
 	Models_Mutex.lock();
 	size_t re = Models.size();
 	Models.push_back(CModel());
@@ -2887,6 +2906,7 @@ size_t CModelManager::Add()
 }
 void CModelManager::Delete(size_t index)
 {
+	DebugTimer timer(__FUNCTION__);
 	Models_Mutex.lock();
 	if (index >= Models.size())
 	{
@@ -2946,6 +2966,9 @@ void CModelManager::Lock()
 }
 CModel& CModelManager::GetRefer(size_t index)
 {
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "[GetRefer], index=" << index << ", size=" << Models.size();
+#endif
 	if (index >= Models.size())
 	{
 		ThrowError("The index of the model is out of range!");

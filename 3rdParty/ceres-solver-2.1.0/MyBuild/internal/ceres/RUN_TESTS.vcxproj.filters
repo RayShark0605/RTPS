@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\RTPS\RTPSv0.5\3rdParty\ceres-solver-2.1.0\MyBuild\CMakeFiles\2be78188bb3e9207ea9db6370dba4bc9\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{78197F5C-D771-3B2B-BABC-C941A8B13C96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

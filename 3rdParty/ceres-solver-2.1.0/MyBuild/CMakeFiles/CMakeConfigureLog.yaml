@@ -1,0 +1,1293 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:60 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:18 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:65 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:60 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      生成启动时间为 2023/5/27 17:07:16。
+      Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdC.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+        或批处理文件。
+        命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:00.86
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/3.26.3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:18 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:65 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:60 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+      生成启动时间为 2023/5/27 17:07:17。
+      Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+      
+      节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdCXX.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+        或批处理文件。
+        命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:00.75
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/3.26.3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:60 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rgl6zx"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rgl6zx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rgl6zx
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_faa28.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:18。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\cmTC_faa28.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_faa28.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\Debug\\”。
+          正在创建目录“cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_faa28.dir\\Debug\\\\" /Fd"cmTC_faa28.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CMakeCCompilerABI.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_faa28.dir\\Debug\\\\" /Fd"cmTC_faa28.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\Debug\\cmTC_faa28.exe" /INCREMENTAL /ILK:"cmTC_faa28.dir\\Debug\\cmTC_faa28.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rgl6zx/Debug/cmTC_faa28.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rgl6zx/Debug/cmTC_faa28.lib" /MACHINE:X64  /machine:x64 cmTC_faa28.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_faa28.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\Debug\\cmTC_faa28.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\Debug\\cmTC_faa28.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\cmTC_faa28.write.1u.tlog" "cmTC_faa28.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\Debug\\cmTC_faa28.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\cmTC_faa28.write.1u.tlog" "cmTC_faa28.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\Debug\\cmTC_faa28.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\cmTC_faa28.write.1u.tlog" "cmTC_faa28.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_faa28.dir\\Debug\\cmTC_faa28.tlog\\cmTC_faa28.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rgl6zx\\cmTC_faa28.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.76
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:60 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-1tgrt7"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-1tgrt7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-1tgrt7
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1583b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:18。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\cmTC_1583b.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_1583b.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\Debug\\”。
+          正在创建目录“cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1583b.dir\\Debug\\\\" /Fd"cmTC_1583b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CMakeCXXCompilerABI.cpp
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1583b.dir\\Debug\\\\" /Fd"cmTC_1583b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\Debug\\cmTC_1583b.exe" /INCREMENTAL /ILK:"cmTC_1583b.dir\\Debug\\cmTC_1583b.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-1tgrt7/Debug/cmTC_1583b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-1tgrt7/Debug/cmTC_1583b.lib" /MACHINE:X64  /machine:x64 cmTC_1583b.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_1583b.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\Debug\\cmTC_1583b.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\Debug\\cmTC_1583b.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\cmTC_1583b.write.1u.tlog" "cmTC_1583b.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\Debug\\cmTC_1583b.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\cmTC_1583b.write.1u.tlog" "cmTC_1583b.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\Debug\\cmTC_1583b.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\cmTC_1583b.write.1u.tlog" "cmTC_1583b.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_1583b.dir\\Debug\\cmTC_1583b.tlog\\cmTC_1583b.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-1tgrt7\\cmTC_1583b.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:96 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_BIGOBJ"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-eu8972"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-eu8972"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_BIGOBJ"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-eu8972
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_14f2c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:19。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\cmTC_14f2c.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_14f2c.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\Debug\\”。
+          正在创建目录“cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_BIGOBJ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_14f2c.dir\\Debug\\\\" /Fd"cmTC_14f2c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue  /bigobj "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          src.cxx
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_BIGOBJ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_14f2c.dir\\Debug\\\\" /Fd"cmTC_14f2c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue  /bigobj "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\src.cxx"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\Debug\\cmTC_14f2c.exe" /INCREMENTAL /ILK:"cmTC_14f2c.dir\\Debug\\cmTC_14f2c.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-eu8972/Debug/cmTC_14f2c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-eu8972/Debug/cmTC_14f2c.lib" /MACHINE:X64  /machine:x64 cmTC_14f2c.dir\\Debug\\src.obj
+          cmTC_14f2c.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\Debug\\cmTC_14f2c.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\Debug\\cmTC_14f2c.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\cmTC_14f2c.write.1u.tlog" "cmTC_14f2c.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\Debug\\cmTC_14f2c.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\cmTC_14f2c.write.1u.tlog" "cmTC_14f2c.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\Debug\\cmTC_14f2c.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\cmTC_14f2c.write.1u.tlog" "cmTC_14f2c.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_14f2c.dir\\Debug\\cmTC_14f2c.tlog\\cmTC_14f2c.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-eu8972\\cmTC_14f2c.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.79
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "CMakeLists.txt:97 (check_library_exists)"
+    checks:
+      - "Looking for pow in m"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-pw3lnn"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-pw3lnn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_LIBM"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-pw3lnn
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_70062.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:20。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\cmTC_70062.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_70062.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\Debug\\”。
+          正在创建目录“cmTC_70062.dir\\Debug\\cmTC_70062.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_70062.dir\\Debug\\cmTC_70062.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pow /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_70062.dir\\Debug\\\\" /Fd"cmTC_70062.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pow /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_70062.dir\\Debug\\\\" /Fd"cmTC_70062.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\Debug\\cmTC_70062.exe" /INCREMENTAL /ILK:"cmTC_70062.dir\\Debug\\cmTC_70062.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" m.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-pw3lnn/Debug/cmTC_70062.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-pw3lnn/Debug/cmTC_70062.lib" /MACHINE:X64  /machine:x64 cmTC_70062.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“m.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\cmTC_70062.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\cmTC_70062.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\cmTC_70062.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“m.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-pw3lnn\\cmTC_70062.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.27
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:483 (_OPENMP_GET_FLAGS)"
+      - "cmake/CeresThreadingModels.cmake:37 (find_package)"
+      - "CMakeLists.txt:123 (find_available_ceres_threading_models)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-slz8ge"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-slz8ge"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_openmp"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-slz8ge
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c4193.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:21。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\cmTC_c4193.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_c4193.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\Debug\\”。
+          正在创建目录“cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_c4193.dir\\Debug\\\\" /Fd"cmTC_c4193.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\OpenMPTryFlag.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPTryFlag.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_c4193.dir\\Debug\\\\" /Fd"cmTC_c4193.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\OpenMPTryFlag.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\Debug\\cmTC_c4193.exe" /INCREMENTAL /ILK:"cmTC_c4193.dir\\Debug\\cmTC_c4193.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-slz8ge/Debug/cmTC_c4193.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-slz8ge/Debug/cmTC_c4193.lib" /MACHINE:X64  /machine:x64 cmTC_c4193.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_c4193.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\Debug\\cmTC_c4193.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\Debug\\cmTC_c4193.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\cmTC_c4193.write.1u.tlog" "cmTC_c4193.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\Debug\\cmTC_c4193.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\cmTC_c4193.write.1u.tlog" "cmTC_c4193.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\Debug\\cmTC_c4193.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\cmTC_c4193.write.1u.tlog" "cmTC_c4193.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_c4193.dir\\Debug\\cmTC_c4193.tlog\\cmTC_c4193.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-slz8ge\\cmTC_c4193.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.77
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:483 (_OPENMP_GET_FLAGS)"
+      - "cmake/CeresThreadingModels.cmake:37 (find_package)"
+      - "CMakeLists.txt:123 (find_available_ceres_threading_models)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-q9ix3y"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-q9ix3y"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_openmp"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-q9ix3y
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f89d5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:21。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\cmTC_f89d5.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_f89d5.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\Debug\\”。
+          正在创建目录“cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_f89d5.dir\\Debug\\\\" /Fd"cmTC_f89d5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\OpenMPTryFlag.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPTryFlag.cpp
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_f89d5.dir\\Debug\\\\" /Fd"cmTC_f89d5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\OpenMPTryFlag.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\Debug\\cmTC_f89d5.exe" /INCREMENTAL /ILK:"cmTC_f89d5.dir\\Debug\\cmTC_f89d5.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-q9ix3y/Debug/cmTC_f89d5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-q9ix3y/Debug/cmTC_f89d5.lib" /MACHINE:X64  /machine:x64 cmTC_f89d5.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_f89d5.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\Debug\\cmTC_f89d5.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\Debug\\cmTC_f89d5.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\cmTC_f89d5.write.1u.tlog" "cmTC_f89d5.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\Debug\\cmTC_f89d5.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\cmTC_f89d5.write.1u.tlog" "cmTC_f89d5.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\Debug\\cmTC_f89d5.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\cmTC_f89d5.write.1u.tlog" "cmTC_f89d5.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_f89d5.dir\\Debug\\cmTC_f89d5.tlog\\cmTC_f89d5.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-q9ix3y\\cmTC_f89d5.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.79
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:419 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_SPEC_DATE)"
+      - "cmake/CeresThreadingModels.cmake:37 (find_package)"
+      - "CMakeLists.txt:123 (find_available_ceres_threading_models)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-5xw6mj"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-5xw6mj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-5xw6mj
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_cf94b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:22。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\cmTC_cf94b.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_cf94b.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\Debug\\”。
+          正在创建目录“cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_cf94b.dir\\Debug\\\\" /Fd"cmTC_cf94b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\OpenMPCheckVersion.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPCheckVersion.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_cf94b.dir\\Debug\\\\" /Fd"cmTC_cf94b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\OpenMPCheckVersion.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\Debug\\cmTC_cf94b.exe" /INCREMENTAL /ILK:"cmTC_cf94b.dir\\Debug\\cmTC_cf94b.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-5xw6mj/Debug/cmTC_cf94b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-5xw6mj/Debug/cmTC_cf94b.lib" /MACHINE:X64  /machine:x64 cmTC_cf94b.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_cf94b.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\Debug\\cmTC_cf94b.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\Debug\\cmTC_cf94b.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\cmTC_cf94b.write.1u.tlog" "cmTC_cf94b.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\Debug\\cmTC_cf94b.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\cmTC_cf94b.write.1u.tlog" "cmTC_cf94b.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\Debug\\cmTC_cf94b.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\cmTC_cf94b.write.1u.tlog" "cmTC_cf94b.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_cf94b.dir\\Debug\\cmTC_cf94b.tlog\\cmTC_cf94b.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-5xw6mj\\cmTC_cf94b.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:419 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_SPEC_DATE)"
+      - "cmake/CeresThreadingModels.cmake:37 (find_package)"
+      - "CMakeLists.txt:123 (find_available_ceres_threading_models)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-jfmvf9"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-jfmvf9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-jfmvf9
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_6f741.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:07:23。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\cmTC_6f741.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_6f741.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\Debug\\”。
+          正在创建目录“cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_6f741.dir\\Debug\\\\" /Fd"cmTC_6f741.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\OpenMPCheckVersion.cpp"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          OpenMPCheckVersion.cpp
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_6f741.dir\\Debug\\\\" /Fd"cmTC_6f741.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\OpenMPCheckVersion.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\Debug\\cmTC_6f741.exe" /INCREMENTAL /ILK:"cmTC_6f741.dir\\Debug\\cmTC_6f741.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-jfmvf9/Debug/cmTC_6f741.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-jfmvf9/Debug/cmTC_6f741.lib" /MACHINE:X64  /machine:x64 cmTC_6f741.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_6f741.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\Debug\\cmTC_6f741.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\Debug\\cmTC_6f741.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\cmTC_6f741.write.1u.tlog" "cmTC_6f741.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\Debug\\cmTC_6f741.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\cmTC_6f741.write.1u.tlog" "cmTC_6f741.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\Debug\\cmTC_6f741.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\cmTC_6f741.write.1u.tlog" "cmTC_6f741.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_6f741.dir\\Debug\\cmTC_6f741.tlog\\cmTC_6f741.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-jfmvf9\\cmTC_6f741.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.78
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:367 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBLAS.cmake:411 (check_blas_libraries)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:247 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:283 (_lapack_find_dependency)"
+      - "CMakeLists.txt:247 (find_package)"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-87gfih"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-87gfih"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "BLAS_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-87gfih
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_cc7f8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:08:31。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\cmTC_cc7f8.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_cc7f8.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\”。
+          正在创建目录“cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sgemm_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cc7f8.dir\\Debug\\\\" /Fd"cmTC_cc7f8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sgemm_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cc7f8.dir\\Debug\\\\" /Fd"cmTC_cc7f8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\cmTC_cc7f8.exe" /INCREMENTAL /ILK:"cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-87gfih/Debug/cmTC_cc7f8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-87gfih/Debug/cmTC_cc7f8.lib" /MACHINE:X64  /machine:x64 cmTC_cc7f8.dir\\Debug\\CheckFunctionExists.obj
+          cmTC_cc7f8.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\cmTC_cc7f8.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\cmTC_cc7f8.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\cmTC_cc7f8.write.1u.tlog" "cmTC_cc7f8.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\cmTC_cc7f8.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\cmTC_cc7f8.write.1u.tlog" "cmTC_cc7f8.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\cmTC_cc7f8.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\cmTC_cc7f8.write.1u.tlog" "cmTC_cc7f8.dir\\Debug\\vcpkg.applocal.log"
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\Debug\\openblas.dll
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_cc7f8.dir\\Debug\\cmTC_cc7f8.tlog\\cmTC_cc7f8.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-87gfih\\cmTC_cc7f8.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.76
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:247 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:323 (_lapack_find_dependency)"
+      - "CMakeLists.txt:247 (find_package)"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-nd7tx8"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-nd7tx8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-nd7tx8
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d5aeb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:08:32。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\cmTC_d5aeb.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_d5aeb.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\Debug\\”。
+          正在创建目录“cmTC_d5aeb.dir\\Debug\\cmTC_d5aeb.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_d5aeb.dir\\Debug\\cmTC_d5aeb.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d5aeb.dir\\Debug\\\\" /Fd"cmTC_d5aeb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\src.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          src.c
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d5aeb.dir\\Debug\\\\" /Fd"cmTC_d5aeb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\src.c"
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\cmTC_d5aeb.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\cmTC_d5aeb.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\cmTC_d5aeb.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nd7tx8\\cmTC_d5aeb.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.21
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:247 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:323 (_lapack_find_dependency)"
+      - "CMakeLists.txt:247 (find_package)"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-0g8ofv"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-0g8ofv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-0g8ofv
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_218c9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:08:32。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\cmTC_218c9.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_218c9.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\Debug\\”。
+          正在创建目录“cmTC_218c9.dir\\Debug\\cmTC_218c9.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_218c9.dir\\Debug\\cmTC_218c9.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_218c9.dir\\Debug\\\\" /Fd"cmTC_218c9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_218c9.dir\\Debug\\\\" /Fd"cmTC_218c9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\Debug\\cmTC_218c9.exe" /INCREMENTAL /ILK:"cmTC_218c9.dir\\Debug\\cmTC_218c9.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-0g8ofv/Debug/cmTC_218c9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-0g8ofv/Debug/cmTC_218c9.lib" /MACHINE:X64  /machine:x64 cmTC_218c9.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\cmTC_218c9.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\cmTC_218c9.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\cmTC_218c9.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-0g8ofv\\cmTC_218c9.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.28
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:247 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:323 (_lapack_find_dependency)"
+      - "CMakeLists.txt:247 (find_package)"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-2rms9m"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-2rms9m"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-2rms9m
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_59754.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:08:32。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\cmTC_59754.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_59754.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\Debug\\”。
+          正在创建目录“cmTC_59754.dir\\Debug\\cmTC_59754.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_59754.dir\\Debug\\cmTC_59754.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_59754.dir\\Debug\\\\" /Fd"cmTC_59754.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.c
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_59754.dir\\Debug\\\\" /Fd"cmTC_59754.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\Debug\\cmTC_59754.exe" /INCREMENTAL /ILK:"cmTC_59754.dir\\Debug\\cmTC_59754.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-2rms9m/Debug/cmTC_59754.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-2rms9m/Debug/cmTC_59754.lib" /MACHINE:X64  /machine:x64 cmTC_59754.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\cmTC_59754.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\cmTC_59754.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\cmTC_59754.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-2rms9m\\cmTC_59754.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.27
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:220 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindLAPACK.cmake:395 (check_lapack_libraries)"
+      - "CMakeLists.txt:247 (find_package)"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-kfcujp"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-kfcujp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "LAPACK_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-kfcujp
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_11516.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:08:33。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\cmTC_11516.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_11516.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\”。
+          正在创建目录“cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cheev_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_11516.dir\\Debug\\\\" /Fd"cmTC_11516.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.c
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cheev_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_11516.dir\\Debug\\\\" /Fd"cmTC_11516.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\cmTC_11516.exe" /INCREMENTAL /ILK:"cmTC_11516.dir\\Debug\\cmTC_11516.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-kfcujp/Debug/cmTC_11516.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-kfcujp/Debug/cmTC_11516.lib" /MACHINE:X64  /machine:x64 cmTC_11516.dir\\Debug\\CheckFunctionExists.obj
+          cmTC_11516.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\cmTC_11516.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\cmTC_11516.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\cmTC_11516.write.1u.tlog" "cmTC_11516.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\cmTC_11516.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\cmTC_11516.write.1u.tlog" "cmTC_11516.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\cmTC_11516.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\cmTC_11516.write.1u.tlog" "cmTC_11516.dir\\Debug\\vcpkg.applocal.log"
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\liblapack.dll
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\libgcc_s_seh-1.dll
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\libwinpthread-1.dll
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\libgfortran-5.dll
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\libquadmath-0.dll
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\Debug\\openblas.dll
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_11516.dir\\Debug\\cmTC_11516.tlog\\cmTC_11516.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-kfcujp\\cmTC_11516.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.92
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "cmake/FindSuiteSparse.cmake:347 (check_library_exists)"
+      - "CMakeLists.txt:269 (find_package)"
+    checks:
+      - "Looking for shm_open in rt"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-xxj2rk"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-xxj2rk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_LIBRT"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-xxj2rk
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2578a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:08:34。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\cmTC_2578a.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_2578a.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\Debug\\”。
+          正在创建目录“cmTC_2578a.dir\\Debug\\cmTC_2578a.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_2578a.dir\\Debug\\cmTC_2578a.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=shm_open /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2578a.dir\\Debug\\\\" /Fd"cmTC_2578a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=shm_open /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2578a.dir\\Debug\\\\" /Fd"cmTC_2578a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\Debug\\cmTC_2578a.exe" /INCREMENTAL /ILK:"cmTC_2578a.dir\\Debug\\cmTC_2578a.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" rt.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-xxj2rk/Debug/cmTC_2578a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-xxj2rk/Debug/cmTC_2578a.lib" /MACHINE:X64  /machine:x64 cmTC_2578a.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“rt.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\cmTC_2578a.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\cmTC_2578a.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\cmTC_2578a.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“rt.lib” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-xxj2rk\\cmTC_2578a.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.27
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "cmake/CheckIfUnderscorePrefixedBesselFunctionsExist.cmake:41 (check_cxx_source_compiles)"
+      - "CMakeLists.txt:557 (check_if_underscore_prefixed_bessel_functions_exist)"
+    checks:
+      - "Performing Test HAVE_UNDERSCORE_PREFIXED_BESSEL_FUNCTIONS"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rasfue"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rasfue"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP"
+      CMAKE_CXX_FLAGS_DEBUG: "/MTd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 /ignore:4049"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_UNDERSCORE_PREFIXED_BESSEL_FUNCTIONS"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rasfue
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_5d3aa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:16:19。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\cmTC_5d3aa.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_5d3aa.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\Debug\\”。
+          正在创建目录“cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_UNDERSCORE_PREFIXED_BESSEL_FUNCTIONS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5d3aa.dir\\Debug\\\\" /Fd"cmTC_5d3aa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          src.cxx
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_UNDERSCORE_PREFIXED_BESSEL_FUNCTIONS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5d3aa.dir\\Debug\\\\" /Fd"cmTC_5d3aa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\src.cxx"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\Debug\\cmTC_5d3aa.exe" /INCREMENTAL /ILK:"cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rasfue/Debug/cmTC_5d3aa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-rasfue/Debug/cmTC_5d3aa.lib" /MACHINE:X64  /machine:x64 /ignore:4049 cmTC_5d3aa.dir\\Debug\\src.obj
+          cmTC_5d3aa.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\Debug\\cmTC_5d3aa.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\Debug\\cmTC_5d3aa.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\cmTC_5d3aa.write.1u.tlog" "cmTC_5d3aa.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\Debug\\cmTC_5d3aa.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\cmTC_5d3aa.write.1u.tlog" "cmTC_5d3aa.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\Debug\\cmTC_5d3aa.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\cmTC_5d3aa.write.1u.tlog" "cmTC_5d3aa.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_5d3aa.dir\\Debug\\cmTC_5d3aa.tlog\\cmTC_5d3aa.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-rasfue\\cmTC_5d3aa.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.98
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "internal/ceres/CMakeLists.txt:276 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test CHECK_CXX_FLAG_Wno_missing_declarations"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-owke8w"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-owke8w"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP"
+      CMAKE_CXX_FLAGS_DEBUG: "/MTd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 /ignore:4049"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CHECK_CXX_FLAG_Wno_missing_declarations"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-owke8w
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_702e7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:16:21。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\cmTC_702e7.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_702e7.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\Debug\\”。
+          正在创建目录“cmTC_702e7.dir\\Debug\\cmTC_702e7.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_702e7.dir\\Debug\\cmTC_702e7.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CXX_FLAG_Wno_missing_declarations /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_702e7.dir\\Debug\\\\" /Fd"cmTC_702e7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue  -Wno-missing-declarations "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CXX_FLAG_Wno_missing_declarations /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_702e7.dir\\Debug\\\\" /Fd"cmTC_702e7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue  -Wno-missing-declarations "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\src.cxx"
+        cl : 命令行  error D8021: 无效的数值参数“/Wno-missing-declarations” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\cmTC_702e7.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\cmTC_702e7.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\cmTC_702e7.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          cl : 命令行  error D8021: 无效的数值参数“/Wno-missing-declarations” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-owke8w\\cmTC_702e7.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.19
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/GenerateExportHeader.cmake:206 (check_cxx_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/GenerateExportHeader.cmake:263 (_check_cxx_compiler_attribute)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/GenerateExportHeader.cmake:420 (_test_compiler_has_deprecated)"
+      - "internal/ceres/CMakeLists.txt:395 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-nq83da"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-nq83da"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP"
+      CMAKE_CXX_FLAGS_DEBUG: "/MTd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 /ignore:4049"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED_ATTR"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-nq83da
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d5d3a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:16:21。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_d5d3a.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\Debug\\”。
+          正在创建目录“cmTC_d5d3a.dir\\Debug\\cmTC_d5d3a.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_d5d3a.dir\\Debug\\cmTC_d5d3a.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d5d3a.dir\\Debug\\\\" /Fd"cmTC_d5d3a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          src.cxx
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d5d3a.dir\\Debug\\\\" /Fd"cmTC_d5d3a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx"
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,16): error C2065: “__deprecated__”: 未声明的标识符 [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,31): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,33): error C2062: 意外的类型“int” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,48): error C2143: 语法错误: 缺少“;”(在“{”的前面) [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,48): error C2447: “{”: 缺少函数标题(是否是老式的形式表?) [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(2,25): error C3861: “somefunc”: 找不到标识符 [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,16): error C2065: “__deprecated__”: 未声明的标识符 [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,31): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,33): error C2062: 意外的类型“int” [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,48): error C2143: 语法错误: 缺少“;”(在“{”的前面) [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(1,48): error C2447: “{”: 缺少函数标题(是否是老式的形式表?) [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\src.cxx(2,25): error C3861: “somefunc”: 找不到标识符 [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-nq83da\\cmTC_d5d3a.vcxproj]
+        
+            0 个警告
+            6 个错误
+        
+        已用时间 00:00:00.20
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/GenerateExportHeader.cmake:206 (check_cxx_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/GenerateExportHeader.cmake:269 (_check_cxx_compiler_attribute)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/GenerateExportHeader.cmake:420 (_test_compiler_has_deprecated)"
+      - "internal/ceres/CMakeLists.txt:395 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED"
+    directories:
+      source: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-j1pe01"
+      binary: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-j1pe01"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP"
+      CMAKE_CXX_FLAGS_DEBUG: "/MTd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 /ignore:4049"
+      CMAKE_MODULE_PATH: "D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED"
+      cached: true
+      stdout: |
+        Change Dir: D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-j1pe01
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b1ef3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+        生成启动时间为 2023/5/27 17:16:21。
+        Included response file: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.rsp
+        
+        节点 1 上的项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\cmTC_b1ef3.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_b1ef3.dir\\Debug\\”。
+          正在创建目录“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\Debug\\”。
+          正在创建目录“cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b1ef3.dir\\Debug\\\\" /Fd"cmTC_b1ef3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\src.cxx"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32217.1 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          src.cxx
+          cl /c /I"C:\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /MP /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MTd /GS /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b1ef3.dir\\Debug\\\\" /Fd"cmTC_b1ef3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\src.cxx"
+        D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\src.cxx(2,25): warning C4996: 'somefunc': 被声明为已否决 [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\cmTC_b1ef3.vcxproj]
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\Debug\\cmTC_b1ef3.exe" /INCREMENTAL /ILK:"cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.ilk" /NOLOGO /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-j1pe01/Debug/cmTC_b1ef3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/RTPS/RTPSv0.5/3rdParty/ceres-solver-2.1.0/MyBuild/CMakeFiles/CMakeScratch/TryCompile-j1pe01/Debug/cmTC_b1ef3.lib" /MACHINE:X64  /machine:x64 /ignore:4049 cmTC_b1ef3.dir\\Debug\\src.obj
+          cmTC_b1ef3.vcxproj -> D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\Debug\\cmTC_b1ef3.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\Debug\\cmTC_b1ef3.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\cmTC_b1ef3.write.1u.tlog" "cmTC_b1ef3.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 不是内部或外部命令，也不是可运行的程序
+          或批处理文件。
+          命令“pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\Debug\\cmTC_b1ef3.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\cmTC_b1ef3.write.1u.tlog" "cmTC_b1ef3.dir\\Debug\\vcpkg.applocal.log"”已退出，代码为 9009。
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\Debug\\cmTC_b1ef3.exe" "C:\\vcpkg\\installed\\x64-windows\\bin" "cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\cmTC_b1ef3.write.1u.tlog" "cmTC_b1ef3.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_b1ef3.dir\\Debug\\cmTC_b1ef3.tlog\\cmTC_b1ef3.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\cmTC_b1ef3.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+        
+        “D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\cmTC_b1ef3.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\src.cxx(2,25): warning C4996: 'somefunc': 被声明为已否决 [D:\\RTPS\\RTPSv0.5\\3rdParty\\ceres-solver-2.1.0\\MyBuild\\CMakeFiles\\CMakeScratch\\TryCompile-j1pe01\\cmTC_b1ef3.vcxproj]
+        
+            1 个警告
+            0 个错误
+        
+        已用时间 00:00:00.79
+        
+      exitCode: 0
+...

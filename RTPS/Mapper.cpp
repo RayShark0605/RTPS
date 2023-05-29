@@ -532,11 +532,13 @@ size_t CMapper::Retriangulate(CTriangulator::Options tri_options)
 }
 size_t CMapper::CompleteTracks(CTriangulator::Options tri_options)
 {
+	DebugTimer timer(__FUNCTION__);
 	CHECK_NOTNULL(Model_);
 	return triangulator_->CompleteAllTracks(tri_options);
 }
 size_t CMapper::MergeTracks(CTriangulator::Options tri_options)
 {
+	DebugTimer timer(__FUNCTION__);
 	CHECK_NOTNULL(Model_);
 	return triangulator_->MergeAllTracks(tri_options);
 }
