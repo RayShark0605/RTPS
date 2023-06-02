@@ -56,10 +56,10 @@ static const uint qt_meta_data_CReconstructor[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x06 /* Public */,
+       1,    2,   19,    2, 0x06 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    2,    2,
 
        0        // eod
 };
@@ -70,13 +70,13 @@ void CReconstructor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         auto *_t = static_cast<CReconstructor *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->ChangeImageColor_SIGNAL((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 0: _t->ChangeImageColor_SIGNAL((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (CReconstructor::*)(int );
+            using _t = void (CReconstructor::*)(int , int );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CReconstructor::ChangeImageColor_SIGNAL)) {
                 *result = 0;
                 return;
@@ -128,9 +128,9 @@ int CReconstructor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void CReconstructor::ChangeImageColor_SIGNAL(int _t1)
+void CReconstructor::ChangeImageColor_SIGNAL(int _t1, int _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

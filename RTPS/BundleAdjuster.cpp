@@ -259,7 +259,7 @@ bool CBundleAdjuster::Solve(CModel* reconstruction)
 
     if (solver_options.minimizer_progress_to_stdout) 
     {
-        std::cout << std::endl;
+        //std::cout << std::endl;
     }
 
     if (options_.print_summary) 

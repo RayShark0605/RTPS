@@ -674,6 +674,8 @@ void CProjectSettingWidget::Save()
 
 CShowMatchWidget::CShowMatchWidget(QWidget* parent, size_t CurrentImgID, size_t MatchedImgID, string ImageSaveDir, bool IsTwoViewGeometry) :QWidget(parent)
 {
+	setWindowFlags(Qt::Window);
+	setWindowModality(Qt::ApplicationModal);
 	this->parent = parent;
 	this->CurrentImgID = CurrentImgID;
 	this->MatchedImgID = MatchedImgID;
@@ -911,13 +913,13 @@ void CMatchesTab::GetMatchInfo()
 }
 void CMatchesTab::ShowMatches()
 {
-	QSqlDatabase db = CreateDatabaseConnect(CDatabase::DatabasePath);
 	QList<QTableWidgetItem*> items = Table->selectedItems();
 	if (items.count() == 0)
 	{
 		QMessageBox::critical(this, "Error", tr("No image pair selected!"));
 		return;
 	}
+	QSqlDatabase db = CreateDatabaseConnect(CDatabase::DatabasePath);
 	size_t MatchedImgID = Table->item(Table->row(items[0]), 0)->text().toInt();
 	size_t CurrentImgID = CDatabase::GetImageID(GetFileName(ImagePath), db);
 	ShowMatchWidget = new CShowMatchWidget(this, CurrentImgID, MatchedImgID, GetParentDir(ImagePath), false);
@@ -1245,7 +1247,6 @@ void CModelImportWidget::Load_SLOT()
 	string PLYPath = (Type == 0 ? "" : this->PLYPath);
 	bool IsOverwrite = (Type == 0 ? FolderOverwrite_RadioButton->isChecked() : PLYOverwrite_RadioButton->isChecked());
 	emit ModelImport_SIGNAL(Type, ModelFolders, PLYPath, IsOverwrite);
-	
 	closeEvent(nullptr);
 }
 void CModelImportWidget::closeEvent(QCloseEvent* event)
@@ -1254,6 +1255,8 @@ void CModelImportWidget::closeEvent(QCloseEvent* event)
 	FromPLY_RadioButton->setChecked(false);
 	FromFolderChecked_SLOT();
 	vector<string>().swap(ModelFolders);
+	FolderDir_LineEdit->setText("");
+	PLYPath_LineEdit->setText("");
 	PLYPath = "";
 	close();
 }
@@ -1309,7 +1312,7 @@ void CModelExportWidget::showEvent(QShowEvent* event)
 {
 	ModelTable->clear();
 	ModelTable->setRowCount(0);
-	ModelTable->setColumnCount(0);
+	ModelTable->setColumnCount(4);
 	QStringList TableHeader({ tr("Model ID"),tr("Registered images num"),tr("Model points num"), tr("Cameras num") });
 	ModelTable->setSortingEnabled(false);
 	ModelTable->setHorizontalHeaderLabels(TableHeader);
@@ -1321,6 +1324,7 @@ void CModelExportWidget::showEvent(QShowEvent* event)
 	ModelTable->verticalHeader()->setDefaultSectionSize(15);
 	ModelTable->clearContents();
 	size_t ModelNum = ModelManager->Size();
+	ModelTable->setRowCount(ModelNum);
 	for (size_t i = 0; i < ModelNum; i++)
 	{
 		QTableWidgetItem* item1 = new QTableWidgetItem;
@@ -1521,11 +1525,10 @@ CModelSelectWidget::CModelSelectWidget(QWidget* parent, CModelManager* ModelMana
 	setFont(font);
 
 	connect(&UpdateTimer, &QTimer::timeout, this, &CModelSelectWidget::Update);
-	//UpdateTimer.start(1000);
 }
 void CModelSelectWidget::Update()
 {
-	DebugTimer timer(__FUNCTION__);
+	//DebugTimer timer(__FUNCTION__);
 	ModelSelectWidget_Mutex.lock();
 	if (view()->isVisible() || !ModelManager)
 	{
@@ -1565,7 +1568,7 @@ void CModelSelectWidget::Update()
 }
 size_t CModelSelectWidget::GetSelectedModelIndex()
 {
-	DebugTimer timer(__FUNCTION__);
+	//DebugTimer timer(__FUNCTION__);
 	if (!ModelManager)
 	{
 		throw "Model manager is nullptr!";
@@ -2206,8 +2209,8 @@ void CMatchMatrixWidget::paintEvent(QPaintEvent* event)
 		QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
 		size_t NewImagesNum = CDatabase::GetImagesNum(db);
 		ReleaseDatabaseConnect(db);
-		//if (NewImagesNum == ImagesNum)return;
 		ImagesNum = NewImagesNum;
+		if (ImagesNum == 0)return;
 	}
 	catch (const std::exception& ex)
 	{
@@ -2269,6 +2272,7 @@ CShowMatchMatrixWidget::CShowMatchMatrixWidget(QWidget* parent, OptionManager* o
 {
 	setWindowTitle(tr("Match Matrix"));
 	setWindowFlags(Qt::Window);
+	setWindowIcon(QIcon(":/media/match-matrix.png"));
 	this->parent = parent;
 	this->options = options;
 	MatchMatrix = new CMatchMatrixWidget(parent, options);
@@ -2310,3 +2314,7 @@ void CShowMatchMatrixWidget::Save()
 		image.save(filename);
 	}
 }
+
+
+
+

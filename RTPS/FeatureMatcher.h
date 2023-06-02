@@ -33,6 +33,8 @@ public:
 private:
 	std::vector<std::string> Database;
 
+	CExhaustiveMatcher* ExhaustiveMatcher = nullptr;
+
 	PyObject* MatchFunc;
 	PyObject* OutputFunc;
 	size_t RetrievalDatabaseNum;

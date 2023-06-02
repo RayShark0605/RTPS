@@ -54,7 +54,7 @@ public:
 
 	static void ClearData(QSqlDatabase& db);
 	static void ExportDatabaseCache(colmap::OptionManager* options, colmap::DatabaseCache& DbCache, QSqlDatabase& db);
-
+	static void GenerateMatchInfo(QSqlDatabase& db);
 private:
 
 	static std::mutex ImageID_Mutex;
@@ -100,7 +100,7 @@ private:
 	}*/
 	static inline QByteArray WriteCameraParams(std::vector<double> Params)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QByteArray byteArray;
 		QDataStream stream(&byteArray, QIODevice::WriteOnly);
 		for (double param : Params)
@@ -111,7 +111,7 @@ private:
 	}
 	static inline std::vector<double> ReadCameraParams(QByteArray Data)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		std::vector<double> params;
 		double param;
 		QDataStream stream(&Data, QIODevice::ReadOnly);
@@ -124,7 +124,7 @@ private:
 	}
 	static inline QByteArray WriteDouble(double num)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QByteArray byteArray;
 		QDataStream ds(&byteArray, QIODevice::WriteOnly);
 		ds << num;
@@ -132,7 +132,7 @@ private:
 	}
 	static inline double ReadDouble(QByteArray Data)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QDataStream ds(&Data, QIODevice::ReadOnly);
 		double num;
 		ds >> num;
@@ -140,7 +140,7 @@ private:
 	}
 	static inline QByteArray WriteKeyPoints(colmap::FeatureKeypoints& Keypoints)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QByteArray byteArray;
 		QDataStream ds(&byteArray, QIODevice::WriteOnly);
 		for (const colmap::FeatureKeypoint& keypoint : Keypoints)
@@ -151,7 +151,7 @@ private:
 	}
 	static inline colmap::FeatureKeypoints ReadKeyPoints(QByteArray Data)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QDataStream ds(&Data, QIODevice::ReadOnly);
 		colmap::FeatureKeypoints keypoints;
 		while (!ds.atEnd()) 
@@ -164,7 +164,7 @@ private:
 	}
 	static inline QByteArray WriteDescriptors(colmap::FeatureDescriptors& Descriptors)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QByteArray data;
 		QDataStream ds(&data, QIODevice::WriteOnly);
 		ds << static_cast<qint32>(Descriptors.rows());
@@ -174,7 +174,7 @@ private:
 	}
 	static inline colmap::FeatureDescriptors ReadDescriptors(QByteArray Data)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QDataStream ds(Data);
 		qint32 rows, cols;
 		ds >> rows;
@@ -185,7 +185,7 @@ private:
 	}
 	static inline QByteArray WriteMatches(colmap::FeatureMatches& Matches)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QByteArray data;
 		QDataStream ds(&data, QIODevice::WriteOnly);
 		ds << static_cast<qint32>(Matches.size());
@@ -198,7 +198,7 @@ private:
 	}
 	static inline colmap::FeatureMatches ReadMatches(QByteArray Data)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QDataStream ds(Data);
 		qint32 size;
 		ds >> size;
@@ -215,7 +215,7 @@ private:
 	}
 	static inline QByteArray WriteTwoViewGeometriesData(colmap::TwoViewGeometry& TwoViewGeometry)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		QByteArray byteArray;
 		QDataStream stream(&byteArray, QIODevice::WriteOnly);
 		stream << TwoViewGeometry.tri_angle;
@@ -243,7 +243,7 @@ private:
 	}
 	static inline colmap::TwoViewGeometry ReadTwoViewGeometriesData(QByteArray Data)
 	{
-		DebugTimer timer(__FUNCTION__);
+		//DebugTimer timer(__FUNCTION__);
 		colmap::TwoViewGeometry TwoViewGeometry;
 		QDataStream stream(Data);
 		stream >> TwoViewGeometry.tri_angle;

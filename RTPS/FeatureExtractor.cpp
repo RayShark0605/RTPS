@@ -9,6 +9,10 @@ CFeatureExtractor::CFeatureExtractor(OptionManager* options)
 }
 bool CFeatureExtractor::Extract(string ImagePath)
 {
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	cout << StringPrintf("Start feature extraction on image %s", GetFileName(ImagePath)) << endl;
 	QElapsedTimer timer;
 	timer.start();
@@ -26,9 +30,13 @@ bool CFeatureExtractor::Extract(string ImagePath)
 	Image image;
 	Bitmap bitmap;
 	int ReadResult = ReadImage(ImagePath, camera, image, bitmap, db);
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	if (ReadResult == -2)
 	{
-		cout << StringPrintf("Image %s read error!", ImagePath) << endl;
+		cout << StringPrintf("Image %s read error!", ImagePath.c_str()) << endl;
 		ReleaseDatabaseConnect(db);
 		return false;
 	}
@@ -37,13 +45,13 @@ bool CFeatureExtractor::Extract(string ImagePath)
 	{
 		size_t ImageID = CDatabase::GetImageID(ImageName, db);
 		size_t KeypointsNum = CDatabase::GetImageKeypointsNum(ImageID, db);
-		cout << StringPrintf("Image [%s, id=%d] already exists and contains %d feature points!", ImageName, ImageID, KeypointsNum) << endl;
+		cout << StringPrintf("Image [%s, id=%d] already exists and contains %d feature points!", ImageName.c_str(), ImageID, KeypointsNum) << endl;
 		ReleaseDatabaseConnect(db);
 		return true;
 	}
 	if (ReadResult == -3)
 	{
-		cout << StringPrintf("Incorrect camera parameters when reading image %s!", ImageName) << endl;
+		cout << StringPrintf("Incorrect camera parameters when reading image %s!", ImageName.c_str()) << endl;
 		ReleaseDatabaseConnect(db);
 		return false;
 	}
@@ -51,6 +59,10 @@ bool CFeatureExtractor::Extract(string ImagePath)
 	FeatureDescriptors descriptors;
 
 	bool IsExtractSuccess = false;
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	if (options->sift_extraction->estimate_affine_shape || options->sift_extraction->domain_size_pooling)
 	{
 		IsExtractSuccess = ExtractCovariantSiftFeaturesCPU(*options->sift_extraction, bitmap, &keypoints, &descriptors);
@@ -61,14 +73,22 @@ bool CFeatureExtractor::Extract(string ImagePath)
 		IsExtractSuccess = ExtractSiftFeaturesGPU(*options->sift_extraction, bitmap, &sift_gpu, &keypoints, &descriptors);
 		Base::GPU_Mutex.unlock();
 	}
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	if (!IsExtractSuccess)
 	{
 		IsExtractSuccess = ExtractSiftFeaturesCPU(*options->sift_extraction, bitmap, &keypoints, &descriptors);
 	}
 	if (!IsExtractSuccess)
 	{
-		cout << StringPrintf("Feature extraction for image %s failed!", ImageName) << endl;
+		cout << StringPrintf("Feature extraction for image %s failed!", ImageName.c_str()) << endl;
 		ReleaseDatabaseConnect(db);
+		return false;
+	}
+	if (Base::IsQuit)
+	{
 		return false;
 	}
 	ScaleKeypoints(bitmap, camera, keypoints);
@@ -82,13 +102,17 @@ bool CFeatureExtractor::Extract(string ImagePath)
 		temp = descriptors.block(0, 0, options->sift_extraction->max_num_features, descriptors.cols());
 		descriptors = temp;
 	}
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	size_t ImageID = CDatabase::AddImage(image, db);
 	CDatabase::AddKeypoints(ImageID, keypoints, db);
 	CDatabase::AddDescriptors(ImageID, descriptors, db);
 
 	//SetImageStatus(ImageName, CImageStatus::Extracted);
 	size_t Elapsed = timer.elapsed();
-	cout << StringPrintf("[%d ms] Image %s successfully extracted %d feature points!", Elapsed, ImageName, CDatabase::GetImageKeypointsNum(ImageID, db)) << endl;
+	cout << StringPrintf("[%d ms] Image %s successfully extracted %d feature points!", Elapsed, ImageName.c_str(), CDatabase::GetImageKeypointsNum(ImageID, db)) << endl;
 	ReleaseDatabaseConnect(db);
 	return true;
 }

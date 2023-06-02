@@ -37,36 +37,49 @@ CReceiver::CReceiver(string ImageSaveDir)
 }
 void CReceiver::StartReceive()
 {
-	QStringList arguments;
-	//arguments << "/c" << "CamFiTransmit.exe" << StdString2QString(Url) << StdString2QString(Port);
-	arguments << StdString2QString(Url) << StdString2QString(Port);
-	if (Password.size() != 0)
+	//QStringList arguments;
+	////arguments << "/c" << "CamFiTransmit.exe" << StdString2QString(Url) << StdString2QString(Port);
+	//arguments << StdString2QString(Url) << StdString2QString(Port);
+	//if (Password.size() != 0)
+	//{
+	//	arguments << StdString2QString(Password);
+	//}
+	//arguments << ("\"" + StdString2QString(ImageSaveDir) + "\"");
+	//process.setWorkingDirectory(QCoreApplication::applicationDirPath());
+	//process.setProgram("CamFiTransmit.exe");
+	//process.setArguments(arguments);
+	//process.setCreateProcessArgumentsModifier([](QProcess::CreateProcessArguments* args)
+	//{
+	//	args->flags |= CREATE_NEW_CONSOLE; // 设置启动模式为控制台模式
+	//	args->startupInfo->dwFlags &= ~STARTF_USESTDHANDLES; // 解除标准输出、标准输入、标准错误的句柄重定向
+	//});
+	//process.start();
+	//process.waitForStarted();
+	string Command = "CamFiTransmit.exe";
+	Command += " "; Command += Url;
+	Command += " "; Command += Port;
+	if (Password != "")
 	{
-		arguments << StdString2QString(Password);
+		Command += " "; Command += Password;
 	}
-	arguments << ("\"" + StdString2QString(ImageSaveDir) + "\"");
-	process.setWorkingDirectory(QCoreApplication::applicationDirPath());
-	process.setProgram("CamFiTransmit.exe");
-	process.setArguments(arguments);
-	process.setCreateProcessArgumentsModifier([](QProcess::CreateProcessArguments* args)
-	{
-		args->flags |= CREATE_NEW_CONSOLE; // 设置启动模式为控制台模式
-		args->startupInfo->dwFlags &= ~STARTF_USESTDHANDLES; // 解除标准输出、标准输入、标准错误的句柄重定向
-	});
-	process.start();
-	process.waitForStarted();
+	Command += " \""; Command += ImageSaveDir; Command += "\"";
+	WinExec(Command.c_str(), SW_SHOW); //运行外部的CamFiTransmit.exe程序, 并向其传递"传输设置"
+	this_thread::sleep_for(chrono::milliseconds(500));
 	IsContinue = true;
 	std::thread ReceiveThread = std::thread(&CReceiver::Receive, this); //开始侦听注册表
 	ReceiveThread.detach();
 }
 void CReceiver::StopReceive()
 {
-	IsContinue = false;
+	/*IsContinue = false;
 	if (process.state() == QProcess::Running)
 	{
 		process.terminate();
 		process.waitForFinished();
-	}
+	}*/
+	string Command = string("TASKKILL /F /IM ") + "CamFiTransmit.exe"; //生成"关闭CamFiTransmit.exe"的CMD命令
+	system(Command.c_str());
+	IsContinue = false; //停止侦听注册表
 	RegMutex.lock();
 	reg->setValue("NewImage", "");
 	RegMutex.unlock();
@@ -91,12 +104,12 @@ void CReceiver::Receive()
 	ThreadStart();
 	while (IsContinue && reg)
 	{
-		if (process.state() == QProcess::NotRunning)
+		/*if (process.state() == QProcess::NotRunning)
 		{
 			StopReceive();
 			emit SenderQuit_SIGNAL();
 			this_thread::sleep_for(chrono::milliseconds(300));
-		}
+		}*/
 		RegMutex.lock();
 		if (!reg || (reg && !reg->contains("NewImage")))
 		{
@@ -104,6 +117,7 @@ void CReceiver::Receive()
 			this_thread::sleep_for(chrono::milliseconds(300));
 			continue;
 		}
+		
 		QString RegValue = reg->value("NewImage", QVariant()).toString();
 		if (RegValue.size() <= 2)
 		{

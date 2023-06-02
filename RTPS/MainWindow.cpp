@@ -22,11 +22,151 @@ CMainWindow::CMainWindow(QWidget* parent) :QMainWindow(parent)
 
 void CMainWindow::ImportModel(int Type, vector<string> ModelFolders, string PLYPath, bool IsOverwrite)
 {
-
+	if (ModelManager->Size() == 0 || IsOverwrite)
+	{
+		ModelManager->Clear();
+		ModelSelectWidget->Update();
+		ModelSelectWidget->SelectModel(ReconstructionManagerWidget::kNewestReconstructionIdx);
+		ModelViewer->ClearReconstruction();
+		if (Reconstructor)
+		{
+			Reconstructor->~CReconstructor();
+			Reconstructor = nullptr;
+		}
+		CreateReconstructor();
+	}
+	if (Type == 0)
+	{
+		bool IsCommonSourceModel = true;
+		string OriginImagePath = "";
+		if (ExistsDir(*options->image_path))
+		{
+			OriginImagePath = *options->image_path;
+		}
+		string ProjectPath = JoinPaths(ModelFolders[ModelFolders.size() - 1], "project.ini");
+		if (ExistsFile(ProjectPath))
+		{
+			options->ReRead(ProjectPath);
+			*options->project_path = ProjectPath;
+			UpdateWindowTitle(StdString2QString(ProjectPath));
+			if (ExistsFile(*options->database_path))
+			{
+				options->image_reader->database_path = *options->database_path;
+				QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
+				CDatabase::OpenDatabase(*options->database_path, db);
+				ReleaseDatabaseConnect(db);
+			}
+			if (ExistsDir(*options->image_path))
+			{
+				if (OriginImagePath != "" && OriginImagePath != *options->image_path)
+				{
+					if (!IsOverwrite)
+					{
+						QMessageBox::StandardButton re = QMessageBox::question(this, tr("Different image sources"), tr("The model to be imported has a different image source than the existing models, please set to \"Overwrite current models\" in the import options! Or you can choose to ignore this message, but the subsequent process may report an error or the program will crash! Continue to import?"));
+						if (re != QMessageBox::Yes)
+						{
+							return;
+						}
+						IsCommonSourceModel = false;
+					}
+				}
+				if (IsOverwrite)
+				{
+					ImageListWidget->ClearImage();
+				}
+				LoadDirImages_SLOT();
+			}
+		}
+		for (string Folder : ModelFolders)
+		{
+			size_t idx = ModelManager->Read(Folder);
+			ModelSelectWidget->Update();
+			ModelSelectWidget->SelectModel(idx);
+		}
+		RenderModelAction->triggered();
+		if (IsCommonSourceModel)
+		{
+			Reconstructor->UpdateRegImgIDs();
+			Reconstructor->TryMergeModels();
+		}
+		ModelSelectWidget->setCurrentIndex(0);
+		RenderModelAction->triggered();
+		if (!ExistsFile(*options->database_path))
+		{
+			QMessageBox::StandardButton re = QMessageBox::question(this, tr("Can't find database"), tr("The database corresponding to this model could not be found! Is feature extraction and feature matching performed on all images at once?"));
+			if (re == QMessageBox::Yes)
+			{
+				for (string ImagePath : ImageListWidget->ImagePaths)
+				{
+					if (ExistsFile(ImagePath))
+					{
+						ScaleImage(ImagePath, options->sift_extraction->max_image_size);
+						cout << StringPrintf("Start processing image %s", GetFileName(ImagePath)) << endl;
+						if (!FeatureExtractor)
+						{
+							cout << "Error! Feature extractor is nullptr!" << endl;
+							continue;
+						}
+						if (FeatureExtractor->Extract(ImagePath))
+						{
+							if (!FeatureMatcher)
+							{
+								cout << "Error! Feature matcher is nullptr!" << endl;
+								continue;
+							}
+							FeatureMatcher->Match(ImagePath);
+						}
+						cout << StringPrintf("All processes for Image %s have been completed!", GetFileName(ImagePath)) << endl;
+					}
+				}
+			}
+		}
+	}
+	else if (Type == 1)
+	{
+		ThreadControlWidget* thread_control_widget_ = new ThreadControlWidget(this);
+		thread_control_widget_->StartFunction(tr("Importing Model from PLY File..."), [this, PLYPath]()
+			{
+				size_t reconstruction_idx = ModelManager->Add();
+				ModelManager->Get(reconstruction_idx).ReadPLY(PLYPath);
+				options->render->min_track_len = 0;
+				ModelSelectWidget->Update();
+				ModelSelectWidget->SelectModel(reconstruction_idx);
+				RenderModelAction->triggered();
+			});
+	}
+	QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
+	CDatabase::GenerateMatchInfo(db);
+	ReleaseDatabaseConnect(db);
+	
 }
-void CMainWindow::ChangeNewImageColor(int ImageID)
+void CMainWindow::ChangeNewImageColor(int ImageID, int ModelID)
 {
+	if (IsTrackModel_Checkbox->isChecked() && ModelID < ModelManager->Size() && ModelID + 1 < ModelSelectWidget->count())
+	{
+		ModelSelectWidget->setCurrentIndex(ModelID + 1);
+	}
 	ImageColormapNameFilter Filter;
+	Eigen::Vector4f NewImagePlaneColor;
+	NewImagePlaneColor(0) = 0.0 / 255.0;
+	NewImagePlaneColor(1) = 0.0 / 255.0;
+	NewImagePlaneColor(2) = 128.0 / 255.0;
+	NewImagePlaneColor(3) = 0.6;
+
+	Eigen::Vector4f NewImageFrameColor;
+	NewImageFrameColor(0) = 0.0 / 255.0;
+	NewImageFrameColor(1) = 0.0 / 255.0;
+	NewImageFrameColor(2) = 255.0 / 255.0;
+	NewImageFrameColor(3) = 1.0;
+
+	QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
+	string ImageName = CDatabase::GetImageName(ImageID, db);
+	Filter.AddColorForWord(ImageName, NewImagePlaneColor, NewImageFrameColor);
+	ImageColormapBase* ColorMap = new ImageColormapNameFilter(Filter);
+	ModelViewer->SetImageColormap(ColorMap);
+	ModelViewer->ReloadReconstruction();
+
+	/*ImageColormapNameFilter Filter;
 	ImageColormapBase* ColorMap = new ImageColormapNameFilter(Filter);
 	ModelViewer->SetImageColormap(ColorMap);
 	ModelViewer->ReloadReconstruction();
@@ -39,18 +179,18 @@ void CMainWindow::ChangeNewImageColor(int ImageID)
 	NewImageColor(0) = 0;
 	NewImageColor(1) = 0;
 	NewImageColor(2) = 1;
-	NewImageColor(3) = 0.5;
+	NewImageColor(3) = 0.8;
 
 	Eigen::Vector4f NewImageFlameColor(ImageColormapBase::kDefaultPlaneColor);
-	NewImageFlameColor(0) = 40.0 / 255;
-	NewImageFlameColor(1) = 237.0 / 255;
-	NewImageFlameColor(2) = 17.0 / 255;
+	NewImageFlameColor(0) = 0.0 / 255;
+	NewImageFlameColor(1) = 0.0 / 255;
+	NewImageFlameColor(2) = 255.0 / 255;
 	NewImageFlameColor(3) = 1;
 
 	Filter.AddColorForWord(ImageName, NewImageColor, NewImageFlameColor);
 	ColorMap = new ImageColormapNameFilter(Filter);
 	ModelViewer->SetImageColormap(ColorMap);
-	ModelViewer->ReloadReconstruction();
+	ModelViewer->ReloadReconstruction();*/
 	//this_thread::sleep_for(chrono::milliseconds(330));
 }
 void CMainWindow::NewImage_SLOT(string ImagePath)
@@ -231,9 +371,13 @@ void CMainWindow::StartReceive()
 }
 void CMainWindow::ProcessImage(string ImagePath)
 {
+	if (Base::IsQuit)
+	{
+		return;
+	}
 	ScaleImage(ImagePath, options->sift_extraction->max_image_size);
 	ImageListWidget->AddImage(ImagePath);
-	while (GetThreadCount() >= 8)
+	while (GetThreadCount() >= 8 && !Base::IsQuit)
 	{
 		size_t SleepTime = QRandomGenerator::global()->bounded(100, 1001);
 		this_thread::sleep_for(chrono::milliseconds(SleepTime));
@@ -250,8 +394,16 @@ void CMainWindow::ProcessImage(string ImagePath)
 		ThreadEnd();
 		return;
 	}
+	if (Base::IsQuit)
+	{
+		return;
+	}
 	if (FeatureExtractor->Extract(ImagePath))
 	{
+		if (Base::IsQuit)
+		{
+			return;
+		}
 		if (!FeatureMatcher)
 		{
 			cout << "Error! Feature matcher is nullptr!" << endl;
@@ -260,6 +412,10 @@ void CMainWindow::ProcessImage(string ImagePath)
 		}
 		if (FeatureMatcher->Match(ImagePath))
 		{
+			if (Base::IsQuit)
+			{
+				return;
+			}
 			if (!Reconstructor)
 			{
 				cout << "Error! Reconstructor is nullptr!" << endl;
@@ -268,6 +424,9 @@ void CMainWindow::ProcessImage(string ImagePath)
 			}
 			LastWaitImagePath = ImagePath;
 			WaitforReconstructImageNum++;
+			WaitforReconstructImagePath_Mutex.lock();
+			WaitforReconstructImagePath.push(ImagePath);
+			WaitforReconstructImagePath_Mutex.unlock();
 		}
 	}
 	cout << StringPrintf("[%d s] All processes for Image %s have been completed!", timer.elapsed() / 1000, GetFileName(ImagePath)) << endl;
@@ -295,6 +454,24 @@ void CMainWindow::ShowShowMatchMatrixWidget()
 	ShowMatchMatrixWidget->show();
 }
 
+void CMainWindow::closeEvent(QCloseEvent* event)
+{
+	QMessageBox::StandardButton resBtn = QMessageBox::question(this, tr("Close"), tr("Are you sure to quit?"), QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+	if (resBtn != QMessageBox::Yes) 
+	{
+		event->ignore();
+	}
+	else 
+	{
+		Base::IsQuit = true;
+		IsContinueReconstruct = false;
+		event->accept();
+		if (Receiver)
+		{
+			StopReceive();
+		}
+	}
+}
 void CMainWindow::UpdateWindowTitle(QString Extras)
 {
 	if (Extras == "")
@@ -311,6 +488,7 @@ void CMainWindow::SetupWidgets()
 {
 	resize(Size(1000, true), Size(800, false));
 	UpdateWindowTitle();
+	setWindowIcon(QIcon(":/media/WindowIcon.png"));
 
 	ModelViewer = new ModelViewerWidget(this, options);
 	setCentralWidget(ModelViewer);
@@ -326,6 +504,8 @@ void CMainWindow::SetupWidgets()
 	ImageListWidget = new CImageListWidget(ImgListViewerDock);
 	ImgListViewerDock->setWidget(ImageListWidget);
 	addDockWidget(Qt::RightDockWidgetArea, ImgListViewerDock);
+	IsTrackModel_Checkbox = new QCheckBox(tr("Track the latest progress"));
+	IsTrackModel_Checkbox->setChecked(true);
 
 	LogWindowDock = new QDockWidget(tr("Log"), this);
 	LogWindow = new LogWidget(this);
@@ -461,10 +641,13 @@ void CMainWindow::CreateToolbar()
 
 	ReconstructToolBar = addToolBar(tr("Reconstruct"));
 	ReconstructToolBar->addWidget(ModelSelectWidget);
+	ReconstructToolBar->addSeparator();
+	ReconstructToolBar->addWidget(IsTrackModel_Checkbox);
 	ReconstructToolBar->addAction(ImportModelAction);
 	ReconstructToolBar->addAction(ExportModelAction);
 	ReconstructToolBar->setIconSize(QSize(16, 16));
 	ReconstructToolBar->setMovable(false);
+
 
 	ToolsToolBar = addToolBar(tr("Tools"));
 	ToolsToolBar->addAction(ShowRenderOptionsAction);
@@ -522,9 +705,9 @@ void CMainWindow::UpdateStatusBar()
 {
 	double TotalGB, UsedGB, FreeGB;
 	GetMemoryUsage(TotalGB, UsedGB, FreeGB);
-	QString MemoryUsage = QString("Memory: %1GB / %2GB. ").arg(UsedGB, 0, 'f', 1).arg(TotalGB, 0, 'f', 1);
+	QString MemoryUsage = tr("Memory: ") + QString("%1GB / %2GB, ").arg(UsedGB, 0, 'f', 1).arg(TotalGB, 0, 'f', 1);
 	GetGPUMemUsage(TotalGB, UsedGB, FreeGB);
-	QString GPUMemUsage = QString("GPU Memory: %1GB / %2GB. ").arg(UsedGB, 0, 'f', 1).arg(TotalGB, 0, 'f', 1);
+	QString GPUMemUsage = tr("GPU Memory: ") + QString("%1GB / %2GB, ").arg(UsedGB, 0, 'f', 1).arg(TotalGB, 0, 'f', 1);
 	QString Info = MemoryUsage + GPUMemUsage + tr("Number of threads: ") + QString::number(GetThreadCount()) + "  ";
 	StatusLabel->setText(Info);
 }
@@ -532,16 +715,29 @@ void CMainWindow::UpdateStatusBar()
 void CMainWindow::DetectReconstruct()
 {
 	ThreadStart();
+
 	while (IsContinueReconstruct)
 	{
 		this_thread::sleep_for(chrono::milliseconds(1000));
-		if (WaitforReconstructImageNum.load() == 0 || !Reconstructor)continue;
+		WaitforReconstructImagePath_Mutex.lock();
+		if (WaitforReconstructImagePath.empty())
+		{
+			WaitforReconstructImagePath_Mutex.unlock();
+			continue;
+		}
+		string CurrentImagePath = WaitforReconstructImagePath.front();
+		WaitforReconstructImagePath.pop();
+		WaitforReconstructImagePath_Mutex.unlock();
+
+		Reconstructor->Reconstruct(CurrentImagePath);
+		AutoSaveModels();
+		/*if (WaitforReconstructImageNum.load() == 0 || !Reconstructor)continue;
 		if (WaitforReconstructImageNum.load() >= 3 || CReconstructor::LastReconstructTimeConsuming <= 5)
 		{
 			WaitforReconstructImageNum.store(0);
 			Reconstructor->Reconstruct(LastWaitImagePath);
 			AutoSaveModels();
-		}
+		}*/
 	}
 	ThreadEnd();
 }
@@ -589,13 +785,20 @@ void CMainWindow::GetRenderModel()
 		return;
 	}
 	ModelSelectWidget->Update();
-	size_t SelectedModelID = ModelSelectWidget->GetSelectedModelIndex();
-	if (SelectedModelID == CModelSelectWidget::NewstModelIndex)
-	{
-		SelectedModelID = ModelManager->Size() - 1;
-	}
 	Reconstruction* Model = new Reconstruction();
-	ModelManager->Get(SelectedModelID).ConvertToReconstruction(*Model);
+	if (IsTrackModel_Checkbox->isChecked() && Reconstructor->CurrentModelID < ModelManager->Size())
+	{
+		ModelManager->Get(Reconstructor->CurrentModelID).ConvertToReconstruction(*Model);
+	}
+	else
+	{
+		size_t SelectedModelID = ModelSelectWidget->GetSelectedModelIndex();
+		if (SelectedModelID == CModelSelectWidget::NewstModelIndex)
+		{
+			SelectedModelID = ModelManager->Size() - 1;
+		}
+		ModelManager->Get(SelectedModelID).ConvertToReconstruction(*Model);
+	}
 	if (ModelToRender)
 	{
 		delete ModelToRender;
@@ -624,7 +827,7 @@ void CMainWindow::CreateReconstructor()
 		Reconstructor->~CReconstructor();
 	}
 	Reconstructor = new CReconstructor(options, ModelManager);
-	connect(Reconstructor, SIGNAL(ChangeImageColor_SIGNAL(int)), this, SLOT(ChangeNewImageColor(int)));
+	connect(Reconstructor, SIGNAL(ChangeImageColor_SIGNAL(int, int)), this, SLOT(ChangeNewImageColor(int, int)));
 	
 	Reconstructor->AddCallback(CReconstructor::INITIAL_IMAGE_PAIR_REG_CALLBACK, [this]() 
 	{
@@ -673,6 +876,10 @@ void CMainWindow::AutoSaveModels()
 	}
 	for (int i = 0; i < ModelManager->Size(); i++)
 	{
+		if (Base::IsQuit)
+		{
+			return;
+		}
 		QString SubModelDir = NewPath + "/" + QString::number(i + 1);
 		dir = QDir(SubModelDir);
 		if (!dir.exists())
@@ -683,10 +890,7 @@ void CMainWindow::AutoSaveModels()
 		ModelManager->Get(i).WriteBinary(QString2StdString(SubModelDir));
 		options->Write(ProjectPath);
 	}
+	cout << "All models have been saved!" << endl;
 }
-
-
-
-
 
 

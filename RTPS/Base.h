@@ -93,12 +93,13 @@ inline QString StdString2QString(std::string string)
 }
 
 //从文件路径中提取出文件名
-inline std::string GetFileName(std::string FilePath)
+inline const char* GetFileName(std::string FilePath)
 {
 	std::string FileName = colmap::StringReplace(FilePath, "\\", "/");
 	size_t pos = FileName.find_last_of('/');
 	FileName = FileName.substr(pos + 1, FileName.size() - pos - 1);
-	return FileName;
+	std::string* re = new std::string(FileName.c_str());
+	return re->c_str();
 }
 
 //从文件路径中提取出其所属文件夹路径
@@ -198,6 +199,7 @@ public:
 	static std::mutex GPU_Mutex;
 	static std::mutex Reconstruction_Mutex;
 	static nvmlDevice_t device;
+	static bool IsQuit;
 
 	static size_t MaxMatches;
 	static std::unordered_map<size_t, std::unordered_map<size_t, size_t>> MatchMatrix;

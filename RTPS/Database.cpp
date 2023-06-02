@@ -19,7 +19,7 @@ QDataStream& operator>>(QDataStream& in, FeatureKeypoint& keypoint)
 
 bool CDatabase::NewDatabase(string DatabasePath, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     /*if (ExistsFile(DatabasePath))
     {
         ThrowError("This database already exists!");
@@ -53,7 +53,7 @@ bool CDatabase::NewDatabase(string DatabasePath, QSqlDatabase& db)
 }
 bool CDatabase::OpenDatabase(string DatabasePath, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!ExistsFile(DatabasePath))
     {
         ThrowError("This database does not exist!");
@@ -135,7 +135,7 @@ bool CDatabase::OpenDatabase(string DatabasePath, QSqlDatabase& db)
 
 bool CDatabase::IsExistCamera(size_t cameraID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Cameras WHERE camera_id = :camera_id");
@@ -152,7 +152,7 @@ bool CDatabase::IsExistCamera(size_t cameraID, QSqlDatabase& db)
 }
 bool CDatabase::IsExistCamera(Camera& camera, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Cameras WHERE width = :width AND height = :height AND model = :model");
@@ -174,7 +174,7 @@ bool CDatabase::IsExistCamera(Camera& camera, QSqlDatabase& db)
 }
 size_t CDatabase::GetCameraID(Camera& camera, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Cameras WHERE width = :width AND height = :height AND model = :model");
@@ -197,7 +197,7 @@ size_t CDatabase::GetCameraID(Camera& camera, QSqlDatabase& db)
 }
 size_t CDatabase::GetCamerasNum(QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT COUNT(*) FROM Cameras");
     if (!query.exec())
@@ -213,7 +213,7 @@ size_t CDatabase::GetCamerasNum(QSqlDatabase& db)
 }
 void CDatabase::GetCamera(size_t cameraID, Camera& camera, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Cameras WHERE camera_id = :camera_id");
@@ -240,7 +240,7 @@ void CDatabase::GetCamera(size_t cameraID, Camera& camera, QSqlDatabase& db)
 }
 void CDatabase::GetAllCameras(vector<Camera>& cameras, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Cameras");
@@ -266,7 +266,7 @@ void CDatabase::GetAllCameras(vector<Camera>& cameras, QSqlDatabase& db)
 }
 size_t CDatabase::AddCamera(Camera& camera, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     size_t NewCameraID = GetCamerasNum(db);
     QSqlQuery query(db);
     query.prepare("INSERT INTO Cameras (camera_id, model, width, height, params, prior_focal_length) "
@@ -289,7 +289,7 @@ size_t CDatabase::AddCamera(Camera& camera, QSqlDatabase& db)
 
 size_t CDatabase::GetImageID(string ImgName, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images WHERE name = :name");
     query.bindValue(":name", StdString2QString(ImgName));
@@ -309,7 +309,7 @@ size_t CDatabase::GetImageID(string ImgName, QSqlDatabase& db)
 }
 string CDatabase::GetImageName(size_t ImageID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images WHERE image_id = :image_id");
     query.bindValue(":image_id", ImageID);
@@ -329,7 +329,7 @@ string CDatabase::GetImageName(size_t ImageID, QSqlDatabase& db)
 }
 bool CDatabase::IsExistImage(size_t ImageID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images WHERE image_id = :image_id");
     query.bindValue(":image_id", ImageID);
@@ -345,7 +345,7 @@ bool CDatabase::IsExistImage(size_t ImageID, QSqlDatabase& db)
 }
 bool CDatabase::IsExistImage(string ImgName, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images WHERE name = :name");
     query.bindValue(":name", QVariant(StdString2QString(ImgName)));
@@ -361,7 +361,7 @@ bool CDatabase::IsExistImage(string ImgName, QSqlDatabase& db)
 }
 void CDatabase::GetImageCamera(size_t ImageID, Camera& camera, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT Cameras.* FROM Cameras INNER JOIN Images ON Cameras.camera_id = Images.camera_id WHERE Images.image_id = :image_id");
     query.bindValue(":image_id", ImageID);
@@ -386,7 +386,7 @@ void CDatabase::GetImageCamera(size_t ImageID, Camera& camera, QSqlDatabase& db)
 }
 size_t CDatabase::GetImagesNum(QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT COUNT(*) FROM Images");
     if (!query.exec())
@@ -402,7 +402,7 @@ size_t CDatabase::GetImagesNum(QSqlDatabase& db)
 }
 void CDatabase::GetImage(size_t ImageID, Image& Image, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images WHERE image_id = :image_id");
     query.bindValue(":image_id", ImageID);
@@ -430,7 +430,7 @@ void CDatabase::GetImage(size_t ImageID, Image& Image, QSqlDatabase& db)
 }
 void CDatabase::GetAllImages(vector<Image>& Images_, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images");
@@ -459,7 +459,7 @@ void CDatabase::GetAllImages(vector<Image>& Images_, QSqlDatabase& db)
 }
 void CDatabase::GetAllImageNames(vector<string>& ImageNames, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
 
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Images");
@@ -477,7 +477,7 @@ void CDatabase::GetAllImageNames(vector<string>& ImageNames, QSqlDatabase& db)
 }
 size_t CDatabase::AddImage(Image& Image, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistCamera(Image.CameraId(), db))
     {
         ThrowError("The camera ID for the current image does not exist!!");
@@ -510,7 +510,7 @@ size_t CDatabase::AddImage(Image& Image, QSqlDatabase& db)
 
 size_t CDatabase::GetImageKeypointsNum(size_t ImageID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -535,7 +535,7 @@ size_t CDatabase::GetImageKeypointsNum(size_t ImageID, QSqlDatabase& db)
 }
 void CDatabase::GetKeypoints(size_t ImageID, FeatureKeypoints& Keypoints, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -558,7 +558,7 @@ void CDatabase::GetKeypoints(size_t ImageID, FeatureKeypoints& Keypoints, QSqlDa
 }
 void CDatabase::AddKeypoints(size_t ImageID, FeatureKeypoints& Keypoints, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -580,7 +580,7 @@ void CDatabase::AddKeypoints(size_t ImageID, FeatureKeypoints& Keypoints, QSqlDa
 }
 size_t CDatabase::GetImageDescriptorsNum(size_t ImageID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -605,7 +605,7 @@ size_t CDatabase::GetImageDescriptorsNum(size_t ImageID, QSqlDatabase& db)
 }
 void CDatabase::GetDescriptors(size_t ImageID, FeatureDescriptors& Descriptors, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -628,7 +628,7 @@ void CDatabase::GetDescriptors(size_t ImageID, FeatureDescriptors& Descriptors, 
 }
 void CDatabase::AddDescriptors(size_t ImageID, FeatureDescriptors& Descriptors, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -649,7 +649,7 @@ void CDatabase::AddDescriptors(size_t ImageID, FeatureDescriptors& Descriptors, 
 
 size_t CDatabase::GetMatchesNum(size_t ImageID1, size_t ImageID2, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID1, db) || !IsExistImage(ImageID2, db))
     {
         ThrowError("Image 1 or Image 2 does not exist!");
@@ -680,7 +680,7 @@ size_t CDatabase::GetMatchesNum(size_t ImageID1, size_t ImageID2, QSqlDatabase& 
 }
 void CDatabase::GetMatches(size_t ImageID1, size_t ImageID2, FeatureMatches& Matches_, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID1, db) || !IsExistImage(ImageID2, db))
     {
         ThrowError("Image 1 or Image 2 does not exist!");
@@ -713,7 +713,7 @@ void CDatabase::GetMatches(size_t ImageID1, size_t ImageID2, FeatureMatches& Mat
 }
 void CDatabase::GetAllMatches(unordered_map<size_t, unordered_map<size_t, FeatureMatches>>& Matches, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM Matches");
     if (!query.exec())
@@ -732,7 +732,7 @@ void CDatabase::GetAllMatches(unordered_map<size_t, unordered_map<size_t, Featur
 }
 void CDatabase::AddMatches(size_t ImageID1, size_t ImageID2, FeatureMatches& Matches_, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID1, db) || !IsExistImage(ImageID2, db))
     {
         ThrowError("Image 1 or Image 2 does not exist!");
@@ -764,7 +764,7 @@ void CDatabase::AddMatches(size_t ImageID1, size_t ImageID2, FeatureMatches& Mat
 }
 size_t CDatabase::MatchedImagesNum(size_t ImageID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -786,7 +786,7 @@ size_t CDatabase::MatchedImagesNum(size_t ImageID, QSqlDatabase& db)
 
 size_t CDatabase::GetTwoViewGeometriesNum(size_t ImageID1, size_t ImageID2, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID1, db) || !IsExistImage(ImageID2, db))
     {
         ThrowError("Image 1 or Image 2 does not exist!");
@@ -819,7 +819,7 @@ size_t CDatabase::GetTwoViewGeometriesNum(size_t ImageID1, size_t ImageID2, QSql
 }
 void CDatabase::GetTwoViewGeometries(size_t ImageID1, size_t ImageID2, TwoViewGeometry& TwoViewGeometry, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID1, db) || !IsExistImage(ImageID2, db))
     {
         ThrowError("Image 1 or Image 2 does not exist!");
@@ -853,7 +853,7 @@ void CDatabase::GetTwoViewGeometries(size_t ImageID1, size_t ImageID2, TwoViewGe
 }
 void CDatabase::GetAllTwoViewGeometries(unordered_map<size_t, unordered_map<size_t, TwoViewGeometry>>& TwoViewGeometries, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.prepare("SELECT * FROM TwoViewGeometries");
     if (!query.exec())
@@ -873,7 +873,7 @@ void CDatabase::GetAllTwoViewGeometries(unordered_map<size_t, unordered_map<size
 }
 void CDatabase::AddTwoViewGeometries(size_t ImageID1, size_t ImageID2, TwoViewGeometry& TwoViewGeometry, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID1,db) || !IsExistImage(ImageID2, db))
     {
         ThrowError("Image 1 or Image 2 does not exist!");
@@ -906,7 +906,7 @@ void CDatabase::AddTwoViewGeometries(size_t ImageID1, size_t ImageID2, TwoViewGe
 }
 size_t CDatabase::ExistTwoViewGeometriesImagesNum(size_t ImageID, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!IsExistImage(ImageID, db))
     {
         ThrowError("This image does not exists!");
@@ -928,7 +928,7 @@ size_t CDatabase::ExistTwoViewGeometriesImagesNum(size_t ImageID, QSqlDatabase& 
 
 void CDatabase::ClearData(QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     QSqlQuery query(db);
     query.exec("DELETE FROM Cameras");
     query.exec("DELETE FROM Images");
@@ -939,7 +939,7 @@ void CDatabase::ClearData(QSqlDatabase& db)
 }
 void CDatabase::ExportDatabaseCache(OptionManager* options, DatabaseCache& DbCache, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     string TempDatabasePath = QString2StdString(QCoreApplication::applicationDirPath()) + "/temp.db";
     ExportMatchedDatabase(TempDatabasePath, db);
     Database database(TempDatabasePath);
@@ -949,10 +949,37 @@ void CDatabase::ExportDatabaseCache(OptionManager* options, DatabaseCache& DbCac
     QFile File(StdString2QString(TempDatabasePath));
     File.remove();
 }
+void CDatabase::GenerateMatchInfo(QSqlDatabase& db)
+{
+    Base::MatchMatrix_Mutex.lock();
+    unordered_map<size_t, unordered_map<size_t, TwoViewGeometry>> TwoViewGeometries;
+    GetAllTwoViewGeometries(TwoViewGeometries, db);
+    for (auto& pair1 : TwoViewGeometries)
+    {
+        size_t ImageID = pair1.first;
+        for (auto& pair2 : pair1.second)
+        {
+            size_t MatchedImageID = pair2.first;
+            size_t MatchNum = pair2.second.inlier_matches.size();
+            if (ImageID > MatchedImageID)
+            {
+                Base::MatchMatrix[ImageID][MatchedImageID] = MatchNum;
+            }
+            else
+            {
+                Base::MatchMatrix[MatchedImageID][ImageID] = MatchNum;
+            }
+            Base::MatchedImages[ImageID].insert(MatchedImageID);
+            Base::MatchedImages[MatchedImageID].insert(ImageID);
+            Base::MaxMatches = max(Base::MaxMatches, MatchNum);
+        }
+    }
+    Base::MatchMatrix_Mutex.unlock();
+}
 
 void CDatabase::ExportMatchedDatabase(string DatabasePath, QSqlDatabase& db)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (ExistsFile(DatabasePath))
     {
         QFile File(StdString2QString(DatabasePath));

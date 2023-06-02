@@ -15,7 +15,10 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 		cout << "[Feature matcher] SiftGPU not fully supported! Automatically use CPU to match!" << endl;
 		UseGPU = false;
 	}
-
+	if (Base::IsQuit)
+	{
+		return;
+	}
 	TwoViewGeometry::Options TwoViewGeometryOptions;
 	TwoViewGeometryOptions.min_num_inliers = options->sift_matching->min_num_inliers;
 	TwoViewGeometryOptions.ransac_options.max_error = options->sift_matching->max_error;
@@ -27,15 +30,26 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 
 	atomic<size_t> CPU_TaskCount(0);
 
-
+	if (Base::IsQuit)
+	{
+		return;
+	}
 #pragma omp parallel for
 	for (int i = 0; i < MatchedImageIDs.size(); i++)
 	{
+		if (Base::IsQuit)
+		{
+			continue;
+		}
 		size_t MatchedImageID = MatchedImageIDs[i];
 		if (MatchedImageID == ImageID)continue;
 
 		QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
 		FeatureDescriptors Descriptors1, Descriptors2;
+		if (Base::IsQuit)
+		{
+			continue;
+		}
 		CDatabase::GetDescriptors(ImageID, Descriptors1, db);
 
 #ifdef OUTPUTLOG_MODE
@@ -93,7 +107,10 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 			CDatabase::GetKeypoints(MatchedImageID, Keypoints2, db);
 		}
 #endif
-
+		if (Base::IsQuit)
+		{
+			continue;
+		}
 		vector<Eigen::Vector2d> PointsVectors1(Keypoints1.size()), PointsVectors2(Keypoints2.size());
 		for (size_t j = 0; j < Keypoints1.size(); j++)
 		{
@@ -116,6 +133,10 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 
 		if (UseGPU && IsGPUAvailable() && sift_match_gpu.__matcher)
 		{
+			if (Base::IsQuit)
+			{
+				continue;
+			}
 			if (MatchedImageIDs.size() >= 500)
 			{
 				QElapsedTimer WaitGPU_Timer;
@@ -154,6 +175,10 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 		}
 		else
 		{
+			if (Base::IsQuit)
+			{
+				continue;
+			}
 			CPU_TaskCount++;
 			MatchSiftFeaturesCPU(*options->sift_matching, Descriptors1, Descriptors2, &Matches);
 			MatchGuidedSiftFeaturesCPU(*options->sift_matching, Keypoints1, Keypoints2, Descriptors1, Descriptors2, &Geometries);
@@ -182,7 +207,10 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 			Matches.resize(options->sift_matching->max_num_matches);
 			Matches.shrink_to_fit();
 		}
-
+		if (Base::IsQuit)
+		{
+			continue;
+		}
 		CDatabase::AddMatches(ImageID, MatchedImageID, Matches, db);
 		if (!Geometries.inlier_matches.empty())
 		{
@@ -220,24 +248,30 @@ bool CExhaustiveMatcher::Match(string ImagePath)
 {
 	cout << StringPrintf("Start feature matching on image %s", GetFileName(ImagePath)) << endl;
 	string ImageName = GetFileName(ImagePath);
-
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
 	if (!CDatabase::IsExistImage(ImageName, db))
 	{
-		cout << StringPrintf("[Feature matcher] Error! Image %s does not exist in the database!", ImageName);
+		cout << StringPrintf("[Feature matcher] Error! Image %s does not exist in the database!", ImageName.c_str());
 		ReleaseDatabaseConnect(db);
 		return false;
 	}
 	size_t CurrentImageID = CDatabase::GetImageID(ImageName, db);
 	if (!CDatabase::GetImageKeypointsNum(CurrentImageID, db))
 	{
-		cout << StringPrintf("[Feature matcher] Error! Image %s has no feature points!", ImageName);
+		cout << StringPrintf("[Feature matcher] Error! Image %s has no feature points!", ImageName.c_str());
 		ReleaseDatabaseConnect(db);
 		return false;
 	}
 	CHECK(options->exhaustive_matching->Check());
 	CHECK(options->sift_matching->Check());
-
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	size_t ImageNum = CDatabase::GetImagesNum(db);
 	vector<size_t> MatchImagePairs, WaitImagePairs;
 	MatchImagePairs.reserve(ImageNum);
@@ -259,13 +293,19 @@ bool CExhaustiveMatcher::Match(string ImagePath)
 			WaitImagePairs.push_back(MatchedImageID);
 		}
 	}
-
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	size_t TimeConsuming1 = 0, TimeConsuming2 = 0;
 	SiftMatch(CurrentImageID, MatchImagePairs, TimeConsuming1);
-
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	if (!WaitImagePairs.empty())
 	{
-		while (true) //等待"需要等待提取特征完成, 才能开始匹配的影像对"中的影像都已被提取特征
+		while (!Base::IsQuit) //等待"需要等待提取特征完成, 才能开始匹配的影像对"中的影像都已被提取特征
 		{
 			bool IsReady = true;
 			for (size_t WaitImageID : WaitImagePairs)
@@ -284,12 +324,12 @@ bool CExhaustiveMatcher::Match(string ImagePath)
 		}
 		SiftMatch(CurrentImageID, WaitImagePairs, TimeConsuming2);
 	}
-	
+
 
 	float TotalTime = (TimeConsuming1 + TimeConsuming2) / 1000.0;
 
 	//SetImageStatus(ImageName, CImageStatus::Matched);
-	cout << StringPrintf("[%.2f s] Image %s matching completed, there are %d images matching it!", TotalTime, ImageName, CDatabase::ExistTwoViewGeometriesImagesNum(CurrentImageID, db)) << endl;
+	cout << StringPrintf("[%.2f s] Image %s matching completed, there are %d images matching it!", TotalTime, ImageName.c_str(), CDatabase::ExistTwoViewGeometriesImagesNum(CurrentImageID, db)) << endl;
 	ReleaseDatabaseConnect(db);
 	return true;
 }
@@ -301,6 +341,12 @@ CRetrievalMatcher::CRetrievalMatcher(OptionManager* options)
 	OutputFunc = nullptr;
 	RetrievalDatabaseNum = 0;
 	Database.resize(0);
+
+	if (ExhaustiveMatcher)
+	{
+		delete ExhaustiveMatcher;
+	}
+	ExhaustiveMatcher = new CExhaustiveMatcher(options);
 
 	std::thread InitializeThread(&CRetrievalMatcher::Initialize, this);
 	InitializeThread.detach();
@@ -333,11 +379,23 @@ bool CRetrievalMatcher::Match(string ImagePath)
 	QSqlDatabase db = CreateDatabaseConnect(*options->database_path);
 	if (!CDatabase::IsExistImage(ImageName, db))
 	{
-		cout << StringPrintf("[Feature matcher] Error! Image %s does not exist in the database!", ImageName);
+		cout << StringPrintf("[Feature matcher] Error! Image %s does not exist in the database!", ImageName.c_str());
 		ReleaseDatabaseConnect(db);
 		return false;
 	}
-	cout << StringPrintf("Start feature matching on image %s", ImageName) << endl;
+	cout << StringPrintf("Start feature matching on image %s", ImageName.c_str()) << endl;
+
+	bool IsUseExhaustiveMatch = false;
+	if (ExhaustiveMatcher && Database.size() < *options->RetrievalTopN)
+	{
+		if (Base::IsQuit)
+		{
+			return false;
+		}
+		IsUseExhaustiveMatch = true;
+		std::thread ExhaustiveMatchThread(&CExhaustiveMatcher::Match, ExhaustiveMatcher, ImagePath);
+		ExhaustiveMatchThread.detach();
+	}
 
 	QElapsedTimer Timer;
 	Timer.start();
@@ -347,8 +405,12 @@ bool CRetrievalMatcher::Match(string ImagePath)
 	PyTuple_SetItem(Arg, 0, Py_BuildValue("s", ImagePath.c_str()));
 	PyTuple_SetItem(Arg, 1, Py_BuildValue("i", *options->RetrievalTopN));
 
+	if (Base::IsQuit)
+	{
+		return false;
+	}
 	Base::GPU_Mutex.lock();
-	PyObject* RetrievalResult_Ptr = PyEval_CallObject(MatchFunc, Arg);
+	PyObject* RetrievalResult_Ptr = PyEval_CallObject(MatchFunc, Arg); //检索
 	Base::GPU_Mutex.unlock();
 	Py_DECREF(Arg);
 
@@ -376,10 +438,10 @@ bool CRetrievalMatcher::Match(string ImagePath)
 	}
 	PyGILState_Release(state);
 	size_t TimeConsuming_MS = Timer.elapsed();
-	cout << StringPrintf("[%d ms] Image %s retrieval is complete!", TimeConsuming_MS, ImageName) << endl;
+	cout << StringPrintf("[%d ms] Image %s retrieval is complete!", TimeConsuming_MS, ImageName.c_str()) << endl;
 
 #ifdef OUTPUTLOG_MODE
-	string Log = StringPrintf("Retrieval results for image %s: ", ImageName);
+	string Log = StringPrintf("Retrieval results for image %s: ", ImageName.c_str());
 	for (size_t i = 0; i < RetrievalResult.size(); i++)
 	{
 		Log += GetFileName(Database[RetrievalResult[i]]);
@@ -390,54 +452,68 @@ bool CRetrievalMatcher::Match(string ImagePath)
 	}
 	qDebug() << StdString2QString(Log);
 #endif
-
-	vector<size_t> MatchImagePairs, WaitImagePairs;
-	MatchImagePairs.reserve(RetrievalResult.size());
-	WaitImagePairs.reserve(RetrievalResult.size());
-
-	image_t ImageID = CDatabase::GetImageID(ImageName, db);
-	for (size_t i = 0; i < RetrievalResult.size(); i++)
+	if (Base::IsQuit)
 	{
-		size_t MatchedImageID = CDatabase::GetImageID(GetFileName(Database[RetrievalResult[i]]), db);
-		if (MatchedImageID == ImageID)continue;
-		if (CDatabase::GetMatchesNum(ImageID, MatchedImageID, db) > 0)
-		{
-			continue;
-		}
-		if (CDatabase::GetImageDescriptorsNum(MatchedImageID, db))
-		{
-			MatchImagePairs.push_back(MatchedImageID);
-		}
-		else
-		{
-			WaitImagePairs.push_back(MatchedImageID);
-		}
+		return false;
 	}
-	size_t TimeConsuming1 = 0, TimeConsuming2 = 0;
-	SiftMatch(ImageID, MatchImagePairs, TimeConsuming1);
-	if (!WaitImagePairs.empty())
+	if (!IsUseExhaustiveMatch)
 	{
-		while (true) //等待"需要等待提取特征完成, 才能开始匹配的影像对"中的影像都已被提取特征
+		vector<size_t> MatchImagePairs, WaitImagePairs;
+		MatchImagePairs.reserve(RetrievalResult.size());
+		WaitImagePairs.reserve(RetrievalResult.size());
+
+		image_t ImageID = CDatabase::GetImageID(ImageName, db);
+		for (size_t i = 0; i < RetrievalResult.size(); i++)
 		{
-			bool IsReady = true;
-			for (size_t WaitImageID : WaitImagePairs)
+			size_t MatchedImageID = CDatabase::GetImageID(GetFileName(Database[RetrievalResult[i]]), db);
+			if (MatchedImageID == ImageID)continue;
+			if (CDatabase::GetMatchesNum(ImageID, MatchedImageID, db) > 0)
 			{
-				if (!CDatabase::GetImageKeypointsNum(WaitImageID, db))
+				continue;
+			}
+			if (CDatabase::GetImageDescriptorsNum(MatchedImageID, db))
+			{
+				MatchImagePairs.push_back(MatchedImageID);
+			}
+			else
+			{
+				WaitImagePairs.push_back(MatchedImageID);
+			}
+		}
+		size_t TimeConsuming1 = 0, TimeConsuming2 = 0;
+		if (Base::IsQuit)
+		{
+			return false;
+		}
+		SiftMatch(ImageID, MatchImagePairs, TimeConsuming1);
+		if (!WaitImagePairs.empty())
+		{
+			while (!Base::IsQuit) //等待"需要等待提取特征完成, 才能开始匹配的影像对"中的影像都已被提取特征
+			{
+				bool IsReady = true;
+				for (size_t WaitImageID : WaitImagePairs)
 				{
-					IsReady = false;
+					if (!CDatabase::GetImageKeypointsNum(WaitImageID, db))
+					{
+						IsReady = false;
+						break;
+					}
+				}
+				if (IsReady)
+				{
 					break;
 				}
+				this_thread::sleep_for(chrono::milliseconds(200));
 			}
-			if (IsReady)
+			if (Base::IsQuit)
 			{
-				break;
+				return false;
 			}
-			this_thread::sleep_for(chrono::milliseconds(200));
+			SiftMatch(ImageID, WaitImagePairs, TimeConsuming2);
+			float TotalTime = (TimeConsuming1 + TimeConsuming2) / 1000.0;
+			cout << StringPrintf("[%.2f s] Image %s matching completed, there are %d images matching it!", TotalTime, ImageName.c_str(), CDatabase::ExistTwoViewGeometriesImagesNum(ImageID, db)) << endl;
 		}
-		SiftMatch(ImageID, WaitImagePairs, TimeConsuming2);
 	}
-	float TotalTime = (TimeConsuming1 + TimeConsuming2) / 1000.0;
-	cout << StringPrintf("[%.2f s] Image %s matching completed, there are %d images matching it!", TotalTime, ImageName, CDatabase::ExistTwoViewGeometriesImagesNum(ImageID, db)) << endl;
 	ReleaseDatabaseConnect(db);
 	return true;
 }

@@ -7,6 +7,9 @@ class CImageListWidget :public QListWidget
 {
 	Q_OBJECT
 public:
+	std::vector<std::string> ImagePaths;
+
+
 	CImageListWidget(QDockWidget* parent);
 	void AddImage(std::string ImagePath);
 	void ClearImage();
@@ -16,7 +19,6 @@ public slots:
 private:
 	QDockWidget* parent;
 	std::vector<QListWidgetItem*> Items;
-	std::vector<std::string> ImagePaths;
 
 	~CImageListWidget();
 	QSize CalculateImgSize(QSize& OriginSize);

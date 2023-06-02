@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_CMainWindow_t {
-    QByteArrayData data[14];
-    char stringdata0[200];
+    QByteArrayData data[15];
+    char stringdata0[208];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,19 +41,20 @@ QT_MOC_LITERAL(5, 66, 24), // "std::vector<std::string>"
 QT_MOC_LITERAL(6, 91, 11), // "std::string"
 QT_MOC_LITERAL(7, 103, 19), // "ChangeNewImageColor"
 QT_MOC_LITERAL(8, 123, 7), // "ImageID"
-QT_MOC_LITERAL(9, 131, 13), // "NewImage_SLOT"
-QT_MOC_LITERAL(10, 145, 9), // "ImagePath"
-QT_MOC_LITERAL(11, 155, 15), // "SenderQuit_SLOT"
-QT_MOC_LITERAL(12, 171, 11), // "RenderModel"
-QT_MOC_LITERAL(13, 183, 16) // "ClearRenderModel"
+QT_MOC_LITERAL(9, 131, 7), // "ModelID"
+QT_MOC_LITERAL(10, 139, 13), // "NewImage_SLOT"
+QT_MOC_LITERAL(11, 153, 9), // "ImagePath"
+QT_MOC_LITERAL(12, 163, 15), // "SenderQuit_SLOT"
+QT_MOC_LITERAL(13, 179, 11), // "RenderModel"
+QT_MOC_LITERAL(14, 191, 16) // "ClearRenderModel"
 
     },
     "CMainWindow\0RenderNow_SIGNAL\0\0"
     "ClearRenderModel_SIGNAL\0ImportModel\0"
     "std::vector<std::string>\0std::string\0"
-    "ChangeNewImageColor\0ImageID\0NewImage_SLOT\0"
-    "ImagePath\0SenderQuit_SLOT\0RenderModel\0"
-    "ClearRenderModel"
+    "ChangeNewImageColor\0ImageID\0ModelID\0"
+    "NewImage_SLOT\0ImagePath\0SenderQuit_SLOT\0"
+    "RenderModel\0ClearRenderModel"
 };
 #undef QT_MOC_LITERAL
 
@@ -76,11 +77,11 @@ static const uint qt_meta_data_CMainWindow[] = {
 
  // slots: name, argc, parameters, tag, flags
        4,    4,   56,    2, 0x0a /* Public */,
-       7,    1,   65,    2, 0x0a /* Public */,
-       9,    1,   68,    2, 0x0a /* Public */,
-      11,    0,   71,    2, 0x0a /* Public */,
-      12,    0,   72,    2, 0x0a /* Public */,
-      13,    0,   73,    2, 0x0a /* Public */,
+       7,    2,   65,    2, 0x0a /* Public */,
+      10,    1,   70,    2, 0x0a /* Public */,
+      12,    0,   73,    2, 0x0a /* Public */,
+      13,    0,   74,    2, 0x0a /* Public */,
+      14,    0,   75,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -88,8 +89,8 @@ static const uint qt_meta_data_CMainWindow[] = {
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int, 0x80000000 | 5, 0x80000000 | 6, QMetaType::Bool,    2,    2,    2,    2,
-    QMetaType::Void, QMetaType::Int,    8,
-    QMetaType::Void, 0x80000000 | 6,   10,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    8,    9,
+    QMetaType::Void, 0x80000000 | 6,   11,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -106,7 +107,7 @@ void CMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->RenderNow_SIGNAL(); break;
         case 1: _t->ClearRenderModel_SIGNAL(); break;
         case 2: _t->ImportModel((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< std::vector<std::string>(*)>(_a[2])),(*reinterpret_cast< std::string(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4]))); break;
-        case 3: _t->ChangeNewImageColor((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->ChangeNewImageColor((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 4: _t->NewImage_SLOT((*reinterpret_cast< std::string(*)>(_a[1]))); break;
         case 5: _t->SenderQuit_SLOT(); break;
         case 6: _t->RenderModel(); break;

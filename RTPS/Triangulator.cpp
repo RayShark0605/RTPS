@@ -207,7 +207,7 @@ size_t CTriangulator::CompleteTracks(const Options& options, const unordered_set
 }
 size_t CTriangulator::CompleteAllTracks(const Options& options) 
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     CHECK(options.Check());
 
     size_t num_completed = 0;
@@ -238,7 +238,7 @@ size_t CTriangulator::MergeTracks(const Options& options, const unordered_set<po
 }
 size_t CTriangulator::MergeAllTracks(const Options& options)
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     CHECK(options.Check());
 
     size_t num_merged = 0;
@@ -563,7 +563,7 @@ size_t CTriangulator::Continue(const Options& options, const CorrData& ref_corr_
 }
 size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id) 
 {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     if (!reconstruction_->IsModelExistPoint3D(point3D_id)) 
     {
         return 0;
@@ -656,7 +656,7 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id)
     return 0;
 }
 size_t CTriangulator::Complete(const Options& options,const point3D_t point3D_id) {
-    DebugTimer timer(__FUNCTION__);
+    //DebugTimer timer(__FUNCTION__);
     size_t num_completed = 0;
 
     if (!reconstruction_->IsModelExistPoint3D(point3D_id)) {

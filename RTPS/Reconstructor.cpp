@@ -10,6 +10,7 @@ CReconstructor::CReconstructor(OptionManager* options, CModelManager* ModelManag
 	CHECK(options->mapper.get()->Check());
 	this->options = options;
 	this->ModelManager = ModelManager;
+	CurrentModelID = INT_MAX;
 	IsContinue = true;
 
 	RegisterCallback(INITIAL_IMAGE_PAIR_REG_CALLBACK);
@@ -31,10 +32,15 @@ void CReconstructor::Reconstruct(string ImagePath)
 	string ImageName = GetFileName(ImagePath);
 	if (!CDatabase::IsExistImage(ImageName, db))
 	{
-		cout << StringPrintf("[Reconstructor] Warning! %s does not exists in database!", ImageName) << endl;
+		cout << StringPrintf("[Reconstructor] Warning! %s does not exists in database!", ImageName.c_str()) << endl;
+		return;
 	}
-	size_t ImageID = CDatabase::GetImageID(ImageName, db);
-	cout << StringPrintf("=====> Reconstruction of image %s is being done... <=====", ImageName) << endl;
+	if (!CDatabase::ExistTwoViewGeometriesImagesNum(CDatabase::GetImageID(ImageName, db), db))
+	{
+		cout << StringPrintf("[Reconstructor] Warning! Image %s is not matched to any images!", ImageName.c_str()) << endl;
+		return;
+	}
+	cout << StringPrintf("=====> Reconstruction of image %s is being done... <=====", ImageName.c_str()) << endl;
 	Base::Reconstruction_Mutex.lock();
 	Reconstruct(ImagePath, db);
 	Callback(LAST_IMAGE_REG_CALLBACK);
@@ -113,7 +119,7 @@ bool CReconstructor::MergeModel(size_t Model1ID, size_t Model2ID)
 	CModel& Model2 = ModelManager->GetRefer(Model2ID);
 	size_t Point1Num = Model1.GetModelPoints3DNum();
 	size_t Point2Num = Model2.GetModelPoints3DNum();
-	double MaxReprojectError = 80000;
+	double MaxReprojectError = 800;
 
 	CModel& Base = (Point1Num > Point2Num ? Model1 : Model2);
 	CModel& Ref = (Point1Num > Point2Num ? Model2 : Model1);
@@ -143,15 +149,22 @@ bool CReconstructor::MergeModel(size_t Model1ID, size_t Model2ID)
 }
 
 void CReconstructor::Run() {};
+
 void CReconstructor::Reconstruct(string ImagePath, QSqlDatabase& db)
 {
-	DebugTimer timer(__FUNCTION__);
+	DebugTimer DebugTimer(__FUNCTION__);
+	QElapsedTimer timer;
+	timer.start();
+	if (Base::IsQuit)
+	{
+		return;
+	}
 	cout << "Loading database cache..." << endl;
 	DatabaseCache DbCache;
 	CDatabase::ExportDatabaseCache(options, DbCache, db);
-	if (DbCache.NumImages() == 0)
+	if (DbCache.NumImages() < 4)
 	{
-		cout << "No images with matches found in the database!" << endl;
+		cout << "Current images are too few!" << endl;
 		return;
 	}
 	for (size_t ImageID : RegImages)
@@ -161,43 +174,214 @@ void CReconstructor::Reconstruct(string ImagePath, QSqlDatabase& db)
 			DbCache.Image(ImageID).SetRegistered(true);
 		}
 	}
-	cout << StringPrintf("Successfully loaded %d images, %d cameras, %d image pairs in database!", DbCache.NumImages(), DbCache.NumCameras(), DbCache.CorrespondenceGraph().NumImagePairs()) << endl;
-	CMapperOptions MapperOptions(*options->mapper);
-	int ReconstructResult = Reconstruct(ImagePath, &MapperOptions, DbCache, db);
-	if (ReconstructResult == -1)
+	if (Base::IsQuit)
 	{
-		cout << "Trying to relax the initialization constraints..." << endl;
-		size_t kNumInitRelaxations = 2; //放松条件
-		for (size_t i = 0; i < kNumInitRelaxations; i++)
+		return;
+	}
+	CMapper mapper(&DbCache);
+	CMapperOptions MapperOptions(*options->mapper);
+
+	size_t ThisImageID = CDatabase::GetImageID(GetFileName(ImagePath), db);
+	size_t ModelID = ChooseModel(ImagePath, db); //当前影像应该属于哪个模型
+	cout << StringPrintf("=====================> Current model: %d <=====================", ModelID + 1) << endl;
+	CModel& Model = ModelManager->GetRefer(ModelID);
+	mapper.BeginReconstruction(&Model);
+
+	unordered_set<size_t> ThisRegImagesID;
+	if (Model.GetModelRegImagesNum() == 0) //该模型还是一个空模型
+	{
+		size_t InitImageID1 = kInvalidImageId, InitImageID2 = kInvalidImageId;
+		bool IsInitialSuccess = false;
+		for (size_t InitialTrial = 0; InitialTrial < 2; InitialTrial++) //多次尝试构建初始模型
 		{
-			MapperOptions.mapper.init_min_num_inliers = MapperOptions.mapper.init_min_num_inliers / 2;
-			ReconstructResult = Reconstruct(ImagePath, &MapperOptions, DbCache, db);
-			if (ReconstructResult == -1)
+			if (Base::IsQuit)
 			{
-				cout << "Trying to relax the initialization constraints again..." << endl;
-				MapperOptions.mapper.init_min_tri_angle = MapperOptions.mapper.init_min_tri_angle / 2;
-				ReconstructResult = Reconstruct(ImagePath, &MapperOptions, DbCache, db);
-				if (ReconstructResult != -1)
+				return;
+			}
+			if (RegisterInitialPair(&MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
+			{
+				IsInitialSuccess = true;
+				break;
+			}
+			MapperOptions.mapper.init_min_num_inliers /= 2;
+			if (RegisterInitialPair(&MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
+			{
+				IsInitialSuccess = true;
+				break;
+			}
+			MapperOptions.mapper.init_min_tri_angle /= 2;
+		}
+		if (Base::IsQuit)
+		{
+			return;
+		}
+		if (!IsInitialSuccess) //初始模型构建不成功
+		{
+			cout << StringPrintf("[Model %d] Cannot find initial image pair!", ModelID + 1) << endl;
+			mapper.EndReconstruction(true);
+			ModelManager->Delete(ModelID);
+			LastReconstructTimeConsuming = timer.elapsed() / 1000;
+			return;
+		}
+		else //初始模型构建成功
+		{
+			Callback(INITIAL_IMAGE_PAIR_REG_CALLBACK);
+			ThisRegImagesID.insert(InitImageID1);
+			ThisRegImagesID.insert(InitImageID2);
+			cout << StringPrintf("Successfully set and registered images with [%s, id=%d] and [%s, id=%d] as initial image pair", CDatabase::GetImageName(InitImageID1, db).c_str(), InitImageID1, CDatabase::GetImageName(InitImageID2, db).c_str(), InitImageID2) << endl;
+		}
+		if (Base::IsQuit)
+		{
+			return;
+		}
+		bool IsContinue = false;
+		if (!ThisRegImagesID.count(ThisImageID)) //当前影像还没有被用作初始影像对
+		{
+			if (mapper.RegisterNextImage(MapperOptions.Mapper(), ThisImageID)) //注册当前影像
+			{
+				cout << StringPrintf("[Model %d] Current image registration successful!", ModelID + 1) << endl;
+				emit ChangeImageColor_SIGNAL(ThisImageID, ModelID); //更改当前注册成功的影像的颜色
+				ImageTriangulate(MapperOptions, ThisImageID, &mapper); //空三
+				if (Base::IsQuit)
 				{
-					cout << StringPrintf("[%d s] Reconstruction success!", LastReconstructTimeConsuming) << endl;
-					TryMergeModels();
 					return;
 				}
+				IterativeLocalRefinement(MapperOptions, ThisImageID, &mapper);
+				ExtractColors(ThisImageID, &Model);
+				Callback(NEXT_IMAGE_REG_CALLBACK);
+				ThisRegImagesID.insert(ThisImageID);
 			}
 			else
 			{
-				cout << StringPrintf("[%d s] Reconstruction success!", LastReconstructTimeConsuming) << endl;
-				TryMergeModels();
-				return;
+				cout << StringPrintf("[Model %d] Current image registration failed!", ModelID + 1) << endl;
 			}
 		}
-		cout << StringPrintf("[%d s] All attempts to reconstruct have ended in failure!", LastReconstructTimeConsuming) << endl;
 	}
-	else
+	cout << StringPrintf("[Model %d] Try registering another images...", ModelID + 1) << endl;
+	while (!Base::IsQuit)
 	{
-		cout << StringPrintf("[%d s] Reconstruction success!", LastReconstructTimeConsuming) << endl;
+		vector<size_t> NextImages = mapper.FindNextImages(MapperOptions.Mapper()); //寻找下一个要注册的影像
+		bool IsContinue = false;
+		for (size_t NextImageID : NextImages)
+		{
+			if (Base::IsQuit)
+			{
+				return;
+			}
+			if (ThisRegImagesID.count(NextImageID) || RegImages.count(NextImageID) || Model.IsImageRegistered(NextImageID))continue;
+			if (!mapper.RegisterNextImage(MapperOptions.Mapper(), NextImageID))continue;
+			if (NextImageID == ThisImageID)
+			{
+				emit ChangeImageColor_SIGNAL(ThisImageID, ModelID); //更改当前注册成功的影像的颜色
+				cout << StringPrintf("[Model %d] Current image registration successful!", ModelID + 1) << endl;
+			}
+			else
+			{
+				cout << StringPrintf("[Model %d] Successfully registered image %s!", ModelID + 1, CDatabase::GetImageName(NextImageID, db).c_str()) << endl;
+			}
+			ImageTriangulate(MapperOptions, NextImageID, &mapper); //空三
+			if (Base::IsQuit)
+			{
+				return;
+			}
+			IterativeLocalRefinement(MapperOptions, NextImageID, &mapper);
+			ExtractColors(NextImageID, &Model);
+			Callback(NEXT_IMAGE_REG_CALLBACK);
+			ThisRegImagesID.insert(NextImageID);
+			IsContinue = true;
+			break;
+		}
+		if (!IsContinue)break;
+	}
+	cout << StringPrintf("[Model %d] Registration of other images has been completed!", ModelID + 1) << endl;
+	size_t CurrentRegImagesNum = Model.GetModelRegImagesNum();
+	size_t MinModelSize = min(DbCache.NumImages(), size_t(MapperOptions.min_model_size));
+	if (CurrentRegImagesNum < MinModelSize)
+	{
+		cout << StringPrintf("[Model %d]: Too few registered images! the model will be deleted!", ModelID + 1) << endl;
+		mapper.EndReconstruction(true);
+		ModelManager->Delete(ModelID); //删除该模型
+		LastReconstructTimeConsuming = timer.elapsed() / 1000;
+		return;
+	}
+	if (ThisRegImagesID.size() >= 20 && !Base::IsQuit)
+	{
+		cout << StringPrintf("[Model %d] Iterative global refinement is being performed...", ModelID + 1) << endl;
+		IterativeGlobalRefinement(MapperOptions, &mapper);
+		cout << StringPrintf("[Model %d] Iterative global refinement finished!", ModelID + 1) << endl;
+	}
+	cout << StringPrintf("[Model %d]: %d images were registered for this reconstruction: ", ModelID + 1, ThisRegImagesID.size());
+	for (size_t index : ThisRegImagesID)
+	{
+		RegImages.insert(index);
+		cout << StringPrintf("%s[%d]", CDatabase::GetImageName(index, db).c_str(), index) << ", ";
+	}
+	cout << endl;
+	if (Base::IsQuit)
+	{
+		return;
+	}
+	mapper.EndReconstruction(false);
+	LastReconstructTimeConsuming = timer.elapsed() / 1000;
+	cout << StringPrintf("=====================> [Model %d, %d s]: This reconstruction is complete <=====================", ModelID + 1, LastReconstructTimeConsuming) << endl;
+	if (!ThisRegImagesID.empty() && !Base::IsQuit)
+	{
 		TryMergeModels();
 	}
+
+	//DebugTimer timer(__FUNCTION__);
+	//cout << "Loading database cache..." << endl;
+	//DatabaseCache DbCache;
+	//CDatabase::ExportDatabaseCache(options, DbCache, db);
+	//if (DbCache.NumImages() == 0)
+	//{
+	//	cout << "No images with matches found in the database!" << endl;
+	//	return;
+	//}
+	//for (size_t ImageID : RegImages)
+	//{
+	//	if (DbCache.ExistsImage(ImageID))
+	//	{
+	//		DbCache.Image(ImageID).SetRegistered(true);
+	//	}
+	//}
+	//cout << StringPrintf("Successfully loaded %d images, %d cameras, %d image pairs in database!", DbCache.NumImages(), DbCache.NumCameras(), DbCache.CorrespondenceGraph().NumImagePairs()) << endl;
+	//CMapperOptions MapperOptions(*options->mapper);
+	//int ReconstructResult = Reconstruct(ImagePath, &MapperOptions, DbCache, db);
+	//if (ReconstructResult == -1)
+	//{
+	//	cout << "Trying to relax the initialization constraints..." << endl;
+	//	size_t kNumInitRelaxations = 2; //放松条件
+	//	for (size_t i = 0; i < kNumInitRelaxations; i++)
+	//	{
+	//		MapperOptions.mapper.init_min_num_inliers = MapperOptions.mapper.init_min_num_inliers / 2;
+	//		ReconstructResult = Reconstruct(ImagePath, &MapperOptions, DbCache, db);
+	//		if (ReconstructResult == -1)
+	//		{
+	//			cout << "Trying to relax the initialization constraints again..." << endl;
+	//			MapperOptions.mapper.init_min_tri_angle = MapperOptions.mapper.init_min_tri_angle / 2;
+	//			ReconstructResult = Reconstruct(ImagePath, &MapperOptions, DbCache, db);
+	//			if (ReconstructResult != -1)
+	//			{
+	//				cout << StringPrintf("[%d s] Reconstruction success!", LastReconstructTimeConsuming) << endl;
+	//				TryMergeModels();
+	//				return;
+	//			}
+	//		}
+	//		else
+	//		{
+	//			cout << StringPrintf("[%d s] Reconstruction success!", LastReconstructTimeConsuming) << endl;
+	//			TryMergeModels();
+	//			return;
+	//		}
+	//	}
+	//	cout << StringPrintf("[%d s] All attempts to reconstruct have ended in failure!", LastReconstructTimeConsuming) << endl;
+	//}
+	//else
+	//{
+	//	cout << StringPrintf("[%d s] Reconstruction success!", LastReconstructTimeConsuming) << endl;
+	//	TryMergeModels();
+	//}
 }
 int CReconstructor::Reconstruct(string ImagePath, CMapperOptions* MapperOptions, DatabaseCache& DbCache, QSqlDatabase& db)
 {
@@ -207,6 +391,7 @@ int CReconstructor::Reconstruct(string ImagePath, CMapperOptions* MapperOptions,
 	CMapper mapper(&DbCache);
 	db = CreateDatabaseConnect(CDatabase::DatabasePath);
 	size_t ModelID = ChooseModel(ImagePath,db); //当前影像应该属于哪个模型
+	CurrentModelID = ModelID;
 	cout << StringPrintf("=====================> Current model: %d <=====================", ModelID + 1) << endl;
 	//ModelManager->Lock();
 	CModel& Model = ModelManager->GetRefer(ModelID);
@@ -225,10 +410,9 @@ int CReconstructor::Reconstruct(string ImagePath, CMapperOptions* MapperOptions,
 		}
 		ThisRegImgIDs.push_back(InitImageID1);
 		ThisRegImgIDs.push_back(InitImageID2);
-		cout << StringPrintf("Successfully set and registered images with [%s, id=%d] and [%s, id=%d] as initial image pair", CDatabase::GetImageName(InitImageID1, db), InitImageID1, CDatabase::GetImageName(InitImageID2, db), InitImageID2) << endl;
+		cout << StringPrintf("Successfully set and registered images with [%s, id=%d] and [%s, id=%d] as initial image pair", CDatabase::GetImageName(InitImageID1, db).c_str(), InitImageID1, CDatabase::GetImageName(InitImageID2, db).c_str(), InitImageID2) << endl;
 	}
 	Callback(INITIAL_IMAGE_PAIR_REG_CALLBACK);
-
 	size_t OriginRegImgNum = Model.GetModelRegImagesNum(); //注册新影像之前, 模型原有的注册影像数和点数
 	size_t OriginPointNum = Model.GetModelPoints3DNum();
 	size_t ContinuedFailedNum = 0; //连续失败次数
@@ -253,15 +437,14 @@ int CReconstructor::Reconstruct(string ImagePath, CMapperOptions* MapperOptions,
 				//ModelManager->UnLock();
 				return 1;
 			}
-			cout << StringPrintf("[Model %d]: Trying to register next image [%s, id=%d]...", ModelID + 1, CDatabase::GetImageName(NextImageID, db), NextImageID) << endl;
+			cout << StringPrintf("[Model %d]: Trying to register next image [%s, id=%d]...", ModelID + 1, CDatabase::GetImageName(NextImageID, db).c_str(), NextImageID) << endl;
 			bool IsThisRegSuccess = mapper.RegisterNextImage(MapperOptions->Mapper(), NextImageID); //尝试注册该影像
 			if (IsThisRegSuccess)
 			{
 				cout << "Success!" << endl;
-				emit ChangeImageColor_SIGNAL(NextImageID); //更改当前注册成功的影像的颜色
+				emit ChangeImageColor_SIGNAL(NextImageID, ModelID); //更改当前注册成功的影像的颜色
 				ContinuedFailedNum = 0; //连续失败次数置0
-				Image image = Model.GetModelImage(NextImageID);
-				ImageTriangulate(*MapperOptions, image, &mapper); //影像三角化
+				ImageTriangulate(*MapperOptions, NextImageID, &mapper); //影像三角化
 				cout << StringPrintf("[Model %d]: Performing iterative local refinement...", ModelID + 1) << endl;
 				try
 				{
@@ -318,7 +501,7 @@ int CReconstructor::Reconstruct(string ImagePath, CMapperOptions* MapperOptions,
 			size_t ID = ThisRegImgIDs[index];
 			RegImages.insert(ID);
 			//SetImageReg(ID, true);
-			cout << StringPrintf("%s[%d]", CDatabase::GetImageName(ID, db), ID);
+			cout << StringPrintf("%s[%d]", CDatabase::GetImageName(ID, db).c_str(), ID);
 			if (index != ThisRegImgIDs.size() - 1)
 			{
 				cout << ", ";
@@ -389,13 +572,13 @@ bool CReconstructor::RegisterInitialPair(CMapperOptions* MapperOptions, CMapper&
 		{
 			cout << StringPrintf("[WARNING] The initial image pair found [%d and %d] is registered images!", InitImageID1, InitImageID2) << endl;
 		}
-		ModelManager->UnLock();
+		/*ModelManager->UnLock();
 		mapper.EndReconstruction(true);
 		ModelManager->Delete(ModelID);
-		ModelManager->Lock();
+		ModelManager->Lock();*/
 		return false;
 	}
-	cout << StringPrintf("[Model %d]: Initializing with image pair: [%s, ID=%d] and [%s, ID=%d]!", ModelID + 1, CDatabase::GetImageName(InitImageID1, db), InitImageID1, CDatabase::GetImageName(InitImageID2, db), InitImageID2) << endl;
+	cout << StringPrintf("[Model %d]: Initializing with image pair: [%s, ID=%d] and [%s, ID=%d]!", ModelID + 1, CDatabase::GetImageName(InitImageID1, db).c_str(), InitImageID1, CDatabase::GetImageName(InitImageID2, db).c_str(), InitImageID2) << endl;
 	
 	bool IsRegInitSuccess = mapper.RegisterInitialImagePair(MapperOptions->Mapper(), InitImageID1, InitImageID2);
 	if (!IsRegInitSuccess)
@@ -427,7 +610,6 @@ bool CReconstructor::RegisterInitialPair(CMapperOptions* MapperOptions, CMapper&
 void CReconstructor::GlobalBundleAdjust(CMapperOptions& options, CMapper* mapper)
 {
 	DebugTimer timer(__FUNCTION__);
-	cout << "Performing global bundle adjustment..." << endl;
 	CBundleAdjustmentOptions BA_Options = options.GlobalBundleAdjustment();
 	size_t RegImagesNum = mapper->GetModel()->GetModelRegImagesNum();
 	// Use stricter convergence criteria for first registered images.
@@ -444,14 +626,14 @@ void CReconstructor::GlobalBundleAdjust(CMapperOptions& options, CMapper* mapper
 	BA_Options.print_summary = false;
 	CMapper::Options CMapperOptions = options.Mapper();
 	mapper->AdjustGlobalBundle(CMapperOptions, BA_Options);
-	cout << "Global bundle adjustment completed!" << endl;
 }
-size_t CReconstructor::ImageTriangulate(CMapperOptions& options, Image& image, CMapper* mapper)
+size_t CReconstructor::ImageTriangulate(CMapperOptions& options, size_t ImageID, CMapper* mapper)
 {
 	DebugTimer timer(__FUNCTION__);
-	cout << StringPrintf("[Image triangulate] Continued observations: %d", image.NumPoints3D()) << endl;
-	size_t num_tris = mapper->TriangulateImage(options.Triangulation(), image.ImageId());
-	cout << StringPrintf("[Image triangulate] Added observations: %d", num_tris) << endl;
+	size_t num_tris = mapper->TriangulateImage(options.Triangulation(), ImageID);
+#ifdef OUTPUTLOG_MODE
+	qDebug() << StdString2QString(StringPrintf("[Image triangulate] Added observations: %d", num_tris));
+#endif
 	return num_tris;
 }
 void CReconstructor::IterativeLocalRefinement(CMapperOptions& options, image_t ImageID, CMapper* mapper)
@@ -460,21 +642,22 @@ void CReconstructor::IterativeLocalRefinement(CMapperOptions& options, image_t I
 	CBundleAdjustmentOptions BA_Options = options.LocalBundleAdjustment();
 	BA_Options.solver_options.logging_type = ceres::LoggingType::SILENT;
 	BA_Options.print_summary = false;
+	BA_Options.solver_options.num_threads = omp_get_max_threads();
 	for (int i = 0; i < options.ba_local_max_refinements; i++)
 	{
+		if (Base::IsQuit)
+		{
+			return;
+		}
 		CMapper::Options CMapperOptions = options.Mapper();
 		CTriangulator::Options CTriangulatorOptions = options.Triangulation();
 
 		auto Report = mapper->AdjustLocalBundle(CMapperOptions, BA_Options, CTriangulatorOptions, ImageID, mapper->GetModifiedPoints3D());
-		//cout << StringPrintf("[Iterative local refinement] Merged observations: %d", Report.num_merged_observations) << endl;
-		//cout << StringPrintf("[Iterative local refinement] Completed observations: %d", Report.num_completed_observations) << endl;
-		//cout << StringPrintf("[Iterative local refinement] Filtered observations: %d", Report.num_filtered_observations) << endl;
 		double Changed = 0;
 		if (Report.num_adjusted_observations != 0)
 		{
 			Changed = (Report.num_merged_observations + Report.num_completed_observations + Report.num_filtered_observations) * 1.0 / Report.num_adjusted_observations;
 		}
-		//cout << StringPrintf("[Iterative local refinement] Changed observations: %.6f", Changed) << endl;
 		if (Changed < options.ba_local_max_refinement_change)
 		{
 			break;
@@ -482,62 +665,77 @@ void CReconstructor::IterativeLocalRefinement(CMapperOptions& options, image_t I
 		// Only use robust cost function for first iteration.
 		BA_Options.loss_function_type = CBundleAdjustmentOptions::LossFunctionType::TRIVIAL;
 	}
-	//cout << StringPrintf("[Iterative local refinement] Clear modified points3D...") << endl;
 	mapper->ClearModifiedPoints3D();
-	cout << StringPrintf("[Iterative local refinement] All steps completed!") << endl;
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "[Iterative local refinement] All steps completed!";
+#endif
 }
 void CReconstructor::IterativeGlobalRefinement(CMapperOptions& options, CMapper* mapper)
 {
 	DebugTimer timer(__FUNCTION__);
-	cout << StringPrintf("[Iterative global refinement] Complete and merge tracks...") << endl;
-	CompleteAndMergeTracks(options, mapper);
-	cout << StringPrintf("[Iterative global refinement] Retriangulated observations: %d", mapper->Retriangulate(options.Triangulation())) << endl;
-	for (int i = 0; i < options.ba_global_max_refinements; i++)
+	if (Base::IsQuit)
 	{
+		return;
+	}
+	CompleteAndMergeTracks(options, mapper);
+	for (size_t i = 0; i < options.ba_global_max_refinements; i++)
+	{
+		if (Base::IsQuit)
+		{
+			return;
+		}
 		size_t num_observations = mapper->GetModel()->GetObservationsNum();
 		size_t num_changed_observations = 0;
 		GlobalBundleAdjust(options, mapper);
 		num_changed_observations += CompleteAndMergeTracks(options, mapper);
 		num_changed_observations += FilterPoints(options, mapper);
 		double changed = (num_observations == 0 ? 0 : static_cast<double>(num_changed_observations) / num_observations);
-		cout << StringPrintf("[Iterative global refinement] Changed observations: %.6f", changed) << endl;
 		if (changed < options.ba_global_max_refinement_change)
 		{
 			break;
 		}
 	}
-	cout << StringPrintf("[Iterative global refinement] Filter images...") << endl;
 	FilterImages(options, mapper);
-	cout << StringPrintf("[Iterative global refinement] All steps completed!") << endl;
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "[Iterative global refinement] All steps completed!";
+#endif
 }
 void CReconstructor::ExtractColors(image_t ImageID, CModel* Model)
 {
 	DebugTimer timer(__FUNCTION__);
 	if (!Model->ExtractColors_SingleImage(ImageID, *options->image_path))
 	{
-		cout << StringPrintf("[WARNING] Could not read image %d at path %s!", ImageID, *options->image_path) << endl;
+		cout << StringPrintf("[WARNING] Could not read image %d at path %s!", ImageID, (*options->image_path).c_str()) << endl;
 	}
 }
 size_t CReconstructor::FilterPoints(CMapperOptions& options, CMapper* mapper)
 {
 	DebugTimer timer(__FUNCTION__);
 	size_t num_filtered_observations = mapper->FilterPoints(options.Mapper());
-	std::cout << "  => Filtered observations: " << num_filtered_observations << std::endl;
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "  => Filtered observations: " << num_filtered_observations;
+#endif
 	return num_filtered_observations;
 }
 size_t CReconstructor::FilterImages(CMapperOptions& options, CMapper* mapper)
 {
 	DebugTimer timer(__FUNCTION__);
 	const size_t num_filtered_images = mapper->FilterImages(options.Mapper());
-	std::cout << "  => Filtered images: " << num_filtered_images << std::endl;
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "  => Filtered images: " << num_filtered_images;
+#endif
 	return num_filtered_images;
 }
 size_t CReconstructor::CompleteAndMergeTracks(CMapperOptions& options, CMapper* mapper)
 {
 	DebugTimer timer(__FUNCTION__);
 	const size_t num_completed_observations = mapper->CompleteTracks(options.Triangulation());
-	std::cout << "  => Completed observations: " << num_completed_observations << std::endl;
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "  => Completed observations: " << num_completed_observations;
+#endif
 	const size_t num_merged_observations = mapper->MergeTracks(options.Triangulation());
-	std::cout << "  => Merged observations: " << num_merged_observations << std::endl;
+#ifdef OUTPUTLOG_MODE
+	qDebug() << "  => Merged observations: " << num_merged_observations;
+#endif
 	return num_completed_observations + num_merged_observations;
 }

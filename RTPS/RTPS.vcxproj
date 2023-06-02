@@ -195,7 +195,6 @@
     <ClCompile Include="FeatureMatcher.cpp" />
     <ClCompile Include="ImageListWidget.cpp" />
     <ClCompile Include="ImageViewer.cpp" />
-    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Mapper.cpp" />
@@ -219,11 +218,13 @@
     <QtMoc Include="ImageViewer.h" />
     <ClInclude Include="FeatureExtractor.h" />
     <ClInclude Include="FeatureMatcher.h" />
-    <ClInclude Include="Logger.h" />
     <QtMoc Include="MainWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Resource.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtTranslation Include="Tanslation_zh_CN.ts" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

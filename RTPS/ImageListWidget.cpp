@@ -51,10 +51,13 @@ void CImageListWidget::AddImage(string ImagePath)
 		Items.push_back(NewItem);
 		ImagePaths.push_back(ImagePath);
 		parent->setWindowTitle(tr("Image list ") + "(" + QString::number(Items.size()) + ")");
-		/*if (count() > 2 && verticalScrollBar() && CurrentValue == MaxValue)
+		if (count() > 2 && verticalScrollBar() && CurrentValue == MaxValue)
 		{
-			setCurrentItem(item(count() - 2));
-		}*/
+			//setCurrentRow(count() - 1);
+			/*QListWidgetItem* LastItem = item(count() - 1);
+			setCurrentItem(LastItem);
+			scrollToItem(LastItem);*/
+		}
 	}
 	catch (...)
 	{

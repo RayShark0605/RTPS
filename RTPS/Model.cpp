@@ -2873,7 +2873,7 @@ CModelManager::CModelManager()
 }
 size_t CModelManager::Size()
 {
-	DebugTimer timer(__FUNCTION__);
+	//DebugTimer timer(__FUNCTION__);
 	Models_Mutex.lock();
 	size_t re = Models.size();
 	Models_Mutex.unlock();

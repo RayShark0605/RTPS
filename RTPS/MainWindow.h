@@ -1,6 +1,5 @@
 #pragma once
 #include "Base.h"
-#include "Logger.h"
 #include "ImageListWidget.h"
 #include "UI.h"
 #include "Reconstructor.h"
@@ -21,16 +20,13 @@ class CMainWindow : public QMainWindow
 public:
 	CMainWindow(QWidget* parent = nullptr);
 
-
-
 public slots:
 	void ImportModel(int, std::vector<std::string>, std::string, bool);
-	void ChangeNewImageColor(int ImageID);
+	void ChangeNewImageColor(int ImageID, int ModelID);
 	void NewImage_SLOT(std::string ImagePath);
 	void SenderQuit_SLOT();
 	void RenderModel();
 	void ClearRenderModel();
-
 
 private:
 	colmap::OptionManager* options;
@@ -47,6 +43,8 @@ private:
 	QDockWidget* LogWindowDock;
 	QDockWidget* ImgListViewerDock;
 	CImageListWidget* ImageListWidget;
+	QCheckBox* IsTrackModel_Checkbox;
+
 	QLabel* StatusLabel;
 
 	QMenu* SettingMenu;
@@ -116,6 +114,8 @@ private:
 	
 	QAction* RenderModelAction;                  //äÖÈ¾Ä£ÐÍ
 
+	void closeEvent(QCloseEvent* event) override;
+
 	void UpdateWindowTitle(QString Extras = "");
 	void SetupWidgets();
 	void SetupActions();
@@ -135,6 +135,8 @@ private:
 	colmap::Reconstruction* ModelToRender = nullptr;
 	bool IsContinueReconstruct = true;
 	std::atomic<size_t> WaitforReconstructImageNum = 0;
+	std::queue<std::string> WaitforReconstructImagePath;
+	std::mutex WaitforReconstructImagePath_Mutex;
 	std::thread ReconstructionThread;
 	void DetectReconstruct();
 	void RenderModel_SLOT();

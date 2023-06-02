@@ -15,6 +15,7 @@ public:
 	}; //重建过程的三个状态, 会触发相应的回调函数
 
 	static size_t LastReconstructTimeConsuming; //单位: 秒
+	size_t CurrentModelID;
 
 	CReconstructor(colmap::OptionManager* options, CModelManager* ModelManager);
 	~CReconstructor();
@@ -24,7 +25,7 @@ public:
 	void TryMergeModels(); //尝试合并模型
 	bool MergeModel(size_t Model1ID, size_t Model2ID);
 signals:
-	void ChangeImageColor_SIGNAL(int);  //提醒主界面更改"当前尝试注册的影像"的颜色
+	void ChangeImageColor_SIGNAL(int, int);  //提醒主界面更改"当前尝试注册的影像"的颜色
 private:
 	colmap::OptionManager* options;
 	CModelManager* ModelManager;
@@ -40,7 +41,7 @@ private:
 	bool RegisterInitialPair(CMapperOptions* MapperOptions, CMapper& mapper, size_t ModelID, size_t& InitImageID1, size_t& InitImageID2, QSqlDatabase& db);
 
 	void GlobalBundleAdjust(CMapperOptions& options, CMapper* mapper);
-	size_t ImageTriangulate(CMapperOptions& options, colmap::Image& image, CMapper* mapper);
+	size_t ImageTriangulate(CMapperOptions& options, size_t ImageID, CMapper* mapper);
 	void IterativeLocalRefinement(CMapperOptions& options, colmap::image_t ImageID, CMapper* mapper);
 	void IterativeGlobalRefinement(CMapperOptions& options, CMapper* mapper);
 	void ExtractColors(colmap::image_t ImageID, CModel* Model);

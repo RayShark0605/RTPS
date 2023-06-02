@@ -40,5 +40,6 @@
         <file>shaders/points.v.glsl</file>
         <file>shaders/triangles.f.glsl</file>
         <file>shaders/triangles.v.glsl</file>
+        <file>media/WindowIcon.png</file>
     </qresource>
 </RCC>

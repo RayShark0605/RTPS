@@ -330,7 +330,11 @@ bool CMapper::RegisterNextImage(Options options, size_t image_id)
 	/*Image& image = reconstruction_->Image(image_id);
 	Camera& camera = reconstruction_->Camera(image.CameraId());*/
 	
-	CHECK(!Model_->IsImageRegistered(image_id)) << "Image cannot be registered multiple times";
+	if (Model_->IsImageRegistered(image_id))
+	{
+		cout << StringPrintf("Image %d is already registered!", image_id);
+	}
+	//CHECK(!Model_->IsImageRegistered(image_id)) << "Image cannot be registered multiple times";
 
 	num_reg_trials_[image_id] += 1;
 

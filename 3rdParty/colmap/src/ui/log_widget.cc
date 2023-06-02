@@ -69,7 +69,7 @@ namespace colmap {
 		QHBoxLayout* right_button_layout = new QHBoxLayout();
 
 		grid->addLayout(right_button_layout, 0, 1, Qt::AlignRight);
-
+		QLocale::setDefault(QLocale(QLocale::Chinese, QLocale::China));
 		text_box_ = new QPlainTextEdit(this);
 		text_box_->setReadOnly(true);
 		text_box_->setMaximumBlockCount(max_num_blocks);
