@@ -41,7 +41,7 @@ namespace colmap {
 struct IncrementalMapperOptions {
  public:
   // The minimum number of matches for inlier matches to be considered.
-  int min_num_matches = 15;
+  int min_num_matches = 100;
 
   // Whether to ignore the inlier matches of watermark image pairs.
   bool ignore_watermarks = false;
@@ -91,7 +91,7 @@ struct IncrementalMapperOptions {
   int ba_min_num_residuals_for_multi_threading = 50000;
 
   // The number of images to optimize in local bundle adjustment.
-  int ba_local_num_images = 6;
+  int ba_local_num_images = 8;
 
   // Ceres solver function tolerance for local bundle adjustment
   double ba_local_function_tolerance = 0.0;

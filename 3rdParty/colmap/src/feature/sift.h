@@ -56,7 +56,7 @@ struct SiftExtractionOptions {
   int max_image_size = 2000;
 
   // Maximum number of features to detect, keeping larger-scale features.
-  int max_num_features = 8192;
+  int max_num_features = 16384;
 
   // First octave in the pyramid, i.e. -1 upsamples the image by one level.
   int first_octave = -1;
@@ -134,7 +134,7 @@ struct SiftMatchingOptions {
   bool cross_check = true;
 
   // Maximum number of matches.
-  int max_num_matches = 8192;
+  int max_num_matches = 16384;
 
   // Maximum epipolar error in pixels for geometric verification.
   double max_error = 4.0;

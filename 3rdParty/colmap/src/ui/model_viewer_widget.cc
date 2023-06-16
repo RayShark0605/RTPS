@@ -274,7 +274,7 @@ namespace colmap {
 			return;
 		}
 
-		cameras = reconstruction->Cameras();
+		/*cameras = reconstruction->Cameras();
 		points3D = reconstruction->Points3D();
 		reg_image_ids = reconstruction->RegImageIds();
 
@@ -282,7 +282,7 @@ namespace colmap {
 		for (const image_t image_id : reg_image_ids) 
 		{
 			images[image_id] = reconstruction->Image(image_id);
-		}
+		}*/
 
 		statusbar_status_label->setText(QString().asprintf("%d Images - %d Points", static_cast<int>(reg_image_ids.size()), static_cast<int>(points3D.size())));
 

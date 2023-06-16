@@ -175,7 +175,7 @@ namespace colmap
 		{
 			QSettings ExtractorOptionsKey("RTPS", "ExtractorOptions");
 			sift_extraction->max_image_size = ExtractorOptionsKey.value("max_image_size", 2000).toInt();
-			sift_extraction->max_num_features = ExtractorOptionsKey.value("max_num_features", 8192).toInt();
+			sift_extraction->max_num_features = ExtractorOptionsKey.value("max_num_features", 16384).toInt();
 			sift_extraction->first_octave = ExtractorOptionsKey.value("first_octave", -1).toInt();
 			sift_extraction->num_octaves = ExtractorOptionsKey.value("num_octaves", 4).toInt();
 			sift_extraction->octave_resolution = ExtractorOptionsKey.value("octave_resolution", 3).toInt();
@@ -235,7 +235,7 @@ namespace colmap
 			sift_matching->max_ratio = MatcherOptionsKey.value("max_ratio", 0.8).toDouble();
 			sift_matching->max_distance = MatcherOptionsKey.value("max_distance", 0.7).toDouble();
 			sift_matching->cross_check = MatcherOptionsKey.value("cross_check", true).toBool();
-			sift_matching->max_num_matches = MatcherOptionsKey.value("max_num_matches", 8192).toInt();
+			sift_matching->max_num_matches = MatcherOptionsKey.value("max_num_matches", 16384).toInt();
 			sift_matching->max_error = MatcherOptionsKey.value("max_error", 4.0).toDouble();
 			sift_matching->confidence = MatcherOptionsKey.value("confidence", 0.99).toDouble();
 			sift_matching->max_num_trials = MatcherOptionsKey.value("max_num_trials", 10000).toInt();
@@ -282,7 +282,7 @@ namespace colmap
 			mapper->min_model_size = ReconstructionOptionsKey.value("min_model_size", 3).toInt();
 			mapper->extract_colors = ReconstructionOptionsKey.value("extract_colors", true).toBool();
 			mapper->num_threads = ReconstructionOptionsKey.value("num_threads", -1).toInt();
-			mapper->min_num_matches = ReconstructionOptionsKey.value("min_num_matches", 15).toInt();
+			mapper->min_num_matches = ReconstructionOptionsKey.value("min_num_matches", 100).toInt();
 			mapper->ignore_watermarks = ReconstructionOptionsKey.value("ignore_watermarks", false).toBool();
 			mapper->snapshot_path = QString2StdString(ReconstructionOptionsKey.value("snapshot_path", "").toString());
 			mapper->snapshot_images_freq = ReconstructionOptionsKey.value("snapshot_images_freq", 0).toInt();
@@ -312,7 +312,7 @@ namespace colmap
 			mapper->ba_refine_focal_length = ReconstructionOptionsKey.value("refine_focal_length", true).toBool();
 			mapper->ba_refine_principal_point = ReconstructionOptionsKey.value("refine_principal_point", false).toBool();
 			mapper->ba_refine_extra_params = ReconstructionOptionsKey.value("refine_extra_params", true).toBool();
-			mapper->ba_local_num_images = ReconstructionOptionsKey.value("num_images", 6).toInt();
+			mapper->ba_local_num_images = ReconstructionOptionsKey.value("num_images", 8).toInt();
 			mapper->ba_local_max_num_iterations = ReconstructionOptionsKey.value("max_num_iterations", 25).toInt();
 			mapper->ba_local_max_refinements = ReconstructionOptionsKey.value("max_refinements", 2).toInt();
 			mapper->ba_local_max_refinement_change = ReconstructionOptionsKey.value("max_refinement_change", 0.001).toDouble();
@@ -321,7 +321,7 @@ namespace colmap
 			mapper->ba_global_points_ratio = ReconstructionOptionsKey.value("points_ratio", 1.10).toDouble();
 			mapper->ba_global_points_freq = ReconstructionOptionsKey.value("points_freq", 250000).toInt();
 			mapper->ba_global_max_num_iterations = ReconstructionOptionsKey.value("max_num_iterations", 30).toInt();
-			mapper->ba_global_max_refinements = ReconstructionOptionsKey.value("max_refinements", 5).toInt();
+			mapper->ba_global_max_refinements = ReconstructionOptionsKey.value("max_refinements", 2).toInt();
 			mapper->ba_global_max_refinement_change = ReconstructionOptionsKey.value("max_refinement_change", 0.0005).toDouble();
 			mapper->min_focal_length_ratio = ReconstructionOptionsKey.value("min_focal_length_ratio", 0.1).toDouble();
 			mapper->max_focal_length_ratio = ReconstructionOptionsKey.value("max_focal_length_ratio", 10.0).toDouble();

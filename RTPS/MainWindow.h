@@ -137,6 +137,7 @@ private:
 	std::atomic<size_t> WaitforReconstructImageNum = 0;
 	std::queue<std::string> WaitforReconstructImagePath;
 	std::mutex WaitforReconstructImagePath_Mutex;
+	std::mutex RenderModel_Mutex;
 	std::thread ReconstructionThread;
 	void DetectReconstruct();
 	void RenderModel_SLOT();

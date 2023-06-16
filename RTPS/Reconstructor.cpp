@@ -119,7 +119,7 @@ bool CReconstructor::MergeModel(size_t Model1ID, size_t Model2ID)
 	CModel& Model2 = ModelManager->GetRefer(Model2ID);
 	size_t Point1Num = Model1.GetModelPoints3DNum();
 	size_t Point2Num = Model2.GetModelPoints3DNum();
-	double MaxReprojectError = 800;
+	double MaxReprojectError = 100;
 
 	CModel& Base = (Point1Num > Point2Num ? Model1 : Model2);
 	CModel& Ref = (Point1Num > Point2Num ? Model2 : Model1);
@@ -153,15 +153,23 @@ void CReconstructor::Run() {};
 void CReconstructor::Reconstruct(string ImagePath, QSqlDatabase& db)
 {
 	DebugTimer DebugTimer(__FUNCTION__);
+
+	QElapsedTimer TotalTimer;
+	TotalTimer.start();
+
 	QElapsedTimer timer;
-	timer.start();
 	if (Base::IsQuit)
 	{
 		return;
 	}
 	cout << "Loading database cache..." << endl;
 	DatabaseCache DbCache;
+
+	timer.start();
 	CDatabase::ExportDatabaseCache(options, DbCache, db);
+	qDebug() << "ExportDatabaseCache:   " << timer.elapsed();
+
+
 	if (DbCache.NumImages() < 4)
 	{
 		cout << "Current images are too few!" << endl;
@@ -182,149 +190,162 @@ void CReconstructor::Reconstruct(string ImagePath, QSqlDatabase& db)
 	CMapperOptions MapperOptions(*options->mapper);
 
 	size_t ThisImageID = CDatabase::GetImageID(GetFileName(ImagePath), db);
-	size_t ModelID = ChooseModel(ImagePath, db); //当前影像应该属于哪个模型
-	cout << StringPrintf("=====================> Current model: %d <=====================", ModelID + 1) << endl;
-	CModel& Model = ModelManager->GetRefer(ModelID);
-	mapper.BeginReconstruction(&Model);
 
-	unordered_set<size_t> ThisRegImagesID;
-	if (Model.GetModelRegImagesNum() == 0) //该模型还是一个空模型
+	timer.restart();
+	vector<size_t> ModelIDs = ChooseModel(ImagePath, db); //当前影像应该属于哪些模型
+	qDebug() << "ChooseModel:   " << timer.elapsed();
+
+	size_t OriginRegImagesNum = RegImages.size();
+	for (size_t ModelID : ModelIDs)
 	{
-		size_t InitImageID1 = kInvalidImageId, InitImageID2 = kInvalidImageId;
-		bool IsInitialSuccess = false;
-		for (size_t InitialTrial = 0; InitialTrial < 2; InitialTrial++) //多次尝试构建初始模型
+		cout << StringPrintf("=====================> Current model: %d <=====================", ModelID + 1) << endl;
+		emit ChangeImageColor_SIGNAL(ThisImageID, ModelID); //更改当前注册成功的影像的颜色
+		CModel& Model = ModelManager->GetRefer(ModelID);
+		mapper.BeginReconstruction(&Model);
+		if (!Model.IsModelExistImage(GetFileName(ImagePath)))
 		{
-			if (Base::IsQuit)
+#ifdef OUTPUTLOG_MODE
+			qDebug() << "Model " << ModelID + 1 << " does not exists " << GetFileName(ImagePath);
+#endif
+			continue;
+		}
+		unordered_set<size_t> ThisRegImagesID;
+		if (Model.GetModelRegImagesNum() == 0) //该模型还是一个空模型
+		{
+			size_t InitImageID1 = kInvalidImageId, InitImageID2 = kInvalidImageId;
+			bool IsInitialSuccess = false;
+			for (size_t InitialTrial = 0; InitialTrial < 2; InitialTrial++) //多次尝试构建初始模型
 			{
-				return;
-			}
-			if (RegisterInitialPair(&MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
-			{
-				IsInitialSuccess = true;
-				break;
-			}
-			MapperOptions.mapper.init_min_num_inliers /= 2;
-			if (RegisterInitialPair(&MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
-			{
-				IsInitialSuccess = true;
-				break;
-			}
-			MapperOptions.mapper.init_min_tri_angle /= 2;
-		}
-		if (Base::IsQuit)
-		{
-			return;
-		}
-		if (!IsInitialSuccess) //初始模型构建不成功
-		{
-			cout << StringPrintf("[Model %d] Cannot find initial image pair!", ModelID + 1) << endl;
-			mapper.EndReconstruction(true);
-			ModelManager->Delete(ModelID);
-			LastReconstructTimeConsuming = timer.elapsed() / 1000;
-			return;
-		}
-		else //初始模型构建成功
-		{
-			Callback(INITIAL_IMAGE_PAIR_REG_CALLBACK);
-			ThisRegImagesID.insert(InitImageID1);
-			ThisRegImagesID.insert(InitImageID2);
-			cout << StringPrintf("Successfully set and registered images with [%s, id=%d] and [%s, id=%d] as initial image pair", CDatabase::GetImageName(InitImageID1, db).c_str(), InitImageID1, CDatabase::GetImageName(InitImageID2, db).c_str(), InitImageID2) << endl;
-		}
-		if (Base::IsQuit)
-		{
-			return;
-		}
-		bool IsContinue = false;
-		if (!ThisRegImagesID.count(ThisImageID)) //当前影像还没有被用作初始影像对
-		{
-			if (mapper.RegisterNextImage(MapperOptions.Mapper(), ThisImageID)) //注册当前影像
-			{
-				cout << StringPrintf("[Model %d] Current image registration successful!", ModelID + 1) << endl;
-				emit ChangeImageColor_SIGNAL(ThisImageID, ModelID); //更改当前注册成功的影像的颜色
-				ImageTriangulate(MapperOptions, ThisImageID, &mapper); //空三
 				if (Base::IsQuit)
 				{
 					return;
 				}
-				IterativeLocalRefinement(MapperOptions, ThisImageID, &mapper);
-				ExtractColors(ThisImageID, &Model);
-				Callback(NEXT_IMAGE_REG_CALLBACK);
-				ThisRegImagesID.insert(ThisImageID);
+				if (RegisterInitialPair(&MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
+				{
+					IsInitialSuccess = true;
+					break;
+				}
+				MapperOptions.mapper.init_min_num_inliers /= 2;
+				if (RegisterInitialPair(&MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
+				{
+					IsInitialSuccess = true;
+					break;
+				}
+				MapperOptions.mapper.init_min_tri_angle /= 2;
 			}
-			else
+			if (Base::IsQuit)
 			{
-				cout << StringPrintf("[Model %d] Current image registration failed!", ModelID + 1) << endl;
+				return;
+			}
+			if (!IsInitialSuccess) //初始模型构建不成功
+			{
+				cout << StringPrintf("[Model %d] Cannot find initial image pair!", ModelID + 1) << endl;
+				mapper.EndReconstruction(true);
+				ModelManager->Delete(ModelID);
+				LastReconstructTimeConsuming = timer.elapsed() / 1000;
+				continue;
+			}
+			else //初始模型构建成功
+			{
+				Callback(INITIAL_IMAGE_PAIR_REG_CALLBACK);
+				ThisRegImagesID.insert(InitImageID1);
+				ThisRegImagesID.insert(InitImageID2);
+				cout << StringPrintf("Successfully set and registered images with [%s, id=%d] and [%s, id=%d] as initial image pair", CDatabase::GetImageName(InitImageID1, db).c_str(), InitImageID1, CDatabase::GetImageName(InitImageID2, db).c_str(), InitImageID2) << endl;
+			}
+			if (Base::IsQuit)
+			{
+				return;
+			}
+			bool IsContinue = false;
+			if (!ThisRegImagesID.count(ThisImageID)) //当前影像还没有被用作初始影像对
+			{
+				if (mapper.RegisterNextImage(MapperOptions.Mapper(), ThisImageID)) //注册当前影像
+				{
+					cout << StringPrintf("[Model %d] Current image registration successful!", ModelID + 1) << endl;
+					ImageTriangulate(MapperOptions, ThisImageID, &mapper); //空三
+					if (Base::IsQuit)
+					{
+						return;
+					}
+					IterativeLocalRefinement(MapperOptions, ThisImageID, &mapper);
+					ExtractColors(ThisImageID, &Model);
+					Callback(NEXT_IMAGE_REG_CALLBACK);
+					ThisRegImagesID.insert(ThisImageID);
+				}
+				else
+				{
+					cout << StringPrintf("[Model %d] Current image registration failed!", ModelID + 1) << endl;
+				}
 			}
 		}
-	}
-	cout << StringPrintf("[Model %d] Try registering another images...", ModelID + 1) << endl;
-	while (!Base::IsQuit)
-	{
-		vector<size_t> NextImages = mapper.FindNextImages(MapperOptions.Mapper()); //寻找下一个要注册的影像
-		bool IsContinue = false;
-		for (size_t NextImageID : NextImages)
+		cout << StringPrintf("[Model %d] Try registering another images...", ModelID + 1) << endl;
+		while (!Base::IsQuit)
 		{
-			if (Base::IsQuit)
+			vector<size_t> NextImages = mapper.FindNextImages(MapperOptions.Mapper()); //寻找下一个要注册的影像
+			bool IsContinue = false;
+			for (size_t NextImageID : NextImages)
 			{
-				return;
+				if (Base::IsQuit)
+				{
+					return;
+				}
+				if (ThisRegImagesID.count(NextImageID) || Model.IsImageRegistered(NextImageID))continue;
+				if (!mapper.RegisterNextImage(MapperOptions.Mapper(), NextImageID))continue;
+				if (NextImageID == ThisImageID)
+				{
+					cout << StringPrintf("[Model %d] Current image registration successful!", ModelID + 1) << endl;
+				}
+				else
+				{
+					cout << StringPrintf("[Model %d] Successfully registered image %s!", ModelID + 1, CDatabase::GetImageName(NextImageID, db).c_str()) << endl;
+				}
+				ImageTriangulate(MapperOptions, NextImageID, &mapper); //空三
+				if (Base::IsQuit)
+				{
+					return;
+				}
+				IterativeLocalRefinement(MapperOptions, NextImageID, &mapper);
+				ExtractColors(NextImageID, &Model);
+				Callback(NEXT_IMAGE_REG_CALLBACK);
+				ThisRegImagesID.insert(NextImageID);
+				IsContinue = true;
+				break;
 			}
-			if (ThisRegImagesID.count(NextImageID) || RegImages.count(NextImageID) || Model.IsImageRegistered(NextImageID))continue;
-			if (!mapper.RegisterNextImage(MapperOptions.Mapper(), NextImageID))continue;
-			if (NextImageID == ThisImageID)
-			{
-				emit ChangeImageColor_SIGNAL(ThisImageID, ModelID); //更改当前注册成功的影像的颜色
-				cout << StringPrintf("[Model %d] Current image registration successful!", ModelID + 1) << endl;
-			}
-			else
-			{
-				cout << StringPrintf("[Model %d] Successfully registered image %s!", ModelID + 1, CDatabase::GetImageName(NextImageID, db).c_str()) << endl;
-			}
-			ImageTriangulate(MapperOptions, NextImageID, &mapper); //空三
-			if (Base::IsQuit)
-			{
-				return;
-			}
-			IterativeLocalRefinement(MapperOptions, NextImageID, &mapper);
-			ExtractColors(NextImageID, &Model);
-			Callback(NEXT_IMAGE_REG_CALLBACK);
-			ThisRegImagesID.insert(NextImageID);
-			IsContinue = true;
-			break;
+			if (!IsContinue)break;
 		}
-		if (!IsContinue)break;
+		cout << StringPrintf("[Model %d] Registration of other images has been completed!", ModelID + 1) << endl;
+		size_t CurrentRegImagesNum = Model.GetModelRegImagesNum();
+		size_t MinModelSize = min(DbCache.NumImages(), size_t(MapperOptions.min_model_size));
+		if (CurrentRegImagesNum < MinModelSize)
+		{
+			cout << StringPrintf("[Model %d]: Too few registered images! the model will be deleted!", ModelID + 1) << endl;
+			mapper.EndReconstruction(true);
+			ModelManager->Delete(ModelID); //删除该模型
+			LastReconstructTimeConsuming = timer.elapsed() / 1000;
+			continue;
+		}
+		if (ThisRegImagesID.size() >= 20 && !Base::IsQuit)
+		{
+			cout << StringPrintf("[Model %d] Iterative global refinement is being performed...", ModelID + 1) << endl;
+			IterativeGlobalRefinement(MapperOptions, &mapper);
+			cout << StringPrintf("[Model %d] Iterative global refinement finished!", ModelID + 1) << endl;
+		}
+		cout << StringPrintf("[Model %d]: %d images were registered for this reconstruction: ", ModelID + 1, ThisRegImagesID.size());
+		for (size_t index : ThisRegImagesID)
+		{
+			RegImages.insert(index);
+			cout << StringPrintf("%s[%d]", CDatabase::GetImageName(index, db).c_str(), index) << ", ";
+		}
+		cout << endl;
+		if (Base::IsQuit)
+		{
+			return;
+		}
+		mapper.EndReconstruction(false);
+		LastReconstructTimeConsuming = TotalTimer.elapsed() / 1000;
+		cout << StringPrintf("=====================> [Model %d, %d s]: This reconstruction is complete <=====================", ModelID + 1, LastReconstructTimeConsuming) << endl;
 	}
-	cout << StringPrintf("[Model %d] Registration of other images has been completed!", ModelID + 1) << endl;
-	size_t CurrentRegImagesNum = Model.GetModelRegImagesNum();
-	size_t MinModelSize = min(DbCache.NumImages(), size_t(MapperOptions.min_model_size));
-	if (CurrentRegImagesNum < MinModelSize)
-	{
-		cout << StringPrintf("[Model %d]: Too few registered images! the model will be deleted!", ModelID + 1) << endl;
-		mapper.EndReconstruction(true);
-		ModelManager->Delete(ModelID); //删除该模型
-		LastReconstructTimeConsuming = timer.elapsed() / 1000;
-		return;
-	}
-	if (ThisRegImagesID.size() >= 20 && !Base::IsQuit)
-	{
-		cout << StringPrintf("[Model %d] Iterative global refinement is being performed...", ModelID + 1) << endl;
-		IterativeGlobalRefinement(MapperOptions, &mapper);
-		cout << StringPrintf("[Model %d] Iterative global refinement finished!", ModelID + 1) << endl;
-	}
-	cout << StringPrintf("[Model %d]: %d images were registered for this reconstruction: ", ModelID + 1, ThisRegImagesID.size());
-	for (size_t index : ThisRegImagesID)
-	{
-		RegImages.insert(index);
-		cout << StringPrintf("%s[%d]", CDatabase::GetImageName(index, db).c_str(), index) << ", ";
-	}
-	cout << endl;
-	if (Base::IsQuit)
-	{
-		return;
-	}
-	mapper.EndReconstruction(false);
-	LastReconstructTimeConsuming = timer.elapsed() / 1000;
-	cout << StringPrintf("=====================> [Model %d, %d s]: This reconstruction is complete <=====================", ModelID + 1, LastReconstructTimeConsuming) << endl;
-	if (!ThisRegImagesID.empty() && !Base::IsQuit)
+	if (RegImages.size() > OriginRegImagesNum && !Base::IsQuit)
 	{
 		TryMergeModels();
 	}
@@ -383,157 +404,31 @@ void CReconstructor::Reconstruct(string ImagePath, QSqlDatabase& db)
 	//	TryMergeModels();
 	//}
 }
-int CReconstructor::Reconstruct(string ImagePath, CMapperOptions* MapperOptions, DatabaseCache& DbCache, QSqlDatabase& db)
+vector<size_t> CReconstructor::ChooseModel(string ImagePath, QSqlDatabase& db)
 {
 	DebugTimer DebugTimer(__FUNCTION__);
-	QElapsedTimer timer;
-	timer.start();
-	CMapper mapper(&DbCache);
-	db = CreateDatabaseConnect(CDatabase::DatabasePath);
-	size_t ModelID = ChooseModel(ImagePath,db); //当前影像应该属于哪个模型
-	CurrentModelID = ModelID;
-	cout << StringPrintf("=====================> Current model: %d <=====================", ModelID + 1) << endl;
-	//ModelManager->Lock();
-	CModel& Model = ModelManager->GetRefer(ModelID);
-	mapper.BeginReconstruction(&Model);
-
-	size_t InitImageID1 = kInvalidImageId, InitImageID2 = kInvalidImageId, NextTryImageID;
-	vector<image_t> ThisRegImgIDs; //本次重建过程中, 新注册的影像。如果重建成功, 那么这个里面的值会全部添加到RegImgIDs中。如果重建失败, 则会清空这个
-	if (Model.GetModelRegImagesNum() == 0)
-	{
-		cout << "This is a new model! Trying to find initial pair..." << endl;
-		if (!RegisterInitialPair(MapperOptions, mapper, ModelID, InitImageID1, InitImageID2, db))
-		{
-			LastReconstructTimeConsuming = timer.elapsed() / 1000;
-			//ModelManager->UnLock();
-			return -1;
-		}
-		ThisRegImgIDs.push_back(InitImageID1);
-		ThisRegImgIDs.push_back(InitImageID2);
-		cout << StringPrintf("Successfully set and registered images with [%s, id=%d] and [%s, id=%d] as initial image pair", CDatabase::GetImageName(InitImageID1, db).c_str(), InitImageID1, CDatabase::GetImageName(InitImageID2, db).c_str(), InitImageID2) << endl;
-	}
-	Callback(INITIAL_IMAGE_PAIR_REG_CALLBACK);
-	size_t OriginRegImgNum = Model.GetModelRegImagesNum(); //注册新影像之前, 模型原有的注册影像数和点数
-	size_t OriginPointNum = Model.GetModelPoints3DNum();
-	size_t ContinuedFailedNum = 0; //连续失败次数
-	while (ContinuedFailedNum <= 3)
-	{
-		if (!IsContinue)
-		{
-			//ModelManager->UnLock();
-			return 1;
-		}
-		cout << StringPrintf("[Model %d]: Trying to register other images...", ModelID + 1) << endl;
-		vector<size_t> NextImages = mapper.FindNextImages(MapperOptions->Mapper()); //寻找下一个要注册的影像
-		if (NextImages.empty()) //如果找不到下一个要注册的影像
-		{
-			cout << StringPrintf("[Model %d]: No more other images!", ModelID + 1) << endl;
-			break;
-		}
-		for (image_t NextImageID : NextImages)
-		{
-			if (!IsContinue)
-			{
-				//ModelManager->UnLock();
-				return 1;
-			}
-			cout << StringPrintf("[Model %d]: Trying to register next image [%s, id=%d]...", ModelID + 1, CDatabase::GetImageName(NextImageID, db).c_str(), NextImageID) << endl;
-			bool IsThisRegSuccess = mapper.RegisterNextImage(MapperOptions->Mapper(), NextImageID); //尝试注册该影像
-			if (IsThisRegSuccess)
-			{
-				cout << "Success!" << endl;
-				emit ChangeImageColor_SIGNAL(NextImageID, ModelID); //更改当前注册成功的影像的颜色
-				ContinuedFailedNum = 0; //连续失败次数置0
-				ImageTriangulate(*MapperOptions, NextImageID, &mapper); //影像三角化
-				cout << StringPrintf("[Model %d]: Performing iterative local refinement...", ModelID + 1) << endl;
-				try
-				{
-					IterativeLocalRefinement(*MapperOptions, NextImageID, &mapper);
-				}
-				catch (...)
-				{
-					qDebug() << "Catch an error!";
-				}
-
-				//如果当前引入了过多的注册影像或者过多的点
-				if (Model.GetModelRegImagesNum() >= MapperOptions->ba_global_images_ratio * OriginRegImgNum || Model.GetModelRegImagesNum() >= MapperOptions->ba_global_images_freq + OriginRegImgNum || Model.GetModelPoints3DNum() >= MapperOptions->ba_global_points_ratio * OriginPointNum || Model.GetModelPoints3DNum() >= MapperOptions->ba_global_points_freq + OriginPointNum)
-				{
-					//cout << StringPrintf("[Model %d]: Added too many new images and points, performing iterative global refinement...", ModelID + 1) << endl;
-					//IterativeGlobalRefinement(*MapperOptions, &mapper); //进行迭代式全局精化
-					//OriginRegImgNum = Model.GetModelRegImagesNum();
-					//OriginPointNum = Model.GetModelPoints3DNum();
-				}
-
-				ExtractColors(NextImageID, &Model);
-				Callback(NEXT_IMAGE_REG_CALLBACK);
-				ThisRegImgIDs.emplace_back(NextImageID);
-				break; //当前已经成功注册了一个影像, 不再注册其他影像
-			}
-			else
-			{
-				cout << "Fail!" << endl;
-				ContinuedFailedNum++;
-				if (ContinuedFailedNum >= 3)
-				{
-					break;
-				}
-			}
-		}
-	}
-	if (Model.GetModelRegImagesNum() >= 2 && Model.GetModelRegImagesNum() != OriginRegImgNum && Model.GetModelPoints3DNum() != OriginPointNum)
-	{
-		IterativeGlobalRefinement(*MapperOptions, &mapper);
-	}
-	size_t MinModelSize = min(DbCache.NumImages(), size_t(MapperOptions->min_model_size));
-	if (Model.GetModelRegImagesNum() < MinModelSize)
-	{
-		cout << StringPrintf("[Model %d]: Too few registered images! the model will be deleted!", ModelID + 1) << endl;
-		mapper.EndReconstruction(true);
-		ThisRegImgIDs.clear(); //清空该列表, 不往RegImgIDs中写入
-		ModelManager->Delete(ModelID); //删除该模型
-	}
-	else
-	{
-		cout << StringPrintf("=====================> [Model %d]: This reconstruction is complete <=====================", ModelID + 1) << endl;
-		cout << StringPrintf("[Model %d]: %d images were registered for this reconstruction: ", ModelID + 1, ThisRegImgIDs.size());
-		for (size_t index = 0; index < ThisRegImgIDs.size(); index++) //把ThisRegImgIDs里面的值全部添加到RegImgIDs中
-		{
-			size_t ID = ThisRegImgIDs[index];
-			RegImages.insert(ID);
-			//SetImageReg(ID, true);
-			cout << StringPrintf("%s[%d]", CDatabase::GetImageName(ID, db).c_str(), ID);
-			if (index != ThisRegImgIDs.size() - 1)
-			{
-				cout << ", ";
-			}
-		}
-		cout << endl;
-		mapper.EndReconstruction(false);
-	}
-	LastReconstructTimeConsuming = timer.elapsed() / 1000;
-	return 1;
-}
-size_t CReconstructor::ChooseModel(string ImagePath, QSqlDatabase& db)
-{
-	DebugTimer DebugTimer(__FUNCTION__);
-	//返回第一个符合条件的模型
+	vector<size_t> re;
 	for (size_t i = 0; i < ModelManager->Size(); i++)
 	{
 		CModel Model = ModelManager->Get(i);
 		if (IsImageBelongsModel(ImagePath, Model, db))
 		{
-			return i;
+			re.push_back(i);
 		}
 	}
-	cout << "Add a new model!" << endl;
-	return ModelManager->Add();
+	if (re.empty())
+	{
+		cout << "Add a new model!" << endl;
+		return { ModelManager->Add() };
+	}
+	return re;
 }
 bool CReconstructor::IsImageBelongsModel(string ImagePath, CModel& Model, QSqlDatabase& db)
 {
 	DebugTimer DebugTimer(__FUNCTION__);
 	//设ImagePath对应的影像为a, 模型中注册的其中一张影像为b, 如果a和b之间的双视几何匹配数超过MinMatchedPointsNum, 那么就认为a和b是"有效的影像对"
 	//如果在当前模型的所有注册影像中, 与a构成"有效的影像对"的数量超过MinMatchedImagesNum, 那么就认为a影像属于该模型
-	size_t MinMatchedPointsNum = 10, MinMatchedImagesNum = 3;
+	size_t MinMatchedPointsNum = 20, MinMatchedImagesNum = 2;
 	vector<size_t> ModelRegImages = Model.GetAllRegImagesIDs(); //获取模型的全部注册影像
 	size_t ImageID = CDatabase::GetImageID(GetFileName(ImagePath),db);
 	size_t ValidMatchedImageNum = 0;

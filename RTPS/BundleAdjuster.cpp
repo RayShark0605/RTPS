@@ -214,6 +214,7 @@ CBundleAdjuster::CBundleAdjuster(const CBundleAdjustmentOptions& options, const 
 }
 bool CBundleAdjuster::Solve(CModel* reconstruction)
 {
+    DebugTimer timer(__FUNCTION__);
     CHECK_NOTNULL(reconstruction);
     CHECK(!problem_) << "Cannot use the same BundleAdjuster multiple times";
 
@@ -256,6 +257,7 @@ bool CBundleAdjuster::Solve(CModel* reconstruction)
     std::string solver_error;
     CHECK(solver_options.IsValid(&solver_error)) << solver_error;
     ceres::Solve(solver_options, problem_.get(), &summary_);
+    cout << "===> Solve completed! Final cost: " << summary_.final_cost << "px" << endl;
 
     if (solver_options.minimizer_progress_to_stdout) 
     {

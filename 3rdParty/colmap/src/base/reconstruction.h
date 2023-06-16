@@ -102,6 +102,16 @@ namespace colmap
 		inline const std::vector<image_t>& RegImageIds() const;
 		inline const EIGEN_STL_UMAP(point3D_t, class Point3D)& Points3D() const;
 		inline const std::unordered_map<image_pair_t, ImagePairStat>& ImagePairs()const;
+		inline EIGEN_STL_UMAP(image_t, class Image) GetAllRegImages() const
+		{
+			EIGEN_STL_UMAP(image_t, class Image) re;
+			std::vector<image_t> RegImageIDs = RegImageIds();
+			for (image_t ImageID : RegImageIDs)
+			{
+				re[ImageID] = Image(ImageID);
+			}
+			return re;
+		}
 
 		// Identifiers of all 3D points.
 		std::unordered_set<point3D_t> Point3DIds() const;
@@ -497,6 +507,17 @@ namespace colmap
 	{
 		return image_pair_stats_;
 	}
+
+	/*EIGEN_STL_UMAP(image_t, class Image) Reconstruction::GetAllRegImages() const
+	{
+		EIGEN_STL_UMAP(image_t, class Image) re;
+		std::vector<image_t> RegImageIDs = RegImageIds();
+		for (image_t ImageID : RegImageIDs)
+		{
+			re[ImageID] = Image(ImageID);
+		}
+		return re;
+	}*/
 
 	bool Reconstruction::ExistsCamera(const camera_t camera_id) const
 	{

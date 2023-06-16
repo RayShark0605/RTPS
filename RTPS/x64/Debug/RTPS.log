@@ -1,1 +1,288 @@
-﻿LINK : fatal error LNK1104: 无法打开文件“C:\vcpkg\installed\x64-windows\lib\bz2d.lib”
+﻿  BundleAdjuster.cpp
+  Database.cpp
+  FeatureExtractor.cpp
+  FeatureMatcher.cpp
+  ImageListWidget.cpp
+  ImageViewer.cpp
+  main.cpp
+  MainWindow.cpp
+  Mapper.cpp
+  Model.cpp
+  Receiver.cpp
+  Reconstructor.cpp
+  Triangulator.cpp
+  UI.cpp
+D:\RTPS\RTPSv0.5\3rdParty\Python\include\numpy\npy_1_7_deprecated_api.h(14): warning Msg: Using deprecated NumPy API, disable it with #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Triangulator.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 BundleAdjuster.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 BundleAdjuster.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Triangulator.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 BundleAdjuster.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Triangulator.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 MainWindow.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 MainWindow.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Database.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Database.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 UI.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 UI.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 MainWindow.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageViewer.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageViewer.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Database.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 UI.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Mapper.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageViewer.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Mapper.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Reconstructor.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Reconstructor.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Mapper.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Receiver.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Reconstructor.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Model.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Model.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Receiver.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageListWidget.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureExtractor.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageListWidget.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Model.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureExtractor.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 main.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 main.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Receiver.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 main.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageListWidget.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\Half.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureMatcher.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureExtractor.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\BFloat16.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureMatcher.cpp)
+C:\vcpkg\installed\x64-windows\include\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h(676,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureMatcher.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 MainWindow.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 MainWindow.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 MainWindow.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 UI.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 UI.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 UI.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 Database.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 Database.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Database.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 ImageViewer.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 ImageViewer.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageViewer.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 Reconstructor.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 Reconstructor.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Reconstructor.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 Mapper.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 Mapper.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Mapper.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 BundleAdjuster.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 BundleAdjuster.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 BundleAdjuster.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 FeatureExtractor.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 FeatureExtractor.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureExtractor.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 Model.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 Model.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Model.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 main.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 main.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 main.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 Triangulator.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 Triangulator.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Triangulator.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 Receiver.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 Receiver.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 Receiver.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 ImageListWidget.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 ImageListWidget.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ImageListWidget.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): warning C4005: “NOMINMAX”: 宏重定义 (编译源文件 FeatureMatcher.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\colmap\src\util\bitmap.h(44,1): message : 之前在命令行上声明的“NOMINMAX” (编译源文件 FeatureMatcher.cpp)
+C:\vcpkg\installed\x64-windows\include\FreeImage.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 FeatureMatcher.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\Python\include\numpy\npy_1_7_deprecated_api.h(14): warning Msg: Using deprecated NumPy API, disable it with #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+D:\RTPS\RTPSv0.5\RTPS\Reconstructor.cpp(528,42): error C3861: “omp_get_max_threads”: 找不到标识符
+D:\RTPS\RTPSv0.5\RTPS\UI.cpp(2182,24): warning C4273: “QAbstractSpinBox::wheelEvent”: dll 链接不一致
+C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets\qabstractspinbox.h(147,10): message : 参见“wheelEvent”的前一个定义 (编译源文件 UI.cpp)
+D:\RTPS\RTPSv0.5\3rdParty\Python\include\numpy\npy_1_7_deprecated_api.h(14): warning Msg: Using deprecated NumPy API, disable it with #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172): warning C4267: “初始化”: 从“size_t”转换到“_Ty1”，可能丢失数据
+          with
+          [
+              _Ty1=const colmap::camera_t
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(852,1): message : 查看对正在编译的函数 模板 实例化“std::pair<const colmap::camera_t,colmap::Camera>::pair<_Ty1&,_Ty2&,0>(_Other1,_Other2) noexcept(false)”的引用
+          with
+          [
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera,
+              _Other1=const size_t &,
+              _Other2=colmap::Camera &
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(852,43): message : 查看对正在编译的函数 模板 实例化“std::pair<const colmap::camera_t,colmap::Camera>::pair<_Ty1&,_Ty2&,0>(_Other1,_Other2) noexcept(false)”的引用
+          with
+          [
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera,
+              _Other1=const size_t &,
+              _Other2=colmap::Camera &
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(572,1): message : 查看对正在编译的函数 模板 实例化“void std::allocator<T>::construct<_Ty,const _Kty&,_Ty2&>(_Objty *const ,const _Kty &,_Ty2 &)”的引用
+          with
+          [
+              T=std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>,
+              _Ty=std::pair<const colmap::camera_t,colmap::Camera>,
+              _Kty=unsigned __int64,
+              _Ty2=colmap::Camera,
+              _Objty=std::pair<const colmap::camera_t,colmap::Camera>
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(572,26): message : 查看对正在编译的函数 模板 实例化“void std::allocator<T>::construct<_Ty,const _Kty&,_Ty2&>(_Objty *const ,const _Kty &,_Ty2 &)”的引用
+          with
+          [
+              T=std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>,
+              _Ty=std::pair<const colmap::camera_t,colmap::Camera>,
+              _Kty=unsigned __int64,
+              _Ty2=colmap::Camera,
+              _Objty=std::pair<const colmap::camera_t,colmap::Camera>
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\list(586,1): message : 查看对正在编译的函数 模板 实例化“void std::_Normal_allocator_traits<_Alloc>::construct<_Ty,_Ty1&,_Ty2&>(_Alloc &,_Ty *,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Alloc=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>>,
+              _Ty=std::pair<const colmap::camera_t,colmap::Camera>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\list(586,34): message : 查看对正在编译的函数 模板 实例化“void std::_Normal_allocator_traits<_Alloc>::construct<_Ty,_Ty1&,_Ty2&>(_Alloc &,_Ty *,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Alloc=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>>,
+              _Ty=std::pair<const colmap::camera_t,colmap::Camera>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xhash(621,1): message : 查看对正在编译的函数 模板 实例化“std::_List_node_emplace_op2<Eigen::aligned_allocator<U>>::_List_node_emplace_op2<_Ty1&,_Ty2&>(_Alnode &,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              U=std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera,
+              _Alnode=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>>
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xhash(621,53): message : 查看对正在编译的函数 模板 实例化“std::_List_node_emplace_op2<Eigen::aligned_allocator<U>>::_List_node_emplace_op2<_Ty1&,_Ty2&>(_Alnode &,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              U=std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera,
+              _Alnode=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::camera_t,colmap::Camera>,void *>>
+          ] (编译源文件 Model.cpp)
+D:\RTPS\RTPSv0.5\RTPS\Model.cpp(73,49): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::_Hash<std::_Umap_traits<_Kty,colmap::Camera,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<_Ty1&,_Ty2&>(_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Ty=std::pair<const colmap::camera_t,colmap::Camera>,
+              _Kty=colmap::camera_t,
+              _Hasher=std::hash<colmap::camera_t>,
+              _Keyeq=std::equal_to<colmap::camera_t>,
+              _Alloc=Eigen::aligned_allocator<std::pair<const colmap::camera_t,colmap::Camera>>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera
+          ]
+D:\RTPS\RTPSv0.5\RTPS\Model.cpp(73,25): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::_Hash<std::_Umap_traits<_Kty,colmap::Camera,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<_Ty1&,_Ty2&>(_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Ty=std::pair<const colmap::camera_t,colmap::Camera>,
+              _Kty=colmap::camera_t,
+              _Hasher=std::hash<colmap::camera_t>,
+              _Keyeq=std::equal_to<colmap::camera_t>,
+              _Alloc=Eigen::aligned_allocator<std::pair<const colmap::camera_t,colmap::Camera>>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Camera
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(172): warning C4267: “初始化”: 从“size_t”转换到“_Ty1”，可能丢失数据
+          with
+          [
+              _Ty1=const colmap::image_t
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(852,1): message : 查看对正在编译的函数 模板 实例化“std::pair<const colmap::image_t,colmap::Image>::pair<_Ty1&,_Ty2&,0>(_Other1,_Other2) noexcept(false)”的引用
+          with
+          [
+              _Ty1=const size_t,
+              _Ty2=colmap::Image,
+              _Other1=const size_t &,
+              _Other2=colmap::Image &
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(852,43): message : 查看对正在编译的函数 模板 实例化“std::pair<const colmap::image_t,colmap::Image>::pair<_Ty1&,_Ty2&,0>(_Other1,_Other2) noexcept(false)”的引用
+          with
+          [
+              _Ty1=const size_t,
+              _Ty2=colmap::Image,
+              _Other1=const size_t &,
+              _Other2=colmap::Image &
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(572,1): message : 查看对正在编译的函数 模板 实例化“void std::allocator<T>::construct<_Ty,const _Kty&,colmap::Image&>(_Objty *const ,const _Kty &,colmap::Image &)”的引用
+          with
+          [
+              T=std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>,
+              _Ty=std::pair<const colmap::image_t,colmap::Image>,
+              _Kty=unsigned __int64,
+              _Objty=std::pair<const colmap::image_t,colmap::Image>
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(572,26): message : 查看对正在编译的函数 模板 实例化“void std::allocator<T>::construct<_Ty,const _Kty&,colmap::Image&>(_Objty *const ,const _Kty &,colmap::Image &)”的引用
+          with
+          [
+              T=std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>,
+              _Ty=std::pair<const colmap::image_t,colmap::Image>,
+              _Kty=unsigned __int64,
+              _Objty=std::pair<const colmap::image_t,colmap::Image>
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\list(586,1): message : 查看对正在编译的函数 模板 实例化“void std::_Normal_allocator_traits<_Alloc>::construct<_Ty,_Ty1&,_Ty2&>(_Alloc &,_Ty *,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Alloc=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>>,
+              _Ty=std::pair<const colmap::image_t,colmap::Image>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Image
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\list(586,34): message : 查看对正在编译的函数 模板 实例化“void std::_Normal_allocator_traits<_Alloc>::construct<_Ty,_Ty1&,_Ty2&>(_Alloc &,_Ty *,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Alloc=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>>,
+              _Ty=std::pair<const colmap::image_t,colmap::Image>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Image
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xhash(621,1): message : 查看对正在编译的函数 模板 实例化“std::_List_node_emplace_op2<Eigen::aligned_allocator<U>>::_List_node_emplace_op2<_Ty1&,_Ty2&>(_Alnode &,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              U=std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Image,
+              _Alnode=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>>
+          ] (编译源文件 Model.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xhash(621,53): message : 查看对正在编译的函数 模板 实例化“std::_List_node_emplace_op2<Eigen::aligned_allocator<U>>::_List_node_emplace_op2<_Ty1&,_Ty2&>(_Alnode &,_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              U=std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Image,
+              _Alnode=Eigen::aligned_allocator<std::_List_node<std::pair<const colmap::image_t,colmap::Image>,void *>>
+          ] (编译源文件 Model.cpp)
+D:\RTPS\RTPSv0.5\RTPS\Model.cpp(78,48): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::_Hash<std::_Umap_traits<_Kty,colmap::Image,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<_Ty1&,_Ty2&>(_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Ty=std::pair<const colmap::image_t,colmap::Image>,
+              _Kty=colmap::image_t,
+              _Hasher=std::hash<colmap::camera_t>,
+              _Keyeq=std::equal_to<colmap::camera_t>,
+              _Alloc=Eigen::aligned_allocator<std::pair<const colmap::image_t,colmap::Image>>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Image
+          ]
+D:\RTPS\RTPSv0.5\RTPS\Model.cpp(78,24): message : 查看对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::_Hash<std::_Umap_traits<_Kty,colmap::Image,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<_Ty1&,_Ty2&>(_Ty1 &,_Ty2 &)”的引用
+          with
+          [
+              _Ty=std::pair<const colmap::image_t,colmap::Image>,
+              _Kty=colmap::image_t,
+              _Hasher=std::hash<colmap::camera_t>,
+              _Keyeq=std::equal_to<colmap::camera_t>,
+              _Alloc=Eigen::aligned_allocator<std::pair<const colmap::image_t,colmap::Image>>,
+              _Ty1=const size_t,
+              _Ty2=colmap::Image
+          ]

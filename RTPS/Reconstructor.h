@@ -35,8 +35,7 @@ private:
 
 	void Run();
 	void Reconstruct(std::string ImagePath, QSqlDatabase& db); //÷ÿΩ®
-	int Reconstruct(std::string ImagePath, CMapperOptions* MapperOptions, colmap::DatabaseCache& DbCache, QSqlDatabase& db);
-	size_t ChooseModel(std::string ImagePath, QSqlDatabase& db);
+	std::vector<size_t> ChooseModel(std::string ImagePath, QSqlDatabase& db);
 	bool IsImageBelongsModel(std::string ImagePath, CModel& Model, QSqlDatabase& db);
 	bool RegisterInitialPair(CMapperOptions* MapperOptions, CMapper& mapper, size_t ModelID, size_t& InitImageID1, size_t& InitImageID2, QSqlDatabase& db);
 

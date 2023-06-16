@@ -1123,7 +1123,7 @@ bool CModel::Merge(CModel& MergedModel, double MaxReprojectError)
 
 	for (size_t ImageID : MergedModelRegImages)
 	{
-		if (IsModelExistImage(ImageID))
+		if (IsImageRegistered(ImageID))
 		{
 			CommonImageIDs.insert(ImageID);
 		}
@@ -1948,11 +1948,13 @@ void CModel::SetObservationAsTriangulated(size_t ImageID, size_t Point2DID, bool
 			if (ImageID < corr.image_id)
 			{
 				ImagePairs[make_pair(ImageID, corr.image_id)].TriangulatedCorrsNum++;
+				ImagePairs[make_pair(ImageID, corr.image_id)].TriangulatedCorrsNum = min(ImagePairs[make_pair(ImageID, corr.image_id)].TriangulatedCorrsNum, ImagePairs[make_pair(ImageID, corr.image_id)].TotalCorrsNum);
 				CHECK_LE(ImagePairs[make_pair(ImageID, corr.image_id)].TriangulatedCorrsNum, ImagePairs[make_pair(ImageID, corr.image_id)].TotalCorrsNum) << "The correspondence graph graph must not contain duplicate matches";
 			}
 			else
 			{
 				ImagePairs[make_pair(corr.image_id, ImageID)].TriangulatedCorrsNum++;
+				ImagePairs[make_pair(corr.image_id, ImageID)].TriangulatedCorrsNum = min(ImagePairs[make_pair(corr.image_id, ImageID)].TriangulatedCorrsNum, ImagePairs[make_pair(corr.image_id, ImageID)].TotalCorrsNum);
 				CHECK_LE(ImagePairs[make_pair(corr.image_id, ImageID)].TriangulatedCorrsNum, ImagePairs[make_pair(corr.image_id, ImageID)].TotalCorrsNum) << "The correspondence graph graph must not contain duplicate matches";
 			}
 

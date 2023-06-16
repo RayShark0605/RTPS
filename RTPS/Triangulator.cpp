@@ -2,6 +2,10 @@
 using namespace std;
 using namespace colmap;
 
+//GetReferPoint3D
+//GetReferCamera
+//GetReferImage
+
 bool CTriangulator::Options::Check() const
 {
 	CHECK_OPTION_GE(max_transitivity, 0);
@@ -90,12 +94,12 @@ size_t CTriangulator::CompleteImage(const Options& options, const image_t image_
 
     ClearCaches();
 
-    const Image& image = reconstruction_->GetModelImage(image_id);
+    const Image& image = reconstruction_->GetReferImage(image_id);
     if (!image.IsRegistered()) {
         return num_tris;
     }
 
-    const Camera& camera = reconstruction_->GetModelCamera(image.CameraId());
+    const Camera& camera = reconstruction_->GetReferCamera(image.CameraId());
     if (HasCameraBogusParams(options, camera)) {
         return num_tris;
     }
@@ -571,8 +575,7 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id)
 
     const double max_squared_reproj_error = options.merge_max_reproj_error * options.merge_max_reproj_error;
 
-
-    const auto& point3D = reconstruction_->GetModelPoint3D(point3D_id);
+    const auto& point3D = reconstruction_->GetReferPoint3D(point3D_id);
 
     for (const auto& track_el : point3D.Track().Elements()) 
     {
@@ -580,7 +583,7 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id)
 
         for (const auto corr : corrs) 
         {
-            const auto& image = reconstruction_->GetModelImage(corr.image_id);
+            const auto& image = reconstruction_->GetReferImage(corr.image_id);
             if (!image.IsRegistered()) 
             {
                 continue;
@@ -596,7 +599,7 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id)
             // Try to merge the two 3D points.
 
             const Point3D& corr_point3D =
-                reconstruction_->GetModelPoint3D(corr_point2D.Point3DId());
+                reconstruction_->GetReferPoint3D(corr_point2D.Point3DId());
 
             merge_trials_[point3D_id].insert(corr_point2D.Point3DId());
             merge_trials_[corr_point2D.Point3DId()].insert(point3D_id);
@@ -613,8 +616,8 @@ size_t CTriangulator::Merge(const Options& options,const point3D_t point3D_id)
             {
                 for (const auto test_track_el : track->Elements()) 
                 {
-                    const Image& test_image = reconstruction_->GetModelImage(test_track_el.image_id);
-                    const Camera& test_camera = reconstruction_->GetModelCamera(test_image.CameraId());
+                    const Image& test_image = reconstruction_->GetReferImage(test_track_el.image_id);
+                    const Camera& test_camera = reconstruction_->GetReferCamera(test_image.CameraId());
                     const Point2D& test_point2D = test_image.Point2D(test_track_el.point2D_idx);
                     if (CalculateSquaredReprojectionError(test_point2D.XY(), merged_xyz, test_image.Qvec(), test_image.Tvec(), test_camera) > max_squared_reproj_error)
                     {
@@ -666,7 +669,7 @@ size_t CTriangulator::Complete(const Options& options,const point3D_t point3D_id
     const double max_squared_reproj_error =
         options.complete_max_reproj_error * options.complete_max_reproj_error;
 
-    const Point3D& point3D = reconstruction_->GetModelPoint3D(point3D_id);
+    const Point3D& point3D = reconstruction_->GetReferPoint3D(point3D_id);
 
     std::vector<TrackElement> queue = point3D.Track().Elements();
 
@@ -685,7 +688,7 @@ size_t CTriangulator::Complete(const Options& options,const point3D_t point3D_id
                     queue_elem.point2D_idx);
 
             for (const auto corr : corrs) {
-                const Image& image = reconstruction_->GetModelImage(corr.image_id);
+                const Image& image = reconstruction_->GetReferImage(corr.image_id);
                 if (!image.IsRegistered()) {
                     continue;
                 }
@@ -695,7 +698,7 @@ size_t CTriangulator::Complete(const Options& options,const point3D_t point3D_id
                     continue;
                 }
 
-                const Camera& camera = reconstruction_->GetModelCamera(image.CameraId());
+                const Camera& camera = reconstruction_->GetReferCamera(image.CameraId());
                 if (HasCameraBogusParams(options, camera)) {
                     continue;
                 }

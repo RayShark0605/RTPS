@@ -375,7 +375,7 @@ void CMainWindow::ProcessImage(string ImagePath)
 	{
 		return;
 	}
-	ScaleImage(ImagePath, options->sift_extraction->max_image_size);
+	//ScaleImage(ImagePath, options->sift_extraction->max_image_size);
 	ImageListWidget->AddImage(ImagePath);
 	while (GetThreadCount() >= 8 && !Base::IsQuit)
 	{
@@ -799,11 +799,13 @@ void CMainWindow::GetRenderModel()
 		}
 		ModelManager->Get(SelectedModelID).ConvertToReconstruction(*Model);
 	}
+	RenderModel_Mutex.lock();
 	if (ModelToRender)
 	{
 		delete ModelToRender;
 	}
 	ModelToRender = Model;
+	RenderModel_Mutex.unlock();
 	emit RenderNow_SIGNAL();
 	IsRenderNow = false;
 }
@@ -811,8 +813,15 @@ void CMainWindow::RenderModel()
 {
 	DebugTimer timer(__FUNCTION__);
 	if (!ModelToRender)return;
+	RenderModel_Mutex.lock();
 	ModelViewer->reconstruction = ModelToRender;
+	ModelViewer->cameras = ModelToRender->cameras_;
+	ModelViewer->points3D = ModelToRender->points3D_;
+	ModelViewer->reg_image_ids = ModelToRender->reg_image_ids_;
+	ModelViewer->images.clear();
+	ModelViewer->images = ModelToRender->GetAllRegImages();
 	ModelViewer->ReloadReconstruction();
+	RenderModel_Mutex.unlock();
 }
 void CMainWindow::ClearRenderModel()
 {

@@ -322,6 +322,7 @@ bool CMapper::RegisterInitialImagePair(Options options, size_t image_id1, size_t
 }
 bool CMapper::RegisterNextImage(Options options, size_t image_id)
 {
+	DebugTimer DebugTimer(__FUNCTION__);
 	CHECK_NOTNULL(Model_);
 	CHECK_GE(Model_->GetModelRegImagesNum(), 2);
 
@@ -556,6 +557,7 @@ CMapper::LocalBundleAdjustmentReport CMapper::AdjustLocalBundle(Options options,
 	// Find images that have most 3D points with given image in common.
 	const std::vector<size_t> local_bundle = FindLocalBundle(options, image_id);
 
+	
 	// Do the bundle adjustment only if there is any connected images.
 	if (local_bundle.size() > 0) 
 	{
@@ -631,18 +633,30 @@ CMapper::LocalBundleAdjustmentReport CMapper::AdjustLocalBundle(Options options,
 		}
 		// Adjust the local bundle.
 		CBundleAdjuster bundle_adjuster(ba_options, ba_config);
+
+		QElapsedTimer timer;
+		timer.start();
 		bundle_adjuster.Solve(Model_);
+		qDebug() << "Solve:   " << timer.elapsed();
+		timer.restart();
 
 		report.num_adjusted_observations = bundle_adjuster.Summary().num_residuals / 2;
 
+		
 		// Merge refined tracks with other existing points.
 		report.num_merged_observations = triangulator_->MergeTracks(tri_options, variable_point3D_ids);
+		qDebug() << "MergeTracks:   " << timer.elapsed();
+		timer.restart();
 		// Complete tracks that may have failed to triangulate before refinement
 		// of camera pose and calibration in bundle-adjustment. This may avoid
 		// that some points are filtered and it helps for subsequent image
 		// registrations.
 		report.num_completed_observations = triangulator_->CompleteTracks(tri_options, variable_point3D_ids);
+		qDebug() << "CompleteTracks:   " << timer.elapsed();
+		timer.restart();
 		report.num_completed_observations += triangulator_->CompleteImage(tri_options, image_id);
+		qDebug() << "CompleteImage:   " << timer.elapsed();
+		
 	}
 
 	// Filter both the modified images and all changed 3D points to make sure
@@ -1157,6 +1171,7 @@ bool CMapper::EstimateInitialTwoViewGeometry(Options& options, size_t image_id1,
 
 	if (!two_view_geometry.EstimateRelativePose(camera1, points1, camera2, points2))
 	{
+		qDebug() << "Model initialization failed: EstimateRelativePose";
 		return false;
 	}
 
@@ -1165,6 +1180,18 @@ bool CMapper::EstimateInitialTwoViewGeometry(Options& options, size_t image_id1,
 		prev_init_image_pair_id_ = image_pair_id;
 		prev_init_two_view_geometry_ = two_view_geometry;
 		return true;
+	}
+	if (static_cast<int>(two_view_geometry.inlier_matches.size()) < options.init_min_num_inliers)
+	{
+		qDebug() << "Model initialization failed: num_inliers too few";
+	}
+	if (std::abs(two_view_geometry.tvec.z()) >= options.init_max_forward_motion)
+	{
+		qDebug() << "Model initialization failed: forward_motion too large";
+	}
+	if (two_view_geometry.tri_angle <= DegToRad(options.init_min_tri_angle))
+	{
+		qDebug() << "Model initialization failed: tri_angle too few";
 	}
 	return false;
 }
@@ -1242,7 +1269,7 @@ CBundleAdjustmentOptions CMapperOptions::LocalBundleAdjustment()
 #if CERES_VERSION_MAJOR < 2
 	options.solver_options.num_linear_solver_threads = num_threads;
 #endif  // CERES_VERSION_MAJOR
-	options.print_summary = true;
+	options.print_summary = false;
 	options.refine_focal_length = ba_refine_focal_length;
 	options.refine_principal_point = ba_refine_principal_point;
 	options.refine_extra_params = ba_refine_extra_params;

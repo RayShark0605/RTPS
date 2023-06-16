@@ -188,7 +188,7 @@ void CFeatureMatcher::SiftMatch(size_t ImageID, vector<size_t>& MatchedImageIDs,
 
 		CPU_TaskCount++;
 #ifdef OUTPUTLOG_MODE
-		Geometries.Estimate(Camera1, PointsVectors1, Camera2, PointsVectors2, Matches, TwoViewGeometryOptions);
+		Geometries.EstimateMultiple(Camera1, PointsVectors1, Camera2, PointsVectors2, Matches, TwoViewGeometryOptions);
 #else
 		if (options->sift_matching->multiple_models)
 		{
