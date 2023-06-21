@@ -257,7 +257,7 @@ bool CBundleAdjuster::Solve(CModel* reconstruction)
     std::string solver_error;
     CHECK(solver_options.IsValid(&solver_error)) << solver_error;
     ceres::Solve(solver_options, problem_.get(), &summary_);
-    cout << "===> Solve completed! Final cost: " << summary_.final_cost << "px" << endl;
+    cout << "===> Solve completed! Final cost: " << summary_.final_cost * 1.0 / problem_->NumResiduals() << "px" << endl;
 
     if (solver_options.minimizer_progress_to_stdout) 
     {

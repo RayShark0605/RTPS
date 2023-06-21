@@ -142,8 +142,8 @@ CFeatureExtractionSettingWidget::CFeatureExtractionSettingWidget(QWidget* parent
 	connect(SaveButton, &QPushButton::released, this, &CFeatureExtractionSettingWidget::Save);
 	Layout->addWidget(SaveButton);
 
-	setFixedWidth(Size(450, true));
-	setFixedHeight(Size(650, false));
+	setFixedWidth(450);
+	setFixedHeight(650);
 	setWindowIcon(QIcon(":/media/feature-extraction.png"));
 }
 void CFeatureExtractionSettingWidget::showEvent(QShowEvent* event)
@@ -313,14 +313,14 @@ void CFeatureMatchingSettingWidget::showEvent(QShowEvent* event)
 		TabWidget->addTab(ExhaustiveTabWidget, tr("Exhaustive"));
 
 		MatchingMethod_ComboBox->setCurrentIndex(0);
-		this->setFixedSize(Size(350, true), Size(400, false));
+		this->setFixedSize(350, 400);
 	}
 	else if (*options->FeatureMatchMethod == CFeatureMatchMethod::Retrieval)
 	{
 		TabWidget->clear();
 		TabWidget->addTab(RetrievalTabWidget, tr("Retrieval"));
 		MatchingMethod_ComboBox->setCurrentIndex(1);
-		this->setFixedSize(Size(465, true), Size(700, false));
+		this->setFixedSize(465, 700);
 	}
 }
 void CFeatureMatchingSettingWidget::closeEvent(QCloseEvent* event)
@@ -333,13 +333,13 @@ void CFeatureMatchingSettingWidget::ShowMethodSettings(QString MethodName)
 	{
 		TabWidget->clear();
 		TabWidget->addTab(ExhaustiveTabWidget, tr("Exhaustive"));
-		this->setFixedSize(Size(350, true), Size(400, false));
+		this->setFixedSize(350, 400);
 	}
 	else if (MethodName == tr("Retrieval"))
 	{
 		TabWidget->clear();
 		TabWidget->addTab(RetrievalTabWidget, tr("Retrieval"));
-		this->setFixedSize(Size(465, true), Size(700, false));
+		this->setFixedSize(465, 700);
 	}
 }
 
@@ -445,7 +445,7 @@ CReconstructionSettingWidget::CReconstructionSettingWidget(QWidget* parent, Opti
 	SaveButton = new QPushButton(tr("Save"), this);
 	connect(SaveButton, &QPushButton::released, this, &CReconstructionSettingWidget::Save);
 	Grid->addWidget(SaveButton, Grid->rowCount(), 0);
-	this->setFixedSize(Size(600, true), Size(500, false));
+	this->setFixedSize(600, 500);
 	this->setWindowIcon(QIcon(":/media/bundle-adjustment.png"));
 }
 void CReconstructionSettingWidget::Save()
@@ -503,7 +503,7 @@ CReceiverSettingWidget::CReceiverSettingWidget(QWidget* parent) :QWidget(parent)
 	Layout->addWidget(SaveButton);
 
 
-	setFixedSize(Size(350, true), Size(120, false));
+	setFixedSize(350, 120);
 	PreloadSettings(); //加载注册表中之前设置好的"传输设置"(避免每次都要更改设置)
 	setWindowIcon(QIcon(":/media/automatic-reconstruction.png"));
 }
@@ -592,7 +592,7 @@ CProjectSettingWidget::CProjectSettingWidget(QWidget* parent, OptionManager* opt
 	Layout->addLayout(Grid);
 	Layout->addWidget(SaveButton);
 
-	setFixedHeight(Size(100, false));
+	setFixedHeight(100);
 	this->setWindowIcon(QIcon(":/media/project-new.png"));
 }
 void CProjectSettingWidget::NewDatabase()
@@ -769,14 +769,14 @@ CShowMatchWidget::CShowMatchWidget(QWidget* parent, size_t CurrentImgID, size_t 
 	Layout->addWidget(ImageLabel);
 	QHBoxLayout* SubLayout = new QHBoxLayout();
 	QHBoxLayout* ButtonLayout = new QHBoxLayout();
-	ButtonLayout->addSpacerItem(new QSpacerItem(Size(20, true), Size(20, false), QSizePolicy::Expanding));
+	ButtonLayout->addSpacerItem(new QSpacerItem(20, 20, QSizePolicy::Expanding));
 	ButtonLayout->addWidget(HideMatchesButton);
 	ButtonLayout->addWidget(SaveButton);
 	SubLayout->addLayout(ButtonLayout);
 	Layout->addLayout(SubLayout);
 	this->setLayout(Layout);
 
-	resize(Size(900, true), Size(700, false));
+	resize(900, 700);
 	setWindowIcon(QIcon(":/media/undistort.png"));
 }
 QList<QColor> CShowMatchWidget::GenerateRandomColor(int Num)
@@ -1034,7 +1034,7 @@ COverlappingInfoWidget::COverlappingInfoWidget(QWidget* parent, string ImagePath
 	size_t ImageID = CDatabase::GetImageID(GetFileName(ImagePath), db);
 	ReleaseDatabaseConnect(db);
 	setWindowTitle(tr("Matches for image [ ") + StdString2QString(GetFileName(ImagePath)) + tr(" ] ID=") + QString::number(ImageID));
-	setMinimumWidth(Size(600, true));
+	setMinimumWidth(600);
 	setWindowIcon(QIcon(":/media/database-management.png"));
 }
 void COverlappingInfoWidget::closeEvent(QCloseEvent* event)
@@ -1106,12 +1106,12 @@ CModelImportWidget::CModelImportWidget(QWidget* parent) :QWidget(parent)
 	Layout->addWidget(TabImportSetting_TabWidget);
 
 	LoadButton = new QPushButton(tr("Import Models"), this);
-	LoadButton->setFixedWidth(Size(200, true));
+	LoadButton->setFixedWidth(200);
 	connect(LoadButton, &QPushButton::released, this, &CModelImportWidget::Load_SLOT);
 	Layout->addWidget(LoadButton, 0, Qt::AlignHCenter);
 
 	this->setLayout(Layout);
-	this->setFixedSize(Size(420, true), Size(180, false));
+	this->setFixedSize(420, 180);
 }
 void CModelImportWidget::DeleteAllTab()
 {
@@ -1306,7 +1306,7 @@ CModelExportWidget::CModelExportWidget(QWidget* parent, CModelManager* ModelMana
 	Export_Button = new QPushButton(tr("Export"), this);
 	connect(Export_Button, &QPushButton::released, this, &CModelExportWidget::Export);
 	Layout->addWidget(Export_Button);
-	this->setFixedWidth(Size(500, true));
+	this->setFixedWidth(500);
 }
 void CModelExportWidget::showEvent(QShowEvent* event)
 {
@@ -1516,19 +1516,18 @@ void CModelExportWidget::Export()
 }
 
 
-size_t CModelSelectWidget::NewstModelIndex = INT_MAX;
 CModelSelectWidget::CModelSelectWidget(QWidget* parent, CModelManager* ModelManager) :QComboBox(parent)
 {
 	this->ModelManager = ModelManager;
 	QFont font;
-	font.setPointSize(Size(10, true));
+	font.setPointSize(10);
 	setFont(font);
 
 	connect(&UpdateTimer, &QTimer::timeout, this, &CModelSelectWidget::Update);
 }
 void CModelSelectWidget::Update()
 {
-	//DebugTimer timer(__FUNCTION__);
+	DebugTimer timer(__FUNCTION__);
 	ModelSelectWidget_Mutex.lock();
 	if (view()->isVisible() || !ModelManager)
 	{
@@ -1577,7 +1576,7 @@ size_t CModelSelectWidget::GetSelectedModelIndex()
 	if (ModelManager->Size() == 0 || currentIndex() == 0)
 	{
 		ModelSelectWidget_Mutex.unlock();
-		return NewstModelIndex;
+		return INT_MAX;
 	}
 	ModelSelectWidget_Mutex.unlock();
 	return currentIndex() - 1;
@@ -2007,7 +2006,7 @@ CRenderOptionsWidget::CRenderOptionsWidget(QWidget* parent, OptionManager* optio
 	Layout->addLayout(RateLayout);
 
 	this->setWindowIcon(QIcon(":/media/reconstruction-reset.png"));
-	this->setFixedSize(Size(400, true), Size(530, false));
+	this->setFixedSize(400, 530);
 	this->setLayout(Layout);
 	connect(&UpdateTimer, &QTimer::timeout, this, &CRenderOptionsWidget::RefreshValues);
 }
@@ -2285,7 +2284,7 @@ CShowMatchMatrixWidget::CShowMatchMatrixWidget(QWidget* parent, OptionManager* o
 	layout->setRowStretch(0, 1);
 	layout->setColumnStretch(0, 1);
 	setLayout(layout);
-	setMinimumSize(Size(500, true), Size(500, false));
+	setMinimumSize(500, 500);
 }
 void CShowMatchMatrixWidget::showEvent(QShowEvent* event)
 {

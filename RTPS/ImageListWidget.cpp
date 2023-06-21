@@ -13,7 +13,7 @@ CImageListWidget::CImageListWidget(QDockWidget* parent): QListWidget(parent)
 
 	setSelectionMode(QAbstractItemView::SingleSelection);
 	setViewMode(QListWidget::IconMode);
-	setIconSize(QSize(Size(180, true), Size(180, false)));
+	setIconSize(QSize(180, 180));
 	setSpacing(2);
 	setResizeMode(QListView::Adjust);
 	setMovement(QListView::Static);
@@ -53,7 +53,7 @@ void CImageListWidget::AddImage(string ImagePath)
 		parent->setWindowTitle(tr("Image list ") + "(" + QString::number(Items.size()) + ")");
 		if (count() > 2 && verticalScrollBar() && CurrentValue == MaxValue)
 		{
-			//setCurrentRow(count() - 1);
+			setCurrentRow(count() - 1);
 			/*QListWidgetItem* LastItem = item(count() - 1);
 			setCurrentItem(LastItem);
 			scrollToItem(LastItem);*/

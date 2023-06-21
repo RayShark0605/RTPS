@@ -34,6 +34,9 @@ using namespace colmap;
 
 int main(int argc, char* argv[])
 {
+	QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+	QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+
 	QApplication App(argc, argv);
 	QTranslator* Translator = new QTranslator();
 	Translator->load("Tanslation_zh_CN.qm");

@@ -383,7 +383,7 @@ bool CRetrievalMatcher::Match(string ImagePath)
 		ReleaseDatabaseConnect(db);
 		return false;
 	}
-	cout << StringPrintf("Start feature matching on image %s", ImageName.c_str()) << endl;
+	cout << StringPrintf("Start retrieval on image %s", ImageName.c_str()) << endl;
 
 	bool IsUseExhaustiveMatch = false;
 	if (ExhaustiveMatcher && Database.size() < *options->RetrievalTopN)

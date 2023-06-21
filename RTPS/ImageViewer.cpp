@@ -22,14 +22,14 @@ CImageViewer::CImageViewer(QWidget* parent, string ImagePath)
 
 	KeyPointsButton = new QPushButton(tr("Show Keypoints"), this);
 	KeyPointsButton->setEnabled(false);
-	KeyPointsButton->setFixedWidth(Size(100, true));
+	KeyPointsButton->setFixedWidth(100);
 
 	SaveButton = new QPushButton(tr("Save"), this);
-	SaveButton->setFixedWidth(Size(60, true));
+	SaveButton->setFixedWidth(60);
 
 	MatchButton = new QPushButton(tr("Overlapping Images"), this);
 	MatchButton->setEnabled(false);
-	MatchButton->setFixedWidth(Size(120, true));
+	MatchButton->setFixedWidth(120);
 
 	connect(KeyPointsButton, &QPushButton::released, this, &CImageViewer::ShowKeyPoints);
 	connect(SaveButton, &QPushButton::released, this, &CImageViewer::Save);
@@ -39,7 +39,7 @@ CImageViewer::CImageViewer(QWidget* parent, string ImagePath)
 	Layout->addWidget(&ImageLabel);
 	SubLayout = new QHBoxLayout();
 	ButtonLayout = new QHBoxLayout();
-	ButtonLayout->addSpacerItem(new QSpacerItem(Size(20, true), Size(60, false), QSizePolicy::Expanding));
+	ButtonLayout->addSpacerItem(new QSpacerItem(20, 60, QSizePolicy::Expanding));
 	ButtonLayout->addWidget(KeyPointsButton);
 	ButtonLayout->addWidget(MatchButton);
 	ButtonLayout->addWidget(SaveButton);
@@ -54,7 +54,7 @@ CImageViewer::CImageViewer(QWidget* parent, string ImagePath)
 	std::thread DaemonThread(&CImageViewer::Daemon, this); //检测当前影像是否已完成"特征提取"和"特征匹配"
 	DaemonThread.detach();
 
-	resize(Size(900, true), Size(700, false));
+	resize(900, 700);
 	setWindowIcon(QIcon(":/media/undistort.png"));
 	show();
 }

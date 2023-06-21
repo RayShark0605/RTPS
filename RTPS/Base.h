@@ -146,12 +146,12 @@ inline bool DeleteDir(QString path)
 	return dir.rmpath(dir.absolutePath());
 }
 
-inline int Size(int OriginSize, bool IsWidth)
-{
-	QRect ScreenRect = QApplication::desktop()->screenGeometry();
-	int ThisScreenLen = IsWidth ? ScreenRect.width() : ScreenRect.height();
-	return ThisScreenLen * OriginSize / (IsWidth ? 1920 : 1080);
-}
+//inline int Size(int OriginSize, bool IsWidth)
+//{
+//	QRect ScreenRect = QApplication::desktop()->screenGeometry();
+//	int ThisScreenLen = IsWidth ? ScreenRect.width() : ScreenRect.height();
+//	return ThisScreenLen * OriginSize / (IsWidth ? 1920 : 1080);
+//}
 
 /*
 enum CImageStatus { Error, NotInitialized, Initialized, Extracting, Extracted, Matching, Matched, Reconstructing, Finished };

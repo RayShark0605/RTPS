@@ -390,8 +390,8 @@ public slots:
 
 class CModelSelectWidget :public QComboBox
 {
+	Q_OBJECT
 public:
-	static size_t NewstModelIndex;
 	CModelSelectWidget(QWidget* parent, CModelManager* ModelManager);
 	void Update();
 	size_t GetSelectedModelIndex();

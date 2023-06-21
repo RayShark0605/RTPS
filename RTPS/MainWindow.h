@@ -143,6 +143,8 @@ private:
 	void RenderModel_SLOT();
 	void GetRenderModel();
 	void CreateReconstructor();
+
+	size_t UnSaveTimes = 0;
 	void AutoSaveModels();
 
 signals:

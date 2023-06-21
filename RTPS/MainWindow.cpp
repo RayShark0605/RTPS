@@ -486,7 +486,7 @@ void CMainWindow::UpdateWindowTitle(QString Extras)
 }
 void CMainWindow::SetupWidgets()
 {
-	resize(Size(1000, true), Size(800, false));
+	resize(1000, 800);
 	UpdateWindowTitle();
 	setWindowIcon(QIcon(":/media/WindowIcon.png"));
 
@@ -495,12 +495,12 @@ void CMainWindow::SetupWidgets()
 
 	ModelManager = new CModelManager();
 	ModelSelectWidget = new CModelSelectWidget(this, ModelManager);
-	ModelSelectWidget->setFixedWidth(Size(270, true));
+	ModelSelectWidget->setFixedWidth(270);
 	connect(ModelSelectWidget, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &CMainWindow::RenderModel_SLOT);
 
 	ImgListViewerDock = new QDockWidget(tr("Image Preview"), this);
-	ImgListViewerDock->setMinimumHeight(Size(100, false));
-	ImgListViewerDock->setMinimumWidth(Size(250, true));
+	ImgListViewerDock->setMinimumHeight(100);
+	ImgListViewerDock->setMinimumWidth(250);
 	ImageListWidget = new CImageListWidget(ImgListViewerDock);
 	ImgListViewerDock->setWidget(ImageListWidget);
 	addDockWidget(Qt::RightDockWidgetArea, ImgListViewerDock);
@@ -793,7 +793,7 @@ void CMainWindow::GetRenderModel()
 	else
 	{
 		size_t SelectedModelID = ModelSelectWidget->GetSelectedModelIndex();
-		if (SelectedModelID == CModelSelectWidget::NewstModelIndex)
+		if (SelectedModelID == INT_MAX)
 		{
 			SelectedModelID = ModelManager->Size() - 1;
 		}
@@ -863,6 +863,12 @@ void CMainWindow::CreateReconstructor()
 }
 void CMainWindow::AutoSaveModels()
 {
+	if (UnSaveTimes < 4)
+	{
+		UnSaveTimes++;
+		return;
+	}
+	UnSaveTimes = 0;
 	cout << "Model is being saved automatically..." << endl;
 	QString DirectoryDir = StdString2QString(GetFileDir(*options->database_path)) + "/AutoSaveModels";
 	QDir dir(DirectoryDir);
